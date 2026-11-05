@@ -141,7 +141,6 @@
             font-size: 0.95rem;
             font-weight: 700;
             letter-spacing: 0.8px;
-            transition: all 0.25s ease;
             cursor: pointer;
             background: rgba(255, 255, 255, 0.1);
             padding: 12px 24px;
@@ -153,17 +152,6 @@
             background: var(--nau-gold);
             color: var(--nau-navy);
             border-color: var(--nau-gold);
-            transform: translateY(2px);
-        }
-
-        .hero-scroll-btn i {
-            animation: bounceDown 1.8s infinite;
-        }
-
-        @keyframes bounceDown {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(8px); }
-            60% { transform: translateY(4px); }
         }
 
         /* Top Header */
@@ -211,26 +199,6 @@
         .header-titles p {
             font-size: 0.82rem;
             color: #cbd5e1;
-        }
-
-        /* Midterm Progress Notice Banner */
-        .status-banner {
-            background-color: #eff6ff;
-            border-bottom: 1px solid #bfdbfe;
-            color: #1e40af;
-            font-size: 0.88rem;
-            padding: 10px 0;
-        }
-
-        .status-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 10px;
         }
 
         /* Navigation Bar */
@@ -561,6 +529,7 @@
         .portal-fa-icon {
             font-size: 2.3rem;
             margin-bottom: 8px;
+            color: var(--nau-navy);
         }
 
         .portal-card h3 {
@@ -578,12 +547,13 @@
             font-size: 0.85rem;
             text-decoration: none;
             color: #ffffff;
+            background-color: var(--nau-navy);
         }
 
         /* Version Progression Rows */
         .version-row-card {
             background: #ffffff;
-            border: 2px solid var(--border-color);
+            border: 2px solid var(--nau-navy);
             border-radius: 8px;
             margin-bottom: 30px;
             overflow: hidden;
@@ -593,6 +563,7 @@
         .version-row-header {
             padding: 14px 22px;
             color: #ffffff;
+            background: var(--nau-navy);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -604,25 +575,25 @@
             padding: 24px;
         }
 
-        .v0-card { border-color: #64748b; }
-        .v0-header { background: #334155; }
+        .v0-card { border-color: var(--nau-navy); }
+        .v0-header { background: var(--nau-navy); }
         
-        .v1-card { border-color: #0284c7; }
-        .v1-header { background: #0284c7; }
+        .v1-card { border-color: var(--nau-navy); }
+        .v1-header { background: var(--nau-navy); }
 
-        .v2-card { border-color: #c2410c; }
-        .v2-header { background: #c2410c; }
+        .v2-card { border-color: var(--nau-navy); }
+        .v2-header { background: var(--nau-navy); }
 
         .v0-images-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 16px;
             margin-bottom: 18px;
         }
 
         .v0-images-container img {
             width: 100%;
-            height: 250px;
+            height: 240px;
             object-fit: contain;
             background: #ffffff;
             border: 1px solid var(--border-color);
@@ -630,19 +601,7 @@
             padding: 6px;
         }
 
-        .version-hero-img {
-            width: 100%;
-            max-height: 440px;
-            object-fit: contain;
-            background: #ffffff;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 10px;
-            margin-bottom: 18px;
-            display: block;
-        }
-
-        /* Staggered (Alternating) Ansys CFD Layout */
+        /* Staggered Ansys CFD Layout */
         .cfd-staggered-container {
             display: flex;
             flex-direction: column;
@@ -656,7 +615,6 @@
             gap: 36px;
         }
 
-        /* Automatically flips every second row for the staggered effect */
         .cfd-staggered-row:nth-child(even) {
             flex-direction: row-reverse;
         }
@@ -710,7 +668,7 @@
             }
         }
 
-        /* Direct Images Grid for Media & CAD Gallery */
+        /* Gallery Grid */
         .gallery-category-title {
             font-size: 1.25rem;
             font-weight: 700;
@@ -758,37 +716,41 @@
             line-height: 1.4;
         }
 
-        /* MATLAB Plots Direct Grid */
+        /* MATLAB Plots Grid */
         .matlab-plots-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
             gap: 24px;
             margin: 20px 0 30px 0;
         }
 
         .matlab-item {
             text-align: center;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: var(--card-shadow);
         }
 
         .matlab-item h5 {
-            font-size: 1.05rem;
+            font-size: 1.02rem;
             color: var(--nau-navy);
-            margin-bottom: 6px;
+            margin-bottom: 10px;
             font-weight: 700;
-            text-align: left;
+            text-align: center;
         }
 
         .matlab-item img {
             width: 100%;
-            height: 440px;
+            height: 360px;
             object-fit: contain;
             background: #ffffff;
-            border: 1px solid var(--border-color);
             border-radius: 6px;
             display: block;
         }
 
-        /* Specifications Table (Alternating Rows & Hover Highlights) */
+        /* Specifications Table */
         .specs-table {
             width: 100%;
             border-collapse: collapse;
@@ -871,19 +833,6 @@
             font-size: 0.92rem;
         }
 
-        .timeline-badge {
-            display: inline-block;
-            font-size: 0.72rem;
-            padding: 1px 7px;
-            border-radius: 3px;
-            font-weight: 700;
-            margin-left: 6px;
-        }
-
-        .badge-done { background: #dcfce7; color: #166534; }
-        .badge-progress { background: #dbeafe; color: #1e40af; }
-        .badge-planned { background: #f1f5f9; color: #475569; }
-
         .timeline-text {
             font-size: 0.86rem;
             color: var(--text-dark);
@@ -955,6 +904,8 @@
             font-size: 0.82rem;
             font-weight: 700;
             transition: background 0.2s;
+            border: none;
+            cursor: pointer;
         }
 
         .btn-view:hover {
@@ -1059,7 +1010,7 @@
             color: var(--text-muted);
         }
 
-        /* Lightbox Modal Styles */
+        /* Lightbox Modal */
         .lightbox-modal {
             display: none;
             position: fixed;
@@ -1174,14 +1125,13 @@
     <!-- ============================================================ -->
     <header class="hero-landing" id="hero-landing">
         <div class="hero-content">
-            <!-- Transparent Steve Sanghi College of Engineering Logo -->
-            <img src="NAU_Steve Sanghi College of Engineering_primary_282_3514.png" 
+            <img src="figures/NAU_Steve Sanghi College of Engineering_primary_282_3514.png" 
                  alt="Northern Arizona University - The Steve Sanghi College of Engineering" 
                  class="hero-college-logo" 
-                 onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                 onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
 
             <div class="hero-project-box">
-                <img src="raptor_logo.png" alt="Project RAPTOR Logo" class="hero-raptor-logo" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                <img src="figures/raptor_logo.png" alt="Project RAPTOR Logo" class="hero-raptor-logo" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                 <div>
                     <div class="hero-project-title">PROJECT RAPTOR</div>
                     <div class="hero-project-sub">Rocket Apogee Payload Transition to Optimal Return</div>
@@ -1199,7 +1149,7 @@
     <div class="top-bar" id="main-nav">
         <div class="header-content">
             <div class="header-logo-group">
-                <img src="raptor_logo.png" alt="Project RAPTOR Logo" class="project-badge-logo" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                <img src="figures/raptor_logo.png" alt="Project RAPTOR Logo" class="project-badge-logo" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                 <div class="header-titles">
                     <h1>PROJECT RAPTOR</h1>
                     <p>Rocket Apogee Payload Transition to Optimal Return | Electrical Engineering Capstone</p>
@@ -1212,51 +1162,37 @@
         </div>
     </div>
 
-    <!-- Status Notice Banner -->
-    <div class="status-banner">
-        <div class="status-content">
-            <div>
-                <i class="fa-solid fa-clock-rotate-left me-2"></i>
-                <strong>Midterm Progress Report (Status as of October 2026):</strong> 
-                Documenting Semester 1 accomplishments of our <strong>two-semester capstone</strong> (Fall 2026 – Spring 2027).
-            </div>
-            <div>
-                <span style="background: #dbeafe; padding: 4px 10px; border-radius: 4px; font-weight: 700;">Semester 1: Prototyping &amp; Simulation</span>
-            </div>
-        </div>
-    </div>
-
     <!-- Navigation Tabs -->
     <nav>
         <ul class="nav-links">
             <li>
                 <button class="nav-tab-btn active" onclick="switchView('overview-view', this)">
-                    <i class="fa-solid fa-house"></i> Project Overview
+                    Project Overview
                 </button>
             </li>
             <li>
                 <button class="nav-tab-btn" onclick="goToTeamSection(this)">
-                    <i class="fa-solid fa-users"></i> Team Members
+                    Team Members
                 </button>
             </li>
             <li>
                 <button class="nav-tab-btn" onclick="switchView('raptor-mini-view', this)">
-                    <i class="fa-solid fa-plane"></i> Raptor Mini (Drone)
+                    RAPTOR Mini
                 </button>
             </li>
             <li>
                 <button class="nav-tab-btn" onclick="switchView('rocket-view', this)">
-                    <i class="fa-solid fa-rocket"></i> Launch Vehicle (Rocket)
+                    RAPTOR
                 </button>
             </li>
             <li>
                 <button class="nav-tab-btn" onclick="switchView('gallery-view', this)">
-                    <i class="fa-solid fa-images"></i> Media &amp; CAD Gallery
+                    Gallery
                 </button>
             </li>
             <li>
                 <button class="nav-tab-btn" onclick="switchView('documents-view', this)">
-                    <i class="fa-solid fa-file-pdf"></i> Documents &amp; Deliverables
+                    Documents
                 </button>
             </li>
         </ul>
@@ -1271,56 +1207,56 @@
         <div id="overview-view" class="page-view active-view">
             <div class="title-with-logo">
                 <h2 class="section-title">Project Overview</h2>
-                <img src="raptor_logo.png" alt="Project RAPTOR Logo" class="section-raptor-logo" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                <img src="figures/raptor_logo.png" alt="Project RAPTOR Logo" class="section-raptor-logo" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
             </div>
             
             <div class="content-box">
                 <p style="font-size: 1.02rem; line-height: 1.8; margin-bottom: 14px;">
-                    <strong>Project RAPTOR</strong> (Rocket Apogee Payload Transition to Optimal Return) is an <strong>electrical engineering capstone project</strong> conducted over <strong>two full academic semesters (Fall 2026 through Spring 2027)</strong>. As of October 2026, our five-member Electrical Engineering team has completed initial aerodynamic lift/drag studies, 3D printed kinematics verification, OpenRocket trajectory simulations, and structural airframe procurement.
+                    <strong>Project RAPTOR</strong> (Rocket Apogee Payload Transition to Optimal Return) is an <strong>electrical engineering capstone project</strong> conducted over <strong>two full academic semesters (Fall 2026 through Spring 2027)</strong>. Our five-member Electrical Engineering team has completed initial aerodynamic lift/drag studies, 3D printed kinematics verification, OpenRocket trajectory simulations, and composite airframe layup fabrication.
                 </p>
                 <p style="font-size: 0.95rem; line-height: 1.7; margin-bottom: 0;">
-                    Bruuuuuu an internalnnnnnnnnnnnnnomous glider to an apogee of <strong>1,500 to 2,000 ft AGL</strong> (capable up to 4,000 ft AGL) at the Tripoli Phoenix launch site. At apogee, an e-match-actuated CO<sub>2</sub> cold-gas canister releases the nosecone and glider without thermal hazards. Following deployment, the glider rotates its 30-inch wing into flight position and executes actively stabilized, controlled glide flight back to a designated recovery area while the rocket recovers safely under dual-deployment parachutes.
+                    The launch vehicle carries an internally folded autonomous glider to an apogee of <strong>1,500 to 2,000 ft AGL</strong> (capable up to 4,000 ft AGL) at the Tripoli Phoenix launch site. At apogee, an e-match-actuated CO<sub>2</sub> cold-gas canister releases the nosecone and glider without thermal hazards. Following deployment, the glider rotates its 30-inch wing into flight position and executes actively stabilized, controlled glide flight back to a designated recovery area while the rocket recovers safely under dual-deployment parachutes.
                 </p>
             </div>
 
             <!-- Figure 1: Concept of Operations -->
             <div class="direct-figure-item">
-                <img src="Picture1.png" alt="Concept of Operations Flight Profile" class="direct-figure-img" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
-                <div class="direct-figure-caption">Figure 1: Mission Profile — Rocket ascent, CO<sub>2</sub> cold-gas apogee deployment, wing swivel lock, and controlled autonomous descent.</div>
+                <img src="figures/Picture1.png" alt="Concept of Operations Flight Profile" class="direct-figure-img" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                <div class="direct-figure-caption">Figure 1: Mission Profile - Rocket ascent, CO<sub>2</sub> cold-gas autonomous deployment, and wing swivel lock.</div>
             </div>
 
-            <!-- Capture29 Added to Project Overview Section -->
+            <!-- Apogee Deployment Kinematics -->
             <div class="direct-figure-item">
                 <h4 style="text-align: center;">Apogee Deployment &amp; Separation Sequence</h4>
                 <p style="text-align: center; max-width: 800px; margin: 0 auto 12px auto;">
-                    CAD modeling of the separation kinematics showing the rocket airframe body, nosecone separation, and the Raptor Mini glider deploying outward along the internal rail track.
+                    CAD modeling of the separation kinematics showing the rocket airframe body, nosecone separation, and the RAPTOR Mini glider deploying outward along the internal rail track.
                 </p>
-                <img src="Capture29.png" alt="Apogee Deployment and Separation Sequence (Capture 29)" class="direct-figure-img" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
-                <div class="direct-figure-caption">Figure 2: Apogee Deployment Kinematics (Capture 29) — Separation of nosecone and rail-guided glider ejection.</div>
+                <img src="figures/Capture29.PNG" alt="Apogee Deployment and Separation Sequence" class="direct-figure-img" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                <div class="direct-figure-caption">Figure 2: Apogee Deployment Kinematics - Separation of nosecone and rail-guided glider ejection.</div>
             </div>
 
             <!-- RAPTOR Subsystem Portals -->
             <h3 class="subsection-title">RAPTOR Subsystem Portals</h3>
             <div class="portal-grid">
                 <div class="portal-card" onclick="switchView('raptor-mini-view', document.querySelectorAll('.nav-tab-btn')[2]);">
-                    <img src="dronelogo.png" alt="Raptor Mini Drone Icon" class="portal-img-icon" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
-                    <h3>Raptor Mini (Drone)</h3>
-                    <span class="portal-btn" style="background-color: #0284c7;">Explore Raptor Mini &rarr;</span>
+                    <img src="figures/Capture38.PNG" alt="RAPTOR Mini Drone Icon" class="portal-img-icon" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h3>RAPTOR Mini</h3>
+                    <span class="portal-btn">Explore RAPTOR Mini &rarr;</span>
                 </div>
                 <div class="portal-card" onclick="switchView('rocket-view', document.querySelectorAll('.nav-tab-btn')[3]);">
-                    <img src="Capture23.png" alt="Launch Vehicle Rocket Icon" class="portal-img-icon" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
-                    <h3>Launch Vehicle (Rocket)</h3>
-                    <span class="portal-btn" style="background-color: #b45309;">Explore Rocket System &rarr;</span>
+                    <img src="figures/Capture23.PNG" alt="RAPTOR Rocket Icon" class="portal-img-icon" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h3>RAPTOR</h3>
+                    <span class="portal-btn">Explore RAPTOR &rarr;</span>
                 </div>
                 <div class="portal-card" onclick="switchView('gallery-view', document.querySelectorAll('.nav-tab-btn')[4]);">
-                    <div class="portal-fa-icon" style="color: #7c3aed;"><i class="fa-solid fa-images"></i></div>
-                    <h3>Media &amp; CAD Gallery</h3>
-                    <span class="portal-btn" style="background-color: #7c3aed;">Open Visual Gallery &rarr;</span>
+                    <div class="portal-fa-icon"><i class="fa-solid fa-images"></i></div>
+                    <h3>Gallery</h3>
+                    <span class="portal-btn">Open Gallery &rarr;</span>
                 </div>
                 <div class="portal-card" onclick="switchView('documents-view', document.querySelectorAll('.nav-tab-btn')[5]);">
-                    <div class="portal-fa-icon" style="color: #c53030;"><i class="fa-solid fa-file-pdf"></i></div>
-                    <h3>Document Repository</h3>
-                    <span class="portal-btn" style="background-color: #c53030;">Open Documents &rarr;</span>
+                    <div class="portal-fa-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                    <h3>Documents</h3>
+                    <span class="portal-btn">Open Documents &rarr;</span>
                 </div>
             </div>
 
@@ -1341,30 +1277,30 @@
                 </div>
             </div>
 
-            <!-- Single Team Section on Overview -->
+            <!-- Team Section on Overview -->
             <div id="team-section" style="scroll-margin-top: 80px;">
                 <h3 class="subsection-title" style="margin-top: 35px;">Team Members &amp; Engineering Sub-Teams</h3>
                 <p style="color: var(--text-muted); margin-bottom: 18px;">
                     We are five <strong>Electrical Engineering</strong> seniors at Northern Arizona University, all active members of the <strong>NAU Rocket Club</strong>.
                 </p>
-                <img src="20261023_133642.jpg" alt="Project RAPTOR Team at Midterm Presentation" class="cropped-team-photo" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                <img src="figures/20261023_133642.jpg" alt="Project RAPTOR Team at Midterm Presentation" class="cropped-team-photo" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                 <div class="photo-caption">
-                    Project RAPTOR Team at Midterm Presentation — <strong>Left to Right: Rhett Yardley, Dominic Hartman, Carter Novick, Justin Fox, Kaidan Holliday.</strong>
+                    Project RAPTOR Team at Midterm Presentation.
                 </div>
 
-                <!-- Raptor mini team -->
-                <div class="team-group-title"><i class="fa-solid fa-plane text-info"></i> Raptor mini team</div>
+                <!-- RAPTOR Mini Team -->
+                <div class="team-group-title">RAPTOR Mini Team</div>
                 <div class="team-grid">
                     <div class="team-card">
                         <div>
                             <div class="team-avatar">KH</div>
                             <h4>Kaidan Holliday</h4>
-                            <span class="team-title-badge">ANSYS and design engineer</span><br>
-                            <span class="badge-subteam-pill">Raptor mini team</span>
+                            <span class="team-title-badge">ANSYS and Design Engineer</span><br>
+                            <span class="badge-subteam-pill">RAPTOR Mini Team</span>
                         </div>
                         <div class="team-links">
                             <a href="mailto:krh568@nau.edu" class="team-link-btn"><i class="fa-solid fa-envelope"></i> krh568@nau.edu</a>
-                            <a href="https://linkedin.com" target="_blank" class="team-link-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                            <a href="https://www.linkedin.com/in/kaidanholliday/" target="_blank" class="team-link-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
                             <a href="#documents-view" onclick="switchView('documents-view', document.querySelectorAll('.nav-tab-btn')[5]);" class="team-link-btn"><i class="fa-solid fa-file-user"></i> Resume</a>
                         </div>
                     </div>
@@ -1372,26 +1308,26 @@
                         <div>
                             <div class="team-avatar">RY</div>
                             <h4>Rhett Yardley</h4>
-                            <span class="team-title-badge">Hardware design engineer</span><br>
-                            <span class="badge-subteam-pill">Raptor mini team</span>
+                            <span class="team-title-badge">Hardware Design Engineer</span><br>
+                            <span class="badge-subteam-pill">RAPTOR Mini Team</span>
                         </div>
                         <div class="team-links">
                             <a href="mailto:rny24@nau.edu" class="team-link-btn"><i class="fa-solid fa-envelope"></i> rny24@nau.edu</a>
-                            <a href="https://linkedin.com" target="_blank" class="team-link-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                            <a href="https://www.linkedin.com/in/rhett-yardley-04669b405/" target="_blank" class="team-link-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
                             <a href="#documents-view" onclick="switchView('documents-view', document.querySelectorAll('.nav-tab-btn')[5]);" class="team-link-btn"><i class="fa-solid fa-file-user"></i> Resume</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Rocket team -->
-                <div class="team-group-title"><i class="fa-solid fa-rocket text-warning"></i> Rocket team</div>
+                <!-- Rocket Team -->
+                <div class="team-group-title">RAPTOR Rocket Team</div>
                 <div class="team-grid">
                     <div class="team-card">
                         <div>
                             <div class="team-avatar" style="background-color: var(--nau-gold-dark);">CN</div>
                             <h4>Carter Novick</h4>
-                            <span class="team-title-badge">Team lead</span><br>
-                            <span class="badge-subteam-pill">Rocket team | L2 Certified Pilot</span>
+                            <span class="team-title-badge">Team Lead, 3D Print Prototyper and Manufacturer</span><br>
+                            <span class="badge-subteam-pill">Rocket Team | L2 Certified Pilot</span>
                         </div>
                         <div class="team-links">
                             <a href="mailto:ap3662@nau.edu" class="team-link-btn"><i class="fa-solid fa-envelope"></i> ap3662@nau.edu</a>
@@ -1403,8 +1339,8 @@
                         <div>
                             <div class="team-avatar">JF</div>
                             <h4>Justin Fox</h4>
-                            <span class="team-title-badge">OpenRocket and fabrication engineer</span><br>
-                            <span class="badge-subteam-pill">Rocket team</span>
+                            <span class="team-title-badge">OpenRocket and Fabrication Engineer</span><br>
+                            <span class="badge-subteam-pill">Rocket Team</span>
                         </div>
                         <div class="team-links">
                             <a href="mailto:jcf347@nau.edu" class="team-link-btn"><i class="fa-solid fa-envelope"></i> jcf347@nau.edu</a>
@@ -1417,72 +1353,64 @@
                             <div class="team-avatar" style="background-color: #0f172a;">DH</div>
                             <h4>Dominic Hartman</h4>
                             <span class="team-title-badge">Avionics Bay DTE</span><br>
-                            <span class="badge-subteam-pill">Rocket team</span>
+                            <span class="badge-subteam-pill">Rocket Team</span>
                         </div>
                         <div class="team-links">
                             <a href="mailto:dsh253@nau.edu" class="team-link-btn"><i class="fa-solid fa-envelope"></i> dsh253@nau.edu</a>
-                            <a href="https://linkedin.com" target="_blank" class="team-link-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                            <a href="https://www.linkedin.com/in/dominic-hartman-electrical-engineering/" target="_blank" class="team-link-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
                             <a href="#documents-view" onclick="switchView('documents-view', document.querySelectorAll('.nav-tab-btn')[5]);" class="team-link-btn"><i class="fa-solid fa-file-user"></i> Resume</a>
                         </div>
                     </div>
                 </div>
-            </div> <!-- End of #team-section -->
+            </div>
 
             <!-- Project Timeline -->
-            <h3 class="subsection-title" style="margin-top: 35px;">Detailed Project Timeline (Fall 2026 – Spring 2027)</h3>
+            <h3 class="subsection-title" style="margin-top: 35px;">Detailed Project Timeline (Fall 2026 - Spring 2027)</h3>
             <ul class="timeline-list">
                 <li class="timeline-item">
                     <span class="timeline-date">October 2026 (Semester 1)</span>
-                    <span class="timeline-badge badge-done">Completed</span>
                     <div class="timeline-text">
                         Project proposal approval, initial Onshape CAD modeling, OpenRocket simulation runs (603 m apogee validation), 3D printing of PETG kinematics prototype, order placement for 7.51″ phenolic tubes and CO<sub>2</sub> canister, TRA Phoenix launch site compliance coordination.
                     </div>
                 </li>
                 <li class="timeline-item">
                     <span class="timeline-date">November 2026 (Semester 1)</span>
-                    <span class="timeline-badge badge-progress">In Progress</span>
                     <div class="timeline-text">
-                        Arrival of initial rocket parts; wet-layup fiberglass reinforcement over 7.51″ airframe; fin construction (fiberglass over wood); initial design refinements; presentation of project videos; NAU Fest presentation.
+                        Arrival of initial rocket parts; wet-layup fiberglass reinforcement over 7.51″ airframe; fin construction (fiberglass over laser-cut wood); initial design refinements; ground CO<sub>2</sub> ejection tests; presentation of project videos; NAU Fest presentation.
                     </div>
                 </li>
                 <li class="timeline-item">
                     <span class="timeline-date">December 2026 (Semester 1)</span>
-                    <span class="timeline-badge badge-planned">Upcoming</span>
                     <div class="timeline-text">
-                        Finalize Build 1 assembly; conduct <strong>1st Rocket Launch at TRAPHX</strong> (rocket-only qualification launch without drone release to certify flight dynamics); Semester 1 Final Presentation and report.
+                        Finalize Build 1 assembly; complete full-scale CO<sub>2</sub> ejection tests prior to launch; conduct <strong>1st Rocket Launch at TRAPHX</strong> (qualification launch to certify flight dynamics and recovery); Semester 1 Final Presentation and report.
                     </div>
                 </li>
                 <li class="timeline-item">
                     <span class="timeline-date">January 2027 (Semester 2)</span>
-                    <span class="timeline-badge badge-planned">Planned</span>
                     <div class="timeline-text">
-                        Post-flight telemetry data review from 1st launch; design revisions for Version 2; fabrication of Version 2 Raptor Mini airframe utilizing lightweight ASA Aero foaming filament.
+                        Post-flight telemetry data review from 1st launch; design revisions for Version 2; fabrication of Version 2 RAPTOR Mini airframe utilizing lightweight Bambu Lab ASA Aero foaming filament.
                     </div>
                 </li>
                 <li class="timeline-item">
                     <span class="timeline-date">February 2027 (Semester 2)</span>
-                    <span class="timeline-badge badge-planned">Planned</span>
                     <div class="timeline-text">
-                        Final design construction; benchtop CO<sub>2</sub> cold-gas deployment firing tests; battery discharge threshold validation; heavy drone glide and flight tuning trials.
+                        Final design construction; secondary CO<sub>2</sub> cold-gas deployment payload integration tests; battery discharge threshold validation; heavy drone glide and flight tuning trials.
                     </div>
                 </li>
                 <li class="timeline-item">
                     <span class="timeline-date">March 2027 (Semester 2)</span>
-                    <span class="timeline-badge badge-planned">Planned</span>
                     <div class="timeline-text">
                         Subsystem integration and controls refinement; Spring Midterm presentations; <strong>2nd Rocket Launch</strong> (validating apogee deployment and separation kinematics).
                     </div>
                 </li>
                 <li class="timeline-item">
                     <span class="timeline-date">April 2027 (Semester 2)</span>
-                    <span class="timeline-badge badge-planned">Planned</span>
                     <div class="timeline-text">
                         Final build optimization based on 2nd launch data; <strong>Final Full-Scale Rocket &amp; Glider Launch</strong> demonstrating apogee ejection, wing rotation, autonomous stabilized glide return, and dual parachute recovery.
                     </div>
                 </li>
                 <li class="timeline-item">
                     <span class="timeline-date">May 2027 (Semester 2)</span>
-                    <span class="timeline-badge badge-planned">Planned</span>
                     <div class="timeline-text">
                         Final Capstone presentation, ABET accreditation documentation, departmental archive upload, and project completion.
                     </div>
@@ -1491,168 +1419,265 @@
         </div>
 
         <!-- ========================================== -->
-        <!-- VIEW 2: RAPTOR MINI (DRONE)                -->
+        <!-- VIEW 2: RAPTOR MINI                        -->
         <!-- ========================================== -->
         <div id="raptor-mini-view" class="page-view">
             <div class="title-with-logo">
-                <h2 class="section-title">Raptor Mini: Design Evolution &amp; Aerodynamics</h2>
-                <img src="raptor_logo.png" alt="Project RAPTOR Logo" class="section-raptor-logo" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                <h2 class="section-title">RAPTOR Mini: Design Evolution &amp; Aerodynamics</h2>
+                <img src="figures/raptor_logo.png" alt="Project RAPTOR Logo" class="section-raptor-logo" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
             </div>
 
             <h3 class="subsection-title" style="margin-top: 0;">Airframe Architectural Evolution Across Development</h3>
 
-            <!-- Version 0 -->
+            <!-- Version 0: Proof of Concept -->
             <div class="version-row-card v0-card">
                 <div class="version-row-header v0-header">
                     <div>
-                        <strong style="font-size: 1.1rem;">Version 0 (V0) — Conceptual Baseline &amp; Benchtop Prototyping</strong>
-                        <span style="font-size: 0.8rem; opacity: 0.85; margin-left: 8px;">| Flat-Wing Baseline &amp; Mechanism Verification</span>
+                        <strong style="font-size: 1.1rem;">Version 0 - Initial Proof of Concept</strong>
+                        <span style="font-size: 0.8rem; opacity: 0.85; margin-left: 8px;">| Proof-of-Concept CAD &amp; Swivel Mechanism Evolution</span>
                     </div>
                 </div>
                 <div class="version-row-body">
                     <div class="v0-images-container">
-                        <img src="Capture10.png" alt="Swivel Mechanism CAD Cross Section" title="Swivel Joint Cutaway" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
-                        <img src="20261023_131228.jpg" alt="V0 Assembled Open Wing Prototype" title="3D Printed Prototype (Flight State)" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
-                        <img src="20261023_131244.jpg" alt="V0 Assembled Folded Wing Prototype" title="3D Printed Prototype (Stowed State)" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                        <img src="figures/Capture7.PNG" alt="Version 0 Fuselage Side Cutaway CAD" title="Version 0 Side Profile Cutaway" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <img src="figures/Capture9.PNG" alt="Version 0 Translucent Isometric CAD" title="Version 0 Translucent Assembly" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <img src="figures/Capture10.PNG" alt="Version 0 Thrust Bearings Cutaway" title="Version 0 Thrust Bearing Cutaway" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     </div>
-                    <h5 style="color: var(--nau-navy); margin-bottom: 6px; font-size: 1.05rem;">Swivel Joint Cutaway &amp; Initial PETG Prototype Rig</h5>
+                    <h5 style="color: var(--nau-navy); margin-bottom: 6px; font-size: 1.05rem;">Proof-of-Concept Baseline</h5>
                     <p style="font-size: 0.9rem; line-height: 1.7; color: var(--text-dark);">
-                        The conceptual gray baseline established our geometric constraints: a 30.0-inch flat, straight high-wing profile and an inverted V-tail empennage. The CAD cross-section highlights the central bearing retention pin and locking collar. Physical full-scale models were 3D printed in PETG to evaluate mechanism kinematics, rotation stops, and clearance within the 7.51-inch launch tube in both deployed and stowed states.
+                        <strong>Version 0 served as our initial proof of concept</strong>, establishing the baseline 30.0-inch high-wing geometry and internal packaging envelope to fit inside the 7.51-inch rocket airframe. The initial Version 0 CAD models utilized metal thrust ball bearings in the central wing rotation joint to evaluate rotation stops and mechanical clearances.
                     </p>
                 </div>
             </div>
 
-            <!-- Version 1 -->
+            <!-- Version 1: Physical Prototype & Nylon Washer Transition -->
             <div class="version-row-card v1-card">
                 <div class="version-row-header v1-header">
                     <div>
-                        <strong style="font-size: 1.1rem;">Version 1 (V1) — Aerodynamically Refined CAD Model</strong>
-                        <span style="font-size: 0.8rem; opacity: 0.9; margin-left: 8px;">| Validated in Ansys CFD &amp; Trajectory Simulations</span>
+                        <strong style="font-size: 1.1rem;">Version 1 - Full-Scale 3D Printed Prototype &amp; Transition to Updated Nylon Washer System</strong>
+                        <span style="font-size: 0.8rem; opacity: 0.9; margin-left: 8px;">| Validated in Ansys CFD &amp; MATLAB Aerodynamic Studies</span>
                     </div>
                 </div>
                 <div class="version-row-body">
-                    <img src="Capture19.png" alt="Raptor Mini V1 Blue CAD Model" class="version-hero-img" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
-                    <h5 style="color: #0284c7; margin-bottom: 6px; font-size: 1.05rem;">Dihedral Winglet Integration &amp; Active Foaming Profile</h5>
+                    <div class="v0-images-container">
+                        <img src="figures/20261023_131228.jpg" alt="RAPTOR Mini Version 1 Deployed Wing Prototype" title="Version 1 Physical Prototype (Flight Configuration)" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <img src="figures/20261023_131244.jpg" alt="RAPTOR Mini Version 1 Stowed Wing Prototype" title="Version 1 Physical Prototype (Stowed In-Tube State)" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <img src="figures/Capture24.PNG" alt="RAPTOR Mini Version 1 Isometric CAD" title="Version 1 Isometric CAD Model" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <img src="figures/Capture39.PNG" alt="Updated Nylon Washer Swivel System Cutaway" title="Updated Nylon Washer System" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    </div>
+                    <h5 style="color: var(--nau-navy); margin-bottom: 6px; font-size: 1.05rem;">Dihedral Winglet Integration &amp; Transition to Updated Nylon Washer System</h5>
                     <p style="font-size: 0.9rem; line-height: 1.7; color: var(--text-dark);">
-                        Version 1 introduced aerodynamic winglets with an upturned dihedral to attenuate circular tip vortices and minimize induced drag during loiter glide. All preliminary lift/drag and Ansys CFD flow simulations documented on this site were executed using the <strong>Raptor Mini V1</strong> geometry. The airframe was engineered for active-foaming ASA Aero filament, integrating continuous internal channels for longitudinal carbon-fiber spar tubes.
+                        <strong>Version 1</strong> introduced upturned aerodynamic winglets to attenuate wingtip vortices and minimize induced drag during glide descent. To eliminate bearing binding, reduce parasitic weight, and improve deployment reliability, the heavy metal ball bearings from the proof of concept were replaced with the <strong>updated low-friction nylon washer swivel system</strong>. Full-scale physical prototypes were 3D printed to verify wing rotation stops, structural spar alignment, and stowed clearance inside the 7.51-inch launch tube. All baseline Ansys CFD streamline simulations and MATLAB aerodynamic studies below were performed on the <strong>RAPTOR Mini Version 1</strong> geometry.
                     </p>
                 </div>
             </div>
 
-            <!-- Version 2 -->
+            <!-- Version 2: Current CAD with Vents -->
             <div class="version-row-card v2-card">
                 <div class="version-row-header v2-header">
                     <div>
-                        <strong style="font-size: 1.1rem;">Version 2 (V2) — Active Control Surfaces &amp; Pointed Wingtips</strong>
-                        <span style="font-size: 0.8rem; opacity: 0.9; margin-left: 8px;">| Flight-Ready Revision</span>
+                        <strong style="font-size: 1.1rem;">Version 2 - Current CAD with Cooling Vents &amp; Control Surfaces</strong>
+                        <span style="font-size: 0.8rem; opacity: 0.9; margin-left: 8px;">| Active Foaming Bambu Lab ASA Aero Revision</span>
                     </div>
                 </div>
                 <div class="version-row-body">
-                    <img src="raptor_mini_v2.png" alt="Raptor Mini V2 Red/Orange CAD Model" class="version-hero-img" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
-                    <h5 style="color: #c2410c; margin-bottom: 6px; font-size: 1.05rem;">Trailing-Edge Aileron Integration &amp; Sculpted Wingtip Geometry</h5>
+                    <div class="v0-images-container">
+                        <img src="figures/Capture38.PNG" alt="RAPTOR Mini Version 2 Isometric CAD with Vents" title="Version 2 Isometric CAD with Vents" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <img src="figures/Capture39.PNG" alt="RAPTOR Mini Version 2 Internal Cross Section" title="Version 2 Longitudinal Cutaway & Nylon Washer System" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <img src="figures/Capture40.PNG" alt="RAPTOR Mini Version 2 Front View CAD" title="Version 2 Front Elevation CAD" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <img src="figures/Capture41.PNG" alt="RAPTOR Mini Version 2 Top-Down View with Vents" title="Version 2 Top Planform View with Vents" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    </div>
+                    <h5 style="color: var(--nau-navy); margin-bottom: 6px; font-size: 1.05rem;">Integrated Avionics Cooling Vents, Nylon Washer Pivot &amp; Aileron Control Surfaces</h5>
                     <p style="font-size: 0.9rem; line-height: 1.7; color: var(--text-dark); margin-bottom: 8px;">
-                        In the <strong>Raptor Mini V2</strong>, functional trailing-edge ailerons were added and the wingtips were pointed to refine roll authority and boundary-layer separation during descent. 
+                        <strong>Version 2</strong> is our current flight-ready CAD iteration featuring integrated NACA-style cooling air vents to regulate internal electronics and Walksnail VTX temperatures, an updated nylon washer swivel retention system, sculpted dihedral winglets, and functional trailing-edge control surfaces.
                     </p>
-                    <p style="font-size: 0.9rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 8px;">
-                        <em>Note regarding internal routing:</em> While the outer aerodynamic surfaces and control planes are modeled, concealed linkage tunnels and internal wire routing for the flight controller are not modeled into V2 yet, and will be added in upcoming CAD releases.
+                    <p style="font-size: 0.9rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 0;">
+                        <em>Note:</em> Additional internal servo linkage channels and wire routing refinements are being finalized as Version 2 moves into full CFD verification and Bambu Lab ASA Aero fabrication.
                     </p>
-                    <p style="font-size: 0.9rem; line-height: 1.7; color: #9a3412; font-weight: 600;">
-                        <i class="fa-solid fa-compass-drafting me-1"></i> Many new aerodynamic, mechanical, and internal packaging designs are coming soon!
-                    </p>
+                </div>
+            </div>
+
+            <!-- Engineering 4-View Drawings for RAPTOR Mini -->
+            <h3 class="subsection-title">RAPTOR Mini Engineering 4-View Drawings</h3>
+            <div class="matlab-plots-grid">
+                <div class="matlab-item">
+                    <h5>Engineering 4-View (Flight Configuration)</h5>
+                    <img src="figures/Picture11.png" alt="RAPTOR Mini 4-View Drawing Flight Configuration" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                </div>
+                <div class="matlab-item">
+                    <h5>Engineering 4-View (Stowed In-Tube Configuration)</h5>
+                    <img src="figures/Picture12.png" alt="RAPTOR Mini 4-View Drawing Stowed Configuration" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                 </div>
             </div>
 
             <!-- Materials & Propulsion -->
             <div class="content-box">
                 <h4 style="font-size: 1.1rem; color: var(--nau-navy); margin-bottom: 10px;">
-                    <i class="fa-solid fa-layer-group text-primary me-2"></i>Materials, Structural Backbone &amp; Propulsion Integration
+                    Materials, Bambu Lab ASA Aero &amp; Propulsion Integration
                 </h4>
                 <p style="font-size: 0.92rem; line-height: 1.7; margin-bottom: 12px;">
-                    While our V0 prototype was printed in PETG to evaluate assembly clearances, PETG's high density yields excess wing loading. For our flight-ready iteration, the team is transitioning to <strong>ASA Aero (active foaming Acrylonitrile Styrene Acrylate)</strong> paired with structural composite reinforcers:
+                    While our initial prototype was printed in standard PETG to verify mechanical clearances, solid filament has a high density that increases wing loading. For our flight airframe, the team is manufacturing the glider using <strong>Bambu Lab ASA Aero</strong> active-foaming filament paired with carbon-fiber structural spars:
                 </p>
                 <ul style="font-size: 0.88rem; color: var(--text-dark); margin-left: 20px; margin-bottom: 15px;">
-                    <li style="margin-bottom: 6px;"><strong>Carbon Fiber Spar Backbone:</strong> To provide rigid bending and torsional stiffness under high aerodynamic loading, we are running <strong>carbon fiber tubes down the middle/centerline of the fuselage</strong> and through the main wing root. This prevents flexure during deployment and high-speed glide transitions.</li>
-                    <li style="margin-bottom: 6px;"><strong>Rear Pusher Propeller System:</strong> The team plans to <strong>add a propeller mounted at the rear/back of the Raptor Mini</strong> (powered by a SunnySky brushless motor with folding pusher blades) to provide forward propulsion for extended loiter and controlled navigation back to the recovery coordinates.</li>
-                    <li style="margin-bottom: 6px;"><strong>~60% Weight Reduction:</strong> ASA Aero utilizes a heat-activated foaming agent during extrusion, reducing airframe density drastically while retaining structural rigidity.</li>
-                    <li style="margin-bottom: 6px;"><strong>Extreme UV &amp; Heat Deflection:</strong> Unlike PLA or standard foams that soften in desert heat, ASA Aero withstands temperatures exceeding 90°C and resists intense UV degradation during field testing in Wickenburg, Arizona.</li>
-                    <li><strong>Zero-Support Geometry Redesign:</strong> Engineered with 45° self-supporting internal overhangs to eliminate slicer support dependency.</li>
+                    <li style="margin-bottom: 6px;"><strong>Bambu Lab ASA Aero Active-Foaming Filament:</strong> Specially formulated for lightweight UAV and RC aircraft structures, Bambu Lab ASA Aero foams as it is extruded at elevated nozzle temperatures, expanding internally to form a closed-cell microstructure. By tuning print temperature and flow rate, airframe weight is reduced by <strong>50% to 60%</strong> compared to solid filaments while maintaining crisp outer mold line accuracy.</li>
+                    <li style="margin-bottom: 6px;"><strong>Superior UV, Weather &amp; Thermal Resistance:</strong> Unlike standard PLA or LW-PLA which warp rapidly under solar heating, Bambu Lab ASA Aero offers exceptional UV stability and high heat resistance, preventing deformation on the flight line in the Arizona desert.</li>
+                    <li style="margin-bottom: 6px;"><strong>Carbon Fiber Spar Backbone:</strong> Continuous carbon fiber tubes run longitudinally down the centerline of the fuselage and through the main wing root to provide high bending and torsional rigidity during apogee deployment and high-speed pull-out.</li>
+                    <li style="margin-bottom: 6px;"><strong>Rear Pusher Propeller System:</strong> A rear-mounted brushless pusher motor with folding propeller blades provides forward thrust for extended loiter and controlled return to the recovery zone.</li>
                 </ul>
 
                 <table class="specs-table">
                     <tbody>
                         <tr><td style="width: 35%; font-weight: bold;">Unfolded Wingspan</td><td>30.0 in (762 mm) with integrated aerodynamic winglets</td></tr>
-                        <tr><td style="font-weight: bold;">Wing Chord &amp; Area</td><td>5.0 to 6.0 in tapered profile | Total Wing Area: 0.200 m²</td></tr>
+                        <tr><td style="font-weight: bold;">Wing Chord &amp; Total Wing Area</td><td>5.0 to 5.58 in profile | Total Wing Area: 0.113 m² (approx. 0.1 m²)</td></tr>
                         <tr><td style="font-weight: bold;">Stowed Envelope</td><td>36.0 in length × 6.0 in width × 5.75 in height (fits 7.51″ tube)</td></tr>
+                        <tr><td style="font-weight: bold;">Swivel Retention Mechanism</td><td>Updated low-friction nylon washer system with central locking bolt</td></tr>
                         <tr><td style="font-weight: bold;">Structural Reinforcement</td><td>Continuous carbon fiber spar tubes running down the center fuselage and wings</td></tr>
-                        <tr><td style="font-weight: bold;">Primary Material</td><td>ASA Aero (60% weight reduction over solid filaments)</td></tr>
+                        <tr><td style="font-weight: bold;">Primary Airframe Material</td><td>Bambu Lab ASA Aero active-foaming filament (~50-60% weight savings, high UV/heat resistance)</td></tr>
                         <tr><td style="font-weight: bold;">Flight Controller</td><td>Matek Systems F405-WING V2 running ArduPilot</td></tr>
                         <tr><td style="font-weight: bold;">Propulsion Configuration</td><td>Rear-mounted brushless pusher motor with folding propeller blades</td></tr>
-                        <tr><td style="font-weight: bold;">Radio / Video Link</td><td>Radiomaster RP1 ELRS 2.4GHz receiver, Foxeer Reaper Nano 5.8 GHz VTx</td></tr>
+                        <tr><td style="font-weight: bold;">Radio / Digital Video Link (VTX)</td><td>Radiomaster RP1 ELRS 2.4GHz receiver, Walksnail Avatar HD Digital VTX</td></tr>
                     </tbody>
                 </table>
             </div>
 
-            <!-- MATLAB Lift & Drag Performance Analysis -->
-            <h3 class="subsection-title">Aerodynamic Lift &amp; Drag Analysis (Raptor Mini V1)</h3>
-            <p style="font-size: 0.92rem; color: #0369a1; font-weight: 600; margin-bottom: 15px;">
-                <i class="fa-solid fa-circle-info me-1"></i> Modeled and calculated exclusively for the <strong>Raptor Mini V1</strong> airframe using Half-Span Symmetry at a Trim Angle of Attack ($\alpha$) of $4.5^\circ$, Total Wing Area of $0.200\text{ m}^2$, and an altitude of 2,000 ft AGL.
-            </p>
-
-            <div class="matlab-plots-grid">
-                <div class="matlab-item">
-                    <h5>Weight Capacity vs. Speed ($\alpha = 4.5^\circ$)</h5>
-                    <img src="matlab_weight_vs_speed.png" alt="Weight Capacity vs Speed MATLAB Graph" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
-                </div>
-                <div class="matlab-item">
-                    <h5>Full Aircraft Lift Force vs. Speed</h5>
-                    <img src="matlab_lift_vs_speed.png" alt="Lift Force vs Speed MATLAB Graph" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
-                </div>
+            <!-- ========================================================== -->
+            <!-- SIMULATION SECTION 1: RAPTOR MINI V1 SIMULATIONS           -->
+            <!-- ========================================================== -->
+            <div class="title-with-logo" style="margin-top: 40px;">
+                <h2 class="section-title">1. RAPTOR Mini Version 1 Simulations (MATLAB &amp; Ansys CFD)</h2>
             </div>
 
-            <!-- Specifications Table with MathJax & Alternating Rows -->
-            <table class="specs-table">
-                <thead>
-                    <tr>
-                        <th>Raptor Mini V1 Airspeed</th>
-                        <th>True Lift Coeff ($C_L$)</th>
-                        <th>True Drag Coeff ($C_D$)</th>
-                        <th>Lift-to-Drag Ratio ($L/D$)</th>
-                        <th>Full Lift Force (N)</th>
-                        <th>Maximum Aircraft Weight Capacity</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>20.0 m/s</strong> (44.7 mph)</td>
-                        <td>0.1557</td>
-                        <td>0.03501</td>
-                        <td>4.45</td>
-                        <td>7.19 N</td>
-                        <td><strong>733 g</strong> (1.62 lbs)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>25.0 m/s</strong> (55.9 mph)</td>
-                        <td>0.1567</td>
-                        <td>0.03440</td>
-                        <td>4.56</td>
-                        <td>11.31 N</td>
-                        <td><strong>1,153 g</strong> (2.54 lbs)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>28.0 m/s</strong> (62.6 mph)</td>
-                        <td>0.1573</td>
-                        <td>0.03410</td>
-                        <td>4.61</td>
-                        <td>14.25 N</td>
-                        <td><strong>1,452 g</strong> (3.20 lbs)</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="content-box">
+                <h3 style="color: var(--nau-navy); margin-top: 0; margin-bottom: 10px;">MATLAB Aerodynamic Lift, Drag &amp; Efficiency Analysis (RAPTOR Mini Version 1)</h3>
+                <p style="font-size: 0.92rem; color: var(--text-dark); margin-bottom: 15px;">
+                    Full-aircraft aerodynamic performance was evaluated across airspeeds from <strong>10 mph to 50 mph</strong> for two primary flight regimes: <strong>$\alpha = 4^\circ$ (Cruise)</strong> and <strong>$\alpha = 12^\circ$ (Pull-Out / High Lift)</strong>, using a total wing area of <strong>$0.113\text{ m}^2$ ($0.1\text{ m}^2$)</strong>.
+                </p>
 
-            <!-- ANSYS CFD SIMULATIONS (STAGGERED ALTERNATING LAYOUT) -->
-            <h3 class="subsection-title">Ansys CFD Streamline &amp; Flow Field Modeling (Raptor Mini V1)</h3>
-            <p style="font-size: 0.92rem; color: #0369a1; font-weight: 600; margin-bottom: 25px;">
-                <i class="fa-solid fa-circle-check me-1"></i> All computational fluid dynamics (CFD) streamline simulations below were executed exclusively on the <strong>Raptor Mini V1</strong> using Ansys Student (2026 R1). Click any image to view in full resolution:
+                <!-- MATLAB Graphs -->
+                <div class="matlab-plots-grid">
+                    <div class="matlab-item">
+                        <h5>Full Aircraft Lift vs. Airspeed</h5>
+                        <img src="figures/LIFT FORCE_VS_AIRSPEED_Raptor_mini_v1.png" alt="RAPTOR Mini Version 1 Full Aircraft Lift vs Airspeed" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    </div>
+                    <div class="matlab-item">
+                        <h5>Aerodynamic Efficiency (L/D) vs. Airspeed</h5>
+                        <img src="figures/AERODYNAMIC_EFFICIENCY_Raptor_mini_v1.png" alt="RAPTOR Mini Version 1 Aerodynamic Efficiency L/D vs Airspeed" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    </div>
+                    <div class="matlab-item">
+                        <h5>Full Aircraft Drag vs. Airspeed</h5>
+                        <img src="figures/DRAG_FORCE_VS_AIRSPEED_Raptor_mini_v1.png" alt="RAPTOR Mini Version 1 Full Aircraft Drag vs Airspeed" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    </div>
+                </div>
+
+                <!-- Table 1: 4 Degrees (Cruise) -->
+                <h4 style="color: var(--nau-navy); margin-top: 25px; margin-bottom: 8px;">
+                    RAPTOR Mini Version 1 Full Aircraft Data - 4&deg; Angle of Attack (Cruise)
+                </h4>
+                <p style="font-size: 0.86rem; color: var(--text-muted); margin-bottom: 10px;">
+                    Note: Values below represent direct <strong>Lift Force (N)</strong> (with supported aircraft weight in grams) and <strong>Drag Force (N)</strong> across airspeeds, rather than dimensionless coefficients.
+                </p>
+                <table class="specs-table">
+                    <thead>
+                        <tr>
+                            <th>Airspeed (mph)</th>
+                            <th>Total Lift Force (N)</th>
+                            <th>Equivalent Supported Weight (g)</th>
+                            <th>Total Drag Force (N)</th>
+                            <th>Lift-to-Drag Ratio ($L/D$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>10 mph</strong></td><td>0.3572 N</td><td>36 g</td><td>0.0900 N</td><td>3.97</td></tr>
+                        <tr><td><strong>15 mph</strong></td><td>0.8278 N</td><td>84 g</td><td>0.1886 N</td><td>4.39</td></tr>
+                        <tr><td><strong>20 mph</strong></td><td>1.5062 N</td><td>154 g</td><td>0.3224 N</td><td>4.67</td></tr>
+                        <tr><td><strong>25 mph</strong></td><td>2.3883 N</td><td>243 g</td><td>0.4898 N</td><td>4.88</td></tr>
+                        <tr><td><strong>30 mph</strong></td><td>3.4585 N</td><td>353 g</td><td>0.6893 N</td><td>5.02</td></tr>
+                        <tr><td><strong>35 mph</strong></td><td>4.7946 N</td><td>489 g</td><td>0.9272 N</td><td>5.17</td></tr>
+                        <tr><td><strong>40 mph</strong></td><td>6.2901 N</td><td>641 g</td><td>1.1935 N</td><td>5.27</td></tr>
+                        <tr><td><strong>45 mph</strong></td><td>8.0141 N</td><td>817 g</td><td>1.4945 N</td><td>5.36</td></tr>
+                        <tr><td><strong>50 mph</strong></td><td>9.9541 N</td><td>1,015 g</td><td>1.8289 N</td><td>5.44</td></tr>
+                    </tbody>
+                </table>
+
+                <!-- Table 2: 12 Degrees (Pull-Out / High Lift) -->
+                <h4 style="color: var(--nau-navy); margin-top: 28px; margin-bottom: 8px;">
+                    RAPTOR Mini Version 1 Full Aircraft Data - 12&deg; Angle of Attack (Pull-Out / High Lift)
+                </h4>
+                <table class="specs-table">
+                    <thead>
+                        <tr>
+                            <th>Airspeed (mph)</th>
+                            <th>Total Lift Force (N)</th>
+                            <th>Equivalent Supported Weight (g)</th>
+                            <th>Total Drag Force (N)</th>
+                            <th>Lift-to-Drag Ratio ($L/D$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>10 mph</strong></td><td>0.4970 N</td><td>51 g</td><td>0.1576 N</td><td>3.15</td></tr>
+                        <tr><td><strong>15 mph</strong></td><td>1.1619 N</td><td>118 g</td><td>0.3471 N</td><td>3.35</td></tr>
+                        <tr><td><strong>20 mph</strong></td><td>2.1159 N</td><td>216 g</td><td>0.6092 N</td><td>3.47</td></tr>
+                        <tr><td><strong>25 mph</strong></td><td>3.3708 N</td><td>344 g</td><td>0.9463 N</td><td>3.56</td></tr>
+                        <tr><td><strong>30 mph</strong></td><td>4.9297 N</td><td>503 g</td><td>1.3575 N</td><td>3.63</td></tr>
+                        <tr><td><strong>35 mph</strong></td><td>6.8018 N</td><td>693 g</td><td>1.8447 N</td><td>3.69</td></tr>
+                        <tr><td><strong>40 mph</strong></td><td>8.9811 N</td><td>916 g</td><td>2.4068 N</td><td>3.73</td></tr>
+                        <tr><td><strong>45 mph</strong></td><td>11.4759 N</td><td>1,170 g</td><td>3.0446 N</td><td>3.77</td></tr>
+                        <tr><td><strong>50 mph</strong></td><td>14.2832 N</td><td>1,456 g</td><td>3.7579 N</td><td>3.80</td></tr>
+                    </tbody>
+                </table>
+
+                <!-- Pitch Moment Analysis -->
+                <h4 style="color: var(--nau-navy); margin-top: 30px; margin-bottom: 10px;">
+                    Pitch Moment, Longitudinal Stability &amp; Battery Placement Analysis (30 mph)
+                </h4>
+                <p style="font-size: 0.92rem; line-height: 1.7; color: var(--text-dark); margin-bottom: 14px;">
+                    To guarantee stable autonomous recovery after apogee ejection, longitudinal static stability was analyzed by evaluating the aircraft's <strong>pitching moment</strong> ($M$) at 30 mph across both $\alpha = 4^\circ$ and $\alpha = 12^\circ$. As angle of attack increases from $4^\circ$ to $12^\circ$, total lift increases by $+1.471\text{ N}$ while the pitching moment becomes more negative by $\Delta M = -0.1362\text{ N}\cdot\text{m}$ (from $-0.2278\text{ N}\cdot\text{m}$ to $-0.3640\text{ N}\cdot\text{m}$). Because $\frac{\partial M}{\partial \alpha} < 0$, the aircraft produces a natural nose-down restoring moment whenever disturbed upward by wind gusts, confirming positive longitudinal static stability when the Center of Gravity (CG) is positioned forward of the Aerodynamic Neutral Point (NP).
+                </p>
+
+                <table class="specs-table">
+                    <thead>
+                        <tr>
+                            <th>Stability &amp; Pitch Moment Parameter (at 30 mph)</th>
+                            <th>Simulated Value / Requirement</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Lift at $\alpha = 4^\circ$ (Cruise)</strong></td>
+                            <td>3.459 N</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Lift at $\alpha = 12^\circ$ (Pull-Out)</strong></td>
+                            <td>4.930 N ($\Delta\text{Lift} = +1.471\text{ N}$)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pitch Moment at $\alpha = 4^\circ$</strong></td>
+                            <td>$-0.2278\text{ N}\cdot\text{m}$</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pitch Moment at $\alpha = 12^\circ$</strong></td>
+                            <td>$-0.3640\text{ N}\cdot\text{m}$ ($\Delta\text{Moment} = -0.1362\text{ N}\cdot\text{m}$)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Aerodynamic Neutral Point (NP)</strong></td>
+                            <td>3.64 inches (9.26 cm) FORWARD of Onshape origin ($+Z$)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Target Center of Gravity (with 10% Static Margin)</strong></td>
+                            <td>4.24 inches (10.78 cm) FORWARD of Onshape origin ($+Z$)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Practical Action (Battery Placement)</strong></td>
+                            <td><strong>Mount the battery in the NOSE cone until the plane balances level at exactly 4.2 inches (10.8 cm) forward of the wing bolt.</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ANSYS CFD SIMULATIONS -->
+            <h3 class="subsection-title">Ansys CFD Streamline &amp; Flow Field Modeling (RAPTOR Mini Version 1)</h3>
+            <p style="font-size: 0.92rem; color: var(--nau-navy); font-weight: 600; margin-bottom: 25px;">
+                All computational fluid dynamics (CFD) streamline simulations below were executed on the <strong>RAPTOR Mini Version 1</strong>. Click any image to view in full resolution:
             </p>
 
             <div class="cfd-staggered-container">
@@ -1660,21 +1685,21 @@
                 <div class="cfd-staggered-row">
                     <div class="cfd-text-col">
                         <h4>1. 3D Velocity Streamlines &amp; Surface Pressure Contours</h4>
-                        <p>Full 3D flowfield of Raptor Mini V1 illustrating velocity progression and surface pressure distribution along the fuselage and wing root junction.</p>
+                        <p>Full 3D flowfield of RAPTOR Mini Version 1 illustrating velocity progression and surface pressure distribution along the fuselage and wing root junction.</p>
                     </div>
                     <div class="cfd-img-col">
-                        <img src="FFFiso.png" alt="Raptor Mini V1 3D Streamlines and Pressure Contours" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                        <img src="figures/FFFiso.png" alt="RAPTOR Mini Version 1 3D Streamlines and Pressure Contours" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     </div>
                 </div>
 
-                <!-- Row 2: Image Left, Text Right (Automated via CSS) -->
+                <!-- Row 2: Image Left, Text Right -->
                 <div class="cfd-staggered-row">
                     <div class="cfd-text-col">
                         <h4>2. Top-Down Spanwise Streamline Alignment</h4>
-                        <p>Verifies attached flow and uniform spanwise velocity distribution across the entire 30.0-inch lifting area of the Raptor Mini V1 at a trim angle of 4.5°.</p>
+                        <p>Verifies attached flow and uniform spanwise velocity distribution across the entire 30.0-inch lifting area of the RAPTOR Mini Version 1.</p>
                     </div>
                     <div class="cfd-img-col">
-                        <img src="topdown.png" alt="Raptor Mini V1 Top Down Streamlines" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                        <img src="figures/topdown.png" alt="RAPTOR Mini Version 1 Top Down Streamlines" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     </div>
                 </div>
 
@@ -1682,78 +1707,110 @@
                 <div class="cfd-staggered-row">
                     <div class="cfd-text-col">
                         <h4>3. Frontal Inflow and Wingtip Vortex</h4>
-                        <p>Airflow division across the aerodynamic nose cone and leading edge, tracking symmetrical outward divergence toward the wingtips on Raptor Mini V1.</p>
+                        <p>Airflow division across the aerodynamic nose cone and leading edge, tracking symmetrical outward divergence toward the wingtips on RAPTOR Mini Version 1.</p>
                     </div>
                     <div class="cfd-img-col">
-                        <img src="front.png" alt="Raptor Mini V1 Frontal Inflow and Wingtip Vortex" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                        <img src="figures/front.png" alt="RAPTOR Mini Version 1 Frontal Inflow and Wingtip Vortex" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     </div>
                 </div>
 
-                <!-- Row 4: Image Left, Text Right (Automated via CSS) -->
+                <!-- Row 4: Image Left, Text Right -->
                 <div class="cfd-staggered-row">
                     <div class="cfd-text-col">
                         <h4>4. Wing Blade Air Ripple Analysis</h4>
                         <p>Flowfield analysis evaluating the air ripple and spanwise deflection generated by the wing blade and upturned dihedral tip geometry.</p>
                     </div>
                     <div class="cfd-img-col">
-                        <img src="wingtip.png" alt="Wing Blade Air Ripple Analysis" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                        <img src="figures/wingtip.png" alt="Wing Blade Air Ripple Analysis" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     </div>
                 </div>
+            </div>
+
+            <!-- ========================================================== -->
+            <!-- SIMULATION SECTION 2: RAPTOR MINI V2 SIMULATIONS           -->
+            <!-- ========================================================== -->
+            <div class="title-with-logo" style="margin-top: 45px;">
+                <h2 class="section-title">2. RAPTOR Mini Version 2 Simulations (Coming Soon)</h2>
+            </div>
+
+            <div class="content-box" style="text-align: center; padding: 40px 26px;">
+                <h3 style="color: var(--nau-navy); margin-bottom: 10px;">RAPTOR Mini Version 2 Aerodynamic CFD &amp; MATLAB Simulations - Coming Soon</h3>
+                <p style="font-size: 0.95rem; color: var(--text-muted); max-width: 780px; margin: 0 auto;">
+                    Ansys CFD flow field modeling and updated MATLAB lift, drag, and pitch moment performance curves for the <strong>RAPTOR Mini Version 2</strong> (incorporating the new avionics cooling vents, nylon washer swivel hub, and trailing-edge control surfaces) are currently in progress and will be added here upon completion.
+                </p>
             </div>
         </div>
 
         <!-- ========================================== -->
-        <!-- VIEW 3: LAUNCH VEHICLE (ROCKET)            -->
+        <!-- VIEW 3: RAPTOR (ROCKET)                    -->
         <!-- ========================================== -->
         <div id="rocket-view" class="page-view">
             <div class="title-with-logo">
-                <h2 class="section-title">Launch Vehicle: Airframe &amp; Trajectory Simulations</h2>
-                <img src="raptor_logo.png" alt="Project RAPTOR Logo" class="section-raptor-logo" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                <h2 class="section-title">RAPTOR: Launch Vehicle Airframe, Fabrication &amp; Trajectory</h2>
+                <img src="figures/raptor_logo.png" alt="Project RAPTOR Logo" class="section-raptor-logo" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
             </div>
 
             <div class="content-box">
                 <h3 style="color: var(--nau-navy); margin-top: 0;">Custom 7.51-Inch High-Powered Rocket</h3>
                 <p style="font-size: 0.95rem; line-height: 1.7; margin-bottom: 15px;">
-                    Because housing and deploying a 30-inch-wingspan drone exceeds commercial kit rockets, the team engineered a custom high-power rocket airframe using <strong>OpenRocket</strong>. The vehicle features a <strong>7.51-inch (19.1 cm) outer diameter</strong> and stands <strong>8.16 feet (249 cm / 98 inches) tall</strong>, designed to carry the Raptor Mini to an apogee of 1,500 to 2,000 ft AGL and recover safely under dual-deployment parachutes.
+                    Because housing and deploying a 30-inch-wingspan drone exceeds standard kit rockets, the team engineered a custom high-power rocket airframe. The vehicle features a <strong>7.51-inch outer diameter</strong> (with a 20.0-inch total fin span) and stands <strong>110.0 inches (9.17 feet) tall</strong>, designed to carry the RAPTOR Mini to an apogee of 1,500 to 2,000 ft AGL and recover safely under dual-deployment parachutes.
                 </p>
 
-                <!-- Dimensional Engineering Drawing of Rocket -->
+                <!-- Rocket Engineering Drawing -->
                 <div class="direct-figure-item">
-                    <h4 style="text-align: center;">Rocket Engineering Dimensional Layout (Height &amp; Diameter)</h4>
-                    <p style="text-align: center; max-width: 800px; margin: 0 auto 10px auto;">
-                        Dimensional layout establishing vehicle length of <strong>249 cm (8.16 ft)</strong> and outer diameter of <strong>19 cm (7.51 in)</strong>, showing forward payload volume, electronics bay, recovery bay, and motor mount:
+                    <h4 style="text-align: center;">RAPTOR Rocket Engineering 3-View Drawing (Height &amp; Width)</h4>
+                    <p style="text-align: center; max-width: 820px; margin: 0 auto 10px auto;">
+                        Full orthographic engineering drawing of the RAPTOR launch vehicle detailing the overall height of <strong>110.0 inches</strong>, airframe body outer diameter of <strong>7.51 inches</strong>, nosecone length of <strong>32.0 inches</strong>, upper payload section of <strong>54.0 inches</strong>, lower booster section of <strong>30.0 inches</strong>, and total fin span width of <strong>20.0 inches</strong>:
                     </p>
-                    <img src="Picture2.png" alt="OpenRocket Airframe Engineering Drawing Layout" class="direct-figure-img" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
-                    <div class="direct-figure-caption">Figure 3: Rocket Engineering Dimensions — Total Height: 249 cm (8.16 ft) | Max Outer Diameter: 19 cm (7.51 in) | Stability: 1.49 calibers.</div>
+                    <img src="figures/rocket_eng_drawing.png" alt="RAPTOR Rocket Engineering Drawing showing Height and Width" class="direct-figure-img" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <div class="direct-figure-caption">Figure 3: RAPTOR Rocket Engineering Drawing - Overall Height: 110.0 in | Body Diameter: 7.51 in | Fin Span Width: 20.0 in.</div>
+                </div>
+
+                <!-- Rocket 3D CAD Views -->
+                <div class="direct-figure-item">
+                    <h4 style="text-align: center;">RAPTOR Launch Vehicle 3D CAD Assembly &amp; Internal Payload Packaging</h4>
+                    <p style="text-align: center; max-width: 820px; margin: 0 auto 10px auto;">
+                        3D CAD views of the RAPTOR rocket assembly showing the outer mold line and translucent internal payload bay with the folded RAPTOR Mini mounted along the internal deployment rail:
+                    </p>
+                    <div class="matlab-plots-grid">
+                        <div class="matlab-item">
+                            <h5>Full Rocket Isometric CAD</h5>
+                            <img src="figures/Capture37.PNG" alt="RAPTOR Rocket Full Isometric CAD" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        </div>
+                        <div class="matlab-item">
+                            <h5>Internal Payload Packaging CAD</h5>
+                            <img src="figures/Capture27.PNG" alt="RAPTOR Rocket Internal Payload Bay CAD" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Custom Airframe & Laser-Cut Fin Details -->
                 <h4 style="font-size: 1.05rem; color: var(--nau-navy); margin-top: 25px; margin-bottom: 8px;">
-                    <i class="fa-solid fa-hammer text-warning me-2"></i>Custom Composite Layup &amp; Laser-Cut Aerodynamic Fins
+                    Custom Composite Layup &amp; Laser-Cut Aerodynamic Fins
                 </h4>
                 <p style="font-size: 0.92rem; line-height: 1.7; margin-bottom: 12px;">
                     While commercial 7.5-inch rocket kits are manufactured and sold, our team deliberately chose not to purchase a pre-assembled commercial kit. Instead, to customize our internal payload bay dimensions and maintain tight budget control, <strong>we ordered standalone 7.51-inch heavy kraft cardboard tubes that we are reinforcing ourselves using wet-layup fiberglass fabric and epoxy resin</strong>.
                 </p>
                 <p style="font-size: 0.92rem; line-height: 1.7; margin-bottom: 15px;">
-                    <strong>Laser-Cut Composite Fins:</strong> For the control fins, <strong>we used a laser cutter to cut very thin precision wood cores, and then laid fiberglass sheets over the wood with epoxy</strong>. This composite sandwich construction produces extremely stiff, lightweight fins capable of handling supersonic shock flutter and high motor thrust without aerodynamic deflection.
+                    <strong>Laser-Cut Composite Fins:</strong> For the control fins, <strong>we used a laser cutter to cut very thin precision wood cores, and then laid fiberglass sheets over the wood with epoxy</strong>. This composite sandwich construction produces extremely stiff, lightweight fins capable of handling high aerodynamic loads and motor thrust without deflection.
                 </p>
 
                 <!-- RAPTOR CO2 Ejection System Details -->
                 <h4 style="font-size: 1.05rem; color: var(--nau-navy); margin-top: 24px; margin-bottom: 8px;">
-                    <i class="fa-solid fa-gas-pump text-primary me-2"></i>The RAPTOR CO<sub>2</sub> Cold-Gas Ejection &amp; Internal Rail System
+                    The RAPTOR CO<sub>2</sub> Cold-Gas Ejection &amp; Internal Rail System
                 </h4>
                 <p style="font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px;">
                     Traditional pyrotechnic black powder ejection charges produce intense flame, superheated gas, and corrosive soot that would scorch and deform thin 3D-printed aerodynamic drone skin. To ensure clean deployment, our team selected the <strong>RAPTOR CO<sub>2</sub> Ejection System</strong> (precision CNC-machined aluminum and stainless steel unit).
                 </p>
                 <p style="font-size: 0.92rem; line-height: 1.7; margin-bottom: 15px;">
-                    <strong>Deployment Mechanics:</strong> The system is <strong>actuated using electric matches (e-matches)</strong> triggered by the Blue Raven flight computer upon reaching apogee. The e-match initiates a micro-charge that drives a piercing pin into the CO<sub>2</sub> cartridge. The instant release of pressurized cold gas acts against an internal baffle to <strong>push the Raptor Mini smoothly along an internal rail system out of the rocket payload bay</strong> into free flight without thermal exposure.
+                    <strong>Deployment Mechanics:</strong> The system is <strong>actuated using electric matches (e-matches)</strong> triggered by the Blue Raven flight computer upon reaching apogee. The e-match initiates a micro-charge that drives a piercing pin into the CO<sub>2</sub> cartridge. The instant release of pressurized cold gas acts against an internal piston/baffle to <strong>push the RAPTOR Mini smoothly along an internal rail system out of the rocket payload bay</strong> into free flight without thermal exposure.
                 </p>
 
                 <!-- Table with Alternating Rows -->
                 <table class="specs-table">
                     <tbody>
-                        <tr><td style="width: 35%; font-weight: bold;">Airframe Outer Diameter (Width)</td><td>7.51 in (191 mm / 19 cm) heavy kraft cardboard reinforced with wet-layup fiberglass</td></tr>
-                        <tr><td style="font-weight: bold;">Total Vehicle Height / Length</td><td>8.16 ft (249 cm / 98 in) standing height</td></tr>
+                        <tr><td style="width: 35%; font-weight: bold;">Airframe Outer Diameter (Width)</td><td>7.51 in (191 mm) heavy kraft cardboard reinforced with wet-layup fiberglass (20.0 in fin span)</td></tr>
+                        <tr><td style="font-weight: bold;">Total Vehicle Height / Length</td><td>110.0 in (9.17 ft / 279.4 cm) overall standing height</td></tr>
                         <tr><td style="font-weight: bold;">Fin Construction</td><td>Laser-cut precision thin wood cores reinforced with fiberglass composite wet-layup</td></tr>
                         <tr><td style="font-weight: bold;">Gross Mass</td><td>~25 lbs (11,813 g loaded with motor, 10,305 g dry mass)</td></tr>
                         <tr><td style="font-weight: bold;">Motor Mount &amp; Motor</td><td>54 mm motor tube | Cesaroni K935-P simulated motor</td></tr>
@@ -1765,202 +1822,363 @@
                 </table>
             </div>
 
+            <!-- Building Progress Section -->
+            <h3 class="subsection-title">Building Progress: Fiberglass Airframe Layup</h3>
+            <div class="content-box">
+                <p style="font-size: 0.94rem; line-height: 1.75; margin-bottom: 18px;">
+                    In early November 2026, the team began full-scale composite manufacturing of the 7.51-inch rocket airframe. To achieve a uniform, high-strength fiberglass layup over the 54-inch and 30-inch heavy kraft body tubes, we constructed a horizontal PVC pipe rotation mandrel supported on sawhorses over a protective tarp. The team wrapped full-length fiberglass cloth around each airframe section, mixed two-part laminating epoxy resin, and worked collaboratively with squeegees and rollers to saturate the weave and eliminate air pockets. This hand-laid composite shell provides the hoop strength and axial rigidity required to withstand high-thrust K-class motor boost and apogee CO<sub>2</sub> deployment forces.
+                </p>
+
+                <div class="direct-gallery-grid" style="margin-bottom: 10px;">
+                    <div class="gallery-item">
+                        <img src="figures/20261104_150920.jpg" alt="Airframe Tube Mounted on Mandrel Stand" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <h5>Airframe Tube Mandrel Setup</h5>
+                        <p>7.51-inch airframe tube mounted on the horizontal rotation pipe prior to fiberglass layup.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="figures/IMG_20261105_121741.jpg" alt="Dry Fiberglass Cloth Alignment" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <h5>Fiberglass Cloth Alignment</h5>
+                        <p>Wrapping and aligning the fiberglass fabric smoothly around the outer circumference of the rocket body tube.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="figures/IMG_20261105_121746.jpg" alt="Initial Epoxy Resin Wet-Out" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <h5>Initial Epoxy Resin Wet-Out</h5>
+                        <p>Pouring and spreading two-part laminating epoxy across the fiberglass reinforcement layer.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="figures/IMG_20261105_121749.jpg" alt="Team Collaborating on Wet-Layup" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <h5>Team Composite Fabrication</h5>
+                        <p>Team members working together to rotate the tube and apply uniform resin coats.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="figures/IMG_20261105_1217462.jpg" alt="Squeegeeing Epoxy into Fiberglass Weave" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <h5>Squeegeeing &amp; Saturating Weave</h5>
+                        <p>Using a laminating squeegee to press epoxy evenly into the fiberglass cloth and remove excess resin.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="figures/IMG_20261105_1217463.jpg" alt="Two-Person Fiberglass Smoothing" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <h5>Longitudinal Seam Smoothing</h5>
+                        <p>Working along the full length of the airframe to ensure zero air bubbles or dry spots.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="figures/IMG_20261105_1217464.jpg" alt="Resin Saturation Inspection" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <h5>Full-Length Wet-Layup Application</h5>
+                        <p>Verifying complete transparency of the wet-out fiberglass cloth as it bonds to the kraft tube.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="figures/IMG_20261105_1217465.jpg" alt="Top-Down View of Fiberglass Wrap" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <h5>Overhead View of Composite Wrap</h5>
+                        <p>Overhead perspective of the saturated 7.51-inch fiberglass airframe section during layup.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="figures/IMG_20261105_12174644.jpg" alt="Detail Work on Fiberglass Surface" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <h5>Surface Finish &amp; Bubble Removal</h5>
+                        <p>Fine-tuning the outer composite surface finish while rotating the mandrel assembly.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="figures/IMG_20261105_1217491.jpg" alt="Saturated Airframe Tube on Mandrel" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <h5>Completed Wet-Layup Section</h5>
+                        <p>Fully saturated fiberglass layup ready for initial stage curing on the rotation stand.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="figures/IMG_20261105_1217492.jpg" alt="Team Inspecting Curing Rocket Tube" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <h5>Post-Layup Quality Check</h5>
+                        <p>Team inspecting the finished fiberglass reinforcement wrap.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="figures/IMG_20261105_1217493.jpg" alt="Curing Fiberglass Airframe Tube" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <h5>Composite Airframe Curing</h5>
+                        <p>Reinforced 7.51-inch rocket body tube curing horizontally on the support rig.</p>
+                    </div>
+                </div>
+            </div>
+
             <!-- OpenRocket Trajectory Graphs -->
             <h3 class="subsection-title">OpenRocket Trajectory &amp; Stability Diagnostic Graphs</h3>
 
             <div class="direct-figure-item">
                 <h4>Altitude &amp; Thrust Profile vs. Flight Time</h4>
                 <p>Cesaroni K935-P motor firing and coast phase. Demonstrates steady acceleration to a simulated peak apogee of 603 m (~2,000 ft AGL) reached at t = 12 seconds with dual-deployment parachute staging.</p>
-                <img src="Picture4.png" alt="Rocket Altitude and Thrust vs Time Graph" class="direct-figure-img" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                <img src="figures/Picture4.png" alt="Rocket Altitude and Thrust vs Time Graph" class="direct-figure-img" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
             </div>
 
             <div class="direct-figure-item">
                 <h4>Variable Wind Speed Stability Simulation</h4>
                 <p>Trajectory modeling under variable 13 mph 90-degree crosswinds increasing with altitude. Verifies that the center of gravity remains securely forward of the center of pressure, sustaining stability &gt; 1.0 caliber throughout boost.</p>
-                <img src="Picture5.png" alt="Variable Wind Simulation Stability Plot" class="direct-figure-img" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                <img src="figures/Picture5.png" alt="Variable Wind Simulation Stability Plot" class="direct-figure-img" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
             </div>
         </div>
 
         <!-- ========================================== -->
-        <!-- VIEW 4: MEDIA & CAD GALLERY                -->
+        <!-- VIEW 4: GALLERY                            -->
         <!-- ========================================== -->
         <div id="gallery-view" class="page-view">
             <div class="title-with-logo">
-                <h2 class="section-title">Media &amp; CAD Visual Archive</h2>
-                <img src="raptor_logo.png" alt="Project RAPTOR Logo" class="section-raptor-logo" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                <h2 class="section-title">Media &amp; CAD Visual Gallery</h2>
+                <img src="figures/raptor_logo.png" alt="Project RAPTOR Logo" class="section-raptor-logo" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
             </div>
             <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px;">
-                Comprehensive photographic archive including benchtop test assemblies, CAD perspectives, presentation milestones, and aerodynamic flow visualizations. Click any image to view full-resolution.
+                Comprehensive photographic archive including fiberglass rocket manufacturing, benchtop test assemblies, CAD iterations (Version 0, Version 1, and Version 2), engineering 4-view drawings, and aerodynamic simulations. Click any image to view full-resolution.
             </p>
 
-            <!-- Category 1: Physical Lab Prototypes -->
-            <div class="gallery-category-title"><i class="fa-solid fa-wrench text-primary"></i> Laboratory Prototypes &amp; Benchtop Assemblies</div>
+            <!-- Category 1: Fiberglass Rocket Construction -->
+            <div class="gallery-category-title">Fiberglass Rocket Construction</div>
             <div class="direct-gallery-grid">
                 <div class="gallery-item">
-                    <img src="20261023_125634.jpg" alt="Lab Assembly Bench Prototype" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                    <img src="figures/20261104_150920.jpg" alt="Airframe Tube Mounted on Mandrel Stand" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Airframe Tube Mandrel Setup</h5>
+                    <p>7.51-inch rocket body tube positioned on the rotation mandrel over a protective tarp.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="figures/IMG_20261105_121741.jpg" alt="Dry Fiberglass Cloth Alignment" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Fiberglass Cloth Alignment</h5>
+                    <p>Wrapping dry fiberglass fabric smoothly around the 7.51-inch tube prior to resin application.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="figures/IMG_20261105_121746.jpg" alt="Initial Epoxy Resin Wet-Out" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Initial Epoxy Resin Wet-Out</h5>
+                    <p>Applying two-part laminating epoxy to bond the fiberglass cloth to the airframe.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="figures/IMG_20261105_121749.jpg" alt="Team Collaborating on Wet-Layup" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Team Composite Fabrication</h5>
+                    <p>Team members collaborating on the wet-layup process.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="figures/IMG_20261105_1217462.jpg" alt="Squeegeeing Epoxy into Fiberglass Weave" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Squeegeeing &amp; Saturating Weave</h5>
+                    <p>Spreading epoxy evenly across the fiberglass weave for a high-strength bond.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="figures/IMG_20261105_1217463.jpg" alt="Two-Person Fiberglass Smoothing" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Longitudinal Seam Smoothing</h5>
+                    <p>Smoothing the fiberglass overlap seam along the length of the rocket body tube.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="figures/IMG_20261105_1217464.jpg" alt="Resin Saturation Inspection" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Full-Length Wet-Layup Application</h5>
+                    <p>Ensuring uniform epoxy saturation across the entire rocket airframe section.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="figures/IMG_20261105_1217465.jpg" alt="Top-Down View of Fiberglass Wrap" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Overhead View of Composite Wrap</h5>
+                    <p>Top-down view of the epoxy-saturated fiberglass cloth on the rotation mandrel.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="figures/IMG_20261105_12174644.jpg" alt="Detail Work on Fiberglass Surface" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Surface Finish &amp; Bubble Removal</h5>
+                    <p>Removing trapped air pockets and excess resin with hand squeegees.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="figures/IMG_20261105_1217491.jpg" alt="Saturated Airframe Tube on Mandrel" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Completed Wet-Layup Section</h5>
+                    <p>Freshly laminated fiberglass rocket tube mounted on the mandrel stand.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="figures/IMG_20261105_1217492.jpg" alt="Team Inspecting Curing Rocket Tube" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Post-Layup Quality Check</h5>
+                    <p>Team inspecting the completed fiberglass layup.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="figures/IMG_20261105_1217493.jpg" alt="Curing Fiberglass Airframe Tube" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Composite Airframe Curing</h5>
+                    <p>Fiberglass-reinforced 7.51-inch airframe tube curing on the support rig.</p>
+                </div>
+            </div>
+
+            <!-- Category 2: Physical Lab Prototypes -->
+            <div class="gallery-category-title">RAPTOR Mini Laboratory Prototypes &amp; Benchtop Assemblies</div>
+            <div class="direct-gallery-grid">
+                <div class="gallery-item">
+                    <img src="figures/20261023_125634.jpg" alt="Lab Assembly Bench Prototype" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     <h5>Benchtop Wing Fitment &amp; Alignment Check</h5>
-                    <p>Initial fit-check of 3D-printed PETG wing sections and fuselage core.</p>
+                    <p>Initial fit-check of 3D-printed wing sections and fuselage core.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="20261023_131228.jpg" alt="Full-Scale 3D Printed Prototype (Flight Configuration)" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
-                    <h5>Full-Scale Prototype (Flight Configuration)</h5>
-                    <p>30-inch wingspan locked at 90° for dimensional check.</p>
+                    <img src="figures/20261023_131228.jpg" alt="Full-Scale 3D Printed Prototype (Flight Configuration)" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>RAPTOR Mini Version 1 Prototype (Flight Configuration)</h5>
+                    <p>30-inch wingspan locked at 90&deg; for dimensional check.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="20261023_131244.jpg" alt="Full-Scale 3D Printed Prototype (Stowed In-Tube State)" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
-                    <h5>Full-Scale Prototype (Stowed State)</h5>
+                    <img src="figures/20261023_131244.jpg" alt="Full-Scale 3D Printed Prototype (Stowed In-Tube State)" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>RAPTOR Mini Version 1 Prototype (Stowed State)</h5>
                     <p>Wing rotated parallel along fuselage in stowed state.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="IMG_20261023_164817709_HDR.jpg" alt="Overhead Planform & Wing Geometry View" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                    <img src="figures/IMG_20261023_164817709_HDR.jpg" alt="Overhead Planform & Wing Geometry View" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     <h5>Overhead Planform &amp; Wing Geometry</h5>
                     <p>High-resolution overhead perspective of the assembled glider.</p>
                 </div>
             </div>
 
-            <!-- Category 2: Raptor Mini CAD Images -->
-            <div class="gallery-category-title"><i class="fa-solid fa-plane text-info"></i> Raptor Mini (Drone) CAD Models</div>
+            <!-- Category 3: RAPTOR Mini CAD Models & 4-View Drawings -->
+            <div class="gallery-category-title">RAPTOR Mini CAD Models &amp; 4-View Drawings</div>
             <div class="direct-gallery-grid">
                 <div class="gallery-item">
-                    <img src="Capture24.png" alt="Current Raptor Mini 3D CAD Assembly" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
-                    <h5>Current Raptor Mini Isometric CAD</h5>
-                    <p>3D rendered assembly showing continuous airframe contours and inverted V-tail.</p>
+                    <img src="figures/Capture38.PNG" alt="RAPTOR Mini Version 2 Isometric CAD with Vents" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>RAPTOR Mini Version 2 Isometric CAD with Vents</h5>
+                    <p>Current Version 2 CAD featuring cooling air vents, dihedral winglets, and ailerons.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="dronelogo.png" alt="Raptor Mini Geometric Wireframe CAD" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
-                    <h5>Raptor Mini Geometric Wireframe CAD</h5>
-                    <p>Orthographic wireframe CAD defining outer mould line dimensions.</p>
+                    <img src="figures/Capture39.PNG" alt="RAPTOR Mini Version 2 Cutaway with Updated Nylon Washer System" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Updated Nylon Washer Swivel Cutaway (Version 2)</h5>
+                    <p>Longitudinal cross-section showing the updated nylon washer wing pivot system.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="raptor_mini_v2.png" alt="Raptor Mini V2 Flight-Ready Model with Control Surfaces" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
-                    <h5>Raptor Mini V2 Control Surfaces CAD</h5>
-                    <p>CAD model with integrated trailing-edge ailerons and sculpted wingtips.</p>
+                    <img src="figures/Capture40.PNG" alt="RAPTOR Mini Version 2 Front View CAD" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>RAPTOR Mini Version 2 Front View CAD</h5>
+                    <p>Front elevation illustrating upturned dihedral wingtips and fuselage profile.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="Capture19.png" alt="Raptor Mini V1 Blue Flight CAD" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
-                    <h5>Raptor Mini V1 Aerodynamic CAD</h5>
-                    <p>Aerodynamic baseline model utilized for all Ansys CFD simulations.</p>
+                    <img src="figures/Capture41.PNG" alt="RAPTOR Mini Version 2 Top-Down Planform CAD with Vents" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>RAPTOR Mini Version 2 Top Planform with Vents</h5>
+                    <p>Top-down view highlighting upper fuselage cooling vents and control surfaces.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="Capture10.png" alt="Wing Rotation Swivel Mechanism & Lock Collar Cutaway" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
-                    <h5>Wing Rotation Swivel Mechanism Cutaway</h5>
-                    <p>Internal CAD section of center rotation pin and retention collar.</p>
+                    <img src="figures/Capture24.PNG" alt="RAPTOR Mini Version 1 3D CAD Assembly" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>RAPTOR Mini Version 1 Isometric CAD</h5>
+                    <p>3D rendered Version 1 assembly used for baseline aerodynamic CFD simulations.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="Capture11.png" alt="Glider In-Tube Packaging Clearance Model" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                    <img src="figures/Capture11.PNG" alt="Glider In-Tube Packaging Clearance Model" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     <h5>Glider In-Tube Packaging Clearance</h5>
                     <p>CAD model illustrating wing folded flush with the upper fuselage.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="Capture7.png" alt="Fuselage Aerodynamic Profile & Inverted V-Tail" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
-                    <h5>Fuselage Aerodynamic Profile View</h5>
-                    <p>Longitudinal aerodynamic contour and flight profile of the airframe.</p>
+                    <img src="figures/Capture7.PNG" alt="Version 0 Proof of Concept Fuselage Side Cutaway" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Version 0 Proof of Concept Side Cutaway</h5>
+                    <p>Initial proof-of-concept longitudinal profile with original thrust bearings.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="Capture9.png" alt="Ventral Fuselage Contour & Payload Clearance" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
-                    <h5>Ventral Fuselage Contour &amp; Payload Volume</h5>
-                    <p>Underside view of fuselage payload volume and wing clearance.</p>
+                    <img src="figures/Capture9.PNG" alt="Version 0 Proof of Concept Translucent Assembly" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Version 0 Proof of Concept Translucent CAD</h5>
+                    <p>Initial proof-of-concept internal layout and wing pivot visualization.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="Picture11.png" alt="Engineering 3-View Drawing (Flight Configuration)" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
-                    <h5>Engineering 3-View (Flight Configuration)</h5>
-                    <p>Orthographic dimensions for the 30.0″ unfolded configuration.</p>
+                    <img src="figures/Capture10.PNG" alt="Version 0 Proof of Concept Thrust Bearing Cutaway" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Version 0 Thrust Bearing Cutaway</h5>
+                    <p>Close-up section of the Version 0 proof-of-concept thrust bearing joint.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="Picture12.png" alt="Engineering 3-View Drawing (Stowed / Rocket Tube Configuration)" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
-                    <h5>Engineering 3-View (Stowed In-Tube State)</h5>
-                    <p>Dimensions showing 36.0″ stowed length and 6.0″ folded width.</p>
+                    <img src="figures/Picture11.png" alt="Engineering 4-View Drawing (Flight Configuration)" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Engineering 4-View (Flight Configuration)</h5>
+                    <p>Orthographic 4-View dimensions for the 30.0″ unfolded configuration.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="figures/Picture12.png" alt="Engineering 4-View Drawing (Stowed / Rocket Tube Configuration)" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Engineering 4-View (Stowed In-Tube State)</h5>
+                    <p>Orthographic 4-View dimensions showing 36.0″ stowed length and 6.0″ folded width.</p>
                 </div>
             </div>
 
-            <!-- Category 3: Launch Vehicle (Rocket) CAD Models -->
-            <div class="gallery-category-title"><i class="fa-solid fa-rocket text-warning"></i> Launch Vehicle (Rocket) CAD Models</div>
+            <!-- Category 4: RAPTOR Rocket CAD Models & Engineering Drawing -->
+            <div class="gallery-category-title">RAPTOR (Rocket) CAD Models &amp; Engineering Drawings</div>
             <div class="direct-gallery-grid">
                 <div class="gallery-item">
-                    <img src="Capture23.png" alt="Launch Vehicle 3D Isometric CAD" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
-                    <h5>Launch Vehicle 3D Isometric CAD</h5>
+                    <img src="figures/rocket_eng_drawing.png" alt="RAPTOR Rocket Engineering Drawing" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>RAPTOR Rocket Engineering Drawing</h5>
+                    <p>Dimensional drawing showing 110.0″ height, 7.51″ diameter, and 20.0″ fin span.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="figures/Capture37.PNG" alt="RAPTOR Rocket Full 3D CAD" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>RAPTOR Rocket 3D CAD</h5>
+                    <p>Isometric CAD assembly of the full-scale high-powered launch vehicle.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="figures/Capture23.PNG" alt="Launch Vehicle 3D Isometric CAD" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Launch Vehicle Exterior Render</h5>
                     <p>High-powered rocket 3D CAD showing 7.51″ airframe and fin empennage.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="Capture25.png" alt="Full Rocket Airframe Longitudinal Profile" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                    <img src="figures/Capture25.PNG" alt="Full Rocket Airframe Longitudinal Profile" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     <h5>Full Rocket Airframe Profile (CAD)</h5>
-                    <p>Longitudinal CAD profile illustrating 8.16 ft overall vehicle height.</p>
+                    <p>Longitudinal CAD profile illustrating the vehicle's standing geometry.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="Capture26.png" alt="Rocket Modular Staging CAD" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                    <img src="figures/Capture26.PNG" alt="Rocket Modular Staging CAD" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     <h5>Rocket Modular Staging Subassemblies</h5>
                     <p>Exploded CAD rendering showing nosecone, forward payload bay, and motor section.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="Capture27.png" alt="Rocket Internal Assembly with Stowed Glider Payload" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                    <img src="figures/Capture27.PNG" alt="Rocket Internal Assembly with Stowed Glider Payload" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     <h5>Glider Stowed in Rocket Payload Bay</h5>
                     <p>Translucent airframe CAD showing folded glider packaged on internal rail track.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="Capture28.png" alt="Rocket Payload Deployment Kinematics CAD" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                    <img src="figures/Capture28.PNG" alt="Rocket Payload Deployment Kinematics CAD" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     <h5>Rail-Guided Ejection Kinematics</h5>
                     <p>CAD model illustrating glider deployment along payload rail upon apogee separation.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="Capture29.png" alt="Full Apogee Separation Sequence CAD" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                    <img src="figures/Capture29.PNG" alt="Full Apogee Separation Sequence CAD" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     <h5>Apogee Deployment Separation Sequence</h5>
                     <p>Full CAD separation sequence showing nosecone jettison and glider release.</p>
                 </div>
             </div>
 
-            <!-- Category 4: Ansys CFD Flow Studies -->
-            <div class="gallery-category-title"><i class="fa-solid fa-wind text-success"></i> Extended Aerodynamic CFD Flow Studies</div>
+            <!-- Category 5: Ansys CFD & MATLAB Aerodynamic Plots -->
+            <div class="gallery-category-title">Aerodynamic CFD Flow Studies &amp; MATLAB Plots</div>
             <div class="direct-gallery-grid">
                 <div class="gallery-item">
-                    <img src="iso2.png" alt="Airframe Surface Pressure Contours" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                    <img src="figures/LIFT FORCE_VS_AIRSPEED_Raptor_mini_v1.png" alt="Lift Force vs Airspeed MATLAB Graph" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Full Aircraft Lift vs. Airspeed (Version 1)</h5>
+                    <p>MATLAB lift force curves at 4&deg; and 12&deg; angle of attack from 10 to 50 mph.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="figures/AERODYNAMIC_EFFICIENCY_Raptor_mini_v1.png" alt="Aerodynamic Efficiency L/D vs Airspeed MATLAB Graph" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Aerodynamic Efficiency (L/D) vs. Airspeed (Version 1)</h5>
+                    <p>Lift-to-drag ratio progression across operating airspeeds for Version 1.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="figures/DRAG_FORCE_VS_AIRSPEED_Raptor_mini_v1.png" alt="Drag Force vs Airspeed MATLAB Graph" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Full Aircraft Drag vs. Airspeed (Version 1)</h5>
+                    <p>Total aerodynamic drag force comparison between 4&deg; cruise and 12&deg; pull-out.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="figures/iso2.png" alt="Airframe Surface Pressure Contours" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     <h5>Airframe Surface Pressure Contours</h5>
-                    <p>Pressure distribution along upper wing camber, fuselage, and inverted V-tail.</p>
+                    <p>Pressure distribution along upper wing camber, fuselage, and tail.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="iso3.png" alt="Downstream Wake Velocity Gradients" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                    <img src="figures/iso3.png" alt="Downstream Wake Velocity Gradients" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     <h5>Downstream Wake Velocity Gradients</h5>
-                    <p>Far-field velocity streamlines tracking trailing-edge airflow and downstream wake decay.</p>
+                    <p>Far-field velocity streamlines tracking trailing-edge airflow and wake decay.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="front2.png" alt="Nose Cone Stagnation & Inflow Velocity" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                    <img src="figures/front2.png" alt="Nose Cone Stagnation & Inflow Velocity" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     <h5>Nose Cone Stagnation &amp; Inflow Velocity</h5>
                     <p>Leading edge boundary layer development and stagnation pressure lines.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="wing_tip_vector.png" alt="Wingtip Vortex Vector Distribution" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                    <img src="figures/wing_tip_vector.png" alt="Wingtip Vortex Vector Distribution" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     <h5>Wingtip Vortex Vector Distribution</h5>
                     <p>Vector plot quantifying upward deflection and dissipation of tip vortices.</p>
                 </div>
             </div>
 
-            <!-- Category 5: Presentations & Hardware Archives (CO2 Hardware Kit Removed) -->
-            <div class="gallery-category-title"><i class="fa-solid fa-users-viewfinder text-warning"></i> Presentation Milestones &amp; Hardware Archives</div>
+            <!-- Category 6: Presentations & Hardware Archives -->
+            <div class="gallery-category-title">Presentation Milestones &amp; Hardware Archives</div>
             <div class="direct-gallery-grid">
                 <div class="gallery-item">
-                    <img src="20261023_133608.jpg" alt="Midterm Technical Presentation Milestone" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                    <img src="figures/20261023_133608.jpg" alt="Midterm Technical Presentation Milestone" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     <h5>Midterm Technical Presentation</h5>
                     <p>Team presenting progress report and technical milestones to faculty advisors and sponsors.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="Picture3.png" alt="LOC Precision 7.51″ Airframe & Component Order" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                    <img src="figures/Picture3.png" alt="LOC Precision 7.51″ Airframe & Component Order" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     <h5>Airframe Components Order Form</h5>
                     <p>LOC Precision order for 7.51″ airframe tubes, nose cone, couplers, and motor retainers.</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="Picture14.png" alt="Subsystem Bill of Materials Ledger" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
-                    <h5>Subsystem Bill of Materials (BOM)</h5>
-                    <p>Component breakdown for glider avionics, batteries, actuators, and airframe tubes.</p>
                 </div>
             </div>
         </div>
 
         <!-- ========================================== -->
-        <!-- VIEW 5: DOCUMENTS & DELIVERABLES           -->
+        <!-- VIEW 5: DOCUMENTS                          -->
         <!-- ========================================== -->
         <div id="documents-view" class="page-view">
             <div class="title-with-logo">
                 <h2 class="section-title">Documents &amp; Deliverables</h2>
-                <img src="raptor_logo.png" alt="Project RAPTOR Logo" class="section-raptor-logo" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                <img src="figures/raptor_logo.png" alt="Project RAPTOR Logo" class="section-raptor-logo" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
             </div>
             <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px;">
                 Official technical reports and presentation slide decks. Read directly in our inline PDF viewer below or download the deliverables to your device.
@@ -2063,14 +2281,14 @@
     <footer>
         <div class="footer-content">
             <div style="display: flex; align-items: center; gap: 15px;">
-                <img src="raptor_logo.png" alt="Project RAPTOR Logo" style="height: 48px; width: 48px; border-radius: 50%; border: 2px solid var(--nau-gold); background: #002447;" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='figures/'+this.getAttribute('src');}">
+                <img src="figures/raptor_logo.png" alt="Project RAPTOR Logo" style="height: 48px; width: 48px; border-radius: 50%; border: 2px solid var(--nau-gold); background: #002447;" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                 <div>
-                    <strong>Project RAPTOR — Autonomous Apogee-Deployed Glider Rocket</strong>
+                    <strong>Project RAPTOR - Autonomous Apogee-Deployed Glider Rocket</strong>
                     <p style="margin-top: 4px; font-size: 0.8rem; color: #94a3b8;">
                         Northern Arizona University | The Steve Sanghi College of Engineering
                     </p>
                     <p style="margin-top: 4px; font-size: 0.8rem; color: var(--nau-gold);">
-                        <i class="fa-regular fa-clock me-1"></i> Website Last Edited: October 31, 2026
+                        <i class="fa-regular fa-clock me-1"></i> Website Last Edited: November 5, 2026
                     </p>
                 </div>
             </div>
@@ -2114,32 +2332,27 @@
                 buttonElement.classList.add('active');
             }
 
-            // Scroll to the main navigation bar smoothly
             const navElement = document.getElementById('main-nav');
             if (navElement) {
                 navElement.scrollIntoView({ behavior: 'smooth' });
             }
 
-            // Trigger MathJax re-render if loaded
             if (window.MathJax && window.MathJax.typesetPromise) {
                 window.MathJax.typesetPromise();
             }
         }
 
-        // Jump directly to the Team Section on the Overview page
+        // Jump directly to Team Section
         function goToTeamSection(buttonElement) {
-            // 1. Ensure the Overview view is active
             const views = document.querySelectorAll('.page-view');
             views.forEach(v => v.classList.remove('active-view'));
             const overview = document.getElementById('overview-view');
             if (overview) overview.classList.add('active-view');
 
-            // 2. Set this tab as active
             const buttons = document.querySelectorAll('.nav-tab-btn');
             buttons.forEach(b => b.classList.remove('active'));
             if (buttonElement) buttonElement.classList.add('active');
 
-            // 3. Smoothly scroll down to the team section
             setTimeout(() => {
                 const teamSec = document.getElementById('team-section');
                 if (teamSec) {
@@ -2152,7 +2365,7 @@
             }
         }
 
-        // Smooth scroll from Hero landing section
+        // Scroll to Nav
         function scrollToNav(event) {
             event.preventDefault();
             const navElement = document.getElementById('main-nav');
@@ -2161,7 +2374,7 @@
             }
         }
 
-        // Inline PDF Viewer Switcher
+        // Inline PDF Switcher
         function loadPdf(pdfUrl, labelText, buttonEl) {
             const frame = document.getElementById('inline-pdf-frame');
             const label = document.getElementById('current-doc-label');
@@ -2180,7 +2393,6 @@
                 if (b) b.classList.add('active');
             }
 
-            // If switching from cards, scroll to the viewer
             const viewerCard = document.querySelector('.pdf-viewer-card');
             if (viewerCard && buttonEl && !buttonEl.classList.contains('pdf-tab-btn')) {
                 viewerCard.scrollIntoView({ behavior: 'smooth' });
@@ -2196,7 +2408,7 @@
             img.alt = altText || '';
             cap.textContent = altText || '';
             modal.classList.add('lightbox-active');
-            document.body.style.overflow = 'hidden'; // Lock background scroll
+            document.body.style.overflow = 'hidden';
         }
 
         function closeLightbox(e) {
@@ -2212,7 +2424,7 @@
             }
         });
 
-        // Automatically Attach Lightbox to all Diagram and Figure Images
+        // Automatically Attach Lightbox to figures
         document.addEventListener('DOMContentLoaded', function() {
             const images = document.querySelectorAll('img:not(.college-logo):not(.hero-college-logo):not(.section-raptor-logo):not(.hero-raptor-logo):not(.project-badge-logo):not(.portal-img-icon)');
             images.forEach(img => {
