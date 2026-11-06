@@ -1,25 +1,29 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project RAPTOR | Autonomous Apogee-Deployed Glider Rocket</title>
-    
+
     <!-- Google Fonts & Font Awesome Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
+    <!-- Google Model Viewer for Interactive 3D WebGL Models -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+
     <!-- MathJax for Flight Equations Rendering -->
     <script>
-        window.MathJax = {
-            tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\\[', '\\]']]
-            },
-            options: {
-                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-            }
-        };
+                window.MathJax = {
+                    tex: {
+                        inlineMath: [['$', '$'], ['\\(', '\\)']],
+                        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+                    },
+                    options: {
+                        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+                    }
+                };
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
@@ -88,9 +92,9 @@
             transition: transform 0.3s ease;
         }
 
-        .hero-college-logo:hover {
-            transform: scale(1.02);
-        }
+            .hero-college-logo:hover {
+                transform: scale(1.02);
+            }
 
         .hero-project-box {
             display: flex;
@@ -148,11 +152,11 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
-        .hero-scroll-btn:hover {
-            background: var(--nau-gold);
-            color: var(--nau-navy);
-            border-color: var(--nau-gold);
-        }
+            .hero-scroll-btn:hover {
+                background: var(--nau-gold);
+                color: var(--nau-navy);
+                border-color: var(--nau-gold);
+            }
 
         /* Top Header */
         .top-bar {
@@ -179,14 +183,14 @@
             gap: 14px;
         }
 
-        .header-logo-group img.project-badge-logo {
-            height: 50px;
-            width: 50px;
-            object-fit: contain;
-            border-radius: 50%;
-            border: 2px solid var(--nau-gold);
-            background: #002447;
-        }
+            .header-logo-group img.project-badge-logo {
+                height: 50px;
+                width: 50px;
+                object-fit: contain;
+                border-radius: 50%;
+                border: 2px solid var(--nau-gold);
+                background: #002447;
+            }
 
         .header-titles h1 {
             font-family: 'Montserrat', sans-serif;
@@ -237,16 +241,16 @@
             transition: all 0.2s ease;
         }
 
-        .nav-tab-btn:hover {
-            color: var(--nau-gold-dark);
-            background-color: var(--bg-light);
-        }
+            .nav-tab-btn:hover {
+                color: var(--nau-gold-dark);
+                background-color: var(--bg-light);
+            }
 
-        .nav-tab-btn.active {
-            color: var(--nau-navy);
-            border-bottom: 3px solid var(--nau-gold);
-            background-color: #f8fafc;
-        }
+            .nav-tab-btn.active {
+                color: var(--nau-navy);
+                border-bottom: 3px solid var(--nau-gold);
+                background-color: #f8fafc;
+            }
 
         /* Container */
         .container {
@@ -262,13 +266,20 @@
             animation: fadeIn 0.25s ease-in-out;
         }
 
-        .page-view.active-view {
-            display: block;
-        }
+            .page-view.active-view {
+                display: block;
+            }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(4px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(4px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Headings */
@@ -324,22 +335,22 @@
             text-align: center;
         }
 
-        .direct-figure-item h4 {
-            font-size: 1.25rem;
-            color: var(--nau-navy);
-            margin-bottom: 8px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            text-align: left;
-        }
+            .direct-figure-item h4 {
+                font-size: 1.25rem;
+                color: var(--nau-navy);
+                margin-bottom: 8px;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+                text-align: left;
+            }
 
-        .direct-figure-item p {
-            font-size: 0.92rem;
-            color: var(--text-dark);
-            margin-bottom: 14px;
-            text-align: left;
-            line-height: 1.6;
-        }
+            .direct-figure-item p {
+                font-size: 0.92rem;
+                color: var(--text-dark);
+                margin-bottom: 14px;
+                text-align: left;
+                line-height: 1.6;
+            }
 
         .direct-figure-img {
             width: 100%;
@@ -358,6 +369,26 @@
             text-align: center;
             margin-top: 8px;
             font-style: italic;
+        }
+
+        /* 3D Model Viewer Card Styles */
+        .model-viewer-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 18px;
+            margin: 25px 0 35px 0;
+            box-shadow: var(--card-shadow);
+            text-align: center;
+        }
+
+        model-viewer {
+            width: 100%;
+            height: 480px;
+            background-color: #f8fafc;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            outline: none;
         }
 
         /* Team Photo */
@@ -478,10 +509,10 @@
             gap: 5px;
         }
 
-        .team-link-btn:hover {
-            background: var(--nau-navy);
-            color: #ffffff;
-        }
+            .team-link-btn:hover {
+                background: var(--nau-navy);
+                color: #ffffff;
+            }
 
         /* Overview Portals */
         .portal-grid {
@@ -507,23 +538,21 @@
             gap: 15px;
         }
 
-        .portal-card:hover {
-            border-color: var(--nau-navy);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-        }
+            .portal-card:hover {
+                border-color: var(--nau-navy);
+                transform: translateY(-3px);
+                box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            }
 
         .portal-img-icon {
-            height: 52px;
+            height: 58px;
             width: auto;
-            max-width: 90px;
+            max-width: 100px;
             object-fit: contain;
             margin-bottom: 8px;
             display: block;
             margin-left: auto;
             margin-right: auto;
-            box-shadow: none !important;
-            filter: none !important;
         }
 
         .portal-fa-icon {
@@ -575,31 +604,46 @@
             padding: 24px;
         }
 
-        .v0-card { border-color: var(--nau-navy); }
-        .v0-header { background: var(--nau-navy); }
-        
-        .v1-card { border-color: var(--nau-navy); }
-        .v1-header { background: var(--nau-navy); }
+        .v0-card {
+            border-color: var(--nau-navy);
+        }
 
-        .v2-card { border-color: var(--nau-navy); }
-        .v2-header { background: var(--nau-navy); }
+        .v0-header {
+            background: var(--nau-navy);
+        }
+
+        .v1-card {
+            border-color: var(--nau-navy);
+        }
+
+        .v1-header {
+            background: var(--nau-navy);
+        }
+
+        .v2-card {
+            border-color: var(--nau-navy);
+        }
+
+        .v2-header {
+            background: var(--nau-navy);
+        }
 
         .v0-images-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 16px;
             margin-bottom: 18px;
         }
 
-        .v0-images-container img {
-            width: 100%;
-            height: 240px;
-            object-fit: contain;
-            background: #ffffff;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 6px;
-        }
+            .v0-images-container img {
+                width: 100%;
+                height: 230px;
+                object-fit: contain;
+                background: #ffffff;
+                border: 1px solid var(--border-color);
+                border-radius: 6px;
+                padding: 6px;
+            }
 
         /* Staggered Ansys CFD Layout */
         .cfd-staggered-container {
@@ -615,29 +659,29 @@
             gap: 36px;
         }
 
-        .cfd-staggered-row:nth-child(even) {
-            flex-direction: row-reverse;
-        }
+            .cfd-staggered-row:nth-child(even) {
+                flex-direction: row-reverse;
+            }
 
         .cfd-text-col {
             flex: 1;
             min-width: 0;
         }
 
-        .cfd-text-col h4 {
-            font-size: 1.22rem;
-            color: var(--nau-navy);
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            margin-bottom: 8px;
-            line-height: 1.35;
-        }
+            .cfd-text-col h4 {
+                font-size: 1.22rem;
+                color: var(--nau-navy);
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+                margin-bottom: 8px;
+                line-height: 1.35;
+            }
 
-        .cfd-text-col p {
-            font-size: 0.93rem;
-            color: var(--text-dark);
-            line-height: 1.65;
-        }
+            .cfd-text-col p {
+                font-size: 0.93rem;
+                color: var(--text-dark);
+                line-height: 1.65;
+            }
 
         .cfd-img-col {
             flex: 1.3;
@@ -646,15 +690,15 @@
             justify-content: center;
         }
 
-        .cfd-img-col img {
-            width: 100%;
-            max-height: 330px;
-            object-fit: contain;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            background: #ffffff;
-            display: block;
-        }
+            .cfd-img-col img {
+                width: 100%;
+                max-height: 330px;
+                object-fit: contain;
+                border-radius: 8px;
+                border: 1px solid var(--border-color);
+                background: #ffffff;
+                display: block;
+            }
 
         @media (max-width: 860px) {
             .cfd-staggered-row,
@@ -663,6 +707,7 @@
                 gap: 16px;
                 text-align: left;
             }
+
             .cfd-img-col img {
                 max-height: 280px;
             }
@@ -692,29 +737,29 @@
             text-align: center;
         }
 
-        .gallery-item img {
-            width: 100%;
-            height: 230px;
-            object-fit: contain;
-            background: #ffffff;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            margin-bottom: 10px;
-            display: block;
-        }
+            .gallery-item img {
+                width: 100%;
+                height: 230px;
+                object-fit: contain;
+                background: #ffffff;
+                border: 1px solid var(--border-color);
+                border-radius: 6px;
+                margin-bottom: 10px;
+                display: block;
+            }
 
-        .gallery-item h5 {
-            font-size: 0.98rem;
-            color: var(--nau-navy);
-            margin-bottom: 4px;
-            font-weight: 700;
-        }
+            .gallery-item h5 {
+                font-size: 0.98rem;
+                color: var(--nau-navy);
+                margin-bottom: 4px;
+                font-weight: 700;
+            }
 
-        .gallery-item p {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            line-height: 1.4;
-        }
+            .gallery-item p {
+                font-size: 0.82rem;
+                color: var(--text-muted);
+                line-height: 1.4;
+            }
 
         /* MATLAB Plots Grid */
         .matlab-plots-grid {
@@ -733,22 +778,22 @@
             box-shadow: var(--card-shadow);
         }
 
-        .matlab-item h5 {
-            font-size: 1.02rem;
-            color: var(--nau-navy);
-            margin-bottom: 10px;
-            font-weight: 700;
-            text-align: center;
-        }
+            .matlab-item h5 {
+                font-size: 1.02rem;
+                color: var(--nau-navy);
+                margin-bottom: 10px;
+                font-weight: 700;
+                text-align: center;
+            }
 
-        .matlab-item img {
-            width: 100%;
-            height: 360px;
-            object-fit: contain;
-            background: #ffffff;
-            border-radius: 6px;
-            display: block;
-        }
+            .matlab-item img {
+                width: 100%;
+                height: 360px;
+                object-fit: contain;
+                background: #ffffff;
+                border-radius: 6px;
+                display: block;
+            }
 
         /* Specifications Table */
         .specs-table {
@@ -763,33 +808,33 @@
             box-shadow: var(--card-shadow);
         }
 
-        .specs-table th, .specs-table td {
-            border: 1px solid var(--border-color);
-            padding: 11px 14px;
-            text-align: left;
-        }
+            .specs-table th, .specs-table td {
+                border: 1px solid var(--border-color);
+                padding: 11px 14px;
+                text-align: left;
+            }
 
-        .specs-table th {
-            background-color: #f1f5f9;
-            color: var(--nau-navy);
-            font-weight: 700;
-        }
+            .specs-table th {
+                background-color: #f1f5f9;
+                color: var(--nau-navy);
+                font-weight: 700;
+            }
 
-        .specs-table tbody tr:nth-child(even) {
-            background-color: #f8fafc;
-        }
+            .specs-table tbody tr:nth-child(even) {
+                background-color: #f8fafc;
+            }
 
-        .specs-table tbody tr:nth-child(odd) {
-            background-color: #ffffff;
-        }
+            .specs-table tbody tr:nth-child(odd) {
+                background-color: #ffffff;
+            }
 
-        .specs-table tbody tr {
-            transition: background-color 0.15s ease;
-        }
+            .specs-table tbody tr {
+                transition: background-color 0.15s ease;
+            }
 
-        .specs-table tbody tr:hover {
-            background-color: #e0f2fe;
-        }
+                .specs-table tbody tr:hover {
+                    background-color: #e0f2fe;
+                }
 
         /* Timeline */
         .timeline-list {
@@ -799,15 +844,15 @@
             margin: 20px 0;
         }
 
-        .timeline-list::before {
-            content: '';
-            position: absolute;
-            top: 5px;
-            bottom: 5px;
-            left: 5px;
-            width: 3px;
-            background-color: var(--nau-gold);
-        }
+            .timeline-list::before {
+                content: '';
+                position: absolute;
+                top: 5px;
+                bottom: 5px;
+                left: 5px;
+                width: 3px;
+                background-color: var(--nau-gold);
+            }
 
         .timeline-item {
             position: relative;
@@ -815,17 +860,17 @@
             padding-left: 20px;
         }
 
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -19px;
-            top: 4px;
-            width: 11px;
-            height: 11px;
-            border-radius: 50%;
-            background-color: var(--nau-navy);
-            border: 2px solid #ffffff;
-        }
+            .timeline-item::before {
+                content: '';
+                position: absolute;
+                left: -19px;
+                top: 4px;
+                width: 11px;
+                height: 11px;
+                border-radius: 50%;
+                background-color: var(--nau-navy);
+                border: 2px solid #ffffff;
+            }
 
         .timeline-date {
             font-weight: 700;
@@ -908,10 +953,10 @@
             cursor: pointer;
         }
 
-        .btn-view:hover {
-            background-color: #003870;
-            color: #ffffff;
-        }
+            .btn-view:hover {
+                background-color: #003870;
+                color: #ffffff;
+            }
 
         .btn-download {
             flex: 1;
@@ -927,10 +972,10 @@
             transition: all 0.2s;
         }
 
-        .btn-download:hover {
-            background-color: #e2e8f0;
-            color: var(--nau-navy);
-        }
+            .btn-download:hover {
+                background-color: #e2e8f0;
+                color: var(--nau-navy);
+            }
 
         /* Inline PDF Viewer Controls */
         .pdf-viewer-card {
@@ -961,11 +1006,11 @@
             transition: all 0.2s ease;
         }
 
-        .pdf-tab-btn.active {
-            background: var(--nau-navy);
-            color: #ffffff;
-            border-color: var(--nau-navy);
-        }
+            .pdf-tab-btn.active {
+                background: var(--nau-navy);
+                color: #ffffff;
+                border-color: var(--nau-navy);
+            }
 
         .pdf-embed-wrapper {
             width: 100%;
@@ -976,11 +1021,11 @@
             background: #525659;
         }
 
-        .pdf-embed-wrapper iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+            .pdf-embed-wrapper iframe {
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
 
         /* Mentors Grid */
         .mentors-grid {
@@ -999,16 +1044,16 @@
             box-shadow: var(--card-shadow);
         }
 
-        .mentor-card h4 {
-            color: var(--nau-navy);
-            font-size: 1.05rem;
-            margin-bottom: 4px;
-        }
+            .mentor-card h4 {
+                color: var(--nau-navy);
+                font-size: 1.05rem;
+                margin-bottom: 4px;
+            }
 
-        .mentor-card p {
-            font-size: 0.88rem;
-            color: var(--text-muted);
-        }
+            .mentor-card p {
+                font-size: 0.88rem;
+                color: var(--text-muted);
+            }
 
         /* Lightbox Modal */
         .lightbox-modal {
@@ -1028,10 +1073,10 @@
             transition: opacity 0.25s ease;
         }
 
-        .lightbox-modal.lightbox-active {
-            display: flex;
-            opacity: 1;
-        }
+            .lightbox-modal.lightbox-active {
+                display: flex;
+                opacity: 1;
+            }
 
         .lightbox-wrapper {
             position: relative;
@@ -1074,19 +1119,19 @@
             z-index: 1000000;
         }
 
-        .lightbox-close-btn:hover {
-            color: var(--nau-gold);
-        }
+            .lightbox-close-btn:hover {
+                color: var(--nau-gold);
+            }
 
         .lightbox-trigger {
             cursor: zoom-in;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .lightbox-trigger:hover {
-            transform: scale(1.015);
-            box-shadow: 0 6px 18px rgba(0, 36, 71, 0.16);
-        }
+            .lightbox-trigger:hover {
+                transform: scale(1.015);
+                box-shadow: 0 6px 18px rgba(0, 36, 71, 0.16);
+            }
 
         /* Footer */
         footer {
@@ -1113,9 +1158,9 @@
             text-decoration: none;
         }
 
-        footer a:hover {
-            text-decoration: underline;
-        }
+            footer a:hover {
+                text-decoration: underline;
+            }
     </style>
 </head>
 <body>
@@ -1125,9 +1170,9 @@
     <!-- ============================================================ -->
     <header class="hero-landing" id="hero-landing">
         <div class="hero-content">
-            <img src="figures/NAU_Steve Sanghi College of Engineering_primary_282_3514.png" 
-                 alt="Northern Arizona University - The Steve Sanghi College of Engineering" 
-                 class="hero-college-logo" 
+            <img src="figures/NAU_Steve Sanghi College of Engineering_primary_282_3514.png"
+                 alt="Northern Arizona University - The Steve Sanghi College of Engineering"
+                 class="hero-college-logo"
                  onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
 
             <div class="hero-project-box">
@@ -1209,7 +1254,7 @@
                 <h2 class="section-title">Project Overview</h2>
                 <img src="figures/raptor_logo.png" alt="Project RAPTOR Logo" class="section-raptor-logo" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
             </div>
-            
+
             <div class="content-box">
                 <p style="font-size: 1.02rem; line-height: 1.8; margin-bottom: 14px;">
                     <strong>Project RAPTOR</strong> (Rocket Apogee Payload Transition to Optimal Return) is an <strong>electrical engineering capstone project</strong> conducted over <strong>two full academic semesters (Fall 2026 through Spring 2027)</strong>. Our five-member Electrical Engineering team has completed initial aerodynamic lift/drag studies, 3D printed kinematics verification, OpenRocket trajectory simulations, and composite airframe layup fabrication.
@@ -1225,26 +1270,26 @@
                 <div class="direct-figure-caption">Figure 1: Mission Profile - Rocket ascent, CO<sub>2</sub> cold-gas autonomous deployment, and wing swivel lock.</div>
             </div>
 
-            <!-- Apogee Deployment Kinematics -->
+            <!-- Figure 2: Apogee Deployment Kinematics -->
             <div class="direct-figure-item">
                 <h4 style="text-align: center;">Apogee Deployment &amp; Separation Sequence</h4>
                 <p style="text-align: center; max-width: 800px; margin: 0 auto 12px auto;">
-                    CAD modeling of the separation kinematics showing the rocket airframe body, nosecone separation, and the RAPTOR Mini glider deploying outward along the internal rail track.
+                    CAD exploded assembly kinematics of the launch vehicle illustrating nosecone ejection, glider release from the internal staging rail, and booster airframe staging.
                 </p>
-                <img src="figures/Capture29.PNG" alt="Apogee Deployment and Separation Sequence" class="direct-figure-img" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                <div class="direct-figure-caption">Figure 2: Apogee Deployment Kinematics - Separation of nosecone and rail-guided glider ejection.</div>
+                <img src="figures/Capture45.PNG" alt="Apogee Deployment and Separation Sequence Exploded View" class="direct-figure-img" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                <div class="direct-figure-caption">Figure 2: Apogee Deployment Kinematics - Nosecone separation, rail-guided glider release, and booster airframe staging.</div>
             </div>
 
             <!-- RAPTOR Subsystem Portals -->
             <h3 class="subsection-title">RAPTOR Subsystem Portals</h3>
             <div class="portal-grid">
                 <div class="portal-card" onclick="switchView('raptor-mini-view', document.querySelectorAll('.nav-tab-btn')[2]);">
-                    <img src="figures/Capture38.PNG" alt="RAPTOR Mini Drone Icon" class="portal-img-icon" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <img src="figures/Capture49.PNG" alt="RAPTOR Mini Glider Wireframe Icon" class="portal-img-icon" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     <h3>RAPTOR Mini</h3>
                     <span class="portal-btn">Explore RAPTOR Mini &rarr;</span>
                 </div>
                 <div class="portal-card" onclick="switchView('rocket-view', document.querySelectorAll('.nav-tab-btn')[3]);">
-                    <img src="figures/Capture23.PNG" alt="RAPTOR Rocket Icon" class="portal-img-icon" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <img src="figures/Capture48.PNG" alt="RAPTOR Rocket Wireframe Icon" class="portal-img-icon" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     <h3>RAPTOR</h3>
                     <span class="portal-btn">Explore RAPTOR &rarr;</span>
                 </div>
@@ -1301,7 +1346,7 @@
                         <div class="team-links">
                             <a href="mailto:krh568@nau.edu" class="team-link-btn"><i class="fa-solid fa-envelope"></i> krh568@nau.edu</a>
                             <a href="https://www.linkedin.com/in/kaidanholliday/" target="_blank" class="team-link-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                            <a href="#documents-view" onclick="switchView('documents-view', document.querySelectorAll('.nav-tab-btn')[5]);" class="team-link-btn"><i class="fa-solid fa-file-user"></i> Resume</a>
+                            <a href="Resumes/Kaidan_Holliday_Resume.pdf" target="_blank" download class="team-link-btn"><i class="fa-solid fa-file-user"></i> Resume</a>
                         </div>
                     </div>
                     <div class="team-card">
@@ -1331,7 +1376,7 @@
                         </div>
                         <div class="team-links">
                             <a href="mailto:ap3662@nau.edu" class="team-link-btn"><i class="fa-solid fa-envelope"></i> ap3662@nau.edu</a>
-                            <a href="https://linkedin.com" target="_blank" class="team-link-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="team-link-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
                             <a href="#documents-view" onclick="switchView('documents-view', document.querySelectorAll('.nav-tab-btn')[5]);" class="team-link-btn"><i class="fa-solid fa-file-user"></i> Resume</a>
                         </div>
                     </div>
@@ -1427,7 +1472,33 @@
                 <img src="figures/raptor_logo.png" alt="Project RAPTOR Logo" class="section-raptor-logo" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
             </div>
 
-            <h3 class="subsection-title" style="margin-top: 0;">Airframe Architectural Evolution Across Development</h3>
+            <!-- Front & Center: RAPTOR Mini Exploded Assembly -->
+            <div class="direct-figure-item" style="margin-top: 10px;">
+                <h4 style="text-align: center;">RAPTOR Mini Exploded Modular Assembly</h4>
+                <p style="text-align: center; max-width: 820px; margin: 0 auto 14px auto;">
+                    Exploded CAD rendering showing all structural subassemblies including 3D-printed modular fuselage segments, wing swivel pivot assembly with central retention pin, high-lift wing blades with control surfaces, and inverted V-tail empennage.
+                </p>
+                <img src="figures/Capture46.PNG" alt="RAPTOR Mini Exploded Modular Assembly" class="direct-figure-img" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                <div class="direct-figure-caption">Exploded CAD Assembly of RAPTOR Mini showing modular airframe sections, wing pivot swivel, and empennage.</div>
+            </div>
+
+            <!-- Front & Center: Interactive 3D Model of RAPTOR Mini V2 -->
+            <div class="model-viewer-card">
+                <h4 style="font-size: 1.15rem; color: var(--nau-navy); margin-bottom: 6px; font-weight: 700;">
+                    Interactive 3D Model: RAPTOR Mini V2
+                </h4>
+                <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 14px;">
+                    Click, hold, and drag to rotate in 360 degrees. Scroll or pinch to zoom in and inspect the airframe contours, wing profile, and cooling vents.
+                </p>
+                <model-viewer src="3D_files/RAPTOR_Mini_v2.glb"
+                              alt="Interactive 3D Model of RAPTOR Mini V2"
+                              auto-rotate
+                              camera-controls
+                              shadow-intensity="1">
+                </model-viewer>
+            </div>
+
+            <h3 class="subsection-title">Airframe Architectural Evolution Across Development</h3>
 
             <!-- Version 0: Proof of Concept -->
             <div class="version-row-card v0-card">
@@ -1450,7 +1521,7 @@
                 </div>
             </div>
 
-            <!-- Version 1: Physical Prototype & Nylon Washer Transition -->
+            <!-- Version 1: Physical Prototype & Benchtop Assembly Images -->
             <div class="version-row-card v1-card">
                 <div class="version-row-header v1-header">
                     <div>
@@ -1462,8 +1533,8 @@
                     <div class="v0-images-container">
                         <img src="figures/20261023_131228.jpg" alt="RAPTOR Mini Version 1 Deployed Wing Prototype" title="Version 1 Physical Prototype (Flight Configuration)" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                         <img src="figures/20261023_131244.jpg" alt="RAPTOR Mini Version 1 Stowed Wing Prototype" title="Version 1 Physical Prototype (Stowed In-Tube State)" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                        <img src="figures/Capture24.PNG" alt="RAPTOR Mini Version 1 Isometric CAD" title="Version 1 Isometric CAD Model" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                        <img src="figures/Capture39.PNG" alt="Updated Nylon Washer Swivel System Cutaway" title="Updated Nylon Washer System" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <img src="figures/20261023_125634.jpg" alt="Benchtop Wing Fitment and Alignment Check" title="Benchtop Wing Fitment" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <img src="figures/IMG_20261023_164817709_HDR.jpg" alt="Overhead Planform & Wing Geometry View" title="Overhead Planform View" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     </div>
                     <h5 style="color: var(--nau-navy); margin-bottom: 6px; font-size: 1.05rem;">Dihedral Winglet Integration &amp; Transition to Updated Nylon Washer System</h5>
                     <p style="font-size: 0.9rem; line-height: 1.7; color: var(--text-dark);">
@@ -1502,11 +1573,11 @@
             <div class="matlab-plots-grid">
                 <div class="matlab-item">
                     <h5>Engineering 4-View (Flight Configuration)</h5>
-                    <img src="figures/Picture11.png" alt="RAPTOR Mini 4-View Drawing Flight Configuration" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <img src="figures/eng_drawing_flight_v2.png" alt="RAPTOR Mini 4-View Drawing Flight Configuration" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                 </div>
                 <div class="matlab-item">
-                    <h5>Engineering 4-View (Stowed In-Tube Configuration)</h5>
-                    <img src="figures/Picture12.png" alt="RAPTOR Mini 4-View Drawing Stowed Configuration" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Engineering 4-View (Stowed Launch Configuration)</h5>
+                    <img src="figures/eng_drawing_launch.png" alt="RAPTOR Mini 4-View Drawing Stowed Launch Configuration" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                 </div>
             </div>
 
@@ -1750,6 +1821,32 @@
                 <img src="figures/raptor_logo.png" alt="Project RAPTOR Logo" class="section-raptor-logo" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
             </div>
 
+            <!-- Front & Center: Full Longitudinal Profile with Translucent Payload Bay -->
+            <div class="direct-figure-item" style="margin-top: 10px;">
+                <h4 style="text-align: center;">RAPTOR Launch Vehicle Longitudinal Profile &amp; Internal Payload Bay</h4>
+                <p style="text-align: center; max-width: 820px; margin: 0 auto 14px auto;">
+                    Longitudinal cross-section profile of the 110-inch rocket airframe highlighting the forward translucent payload bay, internal deployment rail mounting track, and folded RAPTOR Mini stowed envelope.
+                </p>
+                <img src="figures/Capture44.PNG" alt="RAPTOR Launch Vehicle Longitudinal Profile with Internal Glider Payload" class="direct-figure-img" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                <div class="direct-figure-caption">Full Longitudinal Airframe View showing the forward nosecone, payload staging compartment, and fin empennage.</div>
+            </div>
+
+            <!-- Front & Center: Interactive 3D Model of RAPTOR Rocket -->
+            <div class="model-viewer-card">
+                <h4 style="font-size: 1.15rem; color: var(--nau-navy); margin-bottom: 6px; font-weight: 700;">
+                    Interactive 3D Model: RAPTOR Launch Vehicle
+                </h4>
+                <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 14px;">
+                    Click, hold, and drag to rotate in 360 degrees. Scroll or pinch to zoom in and examine the high-power rocket airframe, nosecone, and aft fin geometry.
+                </p>
+                <model-viewer src="3D_files/RAPTOR.glb"
+                              alt="Interactive 3D Model of RAPTOR Rocket"
+                              auto-rotate
+                              camera-controls
+                              shadow-intensity="1">
+                </model-viewer>
+            </div>
+
             <div class="content-box">
                 <h3 style="color: var(--nau-navy); margin-top: 0;">Custom 7.51-Inch High-Powered Rocket</h3>
                 <p style="font-size: 0.95rem; line-height: 1.7; margin-bottom: 15px;">
@@ -1770,7 +1867,7 @@
                 <div class="direct-figure-item">
                     <h4 style="text-align: center;">RAPTOR Launch Vehicle 3D CAD Assembly &amp; Internal Payload Packaging</h4>
                     <p style="text-align: center; max-width: 820px; margin: 0 auto 10px auto;">
-                        3D CAD views of the RAPTOR rocket assembly showing the outer mold line and translucent internal payload bay with the folded RAPTOR Mini mounted along the internal deployment rail:
+                        3D CAD views of the RAPTOR rocket assembly showing the outer mold line and updated translucent internal payload packaging bay with the folded glider mounted along the internal deployment rail:
                     </p>
                     <div class="matlab-plots-grid">
                         <div class="matlab-item">
@@ -1779,7 +1876,7 @@
                         </div>
                         <div class="matlab-item">
                             <h5>Internal Payload Packaging CAD</h5>
-                            <img src="figures/Capture27.PNG" alt="RAPTOR Rocket Internal Payload Bay CAD" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                            <img src="figures/Capture47.PNG" alt="RAPTOR Rocket Internal Payload Bay Packaging CAD" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                         </div>
                     </div>
                 </div>
@@ -1822,14 +1919,44 @@
                 </table>
             </div>
 
-            <!-- Building Progress Section -->
-            <h3 class="subsection-title">Building Progress: Fiberglass Airframe Layup</h3>
+            <!-- Launch Site Operations: Tripoli Phoenix (TRAPHX) & Interactive Google Map -->
+            <h3 class="subsection-title">Launch Site Operations: Tripoli Phoenix (TRAPHX) Eagle Eye Site</h3>
             <div class="content-box">
+                <p style="font-size: 0.94rem; line-height: 1.75; margin-bottom: 12px;">
+                    Flight certification and full-scale mission launches for Project RAPTOR take place with the <strong>Tripoli Phoenix Rocketry Association (TRAPHX Prefecture #67)</strong> at their dedicated <strong>Eagle Eye Launch Site</strong> located off Eagle Eye Road near Aguila and Wickenburg, Arizona.
+                </p>
+                <p style="font-size: 0.94rem; line-height: 1.75; margin-bottom: 14px;">
+                    The site features an exceptional FAA airspace waiver up to <strong>48,000 ft AGL (50,000 ft MSL)</strong> and provides an expansive, unobstructed desert recovery radius. This wide operational envelope is essential for safe staging, parachute recovery of the booster, and autonomous waypoint navigation of the RAPTOR Mini glider back to coordinates. For schedule details, regulations, and club information, visit the official site: <a href="https://traphx.clubexpress.com/" target="_blank" style="color: var(--nau-navy); font-weight: 700; text-decoration: underline;">https://traphx.clubexpress.com/</a>.
+                </p>
+                <div style="width: 100%; border-radius: 8px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--card-shadow); margin-top: 15px;">
+                    <iframe src="https://maps.google.com/maps?q=Eagle+Eye+Road+Aguila+AZ&t=m&z=11&output=embed"
+                            width="100%"
+                            height="420"
+                            style="border:0; display: block;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Tripoli Phoenix Eagle Eye Launch Site Google Map">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Building Progress Section -->
+            <h3 class="subsection-title">Building Progress: Fiberglass Airframe Layup &amp; 3D Printed Alignment Mounts</h3>
+            <div class="content-box">
+                <p style="font-size: 0.94rem; line-height: 1.75; margin-bottom: 14px;">
+                    In early November 2026, the team began full-scale composite manufacturing of the 7.51-inch rocket airframe. To achieve a uniform, high-strength fiberglass layup over the 54-inch and 30-inch heavy kraft body tubes, we constructed a horizontal PVC pipe rotation mandrel supported on sawhorses over a protective tarp.
+                </p>
                 <p style="font-size: 0.94rem; line-height: 1.75; margin-bottom: 18px;">
-                    In early November 2026, the team began full-scale composite manufacturing of the 7.51-inch rocket airframe. To achieve a uniform, high-strength fiberglass layup over the 54-inch and 30-inch heavy kraft body tubes, we constructed a horizontal PVC pipe rotation mandrel supported on sawhorses over a protective tarp. The team wrapped full-length fiberglass cloth around each airframe section, mixed two-part laminating epoxy resin, and worked collaboratively with squeegees and rollers to saturate the weave and eliminate air pockets. This hand-laid composite shell provides the hoop strength and axial rigidity required to withstand high-thrust K-class motor boost and apogee CO<sub>2</sub> deployment forces.
+                    <strong>3D Printed Alignment Mounts for Concentric Drying:</strong> To ensure that the heavy composite airframe dried completely straight and concentric without sagging or ovalizing under wet resin weight, <strong>we engineered and 3D printed precision internal rotation mounts</strong> (shown below). These spoke-hub adapters clamped rigidly onto the rotating PVC mandrel pipe and pressed evenly against the inside tube diameter, maintaining perfect axial alignment and runout control as the fiberglass and two-part laminating epoxy resin cured.
                 </p>
 
                 <div class="direct-gallery-grid" style="margin-bottom: 10px;">
+                    <div class="gallery-item">
+                        <img src="figures/IMG_20261105_2100048.jpg" alt="3D Printed Mandrel Alignment Mounts" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <h5>3D Printed Mandrel Alignment Mounts</h5>
+                        <p>Custom 3D-printed internal spoke adapters engineered to keep the rocket tube straight and concentric while curing.</p>
+                    </div>
                     <div class="gallery-item">
                         <img src="figures/20261104_150920.jpg" alt="Airframe Tube Mounted on Mandrel Stand" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                         <h5>Airframe Tube Mandrel Setup</h5>
@@ -1846,49 +1973,39 @@
                         <p>Pouring and spreading two-part laminating epoxy across the fiberglass reinforcement layer.</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="figures/IMG_20261105_121749.jpg" alt="Team Collaborating on Wet-Layup" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                        <h5>Team Composite Fabrication</h5>
-                        <p>Team members working together to rotate the tube and apply uniform resin coats.</p>
+                        <img src="figures/IMG_20261105_210004_3.jpg" alt="Mandrel Rotation Inspection" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <h5>Mandrel Rotation Inspection</h5>
+                        <p>Checking airframe tube concentricity on the 3D-printed alignment supports during initial rotation.</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="figures/IMG_20261105_1217462.jpg" alt="Squeegeeing Epoxy into Fiberglass Weave" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                        <h5>Squeegeeing &amp; Saturating Weave</h5>
-                        <p>Using a laminating squeegee to press epoxy evenly into the fiberglass cloth and remove excess resin.</p>
+                        <img src="figures/IMG_20261105_210004_5.jpg" alt="Resin Squeegee Application" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <h5>Resin Squeegee Application</h5>
+                        <p>Squeegeeing epoxy resin through the cloth weave to eliminate air voids and ensure uniform saturation.</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="figures/IMG_20261105_1217463.jpg" alt="Two-Person Fiberglass Smoothing" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                        <h5>Longitudinal Seam Smoothing</h5>
-                        <p>Working along the full length of the airframe to ensure zero air bubbles or dry spots.</p>
+                        <img src="figures/IMG_20261105_210004_9).jpg" alt="Full Airframe Layup Progress" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <h5>Full Airframe Layup Progress</h5>
+                        <p>Applying uniform longitudinal composite wraps along the entire 7.51-inch rocket section.</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="figures/IMG_20261105_1217464.jpg" alt="Resin Saturation Inspection" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                        <h5>Full-Length Wet-Layup Application</h5>
-                        <p>Verifying complete transparency of the wet-out fiberglass cloth as it bonds to the kraft tube.</p>
+                        <img src="figures/IMG_20261105_210004_10).jpg" alt="Airframe Curing on Sawhorse Stand" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <h5>Rotational Alignment on Stand</h5>
+                        <p>Even rotation prevents epoxy pooling or resin sag while the matrix cures.</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="figures/IMG_20261105_1217465.jpg" alt="Top-Down View of Fiberglass Wrap" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                        <h5>Overhead View of Composite Wrap</h5>
-                        <p>Overhead perspective of the saturated 7.51-inch fiberglass airframe section during layup.</p>
+                        <img src="figures/IMG_20261105_210004_14).jpg" alt="Laminating Inspection" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <h5>Laminating Inspection</h5>
+                        <p>Team inspecting the wet fiberglass surface to ensure complete optical transparency.</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="figures/IMG_20261105_12174644.jpg" alt="Detail Work on Fiberglass Surface" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                        <h5>Surface Finish &amp; Bubble Removal</h5>
-                        <p>Fine-tuning the outer composite surface finish while rotating the mandrel assembly.</p>
+                        <img src="figures/IMG_20261105_210004_15).jpg" alt="Finished Wet Layup Section" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <h5>Finished Composite Layer</h5>
+                        <p>Uniformly saturated fiberglass reinforcement ready for ambient room temperature curing.</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="figures/IMG_20261105_1217491.jpg" alt="Saturated Airframe Tube on Mandrel" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                        <h5>Completed Wet-Layup Section</h5>
-                        <p>Fully saturated fiberglass layup ready for initial stage curing on the rotation stand.</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="figures/IMG_20261105_1217492.jpg" alt="Team Inspecting Curing Rocket Tube" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                        <h5>Post-Layup Quality Check</h5>
-                        <p>Team inspecting the finished fiberglass reinforcement wrap.</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="figures/IMG_20261105_1217493.jpg" alt="Curing Fiberglass Airframe Tube" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                        <h5>Composite Airframe Curing</h5>
-                        <p>Reinforced 7.51-inch rocket body tube curing horizontally on the support rig.</p>
+                        <img src="figures/IMG_20261105_210004_16).jpg" alt="Final Surface Smoothing" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                        <h5>Final Surface Smoothing</h5>
+                        <p>Smoothing the overlap seam along the airframe body tube for aerodynamic clean air surface.</p>
                     </div>
                 </div>
             </div>
@@ -1918,12 +2035,17 @@
                 <img src="figures/raptor_logo.png" alt="Project RAPTOR Logo" class="section-raptor-logo" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
             </div>
             <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px;">
-                Comprehensive photographic archive including fiberglass rocket manufacturing, benchtop test assemblies, CAD iterations (Version 0, Version 1, and Version 2), engineering 4-view drawings, and aerodynamic simulations. Click any image to view full-resolution.
+                Comprehensive photographic archive including fiberglass rocket manufacturing, 3D-printed alignment mandrel mounts, benchtop test assemblies, CAD iterations (Version 0, Version 1, and Version 2), engineering 4-view drawings, and aerodynamic simulations. Click any image to view full-resolution.
             </p>
 
             <!-- Category 1: Fiberglass Rocket Construction -->
-            <div class="gallery-category-title">Fiberglass Rocket Construction</div>
+            <div class="gallery-category-title">Fiberglass Rocket Construction &amp; Alignment Tooling</div>
             <div class="direct-gallery-grid">
+                <div class="gallery-item">
+                    <img src="figures/IMG_20261105_2100048.jpg" alt="3D Printed Mandrel Alignment Mounts" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>3D Printed Mandrel Alignment Mounts</h5>
+                    <p>Custom 3D-printed internal spoke adapters engineered to keep the tube straight and concentric while curing.</p>
+                </div>
                 <div class="gallery-item">
                     <img src="figures/20261104_150920.jpg" alt="Airframe Tube Mounted on Mandrel Stand" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     <h5>Airframe Tube Mandrel Setup</h5>
@@ -1940,49 +2062,39 @@
                     <p>Applying two-part laminating epoxy to bond the fiberglass cloth to the airframe.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="figures/IMG_20261105_121749.jpg" alt="Team Collaborating on Wet-Layup" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    <h5>Team Composite Fabrication</h5>
-                    <p>Team members collaborating on the wet-layup process.</p>
+                    <img src="figures/IMG_20261105_210004_3.jpg" alt="Mandrel Rotation Inspection" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Mandrel Rotation Inspection</h5>
+                    <p>Verifying rotational straightness and mandrel balance with the internal 3D printed mounts.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="figures/IMG_20261105_1217462.jpg" alt="Squeegeeing Epoxy into Fiberglass Weave" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    <h5>Squeegeeing &amp; Saturating Weave</h5>
-                    <p>Spreading epoxy evenly across the fiberglass weave for a high-strength bond.</p>
+                    <img src="figures/IMG_20261105_210004_5.jpg" alt="Resin Squeegee Application" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Resin Squeegee Application</h5>
+                    <p>Working resin across the weave to ensure full penetration without excess weight.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="figures/IMG_20261105_1217463.jpg" alt="Two-Person Fiberglass Smoothing" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    <h5>Longitudinal Seam Smoothing</h5>
-                    <p>Smoothing the fiberglass overlap seam along the length of the rocket body tube.</p>
+                    <img src="figures/IMG_20261105_210004_9).jpg" alt="Full Airframe Layup Progress" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Full Airframe Layup Progress</h5>
+                    <p>Applying uniform longitudinal composite wraps along the entire 7.51-inch rocket section.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="figures/IMG_20261105_1217464.jpg" alt="Resin Saturation Inspection" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    <h5>Full-Length Wet-Layup Application</h5>
-                    <p>Ensuring uniform epoxy saturation across the entire rocket airframe section.</p>
+                    <img src="figures/IMG_20261105_210004_10).jpg" alt="Airframe Curing on Sawhorse Stand" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Rotational Alignment on Stand</h5>
+                    <p>Continuous rotation ensures an even layer without sagging or resin buildup.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="figures/IMG_20261105_1217465.jpg" alt="Top-Down View of Fiberglass Wrap" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    <h5>Overhead View of Composite Wrap</h5>
-                    <p>Top-down view of the epoxy-saturated fiberglass cloth on the rotation mandrel.</p>
+                    <img src="figures/IMG_20261105_210004_14).jpg" alt="Laminating Inspection" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Laminating Inspection</h5>
+                    <p>Team inspecting the wet fiberglass surface to ensure complete optical transparency.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="figures/IMG_20261105_12174644.jpg" alt="Detail Work on Fiberglass Surface" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    <h5>Surface Finish &amp; Bubble Removal</h5>
-                    <p>Removing trapped air pockets and excess resin with hand squeegees.</p>
+                    <img src="figures/IMG_20261105_210004_15).jpg" alt="Finished Wet Layup Section" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Finished Composite Layer</h5>
+                    <p>Uniformly saturated fiberglass reinforcement ready for ambient room temperature curing.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="figures/IMG_20261105_1217491.jpg" alt="Saturated Airframe Tube on Mandrel" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    <h5>Completed Wet-Layup Section</h5>
-                    <p>Freshly laminated fiberglass rocket tube mounted on the mandrel stand.</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="figures/IMG_20261105_1217492.jpg" alt="Team Inspecting Curing Rocket Tube" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    <h5>Post-Layup Quality Check</h5>
-                    <p>Team inspecting the completed fiberglass layup.</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="figures/IMG_20261105_1217493.jpg" alt="Curing Fiberglass Airframe Tube" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    <h5>Composite Airframe Curing</h5>
-                    <p>Fiberglass-reinforced 7.51-inch airframe tube curing on the support rig.</p>
+                    <img src="figures/IMG_20261105_210004_16).jpg" alt="Final Surface Smoothing" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Final Surface Smoothing</h5>
+                    <p>Smoothing the overlap seam along the airframe body tube for aerodynamic clean air surface.</p>
                 </div>
             </div>
 
@@ -2015,6 +2127,16 @@
             <div class="gallery-category-title">RAPTOR Mini CAD Models &amp; 4-View Drawings</div>
             <div class="direct-gallery-grid">
                 <div class="gallery-item">
+                    <img src="figures/Capture46.PNG" alt="RAPTOR Mini Exploded Assembly CAD" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>RAPTOR Mini Exploded Assembly CAD</h5>
+                    <p>Complete modular exploded view detailing fuselage, wings, pivot pin, and tail.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="figures/Capture49.PNG" alt="RAPTOR Mini Wireframe CAD" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>RAPTOR Mini Wireframe CAD</h5>
+                    <p>Isometric wireframe model illustrating outer mould line and surface geometry.</p>
+                </div>
+                <div class="gallery-item">
                     <img src="figures/Capture38.PNG" alt="RAPTOR Mini Version 2 Isometric CAD with Vents" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     <h5>RAPTOR Mini Version 2 Isometric CAD with Vents</h5>
                     <p>Current Version 2 CAD featuring cooling air vents, dihedral winglets, and ailerons.</p>
@@ -2035,16 +2157,6 @@
                     <p>Top-down view highlighting upper fuselage cooling vents and control surfaces.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="figures/Capture24.PNG" alt="RAPTOR Mini Version 1 3D CAD Assembly" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    <h5>RAPTOR Mini Version 1 Isometric CAD</h5>
-                    <p>3D rendered Version 1 assembly used for baseline aerodynamic CFD simulations.</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="figures/Capture11.PNG" alt="Glider In-Tube Packaging Clearance Model" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    <h5>Glider In-Tube Packaging Clearance</h5>
-                    <p>CAD model illustrating wing folded flush with the upper fuselage.</p>
-                </div>
-                <div class="gallery-item">
                     <img src="figures/Capture7.PNG" alt="Version 0 Proof of Concept Fuselage Side Cutaway" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     <h5>Version 0 Proof of Concept Side Cutaway</h5>
                     <p>Initial proof-of-concept longitudinal profile with original thrust bearings.</p>
@@ -2060,13 +2172,13 @@
                     <p>Close-up section of the Version 0 proof-of-concept thrust bearing joint.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="figures/Picture11.png" alt="Engineering 4-View Drawing (Flight Configuration)" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <img src="figures/eng_drawing_flight_v2.png" alt="Engineering 4-View Drawing (Flight Configuration)" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     <h5>Engineering 4-View (Flight Configuration)</h5>
                     <p>Orthographic 4-View dimensions for the 30.0″ unfolded configuration.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="figures/Picture12.png" alt="Engineering 4-View Drawing (Stowed / Rocket Tube Configuration)" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    <h5>Engineering 4-View (Stowed In-Tube State)</h5>
+                    <img src="figures/eng_drawing_launch.png" alt="Engineering 4-View Drawing (Stowed Launch Configuration)" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Engineering 4-View (Stowed Launch State)</h5>
                     <p>Orthographic 4-View dimensions showing 36.0″ stowed length and 6.0″ folded width.</p>
                 </div>
             </div>
@@ -2074,6 +2186,26 @@
             <!-- Category 4: RAPTOR Rocket CAD Models & Engineering Drawing -->
             <div class="gallery-category-title">RAPTOR (Rocket) CAD Models &amp; Engineering Drawings</div>
             <div class="direct-gallery-grid">
+                <div class="gallery-item">
+                    <img src="figures/Capture44.PNG" alt="RAPTOR Full Rocket Longitudinal Profile with Glider Bay" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Full Rocket Longitudinal Profile CAD</h5>
+                    <p>Longitudinal cutaway showing folded glider packaged on deployment rails inside.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="figures/Capture45.PNG" alt="Full Rocket Exploded Staging Assembly" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Full Rocket Exploded Staging Assembly</h5>
+                    <p>Exploded CAD rendering showing nosecone, glider, airframe, and booster section.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="figures/Capture47.PNG" alt="Rocket Internal Assembly with Stowed Glider Payload" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>Glider Stowed in Rocket Payload Bay</h5>
+                    <p>Translucent airframe CAD showing folded glider packaged on internal rail track.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="figures/Capture48.PNG" alt="RAPTOR Rocket Wireframe CAD" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <h5>RAPTOR Rocket Wireframe CAD</h5>
+                    <p>Isometric wireframe model illustrating outer mould line and fin empennage.</p>
+                </div>
                 <div class="gallery-item">
                     <img src="figures/rocket_eng_drawing.png" alt="RAPTOR Rocket Engineering Drawing" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     <h5>RAPTOR Rocket Engineering Drawing</h5>
@@ -2083,36 +2215,6 @@
                     <img src="figures/Capture37.PNG" alt="RAPTOR Rocket Full 3D CAD" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     <h5>RAPTOR Rocket 3D CAD</h5>
                     <p>Isometric CAD assembly of the full-scale high-powered launch vehicle.</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="figures/Capture23.PNG" alt="Launch Vehicle 3D Isometric CAD" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    <h5>Launch Vehicle Exterior Render</h5>
-                    <p>High-powered rocket 3D CAD showing 7.51″ airframe and fin empennage.</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="figures/Capture25.PNG" alt="Full Rocket Airframe Longitudinal Profile" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    <h5>Full Rocket Airframe Profile (CAD)</h5>
-                    <p>Longitudinal CAD profile illustrating the vehicle's standing geometry.</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="figures/Capture26.PNG" alt="Rocket Modular Staging CAD" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    <h5>Rocket Modular Staging Subassemblies</h5>
-                    <p>Exploded CAD rendering showing nosecone, forward payload bay, and motor section.</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="figures/Capture27.PNG" alt="Rocket Internal Assembly with Stowed Glider Payload" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    <h5>Glider Stowed in Rocket Payload Bay</h5>
-                    <p>Translucent airframe CAD showing folded glider packaged on internal rail track.</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="figures/Capture28.PNG" alt="Rocket Payload Deployment Kinematics CAD" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    <h5>Rail-Guided Ejection Kinematics</h5>
-                    <p>CAD model illustrating glider deployment along payload rail upon apogee separation.</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="figures/Capture29.PNG" alt="Full Apogee Separation Sequence CAD" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    <h5>Apogee Deployment Separation Sequence</h5>
-                    <p>Full CAD separation sequence showing nosecone jettison and glider release.</p>
                 </div>
             </div>
 
@@ -2264,7 +2366,7 @@
                         </button>
                     </div>
                 </div>
-                
+
                 <div class="pdf-embed-wrapper">
                     <iframe id="inline-pdf-frame" src="midterm_report.pdf" title="Embedded Technical Document Viewer">
                         <p style="padding: 20px; color: #ffffff;">
@@ -2288,7 +2390,7 @@
                         Northern Arizona University | The Steve Sanghi College of Engineering
                     </p>
                     <p style="margin-top: 4px; font-size: 0.8rem; color: var(--nau-gold);">
-                        <i class="fa-regular fa-clock me-1"></i> Website Last Edited: November 5, 2026
+                        <i class="fa-regular fa-clock me-1"></i> Website Last Edited: November 6, 2026
                     </p>
                 </div>
             </div>
@@ -2316,125 +2418,125 @@
 
     <!-- JavaScript for Tabs, Lightbox, Smooth Scroll, and PDF Switcher -->
     <script>
-        // Tab Navigation Switcher
-        function switchView(viewId, buttonElement) {
-            const views = document.querySelectorAll('.page-view');
-            views.forEach(v => v.classList.remove('active-view'));
+                // Tab Navigation Switcher
+                function switchView(viewId, buttonElement) {
+                    const views = document.querySelectorAll('.page-view');
+                    views.forEach(v => v.classList.remove('active-view'));
 
-            const selectedView = document.getElementById(viewId);
-            if (selectedView) {
-                selectedView.classList.add('active-view');
-            }
+                    const selectedView = document.getElementById(viewId);
+                    if (selectedView) {
+                        selectedView.classList.add('active-view');
+                    }
 
-            const buttons = document.querySelectorAll('.nav-tab-btn');
-            buttons.forEach(b => b.classList.remove('active'));
-            if (buttonElement) {
-                buttonElement.classList.add('active');
-            }
+                    const buttons = document.querySelectorAll('.nav-tab-btn');
+                    buttons.forEach(b => b.classList.remove('active'));
+                    if (buttonElement) {
+                        buttonElement.classList.add('active');
+                    }
 
-            const navElement = document.getElementById('main-nav');
-            if (navElement) {
-                navElement.scrollIntoView({ behavior: 'smooth' });
-            }
+                    const navElement = document.getElementById('main-nav');
+                    if (navElement) {
+                        navElement.scrollIntoView({ behavior: 'smooth' });
+                    }
 
-            if (window.MathJax && window.MathJax.typesetPromise) {
-                window.MathJax.typesetPromise();
-            }
-        }
-
-        // Jump directly to Team Section
-        function goToTeamSection(buttonElement) {
-            const views = document.querySelectorAll('.page-view');
-            views.forEach(v => v.classList.remove('active-view'));
-            const overview = document.getElementById('overview-view');
-            if (overview) overview.classList.add('active-view');
-
-            const buttons = document.querySelectorAll('.nav-tab-btn');
-            buttons.forEach(b => b.classList.remove('active'));
-            if (buttonElement) buttonElement.classList.add('active');
-
-            setTimeout(() => {
-                const teamSec = document.getElementById('team-section');
-                if (teamSec) {
-                    teamSec.scrollIntoView({ behavior: 'smooth' });
+                    if (window.MathJax && window.MathJax.typesetPromise) {
+                        window.MathJax.typesetPromise();
+                    }
                 }
-            }, 60);
 
-            if (window.MathJax && window.MathJax.typesetPromise) {
-                window.MathJax.typesetPromise();
-            }
-        }
+                // Jump directly to Team Section
+                function goToTeamSection(buttonElement) {
+                    const views = document.querySelectorAll('.page-view');
+                    views.forEach(v => v.classList.remove('active-view'));
+                    const overview = document.getElementById('overview-view');
+                    if (overview) overview.classList.add('active-view');
 
-        // Scroll to Nav
-        function scrollToNav(event) {
-            event.preventDefault();
-            const navElement = document.getElementById('main-nav');
-            if (navElement) {
-                navElement.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
+                    const buttons = document.querySelectorAll('.nav-tab-btn');
+                    buttons.forEach(b => b.classList.remove('active'));
+                    if (buttonElement) buttonElement.classList.add('active');
 
-        // Inline PDF Switcher
-        function loadPdf(pdfUrl, labelText, buttonEl) {
-            const frame = document.getElementById('inline-pdf-frame');
-            const label = document.getElementById('current-doc-label');
-            if (frame) frame.src = pdfUrl;
-            if (label) label.textContent = labelText;
+                    setTimeout(() => {
+                        const teamSec = document.getElementById('team-section');
+                        if (teamSec) {
+                            teamSec.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }, 60);
 
-            const tabButtons = document.querySelectorAll('.pdf-tab-btn');
-            tabButtons.forEach(btn => btn.classList.remove('active'));
-            if (buttonEl && buttonEl.classList.contains('pdf-tab-btn')) {
-                buttonEl.classList.add('active');
-            } else if (pdfUrl.includes('midterm')) {
-                const b = document.getElementById('btn-tab-midterm');
-                if (b) b.classList.add('active');
-            } else if (pdfUrl.includes('proposal')) {
-                const b = document.getElementById('btn-tab-proposal');
-                if (b) b.classList.add('active');
-            }
+                    if (window.MathJax && window.MathJax.typesetPromise) {
+                        window.MathJax.typesetPromise();
+                    }
+                }
 
-            const viewerCard = document.querySelector('.pdf-viewer-card');
-            if (viewerCard && buttonEl && !buttonEl.classList.contains('pdf-tab-btn')) {
-                viewerCard.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
+                // Scroll to Nav
+                function scrollToNav(event) {
+                    event.preventDefault();
+                    const navElement = document.getElementById('main-nav');
+                    if (navElement) {
+                        navElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
 
-        // Lightbox Functions
-        function openLightbox(src, altText) {
-            const modal = document.getElementById('lightbox-modal');
-            const img = document.getElementById('lightbox-img');
-            const cap = document.getElementById('lightbox-caption');
-            img.src = src;
-            img.alt = altText || '';
-            cap.textContent = altText || '';
-            modal.classList.add('lightbox-active');
-            document.body.style.overflow = 'hidden';
-        }
+                // Inline PDF Switcher
+                function loadPdf(pdfUrl, labelText, buttonEl) {
+                    const frame = document.getElementById('inline-pdf-frame');
+                    const label = document.getElementById('current-doc-label');
+                    if (frame) frame.src = pdfUrl;
+                    if (label) label.textContent = labelText;
 
-        function closeLightbox(e) {
-            if (e) e.stopPropagation();
-            const modal = document.getElementById('lightbox-modal');
-            modal.classList.remove('lightbox-active');
-            document.body.style.overflow = '';
-        }
+                    const tabButtons = document.querySelectorAll('.pdf-tab-btn');
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    if (buttonEl && buttonEl.classList.contains('pdf-tab-btn')) {
+                        buttonEl.classList.add('active');
+                    } else if (pdfUrl.includes('midterm')) {
+                        const b = document.getElementById('btn-tab-midterm');
+                        if (b) b.classList.add('active');
+                    } else if (pdfUrl.includes('proposal')) {
+                        const b = document.getElementById('btn-tab-proposal');
+                        if (b) b.classList.add('active');
+                    }
 
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeLightbox();
-            }
-        });
+                    const viewerCard = document.querySelector('.pdf-viewer-card');
+                    if (viewerCard && buttonEl && !buttonEl.classList.contains('pdf-tab-btn')) {
+                        viewerCard.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
 
-        // Automatically Attach Lightbox to figures
-        document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('img:not(.college-logo):not(.hero-college-logo):not(.section-raptor-logo):not(.hero-raptor-logo):not(.project-badge-logo):not(.portal-img-icon)');
-            images.forEach(img => {
-                img.classList.add('lightbox-trigger');
-                img.title = img.title || 'Click to view full-resolution in lightbox';
-                img.addEventListener('click', function() {
-                    openLightbox(this.src, this.alt || this.title || '');
+                // Lightbox Functions
+                function openLightbox(src, altText) {
+                    const modal = document.getElementById('lightbox-modal');
+                    const img = document.getElementById('lightbox-img');
+                    const cap = document.getElementById('lightbox-caption');
+                    img.src = src;
+                    img.alt = altText || '';
+                    cap.textContent = altText || '';
+                    modal.classList.add('lightbox-active');
+                    document.body.style.overflow = 'hidden';
+                }
+
+                function closeLightbox(e) {
+                    if (e) e.stopPropagation();
+                    const modal = document.getElementById('lightbox-modal');
+                    modal.classList.remove('lightbox-active');
+                    document.body.style.overflow = '';
+                }
+
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') {
+                        closeLightbox();
+                    }
                 });
-            });
-        });    
+
+                // Automatically Attach Lightbox to figures
+                document.addEventListener('DOMContentLoaded', function() {
+                    const images = document.querySelectorAll('img:not(.college-logo):not(.hero-college-logo):not(.section-raptor-logo):not(.hero-raptor-logo):not(.project-badge-logo):not(.portal-img-icon)');
+                    images.forEach(img => {
+                        img.classList.add('lightbox-trigger');
+                        img.title = img.title || 'Click to view full-resolution in lightbox';
+                        img.addEventListener('click', function() {
+                            openLightbox(this.src, this.alt || this.title || '');
+                        });
+                    });
+                });
     </script>
 
 </body>
