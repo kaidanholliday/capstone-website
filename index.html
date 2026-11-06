@@ -1540,6 +1540,51 @@
                 </table>
             </div>
 
+
+            <!-- Avionics -->
+             <div class="content-box">
+                <h4 style="font-size: 1.1rem; color: var(--nau-navy); margin-bottom: 10px;">
+                    Avionics Schematic & BOM
+                </h4>
+                <p style="font-size: 0.92rem; line-height: 1.7; margin-bottom: 12px;">
+                    The Avionics for the RAPTOR Mini is centered around the MATEK Mateksys F405 Wing V2 Flight Controller. This flight controller includes an IMU which is essential for <strong>Autonomous and Assisted Flight</strong>. This specific flight controller was picked due an abundances of PWM (Pulse Width Modulation) channels, I2C (Inter-Integrated Circuit) channels, and software support. Looking at the software side this will be running ArduPlane which is a variant of Ardupilot built for fixed wing planes, Arduplane autopilot and assisted flight is built around multiple separate PID (Proportional-Integral-Derivative) controllers nested inside a programmatic loop. The current plan is to test this setup on the ground, if during theses tests this controller is inadequate then custom controllers can be implemented in C within Ardupilot. 
+                </p>
+                <ul style="font-size: 0.88rem; color: var(--text-dark); margin-left: 20px; margin-bottom: 15px;">
+                    <li style="margin-bottom: 6px;"><strong>Communications:</strong> To communicate with RAPTOR Mini a 2.4 GHz Boxer Radio Controller will be used to transmit steering inputs and commands to an 2.4 Ghz ELSR (ExpressLRS) receiver, a separate 30dBm 5.725-5.850GHz 40MHz bandwidth 1080p video transmitter that can embed telemetry data to groundstation. Once theses components arrive range tests can begin.</li>
+                </ul>
+
+                <table class="specs-table">
+                    <caption>Bill of Materials</caption>
+                    <thead>
+                        <tr>
+                        <th style="width: 35%; font-weight: bold;" scope="col" title="Quantity">Qty</th>
+                        <th style="font-weight: bold;" scope="col">Value</th>
+                        <th style="font-weight: bold;" scope="col">Part Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>2 - 6S LiPo (7.4V - 22.2V)</td><td>2 - 6S LiPo (7.4V - 22.2V)</td></tr>
+                        <tr><td>1</td><td>470 uF (35V rated)</td><td>35V 470 uF Capacitor</td></tr>
+                        <tr><td>1</td><td></td><td>MATEKSYS Flight Controller F405-Wing-V2</td></tr>
+                        <tr><td>1</td><td></td><td>WN08-6S14B (FPV transmitter)</td></tr>
+                        <tr><td>4</td><td></td><td>ES08MA II (Servo)</td></tr>
+                        <tr><td>1</td><td></td><td>ELRS-R24-D (2.4 GHz Receiver)</td></tr>
+                        <tr><td>1</td><td></td><td>Lumenier 51A BLHeli_32 32bit 2-6S w/ Telemetry (Prop ESC)</td></tr>
+                        <tr><td>1</td><td></td><td>SAM-M10Q (GNSS)</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="matlab-plots-grid">
+                <div class="matlab-item">
+                    <h5>Avionics Schematic</h5>
+                    <img src="figures/RAPTOR_Mini_Schematic.png" alt="RAPTOR Mini Avionics Schematic" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                </div>
+                </div>
+
+             </div>
+
+
+
             <!-- ========================================================== -->
             <!-- SIMULATION SECTION 1: RAPTOR MINI V1 SIMULATIONS           -->
             <!-- ========================================================== -->
