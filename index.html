@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,15 +14,15 @@
 
     <!-- MathJax for Flight Equations Rendering -->
     <script>
-                window.MathJax = {
-                    tex: {
-                        inlineMath: [['$', '$'], ['\\(', '\\)']],
-                        displayMath: [['$$', '$$'], ['\\[', '\\]']]
-                    },
-                    options: {
-                        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-                    }
-                };
+                        window.MathJax = {
+                            tex: {
+                                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+                            },
+                            options: {
+                                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+                            }
+                        };
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
@@ -385,7 +384,7 @@
         model-viewer {
             width: 100%;
             height: 480px;
-            background-color: #f8fafc;
+            background: radial-gradient(circle at 50% 50%, #f8fafc 0%, #e2e8f0 100%);
             border-radius: 6px;
             border: 1px solid var(--border-color);
             outline: none;
@@ -645,18 +644,18 @@
                 padding: 6px;
             }
 
-        /* Staggered Ansys CFD Layout */
+        /* Staggered CFD Flow Layout (No Tiles / No Black Bars) */
         .cfd-staggered-container {
             display: flex;
             flex-direction: column;
-            gap: 40px;
+            gap: 35px;
             margin: 25px 0 35px 0;
         }
 
         .cfd-staggered-row {
             display: flex;
             align-items: center;
-            gap: 36px;
+            gap: 32px;
         }
 
             .cfd-staggered-row:nth-child(even) {
@@ -669,7 +668,7 @@
         }
 
             .cfd-text-col h4 {
-                font-size: 1.22rem;
+                font-size: 1.18rem;
                 color: var(--nau-navy);
                 font-family: 'Montserrat', sans-serif;
                 font-weight: 700;
@@ -684,7 +683,7 @@
             }
 
         .cfd-img-col {
-            flex: 1.3;
+            flex: 1.35;
             min-width: 0;
             display: flex;
             justify-content: center;
@@ -692,11 +691,11 @@
 
             .cfd-img-col img {
                 width: 100%;
-                max-height: 330px;
+                max-height: 340px;
                 object-fit: contain;
                 border-radius: 8px;
                 border: 1px solid var(--border-color);
-                background: #ffffff;
+                background: #0b1329;
                 display: block;
             }
 
@@ -704,14 +703,102 @@
             .cfd-staggered-row,
             .cfd-staggered-row:nth-child(even) {
                 flex-direction: column;
-                gap: 16px;
+                gap: 14px;
                 text-align: left;
             }
 
             .cfd-img-col img {
-                max-height: 280px;
+                max-height: 270px;
             }
         }
+
+        /* Symmetrical 2x2 Comparison Grid */
+        .comparison-2x2-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+            margin: 20px 0 25px 0;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-2x2-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .comparison-plot-item {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+            box-shadow: var(--card-shadow);
+        }
+
+            .comparison-plot-item h5 {
+                font-size: 1.02rem;
+                color: var(--nau-navy);
+                margin-bottom: 6px;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+            }
+
+            .comparison-plot-item p {
+                font-size: 0.84rem;
+                color: var(--text-muted);
+                margin-bottom: 10px;
+                line-height: 1.45;
+            }
+
+            .comparison-plot-item img {
+                width: 100%;
+                max-height: 290px;
+                object-fit: contain;
+                background: #ffffff;
+                border-radius: 6px;
+                display: block;
+                margin: 0 auto;
+            }
+
+        /* Compact V1 Thumbnail Grid */
+        .v1-compact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 15px;
+            margin-top: 16px;
+        }
+
+        .v1-compact-card {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 12px;
+            text-align: center;
+        }
+
+            .v1-compact-card img {
+                width: 100%;
+                height: 155px;
+                object-fit: contain;
+                background: #ffffff;
+                border-radius: 4px;
+                border: 1px solid var(--border-color);
+                margin-bottom: 8px;
+                display: block;
+            }
+
+            .v1-compact-card h5 {
+                font-size: 0.9rem;
+                color: var(--nau-navy);
+                margin-bottom: 3px;
+                font-weight: 700;
+            }
+
+            .v1-compact-card p {
+                font-size: 0.78rem;
+                color: var(--text-muted);
+                line-height: 1.35;
+            }
 
         /* Gallery Grid */
         .gallery-category-title {
@@ -1494,7 +1581,7 @@
                               alt="Interactive 3D Model of RAPTOR Mini V2"
                               auto-rotate
                               camera-controls
-                              shadow-intensity="1">
+                              shadow-intensity="1.2">
                 </model-viewer>
             </div>
 
@@ -1526,7 +1613,7 @@
                 <div class="version-row-header v1-header">
                     <div>
                         <strong style="font-size: 1.1rem;">Version 1 - Full-Scale 3D Printed Prototype &amp; Transition to Updated Nylon Washer System</strong>
-                        <span style="font-size: 0.8rem; opacity: 0.9; margin-left: 8px;">| Validated in Ansys CFD &amp; MATLAB Aerodynamic Studies</span>
+                        <span style="font-size: 0.8rem; opacity: 0.9; margin-left: 8px;">| Physical Prototype &amp; Baseline Airflow Testing</span>
                     </div>
                 </div>
                 <div class="version-row-body">
@@ -1538,7 +1625,7 @@
                     </div>
                     <h5 style="color: var(--nau-navy); margin-bottom: 6px; font-size: 1.05rem;">Dihedral Winglet Integration &amp; Transition to Updated Nylon Washer System</h5>
                     <p style="font-size: 0.9rem; line-height: 1.7; color: var(--text-dark);">
-                        <strong>Version 1</strong> introduced upturned aerodynamic winglets to attenuate wingtip vortices and minimize induced drag during glide descent. To eliminate bearing binding, reduce parasitic weight, and improve deployment reliability, the heavy metal ball bearings from the proof of concept were replaced with the <strong>updated low-friction nylon washer swivel system</strong>. Full-scale physical prototypes were 3D printed to verify wing rotation stops, structural spar alignment, and stowed clearance inside the 7.51-inch launch tube. All baseline Ansys CFD streamline simulations and MATLAB aerodynamic studies below were performed on the <strong>RAPTOR Mini Version 1</strong> geometry.
+                        <strong>Version 1</strong> introduced upturned aerodynamic winglets to reduce wingtip drag during glide descent. To eliminate bearing binding, save weight, and improve deployment reliability, the heavy metal ball bearings from the proof of concept were replaced with an <strong>updated low-friction nylon washer swivel system</strong>. Full-scale physical prototypes were 3D printed to verify wing rotation stops, spar alignment, and stowed clearance inside the 7.51-inch launch tube.
                     </p>
                 </div>
             </div>
@@ -1548,7 +1635,7 @@
                 <div class="version-row-header v2-header">
                     <div>
                         <strong style="font-size: 1.1rem;">Version 2 - Current CAD with Cooling Vents &amp; Control Surfaces</strong>
-                        <span style="font-size: 0.8rem; opacity: 0.9; margin-left: 8px;">| Active Foaming Bambu Lab ASA Aero Revision</span>
+                        <span style="font-size: 0.8rem; opacity: 0.9; margin-left: 8px;">| Simulated in ANSYS CFD &amp; Ready for ASA Aero Fabrication</span>
                     </div>
                 </div>
                 <div class="version-row-body">
@@ -1560,10 +1647,7 @@
                     </div>
                     <h5 style="color: var(--nau-navy); margin-bottom: 6px; font-size: 1.05rem;">Integrated Avionics Cooling Vents, Nylon Washer Pivot &amp; Aileron Control Surfaces</h5>
                     <p style="font-size: 0.9rem; line-height: 1.7; color: var(--text-dark); margin-bottom: 8px;">
-                        <strong>Version 2</strong> is our current flight-ready CAD iteration featuring integrated NACA-style cooling air vents to regulate internal electronics and Walksnail VTX temperatures, an updated nylon washer swivel retention system, sculpted dihedral winglets, and functional trailing-edge control surfaces.
-                    </p>
-                    <p style="font-size: 0.9rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 0;">
-                        <em>Note:</em> Additional internal servo linkage channels and wire routing refinements are being finalized as Version 2 moves into full CFD verification and Bambu Lab ASA Aero fabrication.
+                        <strong>Version 2</strong> is our current flight-ready CAD iteration featuring integrated NACA-style cooling air vents to keep the onboard electronics and video transmitter cool, an updated nylon washer swivel retention system, sculpted winglets, and trailing-edge control surfaces.
                     </p>
                 </div>
             </div>
@@ -1611,25 +1695,24 @@
                 </table>
             </div>
 
-
             <!-- Avionics -->
-             <div class="content-box">
+            <div class="content-box">
                 <h4 style="font-size: 1.1rem; color: var(--nau-navy); margin-bottom: 10px;">
-                    Avionics Schematic & BOM
+                    Avionics Schematic &amp; BOM
                 </h4>
                 <p style="font-size: 0.92rem; line-height: 1.7; margin-bottom: 12px;">
-                    The Avionics for the RAPTOR Mini center on the MATEK Mateksys F405 Wing V2 Flight Controller. This flight controller includes an IMU, which is essential for <strong>Autonomous and Assisted Flight</strong>. I chose this flight controller for its abundance of PWM (Pulse Width Modulation) channels, I2C (Inter-Integrated Circuit) channels, and software support. Looking at the software side, this will be running ArduPlane, which is a variant of ArduPilot built for fixed-wing planes. The ArduPlane autopilot and assisted flight are built around multiple separate PID (Proportional-Integral-Derivative) controllers nested inside a programmatic loop. The current plan is to test this setup on the ground; if, during these tests, this controller is inadequate, then custom controllers can be implemented in C within ArduPilot. 
+                    The Avionics for the RAPTOR Mini center on the MATEK Mateksys F405 Wing V2 Flight Controller. This flight controller includes an IMU, which is essential for <strong>Autonomous and Assisted Flight</strong>. We chose this flight controller for its abundance of PWM (Pulse Width Modulation) channels, I2C (Inter-Integrated Circuit) channels, and software support. Looking at the software side, this will be running ArduPlane, which is a variant of ArduPilot built for fixed-wing planes. The ArduPlane autopilot and assisted flight are built around multiple separate PID (Proportional-Integral-Derivative) controllers nested inside a programmatic loop. The current plan is to test this setup on the ground; if, during these tests, this controller is inadequate, then custom controllers can be implemented in C within ArduPilot.
                 </p>
                 <ul style="font-size: 0.88rem; color: var(--text-dark); margin-left: 20px; margin-bottom: 15px;">
-                    <li style="margin-bottom: 6px;"><strong>Communications:</strong> To communicate with RAPTOR Mini, a 2.4 GHz Boxer Radio Controller will be used to transmit steering inputs and commands to a 2.4 GHz ELSR (ExpressLRS) receiver, and a separate 30 dBm 5.725- 5.850 GHz, 40 MHz bandwidth, 1080p video transmitter that can embed telemetry data to the ground station. Once these components arrive, range tests can begin.</li>
+                    <li style="margin-bottom: 6px;"><strong>Communications:</strong> To communicate with RAPTOR Mini, a 2.4 GHz Boxer Radio Controller will be used to transmit steering inputs and commands to a 2.4 GHz ELRS (ExpressLRS) receiver, and a separate 30 dBm 5.725-5.850 GHz, 40 MHz bandwidth, 1080p video transmitter that can embed telemetry data to the ground station. Once these components arrive, range tests can begin.</li>
                 </ul>
 
                 <table class="specs-table">
                     <caption>Bill of Materials</caption>
                     <thead>
                         <tr>
-                        <th style="width: 35%; font-weight: bold;" scope="col" title="Quantity">Qty</th>
-                        <th style="font-weight: bold;" scope="col">Part Number</th>
+                            <th style="width: 35%; font-weight: bold;" scope="col" title="Quantity">Qty</th>
+                            <th style="font-weight: bold;" scope="col">Part Number</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -1645,214 +1728,208 @@
                 </table>
 
                 <div class="matlab-plots-grid">
-                <div class="matlab-item">
-                    <h5>Avionics Schematic</h5>
-                    <img src="figures/RAPTOR_Mini_Schematic.png" alt="RAPTOR Mini Avionics Schematic" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <div class="matlab-item">
+                        <h5>Avionics Schematic</h5>
+                        <img src="figures/RAPTOR_Mini_Schematic.png" alt="RAPTOR Mini Avionics Schematic" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    </div>
                 </div>
-                </div>
-
-             </div>
-
-
+            </div>
 
             <!-- ========================================================== -->
-            <!-- SIMULATION SECTION 1: RAPTOR MINI V1 SIMULATIONS           -->
+            <!-- SIMULATION SECTION 1: RAPTOR MINI V2 SIMULATIONS (MAIN)    -->
             <!-- ========================================================== -->
             <div class="title-with-logo" style="margin-top: 40px;">
-                <h2 class="section-title">1. RAPTOR Mini Version 1 Simulations (MATLAB &amp; Ansys CFD)</h2>
+                <h2 class="section-title">1. RAPTOR Mini Version 2 Airflow &amp; Flight Simulations</h2>
             </div>
 
             <div class="content-box">
-                <h3 style="color: var(--nau-navy); margin-top: 0; margin-bottom: 10px;">MATLAB Aerodynamic Lift, Drag &amp; Efficiency Analysis (RAPTOR Mini Version 1)</h3>
-                <p style="font-size: 0.92rem; color: var(--text-dark); margin-bottom: 15px;">
-                    Full-aircraft aerodynamic performance was evaluated across airspeeds from <strong>10 mph to 50 mph</strong> for two primary flight regimes: <strong>$\alpha = 4^\circ$ (Cruise)</strong> and <strong>$\alpha = 12^\circ$ (Pull-Out / High Lift)</strong>, using a total wing area of <strong>$0.113\text{ m}^2$ ($0.1\text{ m}^2$)</strong>.
+                <p style="font-size: 0.98rem; line-height: 1.8; margin-bottom: 25px;">
+                    To evaluate the aerodynamic flight behavior of the <strong>RAPTOR Mini Version 2</strong> prior to manufacturing, our team conducted computational fluid dynamics (CFD) simulations in <strong>ANSYS</strong> alongside <strong>MATLAB</strong> flight performance modeling. These analyses verify airflow attachment, lift generation, and drag reduction across operating speeds from 10 to 50 mph.
                 </p>
 
-                <!-- MATLAB Graphs -->
-                <div class="matlab-plots-grid">
-                    <div class="matlab-item">
-                        <h5>Full Aircraft Lift vs. Airspeed</h5>
-                        <img src="figures/LIFT FORCE_VS_AIRSPEED_Raptor_mini_v1.png" alt="RAPTOR Mini Version 1 Full Aircraft Lift vs Airspeed" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    </div>
-                    <div class="matlab-item">
-                        <h5>Aerodynamic Efficiency (L/D) vs. Airspeed</h5>
-                        <img src="figures/AERODYNAMIC_EFFICIENCY_Raptor_mini_v1.png" alt="RAPTOR Mini Version 1 Aerodynamic Efficiency L/D vs Airspeed" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    </div>
-                    <div class="matlab-item">
-                        <h5>Full Aircraft Drag vs. Airspeed</h5>
-                        <img src="figures/DRAG_FORCE_VS_AIRSPEED_Raptor_mini_v1.png" alt="RAPTOR Mini Version 1 Full Aircraft Drag vs Airspeed" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    </div>
+                <!-- Front & Center: Animated Airflow Pathlines GIF -->
+                <div class="direct-figure-item" style="margin: 20px 0 35px 0; text-align: center;">
+                    <h4 style="text-align: center; font-size: 1.3rem;">Live Animated Airflow Pathlines (RAPTOR Mini V2)</h4>
+                    <p style="text-align: center; max-width: 820px; margin: 0 auto 16px auto;">
+                        Time-dependent airflow pulses streaming smoothly over the nose cone, 30-inch high-wing profile, and inverted V-tail at cruise speed. The animation confirms attached flow along the entire airframe without early boundary layer separation or stall.
+                    </p>
+                    <img src="Simulationfiles/RaptorMiniV2/PulsePathlinesv2.gif"
+                         alt="RAPTOR Mini V2 Live Animated Airflow Pathlines"
+                         class="direct-figure-img"
+                         style="max-height: 480px; width: 100%; max-width: 920px; background: #0b1329; border: 1px solid var(--border-color); border-radius: 8px;">
+                    <div class="direct-figure-caption">Figure: Animated CFD pathline pulses across the RAPTOR Mini V2 airframe.</div>
                 </div>
 
-                <!-- Table 1: 4 Degrees (Cruise) -->
-                <h4 style="color: var(--nau-navy); margin-top: 25px; margin-bottom: 8px;">
-                    RAPTOR Mini Version 1 Full Aircraft Data - 4&deg; Angle of Attack (Cruise)
-                </h4>
-                <p style="font-size: 0.86rem; color: var(--text-muted); margin-bottom: 10px;">
-                    Note: Values below represent direct <strong>Lift Force (N)</strong> (with supported aircraft weight in grams) and <strong>Drag Force (N)</strong> across airspeeds, rather than dimensionless coefficients.
-                </p>
-                <table class="specs-table">
-                    <thead>
-                        <tr>
-                            <th>Airspeed (mph)</th>
-                            <th>Total Lift Force (N)</th>
-                            <th>Equivalent Supported Weight (g)</th>
-                            <th>Total Drag Force (N)</th>
-                            <th>Lift-to-Drag Ratio ($L/D$)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td><strong>10 mph</strong></td><td>0.3572 N</td><td>36 g</td><td>0.0900 N</td><td>3.97</td></tr>
-                        <tr><td><strong>15 mph</strong></td><td>0.8278 N</td><td>84 g</td><td>0.1886 N</td><td>4.39</td></tr>
-                        <tr><td><strong>20 mph</strong></td><td>1.5062 N</td><td>154 g</td><td>0.3224 N</td><td>4.67</td></tr>
-                        <tr><td><strong>25 mph</strong></td><td>2.3883 N</td><td>243 g</td><td>0.4898 N</td><td>4.88</td></tr>
-                        <tr><td><strong>30 mph</strong></td><td>3.4585 N</td><td>353 g</td><td>0.6893 N</td><td>5.02</td></tr>
-                        <tr><td><strong>35 mph</strong></td><td>4.7946 N</td><td>489 g</td><td>0.9272 N</td><td>5.17</td></tr>
-                        <tr><td><strong>40 mph</strong></td><td>6.2901 N</td><td>641 g</td><td>1.1935 N</td><td>5.27</td></tr>
-                        <tr><td><strong>45 mph</strong></td><td>8.0141 N</td><td>817 g</td><td>1.4945 N</td><td>5.36</td></tr>
-                        <tr><td><strong>50 mph</strong></td><td>9.9541 N</td><td>1,015 g</td><td>1.8289 N</td><td>5.44</td></tr>
-                    </tbody>
-                </table>
+                <!-- V2 Combined Aerodynamic Performance Plot -->
+                <div class="direct-figure-item" style="margin: 30px 0;">
+                    <p style="text-align: center; max-width: 840px; margin: 0 auto 12px auto;">
+                        Simulated lift force, drag force, and lift-to-drag efficiency (L/D) comparing cruise flight (&alpha; = 4&deg;, blue) against high-lift pull-out (&alpha; = 12&deg;, orange). At a 30 mph cruise, the glider produces 3.7 N of lift with an efficiency exceeding 5.0.
+                    </p>
+                    <img src="Simulationfiles/RaptorMiniV2/RaptorMiniV2Aerodynamics.png"
+                         alt="RAPTOR Mini V2 Aerodynamics from ANSYS"
+                         class="direct-figure-img"
+                         style="max-height: 380px; border: none;">
+                </div>
 
-                <!-- Table 2: 12 Degrees (Pull-Out / High Lift) -->
-                <h4 style="color: var(--nau-navy); margin-top: 28px; margin-bottom: 8px;">
-                    RAPTOR Mini Version 1 Full Aircraft Data - 12&deg; Angle of Attack (Pull-Out / High Lift)
-                </h4>
-                <table class="specs-table">
-                    <thead>
-                        <tr>
-                            <th>Airspeed (mph)</th>
-                            <th>Total Lift Force (N)</th>
-                            <th>Equivalent Supported Weight (g)</th>
-                            <th>Total Drag Force (N)</th>
-                            <th>Lift-to-Drag Ratio ($L/D$)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td><strong>10 mph</strong></td><td>0.4970 N</td><td>51 g</td><td>0.1576 N</td><td>3.15</td></tr>
-                        <tr><td><strong>15 mph</strong></td><td>1.1619 N</td><td>118 g</td><td>0.3471 N</td><td>3.35</td></tr>
-                        <tr><td><strong>20 mph</strong></td><td>2.1159 N</td><td>216 g</td><td>0.6092 N</td><td>3.47</td></tr>
-                        <tr><td><strong>25 mph</strong></td><td>3.3708 N</td><td>344 g</td><td>0.9463 N</td><td>3.56</td></tr>
-                        <tr><td><strong>30 mph</strong></td><td>4.9297 N</td><td>503 g</td><td>1.3575 N</td><td>3.63</td></tr>
-                        <tr><td><strong>35 mph</strong></td><td>6.8018 N</td><td>693 g</td><td>1.8447 N</td><td>3.69</td></tr>
-                        <tr><td><strong>40 mph</strong></td><td>8.9811 N</td><td>916 g</td><td>2.4068 N</td><td>3.73</td></tr>
-                        <tr><td><strong>45 mph</strong></td><td>11.4759 N</td><td>1,170 g</td><td>3.0446 N</td><td>3.77</td></tr>
-                        <tr><td><strong>50 mph</strong></td><td>14.2832 N</td><td>1,456 g</td><td>3.7579 N</td><td>3.80</td></tr>
-                    </tbody>
-                </table>
-
-                <!-- Pitch Moment Analysis -->
-                <h4 style="color: var(--nau-navy); margin-top: 30px; margin-bottom: 10px;">
-                    Pitch Moment, Longitudinal Stability &amp; Battery Placement Analysis (30 mph)
-                </h4>
-                <p style="font-size: 0.92rem; line-height: 1.7; color: var(--text-dark); margin-bottom: 14px;">
-                    To guarantee stable autonomous recovery after apogee ejection, longitudinal static stability was analyzed by evaluating the aircraft's <strong>pitching moment</strong> ($M$) at 30 mph across both $\alpha = 4^\circ$ and $\alpha = 12^\circ$. As angle of attack increases from $4^\circ$ to $12^\circ$, total lift increases by $+1.471\text{ N}$ while the pitching moment becomes more negative by $\Delta M = -0.1362\text{ N}\cdot\text{m}$ (from $-0.2278\text{ N}\cdot\text{m}$ to $-0.3640\text{ N}\cdot\text{m}$). Because $\frac{\partial M}{\partial \alpha} < 0$, the aircraft produces a natural nose-down restoring moment whenever disturbed upward by wind gusts, confirming positive longitudinal static stability when the Center of Gravity (CG) is positioned forward of the Aerodynamic Neutral Point (NP).
+                <!-- Visual Airflow Breakdown: Staggered Image + Text (No tiles / No black bars) -->
+                <h3 class="subsection-title" style="margin-top: 35px;">Visual Airflow Breakdown</h3>
+                <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 25px;">
+                    Direct CFD post-processing visualizations detailing lift generation, longitudinal stability, and drag behavior across the Version 2 airframe:
                 </p>
 
-                <table class="specs-table">
-                    <thead>
-                        <tr>
-                            <th>Stability &amp; Pitch Moment Parameter (at 30 mph)</th>
-                            <th>Simulated Value / Requirement</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Lift at $\alpha = 4^\circ$ (Cruise)</strong></td>
-                            <td>3.459 N</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Lift at $\alpha = 12^\circ$ (Pull-Out)</strong></td>
-                            <td>4.930 N ($\Delta\text{Lift} = +1.471\text{ N}$)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Pitch Moment at $\alpha = 4^\circ$</strong></td>
-                            <td>$-0.2278\text{ N}\cdot\text{m}$</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Pitch Moment at $\alpha = 12^\circ$</strong></td>
-                            <td>$-0.3640\text{ N}\cdot\text{m}$ ($\Delta\text{Moment} = -0.1362\text{ N}\cdot\text{m}$)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Aerodynamic Neutral Point (NP)</strong></td>
-                            <td>3.64 inches (9.26 cm) FORWARD of Onshape origin ($+Z$)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Target Center of Gravity (with 10% Static Margin)</strong></td>
-                            <td>4.24 inches (10.78 cm) FORWARD of Onshape origin ($+Z$)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Practical Action (Battery Placement)</strong></td>
-                            <td><strong>Mount the battery in the NOSE cone until the plane balances level at exactly 4.2 inches (10.8 cm) forward of the wing bolt.</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- ANSYS CFD SIMULATIONS -->
-            <h3 class="subsection-title">Ansys CFD Streamline &amp; Flow Field Modeling (RAPTOR Mini Version 1)</h3>
-            <p style="font-size: 0.92rem; color: var(--nau-navy); font-weight: 600; margin-bottom: 25px;">
-                All computational fluid dynamics (CFD) streamline simulations below were executed on the <strong>RAPTOR Mini Version 1</strong>. Click any image to view in full resolution:
-            </p>
-
-            <div class="cfd-staggered-container">
-                <!-- Row 1: Text Left, Image Right -->
-                <div class="cfd-staggered-row">
-                    <div class="cfd-text-col">
-                        <h4>1. 3D Velocity Streamlines &amp; Surface Pressure Contours</h4>
-                        <p>Full 3D flowfield of RAPTOR Mini Version 1 illustrating velocity progression and surface pressure distribution along the fuselage and wing root junction.</p>
+                <div class="cfd-staggered-container">
+                    <!-- Row 1: Text Left, Image Right (3D Velocity Pathlines) -->
+                    <div class="cfd-staggered-row">
+                        <div class="cfd-text-col">
+                            <h4>1. 3D Velocity Pathlines Overview</h4>
+                            <p>Color-coded velocity ribbons tracking air acceleration over the upper camber of the wing. Air accelerates smoothly into the yellow and red velocity bands, generating steady low-pressure suction for sustained flight.</p>
+                        </div>
+                        <div class="cfd-img-col">
+                            <img src="Simulationfiles/RaptorMiniV2/velocityPathlines.png" alt="RAPTOR Mini V2 3D Velocity Pathlines">
+                        </div>
                     </div>
-                    <div class="cfd-img-col">
-                        <img src="figures/FFFiso.png" alt="RAPTOR Mini Version 1 3D Streamlines and Pressure Contours" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+
+                    <!-- Row 2: Image Left, Text Right (Upper Wing Suction) -->
+                    <div class="cfd-staggered-row">
+                        <div class="cfd-text-col">
+                            <h4>2. Lift Generation: Upper Wing Suction</h4>
+                            <p>Surface pressure contours showing the low-pressure suction zone (blue and teal contours) that develops over the upper wing surface, producing the primary upward lift force to hold the aircraft in the air.</p>
+                        </div>
+                        <div class="cfd-img-col">
+                            <img src="Simulationfiles/RaptorMiniV2/StaticPressureContor.png" alt="Upper Wing Surface Pressure Contours">
+                        </div>
+                    </div>
+
+                    <!-- Row 3: Text Left, Image Right (Lower Belly Pressure) -->
+                    <div class="cfd-staggered-row">
+                        <div class="cfd-text-col">
+                            <h4>3. Lift Generation: Underside Upward Push</h4>
+                            <p>Static pressure distribution underneath the aircraft showing higher positive pressure (yellow and green contours) acting on the lower fuselage and wing undersides to support glider weight.</p>
+                        </div>
+                        <div class="cfd-img-col">
+                            <img src="Simulationfiles/RaptorMiniV2/StaticPressureContorUnderSide.png" alt="Underside Surface Pressure Contours">
+                        </div>
+                    </div>
+
+                    <!-- Row 4: Image Left, Text Right (Side Velocity Slice) -->
+                    <div class="cfd-staggered-row">
+                        <div class="cfd-text-col">
+                            <h4>4. Stability: Centerline Velocity Magnitude Slice</h4>
+                            <p>Mid-fuselage longitudinal velocity plane showing clean, undisturbed airflow passing the electronics bay, with minimal wake detachment behind the aft pusher section and tail surfaces.</p>
+                        </div>
+                        <div class="cfd-img-col">
+                            <img src="Simulationfiles/RaptorMiniV2/MagVelocityContorSide.png" alt="Side Profile Velocity Magnitude Slice">
+                        </div>
+                    </div>
+
+                    <!-- Row 5: Text Left, Image Right (Velocity Vectors) -->
+                    <div class="cfd-staggered-row">
+                        <div class="cfd-text-col">
+                            <h4>5. Stability: Symmetry Plane Velocity Vectors</h4>
+                            <p>Vector direction arrows verifying that downwash shed by the main wing passes cleanly around the inverted V-tail, ensuring responsive elevator and rudder pitch/yaw authority.</p>
+                        </div>
+                        <div class="cfd-img-col">
+                            <img src="Simulationfiles/RaptorMiniV2/vectorsymmetry.png" alt="Symmetry Plane Velocity Vectors">
+                        </div>
+                    </div>
+
+                    <!-- Row 6: Image Left, Text Right (Wall Shear Stress) -->
+                    <div class="cfd-staggered-row">
+                        <div class="cfd-text-col">
+                            <h4>6. Drag: Skin Friction &amp; Wall Shear Stress</h4>
+                            <p>Skin friction distribution highlighting regions of highest aerodynamic shear stress along the nose cone and leading edge, confirming the airframe maintains low parasitic drag across the fuselage body.</p>
+                        </div>
+                        <div class="cfd-img-col">
+                            <img src="Simulationfiles/RaptorMiniV2/WallShearStressContor.png" alt="Wall Shear Stress Surface Contours">
+                        </div>
+                    </div>
+
+                    <!-- Row 7: Text Left, Image Right (Full-Wingspan Pressure Streamlines) -->
+                    <div class="cfd-staggered-row">
+                        <div class="cfd-text-col">
+                            <h4>7. Full-Wingspan Pressure Pathlines</h4>
+                            <p>Spanwise streamline alignment verifying that the upturned dihedral wingtips effectively manage tip vorticity, dissipating swirling air and improving loiter glide endurance.</p>
+                        </div>
+                        <div class="cfd-img-col">
+                            <img src="Simulationfiles/RaptorMiniV2/pressurePathlines.png" alt="Full Wingspan Pressure Pathlines">
+                        </div>
                     </div>
                 </div>
 
-                <!-- Row 2: Image Left, Text Right -->
-                <div class="cfd-staggered-row">
-                    <div class="cfd-text-col">
-                        <h4>2. Top-Down Spanwise Streamline Alignment</h4>
-                        <p>Verifies attached flow and uniform spanwise velocity distribution across the entire 30.0-inch lifting area of the RAPTOR Mini Version 1.</p>
-                    </div>
-                    <div class="cfd-img-col">
-                        <img src="figures/topdown.png" alt="RAPTOR Mini Version 1 Top Down Streamlines" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    </div>
-                </div>
+                <!-- Version 1 vs. Version 2 Symmetrical 2x2 Grid -->
+                <h3 class="subsection-title" style="margin-top: 40px;">Version 1 vs. Version 2 Aerodynamic Comparison</h3>
+                <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 18px;">
+                    Comparing Version 1 and Version 2 demonstrates that the refined V2 airframe improves glide efficiency by up to 3.1% at low-to-moderate cruise speeds (10 to 25 mph) and generates higher lift with minimal added drag:
+                </p>
 
-                <!-- Row 3: Text Left, Image Right -->
-                <div class="cfd-staggered-row">
-                    <div class="cfd-text-col">
-                        <h4>3. Frontal Inflow and Wingtip Vortex</h4>
-                        <p>Airflow division across the aerodynamic nose cone and leading edge, tracking symmetrical outward divergence toward the wingtips on RAPTOR Mini Version 1.</p>
+                <div class="comparison-2x2-grid">
+                    <div class="comparison-plot-item">
+                        <h5>Glide Efficiency Comparison (V1 vs. V2)</h5>
+                        <p>Lift-to-drag (L/D) efficiency across speeds for cruise (&alpha; = 4&deg;) and high-lift pull-out (&alpha; = 12&deg;).</p>
+                        <img src="Simulationfiles/EfficiencyComparisonMini V1vsMiniV2.png" alt="Efficiency Comparison V1 vs V2">
                     </div>
-                    <div class="cfd-img-col">
-                        <img src="figures/front.png" alt="RAPTOR Mini Version 1 Frontal Inflow and Wingtip Vortex" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <div class="comparison-plot-item">
+                        <h5>V2 Percent Efficiency Gain over V1</h5>
+                        <p>Up to a 3.1% efficiency improvement at lower glide speeds (10 to 25 mph) for extended loiter flight.</p>
+                        <img src="Simulationfiles/EfficiencyGain.png" alt="RAPTOR Mini V2 Percent Efficiency Gain over V1">
                     </div>
-                </div>
-
-                <!-- Row 4: Image Left, Text Right -->
-                <div class="cfd-staggered-row">
-                    <div class="cfd-text-col">
-                        <h4>4. Wing Blade Air Ripple Analysis</h4>
-                        <p>Flowfield analysis evaluating the air ripple and spanwise deflection generated by the wing blade and upturned dihedral tip geometry.</p>
+                    <div class="comparison-plot-item">
+                        <h5>Lift Force Comparison (V1 vs. V2)</h5>
+                        <p>V2 (dashed lines) produces higher upward lift force than V1 across the entire operational envelope.</p>
+                        <img src="Simulationfiles/Mini V1vsMiniV2.png" alt="Lift Force Comparison V1 vs V2">
                     </div>
-                    <div class="cfd-img-col">
-                        <img src="figures/wingtip.png" alt="Wing Blade Air Ripple Analysis" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <div class="comparison-plot-item">
+                        <h5>Drag Force Comparison (V1 vs. V2)</h5>
+                        <p>V2 maintains nearly identical low drag values despite the addition of cooling vents and control surfaces.</p>
+                        <img src="Simulationfiles/Mini V1vsMiniV2drag.png" alt="Drag Force Comparison V1 vs V2">
                     </div>
                 </div>
             </div>
 
             <!-- ========================================================== -->
-            <!-- SIMULATION SECTION 2: RAPTOR MINI V2 SIMULATIONS           -->
+            <!-- SIMULATION SECTION 2: RAPTOR MINI V1 (BELOW V2, COMPACT)   -->
             <!-- ========================================================== -->
-            <div class="title-with-logo" style="margin-top: 45px;">
-                <h2 class="section-title">2. RAPTOR Mini Version 2 Simulations (Coming Soon)</h2>
+            <div class="title-with-logo" style="margin-top: 40px;">
+                <h2 class="section-title">2. RAPTOR Mini Version 1 Baseline Simulations</h2>
             </div>
 
-            <div class="content-box" style="text-align: center; padding: 40px 26px;">
-                <h3 style="color: var(--nau-navy); margin-bottom: 10px;">RAPTOR Mini Version 2 Aerodynamic CFD &amp; MATLAB Simulations - Coming Soon</h3>
-                <p style="font-size: 0.95rem; color: var(--text-muted); max-width: 780px; margin: 0 auto;">
-                    Ansys CFD flow field modeling and updated MATLAB lift, drag, and pitch moment performance curves for the <strong>RAPTOR Mini Version 2</strong> (incorporating the new avionics cooling vents, nylon washer swivel hub, and trailing-edge control surfaces) are currently in progress and will be added here upon completion.
+            <div class="content-box">
+                <p style="font-size: 0.92rem; color: var(--text-dark); margin-bottom: 16px;">
+                    Before designing Version 2, our initial Version 1 airframe was simulated in ANSYS and MATLAB to establish baseline aerodynamic benchmarks:
                 </p>
+
+                <!-- V1 MATLAB Plot (Clean, No Nested Tile Box, No Double Header) -->
+                <div class="direct-figure-item" style="margin: 15px 0 25px 0;">
+                    <img src="Simulationfiles/RaptorMiniV1/RaptorMiniV1Aerodynamics.png"
+                         alt="RAPTOR Mini V1 values from ANSYS"
+                         class="direct-figure-img"
+                         style="max-height: 350px; border: none;">
+                    <div class="direct-figure-caption">Figure: RAPTOR Mini V1 baseline lift, drag, and lift-to-drag efficiency curves.</div>
+                </div>
+
+                <!-- Compact V1 Flow Visuals -->
+                <div class="v1-compact-grid">
+                    <div class="v1-compact-card">
+                        <img src="Simulationfiles/RaptorMiniV1/FFFiso.png" alt="V1 3D Velocity Streamlines">
+                        <h5>3D Airflow Streamlines</h5>
+                        <p>Baseline 3D airflow over the V1 fuselage and wing.</p>
+                    </div>
+                    <div class="v1-compact-card">
+                        <img src="Simulationfiles/RaptorMiniV1/topdown.png" alt="V1 Top-Down Streamlines">
+                        <h5>Top-Down Wing Alignment</h5>
+                        <p>Attached airflow across the 30-inch span.</p>
+                    </div>
+                    <div class="v1-compact-card">
+                        <img src="Simulationfiles/RaptorMiniV1/front.png" alt="V1 Frontal Inflow">
+                        <h5>Frontal Inflow Split</h5>
+                        <p>Airflow division around the nose and leading edges.</p>
+                    </div>
+                    <div class="v1-compact-card">
+                        <img src="Simulationfiles/RaptorMiniV1/wingtip.png" alt="V1 Wingtip Ripple">
+                        <h5>Winglet Vortex Control</h5>
+                        <p>Upturned wingtips reducing tip vortex drag.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -1887,8 +1964,7 @@
                               alt="Interactive 3D Model of RAPTOR Rocket"
                               auto-rotate
                               camera-controls
-                              background-color: #0a1a2f;
-                              shadow-intensity="1">
+                              shadow-intensity="1.2">
                 </model-viewer>
             </div>
 
@@ -2267,39 +2343,94 @@
             <div class="gallery-category-title">Aerodynamic CFD Flow Studies &amp; MATLAB Plots</div>
             <div class="direct-gallery-grid">
                 <div class="gallery-item">
-                    <img src="figures/LIFT FORCE_VS_AIRSPEED_Raptor_mini_v1.png" alt="Lift Force vs Airspeed MATLAB Graph" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    <h5>Full Aircraft Lift vs. Airspeed (Version 1)</h5>
-                    <p>MATLAB lift force curves at 4&deg; and 12&deg; angle of attack from 10 to 50 mph.</p>
+                    <img src="Simulationfiles/RaptorMiniV2/PulsePathlinesv2.gif" alt="RAPTOR Mini V2 Animated Airflow Pathlines GIF">
+                    <h5>Animated Airflow Pathlines (V2)</h5>
+                    <p>Live animated pathlines streaming across the RAPTOR Mini V2 airframe.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="figures/AERODYNAMIC_EFFICIENCY_Raptor_mini_v1.png" alt="Aerodynamic Efficiency L/D vs Airspeed MATLAB Graph" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    <h5>Aerodynamic Efficiency (L/D) vs. Airspeed (Version 1)</h5>
-                    <p>Lift-to-drag ratio progression across operating airspeeds for Version 1.</p>
+                    <img src="Simulationfiles/RaptorMiniV2/velocityPathlines.png" alt="RAPTOR Mini V2 3D Velocity Pathlines">
+                    <h5>3D Velocity Pathlines (V2)</h5>
+                    <p>Velocity ribbons showing airflow acceleration over the V2 wing profile.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="figures/DRAG_FORCE_VS_AIRSPEED_Raptor_mini_v1.png" alt="Drag Force vs Airspeed MATLAB Graph" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    <h5>Full Aircraft Drag vs. Airspeed (Version 1)</h5>
-                    <p>Total aerodynamic drag force comparison between 4&deg; cruise and 12&deg; pull-out.</p>
+                    <img src="Simulationfiles/RaptorMiniV2/RaptorMiniV2Aerodynamics.png" alt="RAPTOR Mini V2 Aerodynamic Curves">
+                    <h5>RAPTOR Mini V2 Aerodynamic Curves</h5>
+                    <p>Lift, drag, and glide efficiency curves for V2 from 10 to 50 mph.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="figures/iso2.png" alt="Airframe Surface Pressure Contours" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    <h5>Airframe Surface Pressure Contours</h5>
-                    <p>Pressure distribution along upper wing camber, fuselage, and tail.</p>
+                    <img src="Simulationfiles/RaptorMiniV2/StaticPressureContor.png" alt="Upper Surface Pressure Contours V2">
+                    <h5>Upper Wing Pressure Contours (V2)</h5>
+                    <p>Low-pressure suction zone across the top of the V2 wing.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="figures/iso3.png" alt="Downstream Wake Velocity Gradients" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    <h5>Downstream Wake Velocity Gradients</h5>
-                    <p>Far-field velocity streamlines tracking trailing-edge airflow and wake decay.</p>
+                    <img src="Simulationfiles/RaptorMiniV2/StaticPressureContorUnderSide.png" alt="Lower Surface Pressure Contours V2">
+                    <h5>Lower Belly Pressure Contours (V2)</h5>
+                    <p>High-pressure upward push underneath the V2 wing and fuselage.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="figures/front2.png" alt="Nose Cone Stagnation & Inflow Velocity" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    <h5>Nose Cone Stagnation &amp; Inflow Velocity</h5>
-                    <p>Leading edge boundary layer development and stagnation pressure lines.</p>
+                    <img src="Simulationfiles/RaptorMiniV2/MagVelocityContorSide.png" alt="Side Velocity Slice V2">
+                    <h5>Side-Profile Velocity Slice (V2)</h5>
+                    <p>Centerline slice showing smooth airflow from the wing back to the tail.</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="figures/wing_tip_vector.png" alt="Wingtip Vortex Vector Distribution" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
-                    <h5>Wingtip Vortex Vector Distribution</h5>
-                    <p>Vector plot quantifying upward deflection and dissipation of tip vortices.</p>
+                    <img src="Simulationfiles/RaptorMiniV2/vectorsymmetry.png" alt="Velocity Vectors V2">
+                    <h5>Symmetry Plane Airflow Vectors (V2)</h5>
+                    <p>Directional velocity vectors confirming clean flow across the V-tail.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Simulationfiles/RaptorMiniV2/WallShearStressContor.png" alt="Wall Shear Stress V2">
+                    <h5>Surface Friction &amp; Shear Stress (V2)</h5>
+                    <p>Shows where airflow brushes hardest against the nose and leading edges.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Simulationfiles/RaptorMiniV2/pressurePathlines.png" alt="Pressure Pathlines V2">
+                    <h5>Full-Wingspan Pressure Pathlines (V2)</h5>
+                    <p>Spanwise airflow ribbons across the 30-inch wing and winglets.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Simulationfiles/EfficiencyComparisonMini V1vsMiniV2.png" alt="Efficiency Comparison V1 vs V2">
+                    <h5>Efficiency Comparison (V1 vs. V2)</h5>
+                    <p>Side-by-side comparison of V1 and V2 lift-to-drag ratios.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Simulationfiles/EfficiencyGain.png" alt="Efficiency Gain V2 over V1">
+                    <h5>V2 Efficiency Gain Over V1</h5>
+                    <p>Percentage efficiency improvement achieved by V2 at low cruise speeds.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Simulationfiles/Mini V1vsMiniV2.png" alt="Lift Comparison V1 vs V2">
+                    <h5>Lift Force Comparison (V1 vs. V2)</h5>
+                    <p>Comparison of total lift force generated from 10 to 50 mph.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Simulationfiles/Mini V1vsMiniV2drag.png" alt="Drag Comparison V1 vs V2">
+                    <h5>Drag Force Comparison (V1 vs. V2)</h5>
+                    <p>Comparison of total aerodynamic drag between V1 and V2.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Simulationfiles/RaptorMiniV1/RaptorMiniV1Aerodynamics.png" alt="RAPTOR Mini V1 Aerodynamic Curves">
+                    <h5>RAPTOR Mini V1 Baseline Curves</h5>
+                    <p>Initial lift, drag, and efficiency curves for Version 1.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Simulationfiles/RaptorMiniV1/iso2.png" alt="V1 Airframe Surface Pressure Contours">
+                    <h5>V1 Surface Pressure Contours</h5>
+                    <p>Baseline pressure distribution along the V1 wing and tail.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Simulationfiles/RaptorMiniV1/iso3.png" alt="V1 Downstream Wake Velocity Gradients">
+                    <h5>V1 Wake Velocity Streamlines</h5>
+                    <p>Far-field velocity streamlines tracking trailing-edge airflow on V1.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Simulationfiles/RaptorMiniV1/front2.png" alt="V1 Nose Cone Inflow Velocity">
+                    <h5>V1 Nose Cone Inflow</h5>
+                    <p>Leading-edge airflow split on the Version 1 prototype.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Simulationfiles/RaptorMiniV1/wing_tip_vector.png" alt="V1 Wingtip Vortex Vector Distribution">
+                    <h5>V1 Wingtip Vortex Vectors</h5>
+                    <p>Vector plot showing airflow around the Version 1 upturned wingtips.</p>
                 </div>
             </div>
 
@@ -2307,7 +2438,7 @@
             <div class="gallery-category-title">Presentation Milestones &amp; Hardware Archives</div>
             <div class="direct-gallery-grid">
                 <div class="gallery-item">
-                    <img src="figures/20261023_133608.jpg" alt="Midterm Technical Presentation Milestone" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    <img src="figures/20261023_133642.jpg" alt="Midterm Technical Presentation Milestone" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
                     <h5>Midterm Technical Presentation</h5>
                     <p>Team presenting progress report and technical milestones to faculty advisors and sponsors.</p>
                 </div>
@@ -2348,7 +2479,7 @@
                     </div>
                 </div>
 
-                <!-- Capstone Proposal -->
+                <!-- Capstone Project Proposal -->
                 <div class="doc-card">
                     <div class="doc-card-header">
                         <i class="fa-solid fa-file-pdf doc-icon-pdf"></i>
@@ -2435,7 +2566,7 @@
                         Northern Arizona University | The Steve Sanghi College of Engineering
                     </p>
                     <p style="margin-top: 4px; font-size: 0.8rem; color: var(--nau-gold);">
-                        <i class="fa-regular fa-clock me-1"></i> Website Last Edited: November 6, 2026
+                        <i class="fa-regular fa-clock me-1"></i> Website Last Edited: November 8, 2026
                     </p>
                 </div>
             </div>
@@ -2463,126 +2594,145 @@
 
     <!-- JavaScript for Tabs, Lightbox, Smooth Scroll, and PDF Switcher -->
     <script>
-                // Tab Navigation Switcher
-                function switchView(viewId, buttonElement) {
-                    const views = document.querySelectorAll('.page-view');
-                    views.forEach(v => v.classList.remove('active-view'));
+                        // Tab Navigation Switcher
+                        function switchView(viewId, buttonElement) {
+                            const views = document.querySelectorAll('.page-view');
+                            views.forEach(v => v.classList.remove('active-view'));
 
-                    const selectedView = document.getElementById(viewId);
-                    if (selectedView) {
-                        selectedView.classList.add('active-view');
-                    }
+                            const selectedView = document.getElementById(viewId);
+                            if (selectedView) {
+                                selectedView.classList.add('active-view');
+                            }
 
-                    const buttons = document.querySelectorAll('.nav-tab-btn');
-                    buttons.forEach(b => b.classList.remove('active'));
-                    if (buttonElement) {
-                        buttonElement.classList.add('active');
-                    }
+                            const buttons = document.querySelectorAll('.nav-tab-btn');
+                            buttons.forEach(b => b.classList.remove('active'));
+                            if (buttonElement) {
+                                buttonElement.classList.add('active');
+                            }
 
-                    const navElement = document.getElementById('main-nav');
-                    if (navElement) {
-                        navElement.scrollIntoView({ behavior: 'smooth' });
-                    }
+                            const navElement = document.getElementById('main-nav');
+                            if (navElement) {
+                                navElement.scrollIntoView({ behavior: 'smooth' });
+                            }
 
-                    if (window.MathJax && window.MathJax.typesetPromise) {
-                        window.MathJax.typesetPromise();
-                    }
-                }
-
-                // Jump directly to Team Section
-                function goToTeamSection(buttonElement) {
-                    const views = document.querySelectorAll('.page-view');
-                    views.forEach(v => v.classList.remove('active-view'));
-                    const overview = document.getElementById('overview-view');
-                    if (overview) overview.classList.add('active-view');
-
-                    const buttons = document.querySelectorAll('.nav-tab-btn');
-                    buttons.forEach(b => b.classList.remove('active'));
-                    if (buttonElement) buttonElement.classList.add('active');
-
-                    setTimeout(() => {
-                        const teamSec = document.getElementById('team-section');
-                        if (teamSec) {
-                            teamSec.scrollIntoView({ behavior: 'smooth' });
+                            if (window.MathJax && window.MathJax.typesetPromise) {
+                                window.MathJax.typesetPromise();
+                            }
                         }
-                    }, 60);
 
-                    if (window.MathJax && window.MathJax.typesetPromise) {
-                        window.MathJax.typesetPromise();
-                    }
-                }
+                        // Jump directly to Team Section
+                        function goToTeamSection(buttonElement) {
+                            const views = document.querySelectorAll('.page-view');
+                            views.forEach(v => v.classList.remove('active-view'));
+                            const overview = document.getElementById('overview-view');
+                            if (overview) overview.classList.add('active-view');
 
-                // Scroll to Nav
-                function scrollToNav(event) {
-                    event.preventDefault();
-                    const navElement = document.getElementById('main-nav');
-                    if (navElement) {
-                        navElement.scrollIntoView({ behavior: 'smooth' });
-                    }
-                }
+                            const buttons = document.querySelectorAll('.nav-tab-btn');
+                            buttons.forEach(b => b.classList.remove('active'));
+                            if (buttonElement) buttonElement.classList.add('active');
 
-                // Inline PDF Switcher
-                function loadPdf(pdfUrl, labelText, buttonEl) {
-                    const frame = document.getElementById('inline-pdf-frame');
-                    const label = document.getElementById('current-doc-label');
-                    if (frame) frame.src = pdfUrl;
-                    if (label) label.textContent = labelText;
+                            setTimeout(() => {
+                                const teamSec = document.getElementById('team-section');
+                                if (teamSec) {
+                                    teamSec.scrollIntoView({ behavior: 'smooth' });
+                                }
+                            }, 60);
 
-                    const tabButtons = document.querySelectorAll('.pdf-tab-btn');
-                    tabButtons.forEach(btn => btn.classList.remove('active'));
-                    if (buttonEl && buttonEl.classList.contains('pdf-tab-btn')) {
-                        buttonEl.classList.add('active');
-                    } else if (pdfUrl.includes('midterm')) {
-                        const b = document.getElementById('btn-tab-midterm');
-                        if (b) b.classList.add('active');
-                    } else if (pdfUrl.includes('proposal')) {
-                        const b = document.getElementById('btn-tab-proposal');
-                        if (b) b.classList.add('active');
-                    }
+                            if (window.MathJax && window.MathJax.typesetPromise) {
+                                window.MathJax.typesetPromise();
+                            }
+                        }
 
-                    const viewerCard = document.querySelector('.pdf-viewer-card');
-                    if (viewerCard && buttonEl && !buttonEl.classList.contains('pdf-tab-btn')) {
-                        viewerCard.scrollIntoView({ behavior: 'smooth' });
-                    }
-                }
+                        // Scroll to Nav
+                        function scrollToNav(event) {
+                            event.preventDefault();
+                            const navElement = document.getElementById('main-nav');
+                            if (navElement) {
+                                navElement.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        }
 
-                // Lightbox Functions
-                function openLightbox(src, altText) {
-                    const modal = document.getElementById('lightbox-modal');
-                    const img = document.getElementById('lightbox-img');
-                    const cap = document.getElementById('lightbox-caption');
-                    img.src = src;
-                    img.alt = altText || '';
-                    cap.textContent = altText || '';
-                    modal.classList.add('lightbox-active');
-                    document.body.style.overflow = 'hidden';
-                }
+                        // Inline PDF Switcher
+                        function loadPdf(pdfUrl, labelText, buttonEl) {
+                            const frame = document.getElementById('inline-pdf-frame');
+                            const label = document.getElementById('current-doc-label');
+                            if (frame) frame.src = pdfUrl;
+                            if (label) label.textContent = labelText;
 
-                function closeLightbox(e) {
-                    if (e) e.stopPropagation();
-                    const modal = document.getElementById('lightbox-modal');
-                    modal.classList.remove('lightbox-active');
-                    document.body.style.overflow = '';
-                }
+                            const tabButtons = document.querySelectorAll('.pdf-tab-btn');
+                            tabButtons.forEach(btn => btn.classList.remove('active'));
+                            if (buttonEl && buttonEl.classList.contains('pdf-tab-btn')) {
+                                buttonEl.classList.add('active');
+                            } else if (pdfUrl.includes('midterm')) {
+                                const b = document.getElementById('btn-tab-midterm');
+                                if (b) b.classList.add('active');
+                            } else if (pdfUrl.includes('proposal')) {
+                                const b = document.getElementById('btn-tab-proposal');
+                                if (b) b.classList.add('active');
+                            }
 
-                document.addEventListener('keydown', function(e) {
-                    if (e.key === 'Escape') {
-                        closeLightbox();
-                    }
-                });
+                            const viewerCard = document.querySelector('.pdf-viewer-card');
+                            if (viewerCard && buttonEl && !buttonEl.classList.contains('pdf-tab-btn')) {
+                                viewerCard.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        }
 
-                // Automatically Attach Lightbox to figures
-                document.addEventListener('DOMContentLoaded', function() {
-                    const images = document.querySelectorAll('img:not(.college-logo):not(.hero-college-logo):not(.section-raptor-logo):not(.hero-raptor-logo):not(.project-badge-logo):not(.portal-img-icon)');
-                    images.forEach(img => {
-                        img.classList.add('lightbox-trigger');
-                        img.title = img.title || 'Click to view full-resolution in lightbox';
-                        img.addEventListener('click', function() {
-                            openLightbox(this.src, this.alt || this.title || '');
+                        // Lightbox Functions
+                        function openLightbox(src, altText) {
+                            const modal = document.getElementById('lightbox-modal');
+                            const img = document.getElementById('lightbox-img');
+                            const cap = document.getElementById('lightbox-caption');
+                            img.src = src;
+                            img.alt = altText || '';
+                            cap.textContent = altText || '';
+                            modal.classList.add('lightbox-active');
+                            document.body.style.overflow = 'hidden';
+                        }
+
+                        function closeLightbox(e) {
+                            if (e) e.stopPropagation();
+                            const modal = document.getElementById('lightbox-modal');
+                            modal.classList.remove('lightbox-active');
+                            document.body.style.overflow = '';
+                        }
+
+                        document.addEventListener('keydown', function(e) {
+                            if (e.key === 'Escape') {
+                                closeLightbox();
+                            }
                         });
-                    });
-                });
-    </script>
 
+                        // Automatically Attach Lightbox to figures
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const images = document.querySelectorAll('img:not(.college-logo):not(.hero-college-logo):not(.section-raptor-logo):not(.hero-raptor-logo):not(.project-badge-logo):not(.portal-img-icon)');
+                            images.forEach(img => {
+                                img.classList.add('lightbox-trigger');
+                                img.title = img.title || 'Click to view full-resolution in lightbox';
+                                img.addEventListener('click', function() {
+                                    openLightbox(this.src, this.alt || this.title || '');
+                                });
+                            });
+                        });
+                        // Automatically tint 3D CAD models dark grey on load
+                        // ==========================================
+// Tint CAD models to a dark slate grey so they pop on the light background
+document.addEventListener('DOMContentLoaded', function () {
+    const viewers = document.querySelectorAll('model-viewer');
+
+    viewers.forEach(viewer => {
+        viewer.addEventListener('load', () => {
+            const model = viewer.model;
+            if (model && model.materials) {
+                model.materials.forEach(material => {
+                    // Dark slate grey [Red, Green, Blue, Alpha]
+                    material.pbrMetallicRoughness.setBaseColorFactor([0.15, 0.17, 0.20]);
+                    material.pbrMetallicRoughness.setRoughnessFactor(0.45);
+                    material.pbrMetallicRoughness.setMetallicFactor(0.2);
+                });
+            }
+        });
+    });
+});
+    </script>
 </body>
 </html>

@@ -2,7 +2,7 @@
   <Configurations>
     <BuildType Name="Debug" />
   </Configurations>
-  <Project Path="." Type="Website" DisplayName="CapstoneWebsitev4(2)">
+  <Project Path="." Type="Website" DisplayName="CapstoneWebsitev4(2)" Id="42776d2a-4277-4d48-9bbe-2e72d48f4ac8">
     <Properties Name="WebsiteProperties">
       <Property Name="Debug.AspNetCompiler.Debug" Value="&quot;True&quot;" />
       <Property Name="Debug.AspNetCompiler.FixedNames" Value="&quot;false&quot;" />
