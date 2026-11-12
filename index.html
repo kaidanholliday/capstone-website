@@ -2040,6 +2040,46 @@
                 </table>
             </div>
 
+
+
+
+            <!-- Avionics -->
+            <div class="content-box">
+                <h4 style="font-size: 1.1rem; color: var(--nau-navy); margin-bottom: 10px;">
+                    Rocket Avionics Schematic &amp; BOM
+                </h4>
+                <p style="font-size: 0.92rem; line-height: 1.7; margin-bottom: 12px;">
+                    The Avionics for the RAPTOR circle around the Blue Raven altimeter, this board is used to automatically trigger 4 ordinance events. The Blue Raven altimeter includes a High G 3-axis accelerometer, gyroscope, and barometer for GPS altitude tracking. The Blue Raven can connect to a phone over Bluetooth and a computer over serial for programming ordinance events. The second board being used in the RAPTOR is the Featherweight GPS Tracker, this tracker sends GPS telemetry to a base station over 915MHz LoRa (Long Range) transmitter. 
+                </p>
+
+                <table class="specs-table">
+                    <caption>Bill of Materials</caption>
+                    <thead>
+                        <tr>
+                            <th style="width: 35%; font-weight: bold;" scope="col" title="Quantity">Qty</th>
+                            <th style="font-weight: bold;" scope="col">Part Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>Blue Raven altimeter</td></tr>
+                        <tr><td>1</td><td>3.7V 25C Li-Po Without Protection Circuits</td></tr>
+                        <tr><td>1</td><td>Featherweight GPS Tracker</td></tr>
+                        <tr><td>1</td><td>3.7V 700mAh 2.59Wh Li-Po With Protection Circuits</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="matlab-plots-grid">
+                    <div class="matlab-item">
+                        <h5>Avionics Schematic</h5>
+                        <img src="figures/RAPTOR_Schematic.png" alt="RAPTOR Avionics Schematic" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.getAttribute('src').replace(/^figures\//,'');}">
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
             <!-- Launch Site Operations: Tripoli Phoenix (TRAPHX) & Interactive Google Map -->
             <h3 class="subsection-title">Launch Site Operations: Tripoli Phoenix (TRAPHX) Eagle Eye Site</h3>
             <div class="content-box">
