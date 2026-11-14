@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project RAPTOR | Autonomous Apogee-Deployed Glider Rocket</title>
+    <meta name="description" content="Project RAPTOR is a Northern Arizona University Electrical Engineering capstone project integrating an autonomous fixed-wing UAV glider deployment system inside a custom 7.51-inch high-powered rocket.">
+    <meta property="og:title" content="Project RAPTOR | Autonomous Apogee-Deployed Glider Rocket">
+    <meta property="og:description" content="Northern Arizona University Electrical Engineering capstone project featuring custom composite rocketry, CO2 apogee deployment, and autonomous glider flight.">
+    <meta property="og:image" content="figures/raptor_logo.png">
+    <meta property="og:type" content="website">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
     <script>
-            window.MathJax = {
-              tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] },
-              options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
-            };
             window.addEventListener('error', function(e) {
               var el = e.target;
               if (el && el.tagName === 'IMG' && !el.dataset.t) {
@@ -24,7 +25,6 @@
               }
             }, true);
     </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
     <style>
         :root {
             --nau-navy: #002447;
@@ -52,6 +52,18 @@
             color: var(--text-dark);
             background-color: #ffffff;
             line-height: 1.65;
+        }
+
+        .me-1 {
+            margin-right: 6px;
+        }
+
+        .me-2 {
+            margin-right: 8px;
+        }
+
+        .text-danger {
+            color: #dc2626;
         }
 
         .hero-landing {
@@ -83,13 +95,8 @@
             height: auto;
             object-fit: contain;
             filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.45));
-            cursor: pointer;
             transition: transform 0.3s ease;
         }
-
-            .hero-college-logo:hover {
-                transform: scale(1.02);
-            }
 
         .hero-project-box {
             display: flex;
@@ -250,6 +257,7 @@
             margin: 0 auto;
             padding: 32px 20px;
             min-height: 75vh;
+            overflow-x: clip;
         }
 
         .page-view {
@@ -279,7 +287,7 @@
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 15px;
-            margin-bottom: 22px;
+            margin-bottom: 20px;
             border-left: 5px solid var(--nau-gold);
             padding-left: 14px;
         }
@@ -319,6 +327,50 @@
             border-top: 1px solid #e2e8f0;
             margin: 36px 0;
         }
+
+        .jump-target {
+            scroll-margin-top: 76px;
+        }
+
+        .jump-pill-bar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+            margin: 0 0 24px 0;
+            padding: 12px 14px;
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+
+        .jump-pill-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-right: 4px;
+        }
+
+        .jump-pill-btn {
+            background: #ffffff;
+            color: var(--nau-navy);
+            border: 1px solid var(--border-color);
+            padding: 5px 12px;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+            .jump-pill-btn:hover {
+                background: var(--nau-navy);
+                color: #ffffff;
+                border-color: var(--nau-navy);
+            }
 
         .direct-figure-item {
             margin: 28px 0;
@@ -379,6 +431,33 @@
                 height: 320px;
             }
         }
+
+        .camera-preset-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .camera-preset-btn {
+            background: #f8fafc;
+            color: var(--nau-navy);
+            border: 1px solid var(--border-color);
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+            .camera-preset-btn:hover {
+                background: var(--nau-navy);
+                color: #ffffff;
+                border-color: var(--nau-navy);
+            }
 
         .cropped-team-photo {
             width: 100%;
@@ -592,6 +671,48 @@
                 border-radius: 6px;
             }
 
+        .mass-budget-box {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-left: 5px solid var(--nau-navy);
+            border-radius: 8px;
+            padding: 18px 20px;
+            margin: 18px 0 24px 0;
+        }
+
+            .mass-budget-box h4 {
+                color: var(--nau-navy);
+                font-family: 'Montserrat', sans-serif;
+                font-size: 1.05rem;
+                margin-bottom: 12px;
+            }
+
+        .mass-budget-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+            gap: 12px;
+        }
+
+        .mass-metric-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 12px 14px;
+        }
+
+        .mass-metric-value {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--nau-navy);
+        }
+
+        .mass-metric-label {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
         .cfd-staggered-container {
             display: flex;
             flex-direction: column;
@@ -641,7 +762,9 @@
                 max-height: 340px;
                 object-fit: contain;
                 border-radius: 8px;
-                background: #0b1329;
+                background: transparent;
+                border: 1px solid #e2e8f0;
+                box-shadow: 0 2px 8px rgba(0, 36, 71, 0.06);
                 display: block;
             }
 
@@ -733,6 +856,41 @@
                 line-height: 1.35;
             }
 
+        .gallery-filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 22px;
+        }
+
+        .gallery-filter-btn {
+            background: #f8fafc;
+            color: var(--nau-navy);
+            border: 1px solid var(--border-color);
+            padding: 7px 14px;
+            border-radius: 999px;
+            font-size: 0.84rem;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+            .gallery-filter-btn:hover {
+                border-color: var(--nau-navy);
+                background: #e2e8f0;
+            }
+
+            .gallery-filter-btn.active {
+                background: var(--nau-navy);
+                color: #ffffff;
+                border-color: var(--nau-navy);
+            }
+
+        .gallery-hidden {
+            display: none !important;
+        }
+
         .gallery-category-title {
             font-size: 1.22rem;
             font-weight: 700;
@@ -748,23 +906,59 @@
 
         .true-gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
             gap: 16px;
             margin-bottom: 28px;
         }
 
-            .true-gallery-grid img {
+        .gallery-thumb {
+            position: relative;
+            overflow: hidden;
+            border-radius: 6px;
+            background: #f8fafc;
+            cursor: zoom-in;
+        }
+
+            .gallery-thumb img {
                 width: 100%;
-                height: 230px;
-                object-fit: contain;
-                background: #ffffff;
-                border-radius: 6px;
+                aspect-ratio: 4 / 3;
+                object-fit: cover;
                 display: block;
+                transition: transform 0.25s ease;
             }
 
-        .gallery-dark-bg {
-            background: #002447 !important;
-            padding: 14px;
+            .gallery-thumb:hover img {
+                transform: scale(1.03);
+            }
+
+            .gallery-thumb.dark-logo-thumb {
+                background: #002447;
+            }
+
+            .gallery-thumb img.gallery-dark-bg {
+                background: #002447;
+                padding: 14px;
+                object-fit: contain;
+                aspect-ratio: 4 / 3;
+            }
+
+        .gallery-hover-caption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 10px 12px;
+            background: linear-gradient(transparent, rgba(0, 20, 40, 0.88));
+            color: #ffffff;
+            font-size: 0.78rem;
+            line-height: 1.35;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            pointer-events: none;
+        }
+
+        .gallery-thumb:hover .gallery-hover-caption {
+            opacity: 1;
         }
 
         .clean-two-col-grid {
@@ -908,19 +1102,39 @@
             margin-top: 3px;
         }
 
-        .document-grid {
+        .doc-group-heading {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--nau-navy);
+            margin: 22px 0 12px 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .document-grid-2 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
-            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .document-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
             margin-bottom: 30px;
+        }
+
+        @media (max-width: 960px) {
+            .document-grid-2, .document-grid-3 {
+                grid-template-columns: 1fr;
+            }
         }
 
         .doc-card {
             background: #f8fafc;
             border: 1px solid var(--border-color);
             border-radius: 8px;
-            padding: 22px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -930,21 +1144,16 @@
             display: flex;
             align-items: flex-start;
             gap: 15px;
-            margin-bottom: 15px;
+            margin-bottom: 14px;
         }
 
         .doc-icon-pdf {
-            font-size: 2.4rem;
+            font-size: 2.3rem;
             color: #dc2626;
         }
 
-        .doc-icon-ppt {
-            font-size: 2.4rem;
-            color: #ea580c;
-        }
-
         .doc-details h4 {
-            font-size: 1.05rem;
+            font-size: 1.04rem;
             color: var(--nau-navy);
             margin-bottom: 4px;
         }
@@ -956,23 +1165,32 @@
 
         .doc-btn-group {
             display: flex;
-            gap: 10px;
+            flex-wrap: wrap;
+            gap: 8px;
             margin-top: 12px;
         }
 
-        .btn-view {
-            flex: 1;
+        .btn-view, .btn-new-tab, .btn-download {
+            flex: 1 1 auto;
             text-align: center;
-            background-color: var(--nau-navy);
-            color: #ffffff;
-            padding: 8px 12px;
+            padding: 8px 10px;
             border-radius: 4px;
             text-decoration: none;
-            font-size: 0.82rem;
+            font-size: 0.8rem;
             font-weight: 700;
-            transition: background 0.2s;
-            border: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .btn-view {
+            background-color: var(--nau-navy);
+            color: #ffffff;
+            border: 1px solid var(--nau-navy);
             cursor: pointer;
+            font-family: inherit;
         }
 
             .btn-view:hover {
@@ -980,18 +1198,21 @@
                 color: #ffffff;
             }
 
+        .btn-new-tab {
+            background-color: #ffffff;
+            color: var(--nau-navy);
+            border: 1px solid var(--nau-navy);
+        }
+
+            .btn-new-tab:hover {
+                background-color: #e0f2fe;
+                color: var(--nau-navy);
+            }
+
         .btn-download {
-            flex: 1;
-            text-align: center;
             background-color: #ffffff;
             color: var(--nau-navy);
             border: 1px solid var(--border-color);
-            padding: 8px 12px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 0.82rem;
-            font-weight: 700;
-            transition: all 0.2s;
         }
 
             .btn-download:hover {
@@ -1009,7 +1230,7 @@
 
         .pdf-switcher-tabs {
             display: flex;
-            gap: 10px;
+            gap: 8px;
             margin-bottom: 15px;
             flex-wrap: wrap;
         }
@@ -1017,13 +1238,17 @@
         .pdf-tab-btn {
             background: #ffffff;
             border: 1px solid var(--border-color);
-            padding: 8px 16px;
+            padding: 8px 14px;
             border-radius: 4px;
             cursor: pointer;
             font-weight: 700;
-            font-size: 0.85rem;
+            font-size: 0.83rem;
+            font-family: inherit;
             color: var(--nau-navy);
             transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
         }
 
             .pdf-tab-btn.active {
@@ -1083,7 +1308,7 @@
             backdrop-filter: blur(6px);
             align-items: center;
             justify-content: center;
-            padding: 25px;
+            padding: 20px;
             opacity: 0;
             transition: opacity 0.25s ease;
         }
@@ -1102,20 +1327,85 @@
             align-items: center;
         }
 
+        .lightbox-img-stage {
+            max-width: 90vw;
+            max-height: 76vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: visible;
+            border-radius: 6px;
+        }
+
+            .lightbox-img-stage.zoomed {
+                display: block;
+                max-width: 92vw;
+                max-height: 76vh;
+                overflow: auto;
+            }
+
         .lightbox-img {
-            max-width: 100%;
-            max-height: 82vh;
+            max-width: 90vw;
+            max-height: 76vh;
             object-fit: contain;
             border-radius: 6px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.6);
             border: 2px solid var(--nau-gold);
             background: #ffffff;
+            cursor: zoom-in;
+            display: block;
         }
 
-        .lightbox-caption {
-            margin-top: 12px;
+            .lightbox-img.zoomed {
+                max-width: none;
+                max-height: none;
+                width: auto;
+                height: auto;
+                min-width: 100%;
+                cursor: zoom-out;
+            }
+
+        .lightbox-controls {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .lightbox-counter {
+            color: var(--nau-gold);
+            font-size: 0.88rem;
+            font-weight: 700;
+        }
+
+        .lightbox-tool-btn {
+            background: rgba(255, 255, 255, 0.14);
             color: #ffffff;
-            font-size: 0.95rem;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+            .lightbox-tool-btn:hover {
+                background: var(--nau-gold);
+                color: var(--nau-navy);
+                border-color: var(--nau-gold);
+            }
+
+        .lightbox-caption {
+            margin-top: 8px;
+            color: #ffffff;
+            font-size: 0.92rem;
             text-align: center;
             max-width: 850px;
             line-height: 1.5;
@@ -1124,28 +1414,95 @@
 
         .lightbox-close-btn {
             position: absolute;
-            top: 20px;
-            right: 30px;
+            top: 16px;
+            right: 26px;
             color: #ffffff;
             font-size: 40px;
             font-weight: bold;
             cursor: pointer;
             transition: color 0.2s;
-            z-index: 1000000;
+            z-index: 1000001;
+            line-height: 1;
         }
 
             .lightbox-close-btn:hover {
                 color: var(--nau-gold);
             }
 
+        .lightbox-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 36, 71, 0.78);
+            color: #ffffff;
+            border: 1px solid rgba(255, 199, 44, 0.6);
+            width: 46px;
+            height: 56px;
+            font-size: 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            z-index: 1000001;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+            .lightbox-nav-btn:hover {
+                background: var(--nau-gold);
+                color: var(--nau-navy);
+            }
+
+        .lightbox-prev {
+            left: 16px;
+        }
+
+        .lightbox-next {
+            right: 16px;
+        }
+
         .lightbox-trigger {
             cursor: zoom-in;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: box-shadow 0.2s ease, opacity 0.2s ease;
         }
 
             .lightbox-trigger:hover {
-                transform: scale(1.015);
                 box-shadow: 0 6px 18px rgba(0, 36, 71, 0.14);
+            }
+
+        .back-to-top-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 950;
+            background: var(--nau-navy);
+            color: #ffffff;
+            border: 2px solid var(--nau-gold);
+            padding: 10px 15px;
+            border-radius: 999px;
+            font-size: 0.84rem;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(10px);
+            transition: all 0.25s ease;
+        }
+
+            .back-to-top-btn.visible {
+                opacity: 1;
+                pointer-events: auto;
+                transform: translateY(0);
+            }
+
+            .back-to-top-btn:hover {
+                background: var(--nau-gold);
+                color: var(--nau-navy);
             }
 
         footer {
@@ -1214,12 +1571,12 @@
 
     <nav>
         <ul class="nav-links">
-            <li><button class="nav-tab-btn active" onclick="switchView('overview-view', this)">Project Overview</button></li>
-            <li><button class="nav-tab-btn" onclick="goToTeamSection(this)">Team Members</button></li>
-            <li><button class="nav-tab-btn" onclick="switchView('raptor-mini-view', this)">RAPTOR Mini</button></li>
-            <li><button class="nav-tab-btn" onclick="switchView('rocket-view', this)">RAPTOR</button></li>
-            <li><button class="nav-tab-btn" onclick="switchView('gallery-view', this)">Gallery</button></li>
-            <li><button class="nav-tab-btn" onclick="switchView('documents-view', this)">Documents</button></li>
+            <li><button class="nav-tab-btn active" data-view="overview-view" onclick="switchView('overview-view', this)">Project Overview</button></li>
+            <li><button class="nav-tab-btn" data-view="team" onclick="goToTeamSection(this)">Team Members</button></li>
+            <li><button class="nav-tab-btn" data-view="raptor-mini-view" onclick="switchView('raptor-mini-view', this)">RAPTOR Mini</button></li>
+            <li><button class="nav-tab-btn" data-view="rocket-view" onclick="switchView('rocket-view', this)">RAPTOR</button></li>
+            <li><button class="nav-tab-btn" data-view="gallery-view" onclick="switchView('gallery-view', this)">Gallery</button></li>
+            <li><button class="nav-tab-btn" data-view="documents-view" onclick="switchView('documents-view', this)">Documents</button></li>
         </ul>
     </nav>
 
@@ -1248,28 +1605,28 @@
                 <p style="text-align: center; max-width: 820px; margin: 0 auto 14px auto;">
                     At Apogee, the RAPTOR Mega Rocket Module, The RAPTOR Mini UAV Module, and the Payload Ejection Module will simultaneously operate to carry out the project goal. Shortly after deployment, the RAPTOR Mega module will separate into three sections including the nose cone, payload bay, and motor bay. This will be followed by a parachute recovery deployment as The RAPTOR Mini completes the remainder of the mission.
                 </p>
-                <img src="figures/Pictudddre1.png" alt="Figure 2 displays a 3D CAD of the post-deployment RAPTOR Mini drone with wings expanded, nosecone separation, rail-guided glider release, and booster airframe staging." class="direct-figure-img">
+                <img src="figures/Pictudddre1.png" loading="lazy" alt="Figure 2 displays a 3D CAD of the post-deployment RAPTOR Mini drone with wings expanded, nosecone separation, rail-guided glider release, and booster airframe staging." class="direct-figure-img">
                 <div class="direct-figure-caption">Figure 2 displays a 3D CAD of the post-deployment RAPTOR Mini drone with wings expanded, nosecone separation, rail-guided glider release, and booster airframe staging.</div>
             </div>
 
             <h3 class="subsection-title">RAPTOR Subsystem Portals</h3>
             <div class="portal-grid">
-                <div class="portal-card" onclick="switchView('raptor-mini-view', document.querySelectorAll('.nav-tab-btn')[2]);">
-                    <img src="figures/Capture49.PNG" alt="RAPTOR Mini Glider Wireframe Icon" class="portal-img-icon">
+                <div class="portal-card" onclick="switchView('raptor-mini-view')">
+                    <img src="figures/Capture49.PNG" loading="lazy" alt="RAPTOR Mini Glider Wireframe Icon" class="portal-img-icon">
                     <h3>RAPTOR Mini</h3>
                     <span class="portal-btn">Explore RAPTOR Mini &rarr;</span>
                 </div>
-                <div class="portal-card" onclick="switchView('rocket-view', document.querySelectorAll('.nav-tab-btn')[3]);">
-                    <img src="figures/Capture48.PNG" alt="RAPTOR Rocket Wireframe Icon" class="portal-img-icon">
+                <div class="portal-card" onclick="switchView('rocket-view')">
+                    <img src="figures/Capture48.PNG" loading="lazy" alt="RAPTOR Rocket Wireframe Icon" class="portal-img-icon">
                     <h3>RAPTOR</h3>
                     <span class="portal-btn">Explore RAPTOR &rarr;</span>
                 </div>
-                <div class="portal-card" onclick="switchView('gallery-view', document.querySelectorAll('.nav-tab-btn')[4]);">
+                <div class="portal-card" onclick="switchView('gallery-view')">
                     <div class="portal-fa-icon"><i class="fa-solid fa-images"></i></div>
                     <h3>Gallery</h3>
                     <span class="portal-btn">Open Gallery &rarr;</span>
                 </div>
-                <div class="portal-card" onclick="switchView('documents-view', document.querySelectorAll('.nav-tab-btn')[5]);">
+                <div class="portal-card" onclick="switchView('documents-view')">
                     <div class="portal-fa-icon"><i class="fa-solid fa-file-pdf"></i></div>
                     <h3>Documents</h3>
                     <span class="portal-btn">Open Documents &rarr;</span>
@@ -1297,7 +1654,7 @@
                 <p style="color: var(--text-muted); margin-bottom: 18px;">
                     We are five <strong>Electrical Engineering</strong> seniors at Northern Arizona University, all active members of the <strong>NAU Rocket Club</strong>.
                 </p>
-                <img src="figures/20261023_133642.jpg" alt="Project RAPTOR Team at Midterm Presentation" class="cropped-team-photo">
+                <img src="figures/20261023_133642.jpg" loading="lazy" alt="Project RAPTOR Team at Midterm Presentation" class="cropped-team-photo">
                 <div class="photo-caption">Project RAPTOR Team at Midterm Presentation.</div>
 
                 <div class="team-group-title">RAPTOR Mini Team</div>
@@ -1311,8 +1668,8 @@
                         </div>
                         <div class="team-links">
                             <a href="mailto:krh568@nau.edu" class="team-link-btn"><i class="fa-solid fa-envelope"></i> krh568@nau.edu</a>
-                            <a href="https://www.linkedin.com/in/kaidanholliday/" target="_blank" class="team-link-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                            <a href="Resumes/Kaidan_Holliday_Resume.pdf" target="_blank" download class="team-link-btn"><i class="fa-solid fa-file-user"></i> Resume</a>
+                            <a href="https://www.linkedin.com/in/kaidanholliday/" target="_blank" rel="noopener" class="team-link-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                            <a href="Resumes/Kaidan_Holliday_Resume.pdf" target="_blank" download class="team-link-btn"><i class="fa-solid fa-file-lines"></i> Resume</a>
                         </div>
                     </div>
                     <div class="team-card">
@@ -1324,8 +1681,7 @@
                         </div>
                         <div class="team-links">
                             <a href="mailto:rny24@nau.edu" class="team-link-btn"><i class="fa-solid fa-envelope"></i> rny24@nau.edu</a>
-                            <a href="https://www.linkedin.com/in/rhett-yardley-04669b405/" target="_blank" class="team-link-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                            <a href="#documents-view" onclick="switchView('documents-view', document.querySelectorAll('.nav-tab-btn')[5]);" class="team-link-btn"><i class="fa-solid fa-file-user"></i> Resume</a>
+                            <a href="https://www.linkedin.com/in/rhett-yardley-04669b405/" target="_blank" rel="noopener" class="team-link-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
                         </div>
                     </div>
                 </div>
@@ -1341,8 +1697,7 @@
                         </div>
                         <div class="team-links">
                             <a href="mailto:ap3662@nau.edu" class="team-link-btn"><i class="fa-solid fa-envelope"></i> ap3662@nau.edu</a>
-                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="team-link-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                            <a href="#documents-view" onclick="switchView('documents-view', document.querySelectorAll('.nav-tab-btn')[5]);" class="team-link-btn"><i class="fa-solid fa-file-user"></i> Resume</a>
+                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener" class="team-link-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
                         </div>
                     </div>
                     <div class="team-card">
@@ -1354,8 +1709,6 @@
                         </div>
                         <div class="team-links">
                             <a href="mailto:jcf347@nau.edu" class="team-link-btn"><i class="fa-solid fa-envelope"></i> jcf347@nau.edu</a>
-                            <a href="https://linkedin.com" target="_blank" class="team-link-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                            <a href="#documents-view" onclick="switchView('documents-view', document.querySelectorAll('.nav-tab-btn')[5]);" class="team-link-btn"><i class="fa-solid fa-file-user"></i> Resume</a>
                         </div>
                     </div>
                     <div class="team-card">
@@ -1367,8 +1720,8 @@
                         </div>
                         <div class="team-links">
                             <a href="mailto:dsh253@nau.edu" class="team-link-btn"><i class="fa-solid fa-envelope"></i> dsh253@nau.edu</a>
-                            <a href="https://www.linkedin.com/in/dominic-hartman-electrical-engineering/" target="_blank" class="team-link-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                            <a href="Resumes/DominicHartman.pdf" target="_blank" download class="team-link-btn"><i class="fa-solid fa-file-user"></i> Resume</a>
+                            <a href="https://www.linkedin.com/in/dominic-hartman-electrical-engineering/" target="_blank" rel="noopener" class="team-link-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                            <a href="Resumes/DominicHartman.pdf" target="_blank" download class="team-link-btn"><i class="fa-solid fa-file-lines"></i> Resume</a>
                         </div>
                     </div>
                 </div>
@@ -1415,7 +1768,17 @@
         <div id="raptor-mini-view" class="page-view">
             <div class="title-with-logo">
                 <h2 class="section-title">RAPTOR Mini: Design Evolution &amp; Aerodynamics</h2>
-                <img src="figures/raptor_logo.png" alt="Project RAPTOR Logo" class="section-raptor-logo">
+                <img src="figures/raptor_logo.png" loading="lazy" alt="Project RAPTOR Logo" class="section-raptor-logo">
+            </div>
+
+            <div class="jump-pill-bar">
+                <span class="jump-pill-label">Jump to Section:</span>
+                <button type="button" class="jump-pill-btn" onclick="jumpToSection('mini-3d')">3D Model</button>
+                <button type="button" class="jump-pill-btn" onclick="jumpToSection('mini-evolution')">Design Evolution</button>
+                <button type="button" class="jump-pill-btn" onclick="jumpToSection('mini-drawings')">4-View Drawings</button>
+                <button type="button" class="jump-pill-btn" onclick="jumpToSection('mini-materials')">Materials &amp; Mass Budget</button>
+                <button type="button" class="jump-pill-btn" onclick="jumpToSection('mini-avionics')">Avionics &amp; BOM</button>
+                <button type="button" class="jump-pill-btn" onclick="jumpToSection('mini-simulations')">CFD &amp; MATLAB Simulations</button>
             </div>
 
             <div class="direct-figure-item" style="margin-top: 10px;">
@@ -1423,17 +1786,23 @@
                 <p style="text-align: center; max-width: 820px; margin: 0 auto 14px auto;">
                     Exploded CAD rendering showing all structural subassemblies including 3D-printed modular fuselage segments, wing swivel pivot assembly with central retention pin, high-lift wing blades with control surfaces, and inverted V-tail empennage.
                 </p>
-                <img src="figures/Capture46.PNG" alt="RAPTOR Mini Exploded Modular Assembly" class="direct-figure-img">
+                <img src="figures/Capture46.PNG" loading="lazy" alt="RAPTOR Mini Exploded Modular Assembly" class="direct-figure-img">
                 <div class="direct-figure-caption">Exploded CAD Assembly of RAPTOR Mini showing modular airframe sections, wing pivot swivel, and empennage.</div>
             </div>
 
-            <div class="model-viewer-section">
+            <div class="model-viewer-section jump-target" id="mini-3d">
                 <h4 style="font-size: 1.15rem; color: var(--nau-navy); margin-bottom: 6px; font-weight: 700;">Interactive 3D Model: RAPTOR Mini V2</h4>
                 <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 14px;">Click, hold, and drag to rotate in 360 degrees. Scroll or pinch to zoom in and inspect the airframe shape, wing profile, and cooling vents.</p>
-                <model-viewer src="3D_files/RAPTOR_Mini_v2.glb" alt="Interactive 3D Model of RAPTOR Mini V2" auto-rotate camera-controls shadow-intensity="1.2"></model-viewer>
+                <model-viewer id="mv-raptor-mini" src="3D_files/RAPTOR_Mini_v2.glb" alt="Interactive 3D Model of RAPTOR Mini V2" auto-rotate camera-controls shadow-intensity="1.2"></model-viewer>
+                <div class="camera-preset-bar">
+                    <button type="button" class="camera-preset-btn" onclick="setCameraPreset('mv-raptor-mini', 'isometric')">Isometric</button>
+                    <button type="button" class="camera-preset-btn" onclick="setCameraPreset('mv-raptor-mini', 'top')">Top</button>
+                    <button type="button" class="camera-preset-btn" onclick="setCameraPreset('mv-raptor-mini', 'side')">Side</button>
+                    <button type="button" class="camera-preset-btn" onclick="setCameraPreset('mv-raptor-mini', 'reset')">Reset View</button>
+                </div>
             </div>
 
-            <h3 class="subsection-title">Airframe Design Evolution (Version 0 to Version 2)</h3>
+            <h3 class="subsection-title jump-target" id="mini-evolution">Airframe Design Evolution (Version 0 to Version 2)</h3>
 
             <div class="version-section">
                 <div class="version-header-bar">
@@ -1441,10 +1810,10 @@
                     <span style="font-size: 0.8rem; opacity: 0.88; margin-left: 8px;">| Proof-of-Concept CAD &amp; Spring Wing Mechanism</span>
                 </div>
                 <div class="v0-images-container">
-                    <img src="figures/Capture7.PNG" alt="Version 0 Fuselage Side Cutaway CAD" title="Version 0 Side Profile Cutaway">
-                    <img src="figures/Capture9.PNG" alt="Version 0 Translucent Isometric CAD" title="Version 0 Translucent Assembly">
-                    <img src="figures/Capture10.PNG" alt="Version 0 Thrust Bearings Cutaway" title="Version 0 Thrust Bearing Cutaway">
-                    <img src="figures/V0WingSnapGif.gif" alt="Version 0 Self-Opening Spring Wing Mechanism" title="Version 0 Spring-Loaded Wing Swivel Test">
+                    <img src="figures/Capture7.PNG" loading="lazy" alt="Version 0 Fuselage Side Cutaway CAD" title="Version 0 Side Profile Cutaway">
+                    <img src="figures/Capture9.PNG" loading="lazy" alt="Version 0 Translucent Isometric CAD" title="Version 0 Translucent Assembly">
+                    <img src="figures/Capture10.PNG" loading="lazy" alt="Version 0 Thrust Bearings Cutaway" title="Version 0 Thrust Bearing Cutaway">
+                    <img src="figures/V0WingSnapGif.gif" loading="lazy" alt="Version 0 Self-Opening Spring Wing Mechanism" title="Version 0 Spring-Loaded Wing Swivel Test">
                 </div>
                 <h5 style="color: var(--nau-navy); margin-bottom: 6px; font-size: 1.02rem;">Proof-of-Concept Baseline &amp; Spring Wing Test</h5>
                 <p style="font-size: 0.92rem; line-height: 1.7; color: var(--text-dark);">
@@ -1458,10 +1827,10 @@
                     <span style="font-size: 0.8rem; opacity: 0.88; margin-left: 8px;">| Physical Prototype &amp; Baseline Airflow Testing</span>
                 </div>
                 <div class="v0-images-container">
-                    <img src="figures/20261023_131228.jpg" alt="RAPTOR Mini Version 1 Deployed Wing Prototype" title="Version 1 Physical Prototype (Flight Configuration)">
-                    <img src="figures/20261023_131244.jpg" alt="RAPTOR Mini Version 1 Stowed Wing Prototype" title="Version 1 Physical Prototype (Stowed In-Tube State)">
-                    <img src="figures/20261023_125634.jpg" alt="Benchtop Wing Fitment and Alignment Check" title="Benchtop Wing Fitment">
-                    <img src="figures/IMG_20261023_164817709_HDR.jpg" alt="Overhead Planform and Wing Geometry View" title="Overhead Planform View">
+                    <img src="figures/20261023_131228.jpg" loading="lazy" alt="RAPTOR Mini Version 1 Deployed Wing Prototype" title="Version 1 Physical Prototype (Flight Configuration)">
+                    <img src="figures/20261023_131244.jpg" loading="lazy" alt="RAPTOR Mini Version 1 Stowed Wing Prototype" title="Version 1 Physical Prototype (Stowed In-Tube State)">
+                    <img src="figures/20261023_125634.jpg" loading="lazy" alt="Benchtop Wing Fitment and Alignment Check" title="Benchtop Wing Fitment">
+                    <img src="figures/IMG_20261023_164817709_HDR.jpg" loading="lazy" alt="Overhead Planform and Wing Geometry View" title="Overhead Planform View">
                 </div>
                 <h5 style="color: var(--nau-navy); margin-bottom: 6px; font-size: 1.02rem;">Dihedral Winglet Integration &amp; Nylon Washer Pivot</h5>
                 <p style="font-size: 0.92rem; line-height: 1.7; color: var(--text-dark);">
@@ -1475,13 +1844,13 @@
                     <span style="font-size: 0.8rem; opacity: 0.88; margin-left: 8px;">| Simulated in ANSYS CFD &amp; Ready for ASA Aero Printing</span>
                 </div>
                 <div class="v0-images-container">
-                    <img src="figures/Capture38.PNG" alt="RAPTOR Mini Version 2 Isometric CAD with Vents" title="Version 2 Isometric CAD with Vents">
-                    <img src="figures/Capture39.PNG" alt="RAPTOR Mini Version 2 Internal Cross Section" title="Version 2 Longitudinal Cutaway and Nylon Washer System">
-                    <img src="figures/Capture40.PNG" alt="RAPTOR Mini Version 2 Front View CAD" title="Version 2 Front Elevation CAD">
-                    <img src="figures/Capture41.PNG" alt="RAPTOR Mini Version 2 Top-Down View with Vents" title="Version 2 Top Planform View with Vents">
+                    <img src="figures/Capture38.PNG" loading="lazy" alt="RAPTOR Mini Version 2 Isometric CAD with Vents" title="Version 2 Isometric CAD with Vents">
+                    <img src="figures/Capture39.PNG" loading="lazy" alt="RAPTOR Mini Version 2 Internal Cross Section" title="Version 2 Longitudinal Cutaway and Nylon Washer System">
+                    <img src="figures/Capture40.PNG" loading="lazy" alt="RAPTOR Mini Version 2 Front View CAD" title="Version 2 Front Elevation CAD">
+                    <img src="figures/Capture41.PNG" loading="lazy" alt="RAPTOR Mini Version 2 Top-Down View with Vents" title="Version 2 Top Planform View with Vents">
                 </div>
                 <div class="direct-figure-item" style="margin: 18px 0;">
-                    <img src="figures/Capture57.PNG" alt="Version 2 Wing Section View showing Carbon Fiber Rod Slots" class="direct-figure-img" style="max-height: 260px;">
+                    <img src="figures/Capture57.PNG" loading="lazy" alt="Version 2 Wing Section View showing Carbon Fiber Rod Slots" class="direct-figure-img" style="max-height: 260px;">
                     <div class="direct-figure-caption">Version 2 wing cross-section view showing internal channels for the carbon fiber reinforcement rods.</div>
                 </div>
                 <h5 style="color: var(--nau-navy); margin-bottom: 6px; font-size: 1.02rem;">Avionics Cooling Vents, Nylon Washer Pivot &amp; Ailerons</h5>
@@ -1490,19 +1859,19 @@
                 </p>
             </div>
 
-            <h3 class="subsection-title">RAPTOR Mini Engineering 4-View Drawings</h3>
+            <h3 class="subsection-title jump-target" id="mini-drawings">RAPTOR Mini Engineering 4-View Drawings</h3>
             <div class="clean-two-col-grid">
                 <div class="clean-figure-col">
                     <h5>Engineering 4-View (Flight Configuration)</h5>
-                    <img src="figures/v2FlightOrientation4-View.png" alt="RAPTOR Mini 4-View Drawing Flight Configuration">
+                    <img src="figures/v2FlightOrientation4-View.png" loading="lazy" alt="RAPTOR Mini 4-View Drawing Flight Configuration">
                 </div>
                 <div class="clean-figure-col">
                     <h5>Engineering 4-View (Stowed Launch Configuration)</h5>
-                    <img src="figures/v2LaunchOrientation4-View.png" alt="RAPTOR Mini 4-View Drawing Stowed Launch Configuration">
+                    <img src="figures/v2LaunchOrientation4-View.png" loading="lazy" alt="RAPTOR Mini 4-View Drawing Stowed Launch Configuration">
                 </div>
             </div>
 
-            <div class="section-block">
+            <div class="section-block jump-target" id="mini-materials">
                 <h3 class="subsection-title">Materials, Bambu Lab ASA Aero &amp; Propulsion Integration</h3>
                 <p style="font-size: 0.94rem; line-height: 1.7; margin-bottom: 12px;">
                     Our initial prototype was printed in standard PETG to check mechanical clearances, which is too heavy for flight. For our flight airframe, we are printing the glider out of <strong>Bambu Lab ASA Aero</strong> active-foaming filament with carbon-fiber structural spars:
@@ -1515,8 +1884,26 @@
                 </ul>
 
                 <div class="direct-figure-item" style="margin: 18px 0 24px 0;">
-                    <img src="figures/IMG_20261110_1946282.jpg" alt="ASA Aero 3D printed parts weighed on digital scale at 194 grams" class="direct-figure-img" style="max-height: 360px;">
+                    <img src="figures/IMG_20261110_1946282.jpg" loading="lazy" alt="ASA Aero 3D printed parts weighed on digital scale at 194 grams" class="direct-figure-img" style="max-height: 360px;">
                     <div class="direct-figure-caption">ASA Aero printed glider parts on a scale weighing 194 grams total.</div>
+                </div>
+
+                <div class="mass-budget-box">
+                    <h4>Mass Budget vs. Lift Margin (30 mph Cruise, 4&deg; Angle of Attack)</h4>
+                    <div class="mass-budget-grid">
+                        <div class="mass-metric-item">
+                            <div class="mass-metric-value">3.7 N (377 g)</div>
+                            <div class="mass-metric-label">Simulated CFD Lift Capacity at 30 mph</div>
+                        </div>
+                        <div class="mass-metric-item">
+                            <div class="mass-metric-value">194 g</div>
+                            <div class="mass-metric-label">Weighed ASA Aero Airframe Parts</div>
+                        </div>
+                        <div class="mass-metric-item">
+                            <div class="mass-metric-value">~183 g</div>
+                            <div class="mass-metric-label">Remaining Margin for Electronics, Battery &amp; Propulsion</div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="table-scroll-wrap">
@@ -1536,7 +1923,7 @@
                 </div>
             </div>
 
-            <div class="section-block">
+            <div class="section-block jump-target" id="mini-avionics">
                 <h3 class="subsection-title">Avionics Schematic &amp; BOM</h3>
                 <p style="font-size: 0.94rem; line-height: 1.7; margin-bottom: 12px;">
                     The Avionics for the RAPTOR Mini center on the MATEK Mateksys F405 Wing V2 Flight Controller. This flight controller includes an IMU, which is essential for <strong>Autonomous and Assisted Flight</strong>. We chose this flight controller for its abundance of PWM (Pulse Width Modulation) channels, I2C (Inter-Integrated Circuit) channels, and software support. Looking at the software side, this will be running ArduPlane, which is a variant of ArduPilot built for fixed-wing planes. The ArduPlane autopilot and assisted flight are built around multiple separate PID (Proportional-Integral-Derivative) controllers nested inside a programmatic loop. The current plan is to test this setup on the ground; if, during these tests, this controller is inadequate, then custom controllers can be implemented in C within ArduPilot.
@@ -1549,30 +1936,75 @@
                     <table class="specs-table">
                         <caption>Bill of Materials</caption>
                         <thead>
-                            <tr><th style="font-weight: bold;" scope="col">Part Name</th></tr>
+                            <tr>
+                                <th scope="col">Part Name</th>
+                                <th scope="col">Subsystem / Role</th>
+                                <th scope="col">Qty</th>
+                                <th scope="col">Key Specs</th>
+                            </tr>
                         </thead>
                         <tbody>
-                            <tr><td>2 - 6S LiPo (7.4V - 22.2V)</td></tr>
-                            <tr><td>35V 470 uF Capacitor</td></tr>
-                            <tr><td>MATEKSYS Flight Controller F405-Wing-V2</td></tr>
-                            <tr><td>WN08-6S14B (FPV transmitter)</td></tr>
-                            <tr><td>ES08MA II (Servo) (4x)</td></tr>
-                            <tr><td>ELRS-R24-D (2.4 GHz Receiver)</td></tr>
-                            <tr><td>Lumenier 51A BLHeli_32 32bit 2-6S w/ Telemetry (Prop ESC)</td></tr>
-                            <tr><td>SAM-M10Q (GNSS)</td></tr>
+                            <tr>
+                                <td>2 - 6S LiPo (7.4V - 22.2V)</td>
+                                <td>Power Supply</td>
+                                <td>1</td>
+                                <td>2 - 6S LiPo, 7.4V - 22.2V</td>
+                            </tr>
+                            <tr>
+                                <td>35V 470 uF Capacitor</td>
+                                <td>Power Filtering</td>
+                                <td>1</td>
+                                <td>35V, 470 uF</td>
+                            </tr>
+                            <tr>
+                                <td>MATEKSYS Flight Controller F405-Wing-V2</td>
+                                <td>Flight Controller &amp; Autopilot</td>
+                                <td>1</td>
+                                <td>Integrated IMU, PWM &amp; I2C channels, runs ArduPlane (ArduPilot)</td>
+                            </tr>
+                            <tr>
+                                <td>WN08-6S14B (FPV transmitter)</td>
+                                <td>Video &amp; Telemetry Link</td>
+                                <td>1</td>
+                                <td>30 dBm, 5.725-5.850 GHz, 40 MHz bandwidth, 1080p w/ embedded telemetry</td>
+                            </tr>
+                            <tr>
+                                <td>ES08MA II (Servo)</td>
+                                <td>Flight Control Surfaces</td>
+                                <td>4</td>
+                                <td>PWM-controlled servos</td>
+                            </tr>
+                            <tr>
+                                <td>ELRS-R24-D (2.4 GHz Receiver)</td>
+                                <td>Radio Control Link</td>
+                                <td>1</td>
+                                <td>2.4 GHz ExpressLRS, paired with 2.4 GHz Boxer Radio Controller</td>
+                            </tr>
+                            <tr>
+                                <td>Lumenier 51A BLHeli_32 32bit 2-6S w/ Telemetry (Prop ESC)</td>
+                                <td>Propulsion Speed Control</td>
+                                <td>1</td>
+                                <td>51A, 2-6S, BLHeli_32 32-bit with telemetry</td>
+                            </tr>
+                            <tr>
+                                <td>SAM-M10Q (GNSS)</td>
+                                <td>GPS Navigation</td>
+                                <td>1</td>
+                                <td>GNSS positioning module</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
 
                 <div class="direct-schematic-wrap">
                     <h5>Avionics Schematic</h5>
-                    <img src="figures/RAPTOR_Mini_Schematic.png" alt="RAPTOR Mini Avionics Schematic">
+                    <img src="figures/RAPTOR_Mini_Schematic.png" loading="lazy" alt="RAPTOR Mini Avionics Schematic">
                 </div>
             </div>
 
             <hr class="section-divider">
 
-            <div class="title-with-logo" style="margin-top: 20px;">
+            <div class="title-with-logo jump-target" id="mini-simulations" style="margin-top: 20px;">
                 <h2 class="section-title">RAPTOR Mini V2 and V1 Simulations</h2>
             </div>
 
@@ -1590,7 +2022,7 @@
                 </p>
 
                 <div class="direct-figure-item" style="margin: 18px 0 32px 0; text-align: center;">
-                    <img src="Simulationfiles/RaptorMiniV2/PulsePathlinesv2.gif" alt="Figure: Animated pathline pulses across the RAPTOR Mini V2" class="direct-figure-img" style="max-height: 480px; width: 100%; max-width: 920px; background: #0b1329; border-radius: 8px;">
+                    <img src="Simulationfiles/RaptorMiniV2/PulsePathlinesv2.gif" loading="lazy" alt="Figure: Animated pathline pulses across the RAPTOR Mini V2" class="direct-figure-img" style="max-height: 480px; width: 100%; max-width: 920px; background: #0b1329; border-radius: 8px;">
                     <div class="direct-figure-caption">Figure: Animated pathline pulses across the RAPTOR Mini V2</div>
                 </div>
 
@@ -1598,7 +2030,7 @@
                     <p style="text-align: left; max-width: 960px; margin: 0 auto 14px auto;">
                         After getting the data from ANSYS we graphed the results in MATLAB below. On the left is the V2 lift vs speed, and we can see this grow exponentially. Then in the middle is the same but with drag and notice how the 12 AOA gets more as the speed increases. Then at the right is the efficiency and that's lift over drag, as we can see that at 4 degrees the efficiency is substantially higher than the 12 degree angle of attack. At a 30 mph cruise angle the glider makes 3.7 N of lift force and that can lift a glider that has a mass of 377 grams.
                     </p>
-                    <img src="Simulationfiles/RaptorMiniV2/RaptorMiniV2Aerodynamics.png" alt="RAPTOR Mini V2 Aerodynamics from ANSYS" class="direct-figure-img" style="max-height: 380px;">
+                    <img src="Simulationfiles/RaptorMiniV2/RaptorMiniV2Aerodynamics.png" loading="lazy" alt="RAPTOR Mini V2 Aerodynamics from ANSYS" class="direct-figure-img" style="max-height: 380px;">
                 </div>
 
                 <h3 class="subsection-title" style="margin-top: 35px;">Visual Airflow Images</h3>
@@ -1613,7 +2045,7 @@
                             <p>On the V2 we have velocity ribbons that are color coded tracking the air acceleration around the V2. We can see the air glide smoothly over the V2 main wing, tail wings and the fuselage.</p>
                         </div>
                         <div class="cfd-img-col">
-                            <img src="Simulationfiles/RaptorMiniV2/velocityPathlines.png" alt="RAPTOR Mini V2 Velocity pathline ribbons">
+                            <img src="Simulationfiles/RaptorMiniV2/velocityPathlines.png" loading="lazy" alt="RAPTOR Mini V2 Velocity pathline ribbons">
                         </div>
                     </div>
 
@@ -1623,7 +2055,7 @@
                             <p>This shows the pressure contour on the V2 when it's flying. With the pressure contour we can actually see low pressure on top of the main wing with blue color on the top. This means that the wing is generating lift with lower pressure air on top of the plane and higher-pressure air on the bottom of the plane.</p>
                         </div>
                         <div class="cfd-img-col">
-                            <img src="Simulationfiles/RaptorMiniV2/StaticPressureContor.png" alt="Lift Generation: Upper Wing Suction">
+                            <img src="Simulationfiles/RaptorMiniV2/StaticPressureContor.png" loading="lazy" alt="Lift Generation: Upper Wing Suction">
                         </div>
                     </div>
 
@@ -1633,7 +2065,7 @@
                             <p>Now we turned the plane to see the underside with the same contour, and we can see most of the V2 is green and yellow. This means that there is a higher pressure (green and yellow) on the bottom of the V2 compared to the top (blue and cyan).</p>
                         </div>
                         <div class="cfd-img-col">
-                            <img src="Simulationfiles/RaptorMiniV2/StaticPressureContorUnderSide.png" alt="Lift Generation: Underside Upward Push">
+                            <img src="Simulationfiles/RaptorMiniV2/StaticPressureContorUnderSide.png" loading="lazy" alt="Lift Generation: Underside Upward Push">
                         </div>
                     </div>
 
@@ -1643,7 +2075,7 @@
                             <p>This post CFD shows the velocity magnitude right down the middle of the V2 with the mesh still drawn in. This shows the low velocity at the tail end with the blue to green transition contour. Also, there is a higher velocity magnitude around the transition from the nose to the fuselage.</p>
                         </div>
                         <div class="cfd-img-col">
-                            <img src="Simulationfiles/RaptorMiniV2/MagVelocityContorSide.png" alt="Stability: Centerline Velocity Magnitude contour">
+                            <img src="Simulationfiles/RaptorMiniV2/MagVelocityContorSide.png" loading="lazy" alt="Stability: Centerline Velocity Magnitude contour">
                         </div>
                     </div>
 
@@ -1653,7 +2085,7 @@
                             <p>This shows the skin friction from the air moving across V2 in units of pressure. The contour shows red for the highest shear stress and blue for the least amount. We can see the nose and the back fuselage being blue, which means not as much air is flying past those sections as the top of the main wing.</p>
                         </div>
                         <div class="cfd-img-col">
-                            <img src="Simulationfiles/RaptorMiniV2/WallShearStressContor.png" alt="Drag: Skin Friction and Wall Shear Stress">
+                            <img src="Simulationfiles/RaptorMiniV2/WallShearStressContor.png" loading="lazy" alt="Drag: Skin Friction and Wall Shear Stress">
                         </div>
                     </div>
 
@@ -1663,7 +2095,7 @@
                             <p>Pressure pathlines over the RAPTOR Mini V2, with blue representing low pressure and red highlighting the high pressure. We can see the green pathlines past the wings showing that the pressure is normal after the main wing.</p>
                         </div>
                         <div class="cfd-img-col">
-                            <img src="Simulationfiles/RaptorMiniV2/pressurePathlines.png" alt="Pressure Pathlines">
+                            <img src="Simulationfiles/RaptorMiniV2/pressurePathlines.png" loading="lazy" alt="Pressure Pathlines">
                         </div>
                     </div>
                 </div>
@@ -1677,22 +2109,22 @@
                     <div class="comparison-plot-item">
                         <h5>Glide Efficiency Comparison</h5>
                         <p>This compares the lift to drag ratio for all simulated speeds. The dashed line is the V2 while the solid line is the V1. This is at the 4 degree angle of attack.</p>
-                        <img src="Simulationfiles/EfficiencyComparisonMini V1vsMiniV2.png" alt="Glide Efficiency Comparison V1 vs V2">
+                        <img src="Simulationfiles/EfficiencyComparisonMini V1vsMiniV2.png" loading="lazy" alt="Glide Efficiency Comparison V1 vs V2">
                     </div>
                     <div class="comparison-plot-item">
                         <h5>Efficiency Gain</h5>
                         <p>This shows the efficiency gain from V1 to V2. We can see the efficiency increase at the lower speeds and then decrease at the higher speeds.</p>
-                        <img src="Simulationfiles/EfficiencyGain.png" alt="RAPTOR Mini V2 Percent Efficiency Gain over V1">
+                        <img src="Simulationfiles/EfficiencyGain.png" loading="lazy" alt="RAPTOR Mini V2 Percent Efficiency Gain over V1">
                     </div>
                     <div class="comparison-plot-item">
                         <h5>Lift Force</h5>
                         <p>The dashed line is the V2 while the solid line is V1. The V2 lift is slightly better for the lower angle of attack than the V1.</p>
-                        <img src="Simulationfiles/Mini V1vsMiniV2.png" alt="Lift Force Comparison V1 vs V2">
+                        <img src="Simulationfiles/Mini V1vsMiniV2.png" loading="lazy" alt="Lift Force Comparison V1 vs V2">
                     </div>
                     <div class="comparison-plot-item">
                         <h5>Drag Force</h5>
                         <p>The dashed line is the V2 while the solid line is V1. The V2 drag is slightly worse than the V1, but V2 was simulated with no air channels so we are expecting less drag because air should be able to go through the fuselage.</p>
-                        <img src="Simulationfiles/Mini V1vsMiniV2drag.png" alt="Drag Force Comparison V1 vs V2">
+                        <img src="Simulationfiles/Mini V1vsMiniV2drag.png" loading="lazy" alt="Drag Force Comparison V1 vs V2">
                     </div>
                 </div>
             </div>
@@ -1706,28 +2138,28 @@
                 </p>
 
                 <div class="direct-figure-item" style="margin: 15px 0 25px 0;">
-                    <img src="Simulationfiles/RaptorMiniV1/RaptorMiniV1Aerodynamics.png" alt="RAPTOR Mini V1 values from ANSYS" class="direct-figure-img" style="max-height: 350px;">
+                    <img src="Simulationfiles/RaptorMiniV1/RaptorMiniV1Aerodynamics.png" loading="lazy" alt="RAPTOR Mini V1 values from ANSYS" class="direct-figure-img" style="max-height: 350px;">
                     <div class="direct-figure-caption">Figure: RAPTOR Mini V1 baseline lift, drag, and lift-to-drag efficiency curves.</div>
                 </div>
 
                 <div class="v1-clean-grid">
                     <div class="v1-clean-item">
-                        <img src="Simulationfiles/RaptorMiniV1/FFFiso.png" alt="V1 3D Velocity Streamlines">
+                        <img src="Simulationfiles/RaptorMiniV1/FFFiso.png" loading="lazy" alt="V1 3D Velocity Streamlines">
                         <h5>3D Airflow Streamlines</h5>
                         <p>Baseline 3D airflow over the V1 fuselage and wing.</p>
                     </div>
                     <div class="v1-clean-item">
-                        <img src="Simulationfiles/RaptorMiniV1/topdown.png" alt="V1 Top-Down Streamlines">
+                        <img src="Simulationfiles/RaptorMiniV1/topdown.png" loading="lazy" alt="V1 Top-Down Streamlines">
                         <h5>Top-Down Wing Alignment</h5>
                         <p>Attached airflow across the 30-inch span.</p>
                     </div>
                     <div class="v1-clean-item">
-                        <img src="Simulationfiles/RaptorMiniV1/front.png" alt="V1 Frontal Inflow">
+                        <img src="Simulationfiles/RaptorMiniV1/front.png" loading="lazy" alt="V1 Frontal Inflow">
                         <h5>Frontal Inflow Split</h5>
                         <p>Airflow division around the nose and leading edges.</p>
                     </div>
                     <div class="v1-clean-item">
-                        <img src="Simulationfiles/RaptorMiniV1/wingtip.png" alt="V1 Wingtip Ripple">
+                        <img src="Simulationfiles/RaptorMiniV1/wingtip.png" loading="lazy" alt="V1 Wingtip Ripple">
                         <h5>Winglet Vortex Control</h5>
                         <p>Upturned wingtips reducing tip vortex drag.</p>
                     </div>
@@ -1739,7 +2171,17 @@
         <div id="rocket-view" class="page-view">
             <div class="title-with-logo">
                 <h2 class="section-title">RAPTOR: Launch Vehicle Airframe, Fabrication &amp; Trajectory</h2>
-                <img src="figures/raptor_logo.png" alt="Project RAPTOR Logo" class="section-raptor-logo">
+                <img src="figures/raptor_logo.png" loading="lazy" alt="Project RAPTOR Logo" class="section-raptor-logo">
+            </div>
+
+            <div class="jump-pill-bar">
+                <span class="jump-pill-label">Jump to Section:</span>
+                <button type="button" class="jump-pill-btn" onclick="jumpToSection('rocket-3d')">3D Model</button>
+                <button type="button" class="jump-pill-btn" onclick="jumpToSection('rocket-specs')">Specs &amp; CAD</button>
+                <button type="button" class="jump-pill-btn" onclick="jumpToSection('rocket-avionics')">Avionics &amp; BOM</button>
+                <button type="button" class="jump-pill-btn" onclick="jumpToSection('rocket-launch-site')">Launch Site (TRAPHX)</button>
+                <button type="button" class="jump-pill-btn" onclick="jumpToSection('rocket-building')">Building Progress</button>
+                <button type="button" class="jump-pill-btn" onclick="jumpToSection('rocket-openrocket')">OpenRocket Graphs</button>
             </div>
 
             <div class="direct-figure-item" style="margin-top: 10px;">
@@ -1747,17 +2189,23 @@
                 <p style="text-align: center; max-width: 820px; margin: 0 auto 14px auto;">
                     Longitudinal cross-section profile of the 110-inch rocket airframe showing the forward translucent payload bay, internal deployment rail mounting track, and folded RAPTOR Mini stowed inside.
                 </p>
-                <img src="figures/Capture44.PNG" alt="RAPTOR Launch Vehicle Longitudinal Profile with Internal Glider Payload" class="direct-figure-img">
+                <img src="figures/Capture44.PNG" loading="lazy" alt="RAPTOR Launch Vehicle Longitudinal Profile with Internal Glider Payload" class="direct-figure-img">
                 <div class="direct-figure-caption">Full Longitudinal Airframe View showing the forward nosecone, payload bay, and fin section.</div>
             </div>
 
-            <div class="model-viewer-section">
+            <div class="model-viewer-section jump-target" id="rocket-3d">
                 <h4 style="font-size: 1.15rem; color: var(--nau-navy); margin-bottom: 6px; font-weight: 700;">Interactive 3D Model: RAPTOR Launch Vehicle</h4>
                 <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 14px;">Click, hold, and drag to rotate in 360 degrees. Scroll or pinch to zoom in and examine the high-power rocket airframe, nosecone, and aft fin geometry.</p>
-                <model-viewer src="3D_files/RAPTOR.glb" alt="Interactive 3D Model of RAPTOR Rocket" auto-rotate camera-controls shadow-intensity="1.2"></model-viewer>
+                <model-viewer id="mv-raptor-rocket" src="3D_files/RAPTOR.glb" alt="Interactive 3D Model of RAPTOR Rocket" auto-rotate camera-controls shadow-intensity="1.2"></model-viewer>
+                <div class="camera-preset-bar">
+                    <button type="button" class="camera-preset-btn" onclick="setCameraPreset('mv-raptor-rocket', 'isometric')">Isometric</button>
+                    <button type="button" class="camera-preset-btn" onclick="setCameraPreset('mv-raptor-rocket', 'top')">Top</button>
+                    <button type="button" class="camera-preset-btn" onclick="setCameraPreset('mv-raptor-rocket', 'side')">Side</button>
+                    <button type="button" class="camera-preset-btn" onclick="setCameraPreset('mv-raptor-rocket', 'reset')">Reset View</button>
+                </div>
             </div>
 
-            <div class="section-block">
+            <div class="section-block jump-target" id="rocket-specs">
                 <h3 class="subsection-title">Custom 7.51-Inch High-Powered Rocket</h3>
                 <p style="font-size: 0.95rem; line-height: 1.7; margin-bottom: 18px;">
                     Because housing a 30-inch-wingspan drone exceeds standard kit rockets, the team built a custom high-power rocket airframe. The vehicle has a <strong>7.51-inch outer diameter</strong> (with a 20.0-inch total fin span) and stands <strong>110.0 inches (9.17 feet) tall</strong>. It is designed to carry the RAPTOR Mini to an apogee of 1,500 to 2,000 ft AGL and recover safely under dual-deployment parachutes.
@@ -1768,7 +2216,7 @@
                     <p style="text-align: center; max-width: 820px; margin: 0 auto 12px auto;">
                         Full orthographic engineering drawing of the RAPTOR launch vehicle detailing the overall height of <strong>110.0 inches</strong>, airframe body outer diameter of <strong>7.51 inches</strong>, nosecone length of <strong>32.0 inches</strong>, upper payload section of <strong>54.0 inches</strong>, lower booster section of <strong>30.0 inches</strong>, and total fin span width of <strong>20.0 inches</strong>:
                     </p>
-                    <img src="figures/RAPTOR3-View.png" alt="RAPTOR Rocket Engineering 3-View Drawing with Shaded Isometric View" class="direct-figure-img">
+                    <img src="figures/RAPTOR3-View.png" loading="lazy" alt="RAPTOR Rocket Engineering 3-View Drawing with Shaded Isometric View" class="direct-figure-img">
                     <div class="direct-figure-caption">Figure 3: RAPTOR Rocket Engineering Drawing - Overall Height: 110.0 in | Body Diameter: 7.51 in | Fin Span Width: 20.0 in.</div>
                 </div>
 
@@ -1780,11 +2228,11 @@
                     <div class="clean-two-col-grid">
                         <div class="clean-figure-col">
                             <h5>Full Rocket Isometric CAD</h5>
-                            <img src="figures/Capture37.PNG" alt="RAPTOR Rocket Full Isometric CAD">
+                            <img src="figures/Capture37.PNG" loading="lazy" alt="RAPTOR Rocket Full Isometric CAD">
                         </div>
                         <div class="clean-figure-col">
                             <h5>Internal Payload Packaging CAD</h5>
-                            <img src="figures/Capture47.PNG" alt="RAPTOR Rocket Internal Payload Bay Packaging CAD">
+                            <img src="figures/Capture47.PNG" loading="lazy" alt="RAPTOR Rocket Internal Payload Bay Packaging CAD">
                         </div>
                     </div>
                 </div>
@@ -1815,7 +2263,7 @@
                 </div>
             </div>
 
-            <div class="section-block">
+            <div class="section-block jump-target" id="rocket-avionics">
                 <h3 class="subsection-title">Rocket Avionics Schematic &amp; BOM</h3>
                 <p style="font-size: 0.94rem; line-height: 1.7; margin-bottom: 14px;">
                     The Avionics for the RAPTOR circle around the Blue Raven altimeter, this board is used to automatically trigger 4 ordinance events. The Blue Raven altimeter includes a High G 3-axis accelerometer, gyroscope, and barometer for GPS altitude tracking. The Blue Raven can connect to a phone over Bluetooth and a computer over serial for programming ordinance events. The second board being used in the RAPTOR is the Featherweight GPS Tracker, this tracker sends GPS telemetry to a base station over 915MHz LoRa (Long Range) transmitter.
@@ -1825,37 +2273,62 @@
                     <table class="specs-table">
                         <caption>Bill of Materials</caption>
                         <thead>
-                            <tr><th style="font-weight: bold;" scope="col">Part Name</th></tr>
+                            <tr>
+                                <th scope="col">Part Name</th>
+                                <th scope="col">Subsystem / Role</th>
+                                <th scope="col">Qty</th>
+                                <th scope="col">Key Specs</th>
+                            </tr>
                         </thead>
                         <tbody>
-                            <tr><td>Blue Raven altimeter</td></tr>
-                            <tr><td>3.7V 25C Li-Po Without Protection Circuits</td></tr>
-                            <tr><td>Featherweight GPS Tracker</td></tr>
-                            <tr><td>3.7V 700mAh 2.59Wh Li-Po With Protection Circuits</td></tr>
+                            <tr>
+                                <td>Blue Raven altimeter</td>
+                                <td>Flight Computer &amp; Ordnance Trigger</td>
+                                <td>1</td>
+                                <td>Triggers 4 ordnance events; High-G 3-axis accelerometer, gyroscope, barometer; Bluetooth &amp; serial</td>
+                            </tr>
+                            <tr>
+                                <td>3.7V 25C Li-Po Without Protection Circuits</td>
+                                <td>Altimeter &amp; Ordnance Power</td>
+                                <td>1</td>
+                                <td>3.7V, 25C, without protection circuits</td>
+                            </tr>
+                            <tr>
+                                <td>Featherweight GPS Tracker</td>
+                                <td>Rocket Telemetry &amp; Tracking</td>
+                                <td>1</td>
+                                <td>915 MHz LoRa transmitter to base station</td>
+                            </tr>
+                            <tr>
+                                <td>3.7V 700mAh 2.59Wh Li-Po With Protection Circuits</td>
+                                <td>GPS Tracker Power</td>
+                                <td>1</td>
+                                <td>3.7V, 700 mAh, 2.59 Wh, with protection circuits</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
 
                 <div class="direct-schematic-wrap">
                     <h5>Avionics Schematic</h5>
-                    <img src="figures/RAPTOR_Schematic.png" alt="RAPTOR Avionics Schematic">
+                    <img src="figures/RAPTOR_Schematic.png" loading="lazy" alt="RAPTOR Avionics Schematic">
                 </div>
             </div>
 
-            <div class="section-block">
+            <div class="section-block jump-target" id="rocket-launch-site">
                 <h3 class="subsection-title">Launch Site Operations: Tripoli Phoenix (TRAPHX) Eagle Eye Site</h3>
                 <p style="font-size: 0.94rem; line-height: 1.75; margin-bottom: 12px;">
                     Flight certification and full-scale mission launches for Project RAPTOR take place with the <strong>Tripoli Phoenix Rocketry Association (TRAPHX Prefecture #67)</strong> at their dedicated <strong>Eagle Eye Launch Site</strong> located off Eagle Eye Road near Aguila and Wickenburg, Arizona.
                 </p>
                 <p style="font-size: 0.94rem; line-height: 1.75; margin-bottom: 14px;">
-                    The site has an FAA airspace waiver up to <strong>48,000 ft AGL (50,000 ft MSL)</strong> and provides a wide-open desert recovery area. This open range gives plenty of room for booster parachute recovery and autonomous waypoint return of the RAPTOR Mini glider. For launch schedules, rules, and club info, visit <a href="https://traphx.clubexpress.com/" target="_blank" style="color: var(--nau-navy); font-weight: 700; text-decoration: underline;">https://traphx.clubexpress.com/</a>.
+                    The site has an FAA airspace waiver up to <strong>48,000 ft AGL (50,000 ft MSL)</strong> and provides a wide-open desert recovery area. This open range gives plenty of room for booster parachute recovery and autonomous waypoint return of the RAPTOR Mini glider. For launch schedules, rules, and club info, visit <a href="https://traphx.clubexpress.com/" target="_blank" rel="noopener" style="color: var(--nau-navy); font-weight: 700; text-decoration: underline;">https://traphx.clubexpress.com/</a>.
                 </p>
                 <div style="width: 100%; border-radius: 8px; overflow: hidden; border: 1px solid var(--border-color); margin-top: 15px;">
-                    <iframe src="https://maps.google.com/maps?q=Eagle+Eye+Road+Aguila+AZ&t=m&z=11&output=embed" width="100%" height="420" style="border:0; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Tripoli Phoenix Eagle Eye Launch Site Google Map"></iframe>
+                    <iframe id="traphx-map-frame" data-src="https://maps.google.com/maps?q=Eagle+Eye+Road+Aguila+AZ&t=m&z=11&output=embed" width="100%" height="420" style="border:0; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Tripoli Phoenix Eagle Eye Launch Site Google Map"></iframe>
                 </div>
             </div>
 
-            <div class="section-block">
+            <div class="section-block jump-target" id="rocket-building">
                 <h3 class="subsection-title">Building Progress: Fiberglass Airframe Layup, Alignment Mounts &amp; Fin Fabrication</h3>
                 <p style="font-size: 0.94rem; line-height: 1.75; margin-bottom: 12px;">
                     In early November 2026, the team began full-scale composite manufacturing of the 7.51-inch rocket airframe. To apply a uniform fiberglass layup over the 54-inch and 30-inch heavy kraft body tubes, we built a horizontal PVC pipe rotation mandrel supported on sawhorses over a protective tarp.
@@ -1865,40 +2338,41 @@
                 </p>
 
                 <div class="true-gallery-grid">
-                    <img src="figures/IMG_20261105_2100048.jpg" alt="3D Printed Mandrel Alignment Mounts">
-                    <img src="figures/20261104_150920.jpg" alt="Airframe Tube Mounted on Mandrel Stand">
-                    <img src="figures/IMG_20261105_121741.jpg" alt="Dry Fiberglass Cloth Alignment">
-                    <img src="figures/IMG_20261105_121746.jpg" alt="Initial Epoxy Resin Wet-Out">
-                    <img src="figures/IMG_20261105_210004_3.jpg" alt="Mandrel Rotation Inspection">
-                    <img src="figures/IMG_20261105_210004_5.jpg" alt="Resin Squeegee Application">
-                    <img src="figures/IMG_20261105_210004_9).jpg" alt="Full Airframe Layup Progress">
-                    <img src="figures/IMG_20261105_210004_10).jpg" alt="Airframe Curing on Sawhorse Stand">
-                    <img src="figures/IMG_20261105_210004_14).jpg" alt="Laminating Inspection">
-                    <img src="figures/IMG_20261105_210004_15).jpg" alt="Finished Wet Layup Section">
-                    <img src="figures/IMG_20261105_210004_16).jpg" alt="Final Surface Smoothing">
-                    <img src="figures/IMG_20261110_1946283.jpg" alt="Wooden Rocket Fin Clamping and Assembly">
-                    <img src="figures/IMG_20261110_1946284.jpg" alt="Cut Wooden Rocket Fins">
-                    <img src="figures/IMG_20261110_194628.jpg" alt="Measuring and Cutting Fin Core Wood">
-                    <img src="figures/IMG_20261113_122334.jpg" alt="Assembling Motor Mount Tube and Centering Rings">
-                    <img src="figures/IMG_20261113_1223341).jpg" alt="Motor Mount Tube with Centering Rings">
-                    <img src="figures/IMG_20261113_1223342).jpg" alt="Wooden Rocket Fins Clamped Flat on Work Stand">
-                    <img src="figures/IMG_20261113_1223343).jpg" alt="Fiberglass Cloth Layered Over Wooden Fin Core">
-                    <img src="figures/IMG_20261113_1223344).jpg" alt="Applying Fiberglass and Epoxy to Wooden Rocket Fins">
+                    <img src="figures/IMG_20261105_2100048.jpg" loading="lazy" alt="3D Printed Mandrel Alignment Mounts">
+                    <img src="figures/20261104_150920.jpg" loading="lazy" alt="Airframe Tube Mounted on Mandrel Stand">
+                    <img src="figures/IMG_20261105_121741.jpg" loading="lazy" alt="Dry Fiberglass Cloth Alignment">
+                    <img src="figures/IMG_20261105_121746.jpg" loading="lazy" alt="Initial Epoxy Resin Wet-Out">
+                    <img src="figures/IMG_20261105_210004_3.jpg" loading="lazy" alt="Mandrel Rotation Inspection">
+                    <img src="figures/IMG_20261105_210004_5.jpg" loading="lazy" alt="Resin Squeegee Application">
+                    <img src="figures/IMG_20261105_210004_9).jpg" loading="lazy" alt="Full Airframe Layup Progress">
+                    <img src="figures/IMG_20261105_210004_10).jpg" loading="lazy" alt="Airframe Curing on Sawhorse Stand">
+                    <img src="figures/IMG_20261105_210004_14).jpg" loading="lazy" alt="Laminating Inspection">
+                    <img src="figures/IMG_20261105_210004_15).jpg" loading="lazy" alt="Finished Wet Layup Section">
+                    <img src="figures/IMG_20261105_210004_16).jpg" loading="lazy" alt="Final Surface Smoothing">
+                    <img src="figures/IMG_20261110_1946283.jpg" loading="lazy" alt="Wooden Rocket Fin Clamping and Assembly">
+                    <img src="figures/IMG_20261110_1946284.jpg" loading="lazy" alt="Cut Wooden Rocket Fins">
+                    <img src="figures/IMG_20261110_194628.jpg" loading="lazy" alt="Measuring and Cutting Fin Core Wood">
+                    <img src="figures/IMG_20261113_122334.jpg" loading="lazy" alt="Assembling Motor Mount Tube and Centering Rings">
+                    <img src="figures/IMG_20261113_1223341).jpg" loading="lazy" alt="Motor Mount Tube with Centering Rings">
+                    <img src="figures/IMG_20261113_1223342).jpg" loading="lazy" alt="Wooden Rocket Fins Clamped Flat on Work Stand">
+                    <img src="figures/IMG_20261113_1223343).jpg" loading="lazy" alt="Fiberglass Cloth Layered Over Wooden Fin Core">
+                    <img src="figures/IMG_20261113_1223344).jpg" loading="lazy" alt="Applying Fiberglass and Epoxy to Wooden Rocket Fins">
                 </div>
             </div>
 
-            <h3 class="subsection-title">OpenRocket Trajectory &amp; Stability Graphs</h3>
+            <h3 class="subsection-title jump-target" id="rocket-openrocket">OpenRocket Trajectory &amp; Stability Graphs</h3>
 
             <div class="direct-figure-item">
                 <h4>Altitude &amp; Thrust Profile vs. Flight Time</h4>
                 <p>Cesaroni K935-P motor burn and coast phase reaching a simulated apogee of 603 m (~2,000 ft AGL) at t = 12 seconds with dual-deployment parachute staging.</p>
-                <img src="figures/Picture4.png" alt="Rocket Altitude and Thrust vs Time Graph" class="direct-figure-img">
+                <img src="figures/Picture4.png" loading="lazy" alt="Rocket Altitude and Thrust vs Time Graph" class="direct-figure-img">
             </div>
 
             <div class="direct-figure-item">
                 <h4>Variable Wind Speed Stability Simulation</h4>
                 <p>Trajectory simulation under 13 mph 90-degree crosswinds increasing with altitude, showing center of gravity forward of center of pressure with stability above 1.0 caliber throughout boost.</p>
-                <img src="figures/Picture5.png" alt="Variable Wind Simulation Stability Plot" class="direct-figure-img">
+                <img src="figures/Picture5.png" loading="lazy" alt="Variable Wind Simulation Stability Plot" class="direct-figure-img">
+                <div class="direct-figure-caption">Note: The stability margin drop to -7.5 calibers at t = 12 s represents apogee separation and drogue parachute deployment in the simulation.</div>
             </div>
         </div>
 
@@ -1906,112 +2380,121 @@
         <div id="gallery-view" class="page-view">
             <div class="title-with-logo">
                 <h2 class="section-title">Media &amp; CAD Visual Gallery</h2>
-                <img src="figures/raptor_logo.png" alt="Project RAPTOR Logo" class="section-raptor-logo">
+                <img src="figures/raptor_logo.png" loading="lazy" alt="Project RAPTOR Logo" class="section-raptor-logo">
             </div>
-            <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px;">
+            <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 18px;">
                 Photos of fiberglass rocket building, 3D printed parts, CAD versions, engineering drawings, schematics, and CFD plots. Click any image to view it larger.
             </p>
 
-            <div class="gallery-category-title">Fiberglass Rocket Construction &amp; Alignment Tooling</div>
-            <div class="true-gallery-grid">
-                <img src="figures/IMG_20261105_2100048.jpg" alt="3D Printed Mandrel Alignment Mounts">
-                <img src="figures/20261104_150920.jpg" alt="Airframe Tube Mounted on Mandrel Stand">
-                <img src="figures/IMG_20261105_121741.jpg" alt="Dry Fiberglass Cloth Alignment">
-                <img src="figures/IMG_20261105_121746.jpg" alt="Initial Epoxy Resin Wet-Out">
-                <img src="figures/IMG_20261105_210004_3.jpg" alt="Mandrel Rotation Inspection">
-                <img src="figures/IMG_20261105_210004_5.jpg" alt="Resin Squeegee Application">
-                <img src="figures/IMG_20261105_210004_9).jpg" alt="Full Airframe Layup Progress">
-                <img src="figures/IMG_20261105_210004_10).jpg" alt="Airframe Curing on Sawhorse Stand">
-                <img src="figures/IMG_20261105_210004_14).jpg" alt="Laminating Inspection">
-                <img src="figures/IMG_20261105_210004_15).jpg" alt="Finished Wet Layup Section">
-                <img src="figures/IMG_20261105_210004_16).jpg" alt="Final Surface Smoothing">
-                <img src="figures/IMG_20261110_1946283.jpg" alt="Wooden Rocket Fin Clamping and Assembly">
-                <img src="figures/IMG_20261110_1946284.jpg" alt="Cut Wooden Rocket Fins">
-                <img src="figures/IMG_20261110_194628.jpg" alt="Measuring and Cutting Fin Core Wood">
-                <img src="figures/IMG_20261113_122334.jpg" alt="Assembling Motor Mount Tube and Centering Rings">
-                <img src="figures/IMG_20261113_1223341).jpg" alt="Motor Mount Tube with Centering Rings">
-                <img src="figures/IMG_20261113_1223342).jpg" alt="Wooden Rocket Fins Clamped Flat on Work Stand">
-                <img src="figures/IMG_20261113_1223343).jpg" alt="Fiberglass Cloth Layered Over Wooden Fin Core">
-                <img src="figures/IMG_20261113_1223344).jpg" alt="Applying Fiberglass and Epoxy to Wooden Rocket Fins">
+            <div class="gallery-filter-bar">
+                <button type="button" class="gallery-filter-btn active" onclick="filterGallery('all', this)">All</button>
+                <button type="button" class="gallery-filter-btn" onclick="filterGallery('rocket-build', this)">Rocket Build</button>
+                <button type="button" class="gallery-filter-btn" onclick="filterGallery('glider-prototypes', this)">Glider Prototypes</button>
+                <button type="button" class="gallery-filter-btn" onclick="filterGallery('cad-drawings', this)">CAD &amp; Drawings</button>
+                <button type="button" class="gallery-filter-btn" onclick="filterGallery('cfd-plots', this)">CFD &amp; Plots</button>
+                <button type="button" class="gallery-filter-btn" onclick="filterGallery('milestones-logos', this)">Milestones &amp; Logos</button>
             </div>
 
-            <div class="gallery-category-title">RAPTOR Mini Laboratory Prototypes &amp; Benchtop Assemblies</div>
-            <div class="true-gallery-grid">
-                <img src="figures/20261023_125634.jpg" alt="Lab Assembly Bench Prototype">
-                <img src="figures/20261023_131228.jpg" alt="Full-Scale 3D Printed Prototype (Flight Configuration)">
-                <img src="figures/20261023_131244.jpg" alt="Full-Scale 3D Printed Prototype (Stowed In-Tube State)">
-                <img src="figures/IMG_20261023_164817709_HDR.jpg" alt="Overhead Planform and Wing Geometry View">
-                <img src="figures/V0WingSnapGif.gif" alt="Version 0 Self-Opening Spring Wing Mechanism">
-                <img src="figures/IMG_20261110_1946282.jpg" alt="ASA Aero 3D printed parts weighed on scale (194 g)">
+            <div class="gallery-category-title" data-category="rocket-build">Fiberglass Rocket Construction &amp; Alignment Tooling</div>
+            <div class="true-gallery-grid" data-category="rocket-build">
+                <img src="figures/IMG_20261105_2100048.jpg" loading="lazy" alt="3D Printed Mandrel Alignment Mounts">
+                <img src="figures/20261104_150920.jpg" loading="lazy" alt="Airframe Tube Mounted on Mandrel Stand">
+                <img src="figures/IMG_20261105_121741.jpg" loading="lazy" alt="Dry Fiberglass Cloth Alignment">
+                <img src="figures/IMG_20261105_121746.jpg" loading="lazy" alt="Initial Epoxy Resin Wet-Out">
+                <img src="figures/IMG_20261105_210004_3.jpg" loading="lazy" alt="Mandrel Rotation Inspection">
+                <img src="figures/IMG_20261105_210004_5.jpg" loading="lazy" alt="Resin Squeegee Application">
+                <img src="figures/IMG_20261105_210004_9).jpg" loading="lazy" alt="Full Airframe Layup Progress">
+                <img src="figures/IMG_20261105_210004_10).jpg" loading="lazy" alt="Airframe Curing on Sawhorse Stand">
+                <img src="figures/IMG_20261105_210004_14).jpg" loading="lazy" alt="Laminating Inspection">
+                <img src="figures/IMG_20261105_210004_15).jpg" loading="lazy" alt="Finished Wet Layup Section">
+                <img src="figures/IMG_20261105_210004_16).jpg" loading="lazy" alt="Final Surface Smoothing">
+                <img src="figures/IMG_20261110_1946283.jpg" loading="lazy" alt="Wooden Rocket Fin Clamping and Assembly">
+                <img src="figures/IMG_20261110_1946284.jpg" loading="lazy" alt="Cut Wooden Rocket Fins">
+                <img src="figures/IMG_20261110_194628.jpg" loading="lazy" alt="Measuring and Cutting Fin Core Wood">
+                <img src="figures/IMG_20261113_122334.jpg" loading="lazy" alt="Assembling Motor Mount Tube and Centering Rings">
+                <img src="figures/IMG_20261113_1223341).jpg" loading="lazy" alt="Motor Mount Tube with Centering Rings">
+                <img src="figures/IMG_20261113_1223342).jpg" loading="lazy" alt="Wooden Rocket Fins Clamped Flat on Work Stand">
+                <img src="figures/IMG_20261113_1223343).jpg" loading="lazy" alt="Fiberglass Cloth Layered Over Wooden Fin Core">
+                <img src="figures/IMG_20261113_1223344).jpg" loading="lazy" alt="Applying Fiberglass and Epoxy to Wooden Rocket Fins">
             </div>
 
-            <div class="gallery-category-title">RAPTOR Mini CAD Models, Schematics &amp; 4-View Drawings</div>
-            <div class="true-gallery-grid">
-                <img src="figures/Capture46.PNG" alt="RAPTOR Mini Exploded Assembly CAD">
-                <img src="figures/Capture49.PNG" alt="RAPTOR Mini Wireframe CAD">
-                <img src="figures/Capture24.PNG" alt="RAPTOR Mini Isometric CAD">
-                <img src="figures/Capture38.PNG" alt="RAPTOR Mini Version 2 Isometric CAD with Vents">
-                <img src="figures/Capture39.PNG" alt="RAPTOR Mini Version 2 Cutaway with Updated Nylon Washer System">
-                <img src="figures/Capture40.PNG" alt="RAPTOR Mini Version 2 Front View CAD">
-                <img src="figures/Capture41.PNG" alt="RAPTOR Mini Version 2 Top-Down Planform CAD with Vents">
-                <img src="figures/Capture57.PNG" alt="Version 2 Wing Section View showing Carbon Fiber Rod Channels">
-                <img src="figures/Capture7.PNG" alt="Version 0 Proof of Concept Fuselage Side Cutaway">
-                <img src="figures/Capture9.PNG" alt="Version 0 Proof of Concept Translucent Assembly">
-                <img src="figures/Capture10.PNG" alt="Version 0 Proof of Concept Thrust Bearing Cutaway">
-                <img src="figures/v2FlightOrientation4-View.png" alt="Engineering 4-View Drawing (Flight Configuration)">
-                <img src="figures/v2LaunchOrientation4-View.png" alt="Engineering 4-View Drawing (Stowed Launch Configuration)">
-                <img src="figures/Picture11.png" alt="RAPTOR Mini 4-View Drawing (Flight Orientation)">
-                <img src="figures/Picture12.png" alt="RAPTOR Mini 4-View Drawing (Launch Orientation)">
-                <img src="figures/eng_drawing_flight_v2.png" alt="RAPTOR Mini Line 4-View Drawing (Flight Configuration)">
-                <img src="figures/eng_drawing_launch.png" alt="RAPTOR Mini Line 4-View Drawing (Launch Configuration)">
-                <img src="figures/RAPTOR_Mini_Schematic.png" alt="RAPTOR Mini Avionics Schematic">
+            <div class="gallery-category-title" data-category="glider-prototypes">RAPTOR Mini Laboratory Prototypes &amp; Benchtop Assemblies</div>
+            <div class="true-gallery-grid" data-category="glider-prototypes">
+                <img src="figures/20261023_125634.jpg" loading="lazy" alt="Lab Assembly Bench Prototype">
+                <img src="figures/20261023_131228.jpg" loading="lazy" alt="Full-Scale 3D Printed Prototype (Flight Configuration)">
+                <img src="figures/20261023_131244.jpg" loading="lazy" alt="Full-Scale 3D Printed Prototype (Stowed In-Tube State)">
+                <img src="figures/IMG_20261023_164817709_HDR.jpg" loading="lazy" alt="Overhead Planform and Wing Geometry View">
+                <img src="figures/V0WingSnapGif.gif" loading="lazy" alt="Version 0 Self-Opening Spring Wing Mechanism">
+                <img src="figures/IMG_20261110_1946282.jpg" loading="lazy" alt="ASA Aero 3D printed parts weighed on scale (194 g)">
             </div>
 
-            <div class="gallery-category-title">RAPTOR (Rocket) CAD Models, OpenRocket &amp; Engineering Drawings</div>
-            <div class="true-gallery-grid">
-                <img src="figures/Pictudddre1.png" alt="Apogee Deployment and Separation Sequence 3D CAD">
-                <img src="figures/Picture1.png" alt="Mission Flight Profile Diagram">
-                <img src="figures/Picture2.png" alt="OpenRocket Launch Vehicle Configuration and Stability Summary">
-                <img src="figures/Picture4.png" alt="OpenRocket Altitude and Thrust vs Time Graph">
-                <img src="figures/Picture5.png" alt="OpenRocket Variable Wind Simulation Stability Plot">
-                <img src="figures/Capture44.PNG" alt="RAPTOR Full Rocket Longitudinal Profile with Glider Bay">
-                <img src="figures/Capture45.PNG" alt="Full Rocket Exploded Staging Assembly">
-                <img src="figures/Capture47.PNG" alt="Rocket Internal Assembly with Stowed Glider Payload">
-                <img src="figures/Capture48.PNG" alt="RAPTOR Rocket Wireframe CAD">
-                <img src="figures/RAPTOR3-View.png" alt="RAPTOR Rocket Engineering 3-View Drawing (Shaded)">
-                <img src="figures/rocket_eng_drawing.png" alt="RAPTOR Rocket Engineering 3-View Drawing">
-                <img src="figures/Capture37.PNG" alt="RAPTOR Rocket Full 3D CAD">
-                <img src="figures/RAPTOR_Schematic.png" alt="RAPTOR Rocket Avionics Schematic">
+            <div class="gallery-category-title" data-category="cad-drawings">RAPTOR Mini CAD Models, Schematics &amp; 4-View Drawings</div>
+            <div class="true-gallery-grid" data-category="cad-drawings">
+                <img src="figures/Capture46.PNG" loading="lazy" alt="RAPTOR Mini Exploded Assembly CAD">
+                <img src="figures/Capture49.PNG" loading="lazy" alt="RAPTOR Mini Wireframe CAD">
+                <img src="figures/Capture24.PNG" loading="lazy" alt="RAPTOR Mini Isometric CAD">
+                <img src="figures/Capture38.PNG" loading="lazy" alt="RAPTOR Mini Version 2 Isometric CAD with Vents">
+                <img src="figures/Capture39.PNG" loading="lazy" alt="RAPTOR Mini Version 2 Cutaway with Updated Nylon Washer System">
+                <img src="figures/Capture40.PNG" loading="lazy" alt="RAPTOR Mini Version 2 Front View CAD">
+                <img src="figures/Capture41.PNG" loading="lazy" alt="RAPTOR Mini Version 2 Top-Down Planform CAD with Vents">
+                <img src="figures/Capture57.PNG" loading="lazy" alt="Version 2 Wing Section View showing Carbon Fiber Rod Channels">
+                <img src="figures/Capture7.PNG" loading="lazy" alt="Version 0 Proof of Concept Fuselage Side Cutaway">
+                <img src="figures/Capture9.PNG" loading="lazy" alt="Version 0 Proof of Concept Translucent Assembly">
+                <img src="figures/Capture10.PNG" loading="lazy" alt="Version 0 Proof of Concept Thrust Bearing Cutaway">
+                <img src="figures/v2FlightOrientation4-View.png" loading="lazy" alt="Engineering 4-View Drawing (Flight Configuration)">
+                <img src="figures/v2LaunchOrientation4-View.png" loading="lazy" alt="Engineering 4-View Drawing (Stowed Launch Configuration)">
+                <img src="figures/Picture11.png" loading="lazy" alt="RAPTOR Mini 4-View Drawing (Flight Orientation)">
+                <img src="figures/Picture12.png" loading="lazy" alt="RAPTOR Mini 4-View Drawing (Launch Orientation)">
+                <img src="figures/eng_drawing_flight_v2.png" loading="lazy" alt="RAPTOR Mini Line 4-View Drawing (Flight Configuration)">
+                <img src="figures/eng_drawing_launch.png" loading="lazy" alt="RAPTOR Mini Line 4-View Drawing (Launch Configuration)">
+                <img src="figures/RAPTOR_Mini_Schematic.png" loading="lazy" alt="RAPTOR Mini Avionics Schematic">
             </div>
 
-            <div class="gallery-category-title">Aerodynamic CFD Flow Studies &amp; MATLAB Plots</div>
-            <div class="true-gallery-grid">
-                <img src="Simulationfiles/RaptorMiniV2/PulsePathlinesv2.gif" alt="Figure: Animated pathline pulses across the RAPTOR Mini V2">
-                <img src="Simulationfiles/RaptorMiniV2/velocityPathlines.png" alt="RAPTOR Mini V2 Velocity pathline ribbons">
-                <img src="Simulationfiles/RaptorMiniV2/RaptorMiniV2Aerodynamics.png" alt="RAPTOR Mini V2 Aerodynamic Curves">
-                <img src="Simulationfiles/RaptorMiniV2/StaticPressureContor.png" alt="Upper Wing Pressure Contours (V2)">
-                <img src="Simulationfiles/RaptorMiniV2/StaticPressureContorUnderSide.png" alt="Lower Belly Pressure Contours (V2)">
-                <img src="Simulationfiles/RaptorMiniV2/MagVelocityContorSide.png" alt="Side-Profile Velocity Slice (V2)">
-                <img src="Simulationfiles/RaptorMiniV2/WallShearStressContor.png" alt="Surface Friction and Shear Stress (V2)">
-                <img src="Simulationfiles/RaptorMiniV2/pressurePathlines.png" alt="Full-Wingspan Pressure Pathlines (V2)">
-                <img src="Simulationfiles/EfficiencyComparisonMini V1vsMiniV2.png" alt="Efficiency Comparison (V1 vs. V2)">
-                <img src="Simulationfiles/EfficiencyGain.png" alt="V2 Efficiency Gain Over V1">
-                <img src="Simulationfiles/Mini V1vsMiniV2.png" alt="Lift Force Comparison (V1 vs. V2)">
-                <img src="Simulationfiles/Mini V1vsMiniV2drag.png" alt="Drag Force Comparison (V1 vs. V2)">
-                <img src="Simulationfiles/RaptorMiniV1/RaptorMiniV1Aerodynamics.png" alt="RAPTOR Mini V1 Aerodynamic Curves">
-                <img src="Simulationfiles/RaptorMiniV1/iso2.png" alt="V1 Airframe Surface Pressure Contours">
-                <img src="Simulationfiles/RaptorMiniV1/iso3.png" alt="V1 Downstream Wake Velocity Gradients">
-                <img src="Simulationfiles/RaptorMiniV1/front2.png" alt="V1 Nose Cone Inflow Velocity">
-                <img src="Simulationfiles/RaptorMiniV1/wing_tip_vector.png" alt="V1 Wingtip Vortex Vector Distribution">
+            <div class="gallery-category-title" data-category="cad-drawings">RAPTOR (Rocket) CAD Models, OpenRocket &amp; Engineering Drawings</div>
+            <div class="true-gallery-grid" data-category="cad-drawings">
+                <img src="figures/Pictudddre1.png" loading="lazy" alt="Apogee Deployment and Separation Sequence 3D CAD">
+                <img src="figures/Picture1.png" loading="lazy" alt="Mission Flight Profile Diagram">
+                <img src="figures/Picture2.png" loading="lazy" alt="OpenRocket Launch Vehicle Configuration and Stability Summary">
+                <img src="figures/Picture4.png" loading="lazy" alt="OpenRocket Altitude and Thrust vs Time Graph">
+                <img src="figures/Picture5.png" loading="lazy" alt="OpenRocket Variable Wind Simulation Stability Plot">
+                <img src="figures/Capture44.PNG" loading="lazy" alt="RAPTOR Full Rocket Longitudinal Profile with Glider Bay">
+                <img src="figures/Capture45.PNG" loading="lazy" alt="Full Rocket Exploded Staging Assembly">
+                <img src="figures/Capture47.PNG" loading="lazy" alt="Rocket Internal Assembly with Stowed Glider Payload">
+                <img src="figures/Capture48.PNG" loading="lazy" alt="RAPTOR Rocket Wireframe CAD">
+                <img src="figures/RAPTOR3-View.png" loading="lazy" alt="RAPTOR Rocket Engineering 3-View Drawing (Shaded)">
+                <img src="figures/rocket_eng_drawing.png" loading="lazy" alt="RAPTOR Rocket Engineering 3-View Drawing">
+                <img src="figures/Capture37.PNG" loading="lazy" alt="RAPTOR Rocket Full 3D CAD">
+                <img src="figures/RAPTOR_Schematic.png" loading="lazy" alt="RAPTOR Rocket Avionics Schematic">
             </div>
 
-            <div class="gallery-category-title">Presentation Milestones, Logos &amp; Hardware Archives</div>
-            <div class="true-gallery-grid">
-                <img src="figures/20261023_133642.jpg" alt="Midterm Technical Presentation Milestone">
-                <img src="figures/Picture3.png" alt="LOC Precision 7.51 inch Airframe and Component Order">
-                <img src="figures/raptor_logo.png" alt="Project RAPTOR Logo">
-                <img src="figures/NAU_Steve Sanghi College of Engineering_primary_282_3514.png" alt="NAU Steve Sanghi College of Engineering Primary Logo" class="gallery-dark-bg">
-                <img src="figures/steveSanghiWhiteLogo.png" alt="NAU Steve Sanghi College of Engineering White Logo" class="gallery-dark-bg">
+            <div class="gallery-category-title" data-category="cfd-plots">Aerodynamic CFD Flow Studies &amp; MATLAB Plots</div>
+            <div class="true-gallery-grid" data-category="cfd-plots">
+                <img src="Simulationfiles/RaptorMiniV2/PulsePathlinesv2.gif" loading="lazy" alt="Figure: Animated pathline pulses across the RAPTOR Mini V2">
+                <img src="Simulationfiles/RaptorMiniV2/velocityPathlines.png" loading="lazy" alt="RAPTOR Mini V2 Velocity pathline ribbons">
+                <img src="Simulationfiles/RaptorMiniV2/RaptorMiniV2Aerodynamics.png" loading="lazy" alt="RAPTOR Mini V2 Aerodynamic Curves">
+                <img src="Simulationfiles/RaptorMiniV2/StaticPressureContor.png" loading="lazy" alt="Upper Wing Pressure Contours (V2)">
+                <img src="Simulationfiles/RaptorMiniV2/StaticPressureContorUnderSide.png" loading="lazy" alt="Lower Belly Pressure Contours (V2)">
+                <img src="Simulationfiles/RaptorMiniV2/MagVelocityContorSide.png" loading="lazy" alt="Side-Profile Velocity Slice (V2)">
+                <img src="Simulationfiles/RaptorMiniV2/WallShearStressContor.png" loading="lazy" alt="Surface Friction and Shear Stress (V2)">
+                <img src="Simulationfiles/RaptorMiniV2/pressurePathlines.png" loading="lazy" alt="Full-Wingspan Pressure Pathlines (V2)">
+                <img src="Simulationfiles/EfficiencyComparisonMini V1vsMiniV2.png" loading="lazy" alt="Efficiency Comparison (V1 vs. V2)">
+                <img src="Simulationfiles/EfficiencyGain.png" loading="lazy" alt="V2 Efficiency Gain Over V1">
+                <img src="Simulationfiles/Mini V1vsMiniV2.png" loading="lazy" alt="Lift Force Comparison (V1 vs. V2)">
+                <img src="Simulationfiles/Mini V1vsMiniV2drag.png" loading="lazy" alt="Drag Force Comparison (V1 vs. V2)">
+                <img src="Simulationfiles/RaptorMiniV1/RaptorMiniV1Aerodynamics.png" loading="lazy" alt="RAPTOR Mini V1 Aerodynamic Curves">
+                <img src="Simulationfiles/RaptorMiniV1/iso2.png" loading="lazy" alt="V1 Airframe Surface Pressure Contours">
+                <img src="Simulationfiles/RaptorMiniV1/iso3.png" loading="lazy" alt="V1 Downstream Wake Velocity Gradients">
+                <img src="Simulationfiles/RaptorMiniV1/front2.png" loading="lazy" alt="V1 Nose Cone Inflow Velocity">
+                <img src="Simulationfiles/RaptorMiniV1/wing_tip_vector.png" loading="lazy" alt="V1 Wingtip Vortex Vector Distribution">
+            </div>
+
+            <div class="gallery-category-title" data-category="milestones-logos">Presentation Milestones, Logos &amp; Hardware Archives</div>
+            <div class="true-gallery-grid" data-category="milestones-logos">
+                <img src="figures/20261023_133642.jpg" loading="lazy" alt="Midterm Technical Presentation Milestone">
+                <img src="figures/Picture3.png" loading="lazy" alt="LOC Precision 7.51 inch Airframe and Component Order">
+                <img src="figures/raptor_logo.png" loading="lazy" alt="Project RAPTOR Logo">
+                <img src="figures/NAU_Steve Sanghi College of Engineering_primary_282_3514.png" loading="lazy" alt="NAU Steve Sanghi College of Engineering Primary Logo" class="gallery-dark-bg">
+                <img src="figures/steveSanghiWhiteLogo.png" loading="lazy" alt="NAU Steve Sanghi College of Engineering White Logo" class="gallery-dark-bg">
             </div>
         </div>
 
@@ -2019,24 +2502,26 @@
         <div id="documents-view" class="page-view">
             <div class="title-with-logo">
                 <h2 class="section-title">Documents &amp; Deliverables</h2>
-                <img src="figures/raptor_logo.png" alt="Project RAPTOR Logo" class="section-raptor-logo">
+                <img src="figures/raptor_logo.png" loading="lazy" alt="Project RAPTOR Logo" class="section-raptor-logo">
             </div>
             <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px;">
                 Technical reports, presentation slide decks, and posters. Read the PDFs in the viewer below or download the files directly.
             </p>
 
-            <div class="document-grid">
+            <div class="doc-group-heading">Technical Reports</div>
+            <div class="document-grid-2">
                 <div class="doc-card">
                     <div class="doc-card-header">
                         <i class="fa-solid fa-file-pdf doc-icon-pdf"></i>
                         <div class="doc-details">
                             <h4>Midterm Progress Report</h4>
-                            <p>Published: October 23, 2026 (25 Pages)<br>Technical progress report, OpenRocket simulations, and CAD kinematics.</p>
+                            <p>Published: October 23, 2026 (25 Pages, PDF)<br>Technical progress report, OpenRocket simulations, and CAD kinematics.</p>
                         </div>
                     </div>
                     <div class="doc-btn-group">
-                        <button class="btn-view" onclick="loadPdf('midterm_report.pdf', 'Midterm Progress Report (PDF)', this)"><i class="fa-solid fa-eye me-1"></i> View Inline</button>
-                        <a href="midterm_report.pdf" download="RAPTOR_Midterm_Report_Oct2026.pdf" class="btn-download"><i class="fa-solid fa-download me-1"></i> Download</a>
+                        <button type="button" class="btn-view" onclick="loadPdf('midterm_report.pdf', 'Midterm Progress Report (PDF)', this)"><i class="fa-solid fa-eye"></i> View Inline</button>
+                        <a href="midterm_report.pdf" target="_blank" rel="noopener" class="btn-new-tab"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open in New Tab</a>
+                        <a href="midterm_report.pdf" download="RAPTOR_Midterm_Report_Oct2026.pdf" class="btn-download"><i class="fa-solid fa-download"></i> Download</a>
                     </div>
                 </div>
 
@@ -2045,51 +2530,61 @@
                         <i class="fa-solid fa-file-pdf doc-icon-pdf"></i>
                         <div class="doc-details">
                             <h4>Capstone Project Proposal</h4>
-                            <p>Published: September 2026<br>Requirements baseline, scope definition, mentor charter, and project budget.</p>
+                            <p>Published: September 2026 (PDF)<br>Requirements baseline, scope definition, mentor charter, and project budget.</p>
                         </div>
                     </div>
                     <div class="doc-btn-group">
-                        <button class="btn-view" onclick="loadPdf('project_proposal.pdf', 'Capstone Project Proposal (PDF)', this)"><i class="fa-solid fa-eye me-1"></i> View Inline</button>
-                        <a href="project_proposal.pdf" download="RAPTOR_Project_Proposal.pdf" class="btn-download"><i class="fa-solid fa-download me-1"></i> Download</a>
+                        <button type="button" class="btn-view" onclick="loadPdf('project_proposal.pdf', 'Capstone Project Proposal (PDF)', this)"><i class="fa-solid fa-eye"></i> View Inline</button>
+                        <a href="project_proposal.pdf" target="_blank" rel="noopener" class="btn-new-tab"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open in New Tab</a>
+                        <a href="project_proposal.pdf" download="RAPTOR_Project_Proposal.pdf" class="btn-download"><i class="fa-solid fa-download"></i> Download</a>
                     </div>
                 </div>
+            </div>
 
+            <div class="doc-group-heading">Poster &amp; Presentations</div>
+            <div class="document-grid-3">
                 <div class="doc-card">
                     <div class="doc-card-header">
-                        <i class="fa-solid fa-file-powerpoint doc-icon-ppt"></i>
+                        <i class="fa-solid fa-file-pdf doc-icon-pdf"></i>
                         <div class="doc-details">
                             <h4>Project RAPTOR FEST 2026 Poster</h4>
-                            <p>November 12, 2026 (3,815 KB PowerPoint Poster)<br>Capstone showcase poster covering mission profile, CAD, CFD simulations, and fabrication progress.</p>
+                            <p>November 12, 2026 (PDF Poster)<br>Capstone showcase poster covering mission profile, CAD, CFD simulations, and fabrication progress.</p>
                         </div>
                     </div>
                     <div class="doc-btn-group">
-                        <a href="Project_RAPTOR_FEST_26_Poster.pptx" download="Project_RAPTOR_FEST_26_Poster.pptx" class="btn-view"><i class="fa-solid fa-download me-1"></i> Download Poster (PPTX)</a>
+                        <button type="button" class="btn-view" onclick="loadPdf('Project_RAPTOR_FEST_26_Poster.pdf', 'Project RAPTOR FEST 2026 Poster (PDF)', this)"><i class="fa-solid fa-eye"></i> View Inline</button>
+                        <a href="Project_RAPTOR_FEST_26_Poster.pdf" target="_blank" rel="noopener" class="btn-new-tab"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open in New Tab</a>
+                        <a href="Project_RAPTOR_FEST_26_Poster.pdf" download="Project_RAPTOR_FEST_26_Poster.pdf" class="btn-download"><i class="fa-solid fa-download"></i> Download</a>
                     </div>
                 </div>
 
                 <div class="doc-card">
                     <div class="doc-card-header">
-                        <i class="fa-solid fa-file-powerpoint doc-icon-ppt"></i>
+                        <i class="fa-solid fa-file-pdf doc-icon-pdf"></i>
                         <div class="doc-details">
                             <h4>Midterm Progress Presentation</h4>
-                            <p>October 31, 2026 (535 KB PowerPoint Presentation)<br>Midterm design review, CAD iterations, and trajectory status presentation slides.</p>
+                            <p>October 31, 2026 (PDF Presentation)<br>Midterm design review, CAD iterations, and trajectory status presentation slides.</p>
                         </div>
                     </div>
                     <div class="doc-btn-group">
-                        <a href="Midterm_Progress_Presentation.pptx" download="Midterm_Progress_Presentation.pptx" class="btn-view"><i class="fa-solid fa-download me-1"></i> Download Presentation (PPTX)</a>
+                        <button type="button" class="btn-view" onclick="loadPdf('Midterm_Progress_Presentation.pdf', 'Midterm Progress Presentation (PDF)', this)"><i class="fa-solid fa-eye"></i> View Inline</button>
+                        <a href="Midterm_Progress_Presentation.pdf" target="_blank" rel="noopener" class="btn-new-tab"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open in New Tab</a>
+                        <a href="Midterm_Progress_Presentation.pdf" download="Midterm_Progress_Presentation.pdf" class="btn-download"><i class="fa-solid fa-download"></i> Download</a>
                     </div>
                 </div>
 
                 <div class="doc-card">
                     <div class="doc-card-header">
-                        <i class="fa-solid fa-file-powerpoint doc-icon-ppt"></i>
+                        <i class="fa-solid fa-file-pdf doc-icon-pdf"></i>
                         <div class="doc-details">
                             <h4>Proposal Presentation</h4>
-                            <p>September 2026 (2,481 KB PowerPoint Presentation)<br>Capstone scope pitch, operational mission timeline, and subsystem allocation slides.</p>
+                            <p>September 2026 (PDF Presentation)<br>Capstone scope pitch, operational mission timeline, and subsystem allocation slides.</p>
                         </div>
                     </div>
                     <div class="doc-btn-group">
-                        <a href="Proposal_Presentation.pptx" download="Proposal_Presentation.pptx" class="btn-view"><i class="fa-solid fa-download me-1"></i> Download Presentation (PPTX)</a>
+                        <button type="button" class="btn-view" onclick="loadPdf('Proposal_Presentation.pdf', 'Proposal Presentation (PDF)', this)"><i class="fa-solid fa-eye"></i> View Inline</button>
+                        <a href="Proposal_Presentation.pdf" target="_blank" rel="noopener" class="btn-new-tab"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open in New Tab</a>
+                        <a href="Proposal_Presentation.pdf" download="Proposal_Presentation.pdf" class="btn-download"><i class="fa-solid fa-download"></i> Download</a>
                     </div>
                 </div>
             </div>
@@ -2100,13 +2595,16 @@
                         <i class="fa-solid fa-file-pdf text-danger me-2"></i><span id="current-doc-label">Midterm Progress Report (PDF)</span>
                     </h3>
                     <div class="pdf-switcher-tabs">
-                        <button class="pdf-tab-btn active" id="btn-tab-midterm" onclick="loadPdf('midterm_report.pdf', 'Midterm Progress Report (PDF)', this)"><i class="fa-solid fa-file-lines me-1"></i> Midterm Report</button>
-                        <button class="pdf-tab-btn" id="btn-tab-proposal" onclick="loadPdf('project_proposal.pdf', 'Capstone Project Proposal (PDF)', this)"><i class="fa-solid fa-file-lines me-1"></i> Capstone Proposal</button>
+                        <button type="button" class="pdf-tab-btn active" data-pdf="midterm_report.pdf" id="btn-tab-midterm" onclick="loadPdf('midterm_report.pdf', 'Midterm Progress Report (PDF)', this)"><i class="fa-solid fa-file-lines"></i> Midterm Report</button>
+                        <button type="button" class="pdf-tab-btn" data-pdf="project_proposal.pdf" id="btn-tab-proposal" onclick="loadPdf('project_proposal.pdf', 'Capstone Project Proposal (PDF)', this)"><i class="fa-solid fa-file-lines"></i> Capstone Proposal</button>
+                        <button type="button" class="pdf-tab-btn" data-pdf="Project_RAPTOR_FEST_26_Poster.pdf" id="btn-tab-poster" onclick="loadPdf('Project_RAPTOR_FEST_26_Poster.pdf', 'Project RAPTOR FEST 2026 Poster (PDF)', this)"><i class="fa-solid fa-file-lines"></i> FEST 2026 Poster</button>
+                        <button type="button" class="pdf-tab-btn" data-pdf="Midterm_Progress_Presentation.pdf" id="btn-tab-midterm-pres" onclick="loadPdf('Midterm_Progress_Presentation.pdf', 'Midterm Progress Presentation (PDF)', this)"><i class="fa-solid fa-file-lines"></i> Midterm Presentation</button>
+                        <button type="button" class="pdf-tab-btn" data-pdf="Proposal_Presentation.pdf" id="btn-tab-proposal-pres" onclick="loadPdf('Proposal_Presentation.pdf', 'Proposal Presentation (PDF)', this)"><i class="fa-solid fa-file-lines"></i> Proposal Presentation</button>
                     </div>
                 </div>
                 <div class="pdf-embed-wrapper">
-                    <iframe id="inline-pdf-frame" src="midterm_report.pdf" title="Embedded Technical Document Viewer">
-                        <p style="padding: 20px; color: #ffffff;">Your browser does not support inline PDFs. <a href="midterm_report.pdf" target="_blank" style="color: var(--nau-gold);">Click here to view or download the PDF file directly.</a></p>
+                    <iframe id="inline-pdf-frame" data-src="midterm_report.pdf" title="Embedded Technical Document Viewer">
+                        <p style="padding: 20px; color: #ffffff;">Your browser does not support inline PDFs. <a href="midterm_report.pdf" target="_blank" rel="noopener" style="color: var(--nau-gold);">Click here to view or download the PDF file directly.</a></p>
                     </iframe>
                 </div>
             </div>
@@ -2114,10 +2612,14 @@
 
     </main>
 
+    <button type="button" id="back-to-top-btn" class="back-to-top-btn" onclick="scrollBackToTop()" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i> Top
+    </button>
+
     <footer>
         <div class="footer-content">
             <div style="display: flex; align-items: center; gap: 15px;">
-                <img src="figures/raptor_logo.png" alt="Project RAPTOR Logo" style="height: 48px; width: 48px; border-radius: 50%; border: 2px solid var(--nau-gold); background: #002447;">
+                <img src="figures/raptor_logo.png" loading="lazy" alt="Project RAPTOR Logo" style="height: 48px; width: 48px; border-radius: 50%; border: 2px solid var(--nau-gold); background: #002447;">
                 <div>
                     <strong>Project RAPTOR - Autonomous Apogee-Deployed Glider Rocket</strong>
                     <p style="margin-top: 4px; font-size: 0.8rem; color: #94a3b8;">Northern Arizona University | The Steve Sanghi College of Engineering</p>
@@ -2127,9 +2629,9 @@
             <div>
                 <strong>External Links</strong>
                 <ul style="list-style: none; margin-top: 4px;">
-                    <li><a href="https://traphx.clubexpress.com/" target="_blank">Tripoli Phoenix (TRAPHX)</a></li>
-                    <li><a href="https://nau.edu/college-engineering/" target="_blank">The Steve Sanghi College of Engineering</a></li>
-                    <li><a href="https://nau.edu" target="_blank">Northern Arizona University</a></li>
+                    <li><a href="https://traphx.clubexpress.com/" target="_blank" rel="noopener">Tripoli Phoenix (TRAPHX)</a></li>
+                    <li><a href="https://nau.edu/college-engineering/" target="_blank" rel="noopener">The Steve Sanghi College of Engineering</a></li>
+                    <li><a href="https://nau.edu" target="_blank" rel="noopener">Northern Arizona University</a></li>
                 </ul>
             </div>
         </div>
@@ -2137,35 +2639,169 @@
 
     <div id="lightbox-modal" class="lightbox-modal" onclick="closeLightbox(event)">
         <span class="lightbox-close-btn" onclick="closeLightbox(event)">&times;</span>
+        <button type="button" class="lightbox-nav-btn lightbox-prev" id="lightbox-prev-btn" onclick="stepLightbox(-1, event)" aria-label="Previous image">&#10094;</button>
+        <button type="button" class="lightbox-nav-btn lightbox-next" id="lightbox-next-btn" onclick="stepLightbox(1, event)" aria-label="Next image">&#10095;</button>
         <div class="lightbox-wrapper" onclick="event.stopPropagation()">
-            <img id="lightbox-img" class="lightbox-img" src="" alt="">
+            <div class="lightbox-img-stage" id="lightbox-img-stage">
+                <img id="lightbox-img" class="lightbox-img" src="" alt="" title="Click to zoom in or out" onclick="toggleLightboxZoom(event)">
+            </div>
+            <div class="lightbox-controls">
+                <span id="lightbox-counter" class="lightbox-counter"></span>
+                <button type="button" id="lightbox-zoom-btn" class="lightbox-tool-btn" onclick="toggleLightboxZoom(event)"><i class="fa-solid fa-magnifying-glass-plus"></i> Zoom In</button>
+                <a id="lightbox-full-link" href="" target="_blank" rel="noopener" class="lightbox-tool-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Full Image</a>
+            </div>
             <div id="lightbox-caption" class="lightbox-caption"></div>
         </div>
     </div>
 
+    <script type="module">
+            import { EdgesGeometry, LineSegments, LineBasicMaterial } from 'https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js';
+
+            function enhanceModelViewer(viewer) {
+              const model = viewer.model;
+              if (model && model.materials) {
+                model.materials.forEach(material => {
+                  material.pbrMetallicRoughness.setBaseColorFactor([0.15, 0.17, 0.20]);
+                  material.pbrMetallicRoughness.setRoughnessFactor(0.45);
+                  material.pbrMetallicRoughness.setMetallicFactor(0.2);
+                });
+              }
+
+              try {
+                const symbols = Object.getOwnPropertySymbols(viewer);
+                const sceneSym = symbols.find(s => s.description === 'scene');
+                const scene = sceneSym ? viewer[sceneSym] : null;
+                if (!scene) return;
+
+                scene.traverse(obj => {
+                  if (!obj.isMesh || !obj.geometry) return;
+                  const mats = Array.isArray(obj.material) ? obj.material : [obj.material];
+                  mats.forEach(m => {
+                    if (m) {
+                      m.polygonOffset = true;
+                      m.polygonOffsetFactor = 1;
+                      m.polygonOffsetUnits = 1;
+                      m.needsUpdate = true;
+                    }
+                  });
+
+                  if (obj.userData.hasEdgeOverlay || obj.children.some(c => c.userData && c.userData.isEdgeOverlay)) return;
+
+                  const edgesGeo = new EdgesGeometry(obj.geometry, 10);
+                  const edgesMat = new LineBasicMaterial({
+                    color: 0xcbd5e1,
+                    transparent: true,
+                    opacity: 0.55
+                  });
+                  const lineSegments = new LineSegments(edgesGeo, edgesMat);
+                  lineSegments.userData.isEdgeOverlay = true;
+                  lineSegments.raycast = () => {};
+                  obj.add(lineSegments);
+                  obj.userData.hasEdgeOverlay = true;
+                });
+
+                if (typeof scene.queueRender === 'function') scene.queueRender();
+                const needsRenderSym = symbols.find(s => s.description === 'needsRender');
+                if (needsRenderSym) {
+                  if (typeof viewer[needsRenderSym] === 'function') {
+                    viewer[needsRenderSym]();
+                  } else {
+                    viewer[needsRenderSym] = true;
+                  }
+                }
+              } catch (err) {
+                console.warn('CAD edge overlay skipped:', err);
+              }
+            }
+
+            document.querySelectorAll('model-viewer').forEach(viewer => {
+              viewer.addEventListener('load', () => enhanceModelViewer(viewer));
+              if (viewer.loaded) enhanceModelViewer(viewer);
+            });
+    </script>
+
     <script>
-            function switchView(viewId, buttonElement) {
+            const VIEW_TO_HASH = {
+              'overview-view': 'overview',
+              'raptor-mini-view': 'raptor-mini',
+              'rocket-view': 'rocket',
+              'gallery-view': 'gallery',
+              'documents-view': 'documents'
+            };
+            const HASH_TO_VIEW = {
+              'overview': 'overview-view',
+              'team': 'overview-view',
+              'raptor-mini': 'raptor-mini-view',
+              'rocket': 'rocket-view',
+              'gallery': 'gallery-view',
+              'documents': 'documents-view'
+            };
+
+            function lazyLoadFramesForView(viewId) {
+              if (viewId === 'documents-view') {
+                const pdfFrame = document.getElementById('inline-pdf-frame');
+                if (pdfFrame && !pdfFrame.getAttribute('src') && pdfFrame.dataset.src) {
+                  pdfFrame.src = pdfFrame.dataset.src;
+                }
+              } else if (viewId === 'rocket-view') {
+                const mapFrame = document.getElementById('traphx-map-frame');
+                if (mapFrame && !mapFrame.getAttribute('src') && mapFrame.dataset.src) {
+                  mapFrame.src = mapFrame.dataset.src;
+                }
+              }
+            }
+
+            function instantScrollToNav() {
+              const navElement = document.getElementById('main-nav');
+              if (!navElement) return;
+              const prevBehavior = document.documentElement.style.scrollBehavior;
+              document.documentElement.style.scrollBehavior = 'auto';
+              navElement.scrollIntoView({ behavior: 'instant' });
+              document.documentElement.style.scrollBehavior = prevBehavior;
+            }
+
+            function switchView(viewId, buttonElement, options) {
+              const opts = options || {};
               document.querySelectorAll('.page-view').forEach(v => v.classList.remove('active-view'));
               const selectedView = document.getElementById(viewId);
               if (selectedView) selectedView.classList.add('active-view');
+
               document.querySelectorAll('.nav-tab-btn').forEach(b => b.classList.remove('active'));
-              if (buttonElement) buttonElement.classList.add('active');
-              const navElement = document.getElementById('main-nav');
-              if (navElement) navElement.scrollIntoView({ behavior: 'smooth' });
-              if (window.MathJax && window.MathJax.typesetPromise) window.MathJax.typesetPromise();
+              const targetBtn = buttonElement || document.querySelector('.nav-tab-btn[data-view="' + viewId + '"]');
+              if (targetBtn) targetBtn.classList.add('active');
+
+              lazyLoadFramesForView(viewId);
+
+              if (!opts.skipHash && VIEW_TO_HASH[viewId]) {
+                const nextHash = '#' + VIEW_TO_HASH[viewId];
+                if (window.location.hash !== nextHash) {
+                  history.pushState(null, '', nextHash);
+                }
+              }
+
+              if (!opts.skipScroll) {
+                instantScrollToNav();
+              }
             }
 
-            function goToTeamSection(buttonElement) {
+            function goToTeamSection(buttonElement, options) {
+              const opts = options || {};
               document.querySelectorAll('.page-view').forEach(v => v.classList.remove('active-view'));
               const overview = document.getElementById('overview-view');
               if (overview) overview.classList.add('active-view');
+
               document.querySelectorAll('.nav-tab-btn').forEach(b => b.classList.remove('active'));
-              if (buttonElement) buttonElement.classList.add('active');
+              const targetBtn = buttonElement || document.querySelector('.nav-tab-btn[data-view="team"]');
+              if (targetBtn) targetBtn.classList.add('active');
+
+              if (!opts.skipHash && window.location.hash !== '#team') {
+                history.pushState(null, '', '#team');
+              }
+
               setTimeout(() => {
                 const teamSec = document.getElementById('team-section');
                 if (teamSec) teamSec.scrollIntoView({ behavior: 'smooth' });
               }, 60);
-              if (window.MathJax && window.MathJax.typesetPromise) window.MathJax.typesetPromise();
             }
 
             function scrollToNav(event) {
@@ -2174,72 +2810,201 @@
               if (navElement) navElement.scrollIntoView({ behavior: 'smooth' });
             }
 
+            function jumpToSection(targetId) {
+              const target = document.getElementById(targetId);
+              if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+
+            function scrollBackToTop() {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            function setCameraPreset(viewerId, preset) {
+              const viewer = document.getElementById(viewerId);
+              if (!viewer) return;
+              if (preset === 'isometric') {
+                viewer.removeAttribute('auto-rotate');
+                viewer.resetTurntableRotation();
+                viewer.cameraOrbit = '45deg 65deg auto';
+              } else if (preset === 'top') {
+                viewer.removeAttribute('auto-rotate');
+                viewer.resetTurntableRotation();
+                viewer.cameraOrbit = '0deg 0deg auto';
+              } else if (preset === 'side') {
+                viewer.removeAttribute('auto-rotate');
+                viewer.resetTurntableRotation();
+                viewer.cameraOrbit = '90deg 90deg auto';
+              } else if (preset === 'reset') {
+                viewer.resetTurntableRotation();
+                viewer.cameraTarget = 'auto auto auto';
+                viewer.fieldOfView = 'auto';
+                viewer.cameraOrbit = 'auto auto auto';
+                viewer.setAttribute('auto-rotate', '');
+              }
+            }
+
             function loadPdf(pdfUrl, labelText, buttonEl) {
               const frame = document.getElementById('inline-pdf-frame');
               const label = document.getElementById('current-doc-label');
-              if (frame) frame.src = pdfUrl;
-              if (label) label.textContent = labelText;
-              document.querySelectorAll('.pdf-tab-btn').forEach(btn => btn.classList.remove('active'));
-              if (buttonEl && buttonEl.classList.contains('pdf-tab-btn')) {
-                buttonEl.classList.add('active');
-              } else if (pdfUrl.includes('midterm')) {
-                const b = document.getElementById('btn-tab-midterm');
-                if (b) b.classList.add('active');
-              } else if (pdfUrl.includes('proposal')) {
-                const b = document.getElementById('btn-tab-proposal');
-                if (b) b.classList.add('active');
+              if (frame) {
+                frame.dataset.src = pdfUrl;
+                frame.src = pdfUrl;
               }
+              if (label) label.textContent = labelText;
+
+              document.querySelectorAll('.pdf-tab-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.pdf === pdfUrl);
+              });
+
               const viewerCard = document.querySelector('.pdf-viewer-card');
               if (viewerCard && buttonEl && !buttonEl.classList.contains('pdf-tab-btn')) {
                 viewerCard.scrollIntoView({ behavior: 'smooth' });
               }
             }
 
-            function openLightbox(src, altText) {
-              const modal = document.getElementById('lightbox-modal');
+            function filterGallery(category, buttonEl) {
+              document.querySelectorAll('.gallery-filter-btn').forEach(btn => btn.classList.remove('active'));
+              if (buttonEl) buttonEl.classList.add('active');
+
+              document.querySelectorAll('#gallery-view [data-category]').forEach(el => {
+                const show = category === 'all' || el.dataset.category === category;
+                el.classList.toggle('gallery-hidden', !show);
+              });
+            }
+
+            let lightboxImages = [];
+            let lightboxIndex = 0;
+
+            function setLightboxZoom(zoomed) {
+              const img = document.getElementById('lightbox-img');
+              const stage = document.getElementById('lightbox-img-stage');
+              const btn = document.getElementById('lightbox-zoom-btn');
+              img.classList.toggle('zoomed', zoomed);
+              stage.classList.toggle('zoomed', zoomed);
+              if (btn) {
+                btn.innerHTML = zoomed
+                  ? '<i class="fa-solid fa-magnifying-glass-minus"></i> Zoom Out'
+                  : '<i class="fa-solid fa-magnifying-glass-plus"></i> Zoom In';
+              }
+            }
+
+            function toggleLightboxZoom(e) {
+              if (e) e.stopPropagation();
+              const img = document.getElementById('lightbox-img');
+              setLightboxZoom(!img.classList.contains('zoomed'));
+            }
+
+            function renderLightboxAt(index) {
+              if (!lightboxImages.length) return;
+              lightboxIndex = (index + lightboxImages.length) % lightboxImages.length;
+              const target = lightboxImages[lightboxIndex];
+              const src = target.currentSrc || target.src;
+              const altText = target.alt || target.title || '';
+
               const img = document.getElementById('lightbox-img');
               const cap = document.getElementById('lightbox-caption');
+              const counter = document.getElementById('lightbox-counter');
+              const fullLink = document.getElementById('lightbox-full-link');
+              const prevBtn = document.getElementById('lightbox-prev-btn');
+              const nextBtn = document.getElementById('lightbox-next-btn');
+
+              setLightboxZoom(false);
               img.src = src;
-              img.alt = altText || '';
+              img.alt = altText;
               img.style.background = (src.includes('steveSanghi') || src.includes('NAU_Steve')) ? '#002447' : '#ffffff';
-              cap.textContent = altText || '';
+              cap.textContent = altText;
+              counter.textContent = (lightboxIndex + 1) + ' / ' + lightboxImages.length;
+              if (fullLink) fullLink.href = src;
+
+              const showNav = lightboxImages.length > 1;
+              if (prevBtn) prevBtn.style.display = showNav ? 'flex' : 'none';
+              if (nextBtn) nextBtn.style.display = showNav ? 'flex' : 'none';
+            }
+
+            function openLightboxForImage(clickedImg) {
+              const groupSelector = '.true-gallery-grid, .v0-images-container, .clean-two-col-grid, .comparison-2x2-grid, .v1-clean-grid, .cfd-staggered-container';
+              const grid = clickedImg.closest(groupSelector);
+              if (grid) {
+                lightboxImages = Array.from(grid.querySelectorAll('img.lightbox-trigger'));
+              } else {
+                const activeView = clickedImg.closest('.page-view') || document;
+                lightboxImages = Array.from(activeView.querySelectorAll('img.lightbox-trigger')).filter(el => !el.closest(groupSelector));
+              }
+              const idx = lightboxImages.indexOf(clickedImg);
+              renderLightboxAt(idx >= 0 ? idx : 0);
+
+              const modal = document.getElementById('lightbox-modal');
               modal.classList.add('lightbox-active');
               document.body.style.overflow = 'hidden';
+            }
+
+            function stepLightbox(delta, e) {
+              if (e) e.stopPropagation();
+              renderLightboxAt(lightboxIndex + delta);
             }
 
             function closeLightbox(e) {
               if (e) e.stopPropagation();
               const modal = document.getElementById('lightbox-modal');
               modal.classList.remove('lightbox-active');
+              setLightboxZoom(false);
               document.body.style.overflow = '';
             }
 
+            function applyHashRoute(isInitial) {
+              const rawHash = window.location.hash.replace('#', '').toLowerCase();
+              if (rawHash === 'team') {
+                goToTeamSection(null, { skipHash: true });
+              } else if (HASH_TO_VIEW[rawHash]) {
+                switchView(HASH_TO_VIEW[rawHash], null, { skipHash: true, skipScroll: false });
+              } else if (isInitial) {
+                lazyLoadFramesForView('overview-view');
+              } else {
+                switchView('overview-view', null, { skipHash: true, skipScroll: true });
+              }
+            }
+
+            window.addEventListener('hashchange', () => applyHashRoute(false));
+            window.addEventListener('popstate', () => applyHashRoute(false));
+
             document.addEventListener('keydown', function(e) {
+              const modal = document.getElementById('lightbox-modal');
+              if (!modal || !modal.classList.contains('lightbox-active')) return;
               if (e.key === 'Escape') closeLightbox();
+              else if (e.key === 'ArrowLeft') stepLightbox(-1);
+              else if (e.key === 'ArrowRight') stepLightbox(1);
             });
 
+            window.addEventListener('scroll', function() {
+              const btn = document.getElementById('back-to-top-btn');
+              if (btn) btn.classList.toggle('visible', window.scrollY > 450);
+            }, { passive: true });
+
             document.addEventListener('DOMContentLoaded', function() {
-              const images = document.querySelectorAll('img:not(.college-logo):not(.hero-college-logo):not(.section-raptor-logo):not(.hero-raptor-logo):not(.project-badge-logo):not(.portal-img-icon)');
+              document.querySelectorAll('.true-gallery-grid > img').forEach(img => {
+                const wrapper = document.createElement('div');
+                wrapper.className = 'gallery-thumb';
+                if (img.classList.contains('gallery-dark-bg')) wrapper.classList.add('dark-logo-thumb');
+
+                const cap = document.createElement('span');
+                cap.className = 'gallery-hover-caption';
+                cap.textContent = img.alt || '';
+
+                img.parentNode.insertBefore(wrapper, img);
+                wrapper.appendChild(img);
+                wrapper.appendChild(cap);
+              });
+
+              const images = document.querySelectorAll('img:not(.college-logo):not(.hero-college-logo):not(.section-raptor-logo):not(.hero-raptor-logo):not(.project-badge-logo):not(.portal-img-icon):not(#lightbox-img)');
               images.forEach(img => {
                 img.classList.add('lightbox-trigger');
                 img.title = img.title || 'Click to view full-resolution in lightbox';
                 img.addEventListener('click', function() {
-                  openLightbox(this.src, this.alt || this.title || '');
+                  openLightboxForImage(this);
                 });
               });
 
-              document.querySelectorAll('model-viewer').forEach(viewer => {
-                viewer.addEventListener('load', () => {
-                  const model = viewer.model;
-                  if (model && model.materials) {
-                    model.materials.forEach(material => {
-                      material.pbrMetallicRoughness.setBaseColorFactor([0.15, 0.17, 0.20]);
-                      material.pbrMetallicRoughness.setRoughnessFactor(0.45);
-                      material.pbrMetallicRoughness.setMetallicFactor(0.2);
-                    });
-                  }
-                });
-              });
+              applyHashRoute(true);
             });
     </script>
 </body>
