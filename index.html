@@ -2687,7 +2687,7 @@
 
                   if (obj.userData.hasEdgeOverlay || obj.children.some(c => c.userData && c.userData.isEdgeOverlay)) return;
 
-                  const edgesGeo = new EdgesGeometry(obj.geometry, 10);
+                  const edgesGeo = new EdgesGeometry(obj.geometry, 30);
                   const edgesMat = new LineBasicMaterial({
                     color: 0xcbd5e1,
                     transparent: true,
