@@ -257,7 +257,7 @@
             }
 
         /* ============================================================ */
-        /* MINIMAL LEFT SECTION OUTLINE (NO TILE, NO SCROLLBAR)         */
+        /* MINIMAL LEFT SECTION OUTLINE (NO TILE, NO SCROLLBAR, NO ICON)*/
         /* ============================================================ */
         .page-layout {
             max-width: 1640px;
@@ -350,18 +350,8 @@
             }
 
         .side-group-title {
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            display: block;
             min-width: 0;
-        }
-
-        .side-group-icon {
-            width: 16px;
-            text-align: center;
-            color: var(--nau-navy);
-            font-size: 0.84rem;
-            flex-shrink: 0;
         }
 
         .side-chevron {
@@ -377,7 +367,7 @@
 
         .side-sublist {
             list-style: none;
-            margin: 4px 0 4px 14px;
+            margin: 4px 0 4px 10px;
             padding-left: 10px;
             border-left: 1.5px solid #cbd5e1;
             display: flex;
@@ -691,46 +681,6 @@
         .jump-target {
             scroll-margin-top: 76px;
         }
-
-        .jump-pill-bar {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 8px;
-            margin: 0 0 24px 0;
-            padding: 12px 14px;
-            background: #f8fafc;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-        }
-
-        .jump-pill-label {
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-right: 4px;
-        }
-
-        .jump-pill-btn {
-            background: #ffffff;
-            color: var(--nau-navy);
-            border: 1px solid var(--border-color);
-            padding: 5px 12px;
-            border-radius: 999px;
-            font-size: 0.82rem;
-            font-weight: 600;
-            font-family: inherit;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-            .jump-pill-btn:hover {
-                background: var(--nau-navy);
-                color: #ffffff;
-                border-color: var(--nau-navy);
-            }
 
         .direct-figure-item {
             margin: 24px 0;
@@ -1931,7 +1881,7 @@
         <div class="mobile-nav-bar">
             <span class="mobile-nav-current" id="mobile-nav-current">Project Overview</span>
             <div class="mobile-nav-actions">
-                <button type="button" class="mobile-outline-btn" onclick="toggleSideDrawer()" aria-label="Open Page Sections">
+                <button type="button" class="mobile-outline-btn" onclick="toggleSideDrawer()" aria-label="Open Jump to Section">
                     <i class="fa-solid fa-list-ul"></i> Sections
                 </button>
                 <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-expanded="false" aria-controls="nav-links-list">
@@ -1953,17 +1903,17 @@
 
     <div class="page-layout">
 
-        <!-- CURRENT PAGE SECTION OUTLINE SIDEBAR -->
-        <aside class="side-nav-panel" id="side-nav-panel" aria-label="Current Page Section Navigation">
+        <!-- CURRENT PAGE SECTION OUTLINE SIDEBAR (WORDS ONLY, NO ICONS) -->
+        <aside class="side-nav-panel" id="side-nav-panel" aria-label="Jump to Section">
             <div class="side-nav-header">
-                <span class="side-nav-kicker">On This Page</span>
+                <span class="side-nav-kicker">Jump to Section</span>
                 <button type="button" class="side-drawer-close" onclick="closeSideDrawer()" aria-label="Close Sidebar">&times;</button>
             </div>
 
             <!-- Group 1: Overview -->
             <div class="side-group visible-group" data-group-view="overview-view">
                 <button type="button" class="side-group-btn" onclick="toggleSideGroup(this)">
-                    <span class="side-group-title"><i class="fa-solid fa-compass side-group-icon"></i> Project Overview</span>
+                    <span class="side-group-title">Project Overview</span>
                     <i class="fa-solid fa-chevron-up side-chevron"></i>
                 </button>
                 <ul class="side-sublist">
@@ -1980,7 +1930,7 @@
             <!-- Group 2: RAPTOR Mini -->
             <div class="side-group" data-group-view="raptor-mini-view">
                 <button type="button" class="side-group-btn" onclick="toggleSideGroup(this)">
-                    <span class="side-group-title"><i class="fa-solid fa-paper-plane side-group-icon"></i> RAPTOR Mini</span>
+                    <span class="side-group-title">RAPTOR Mini</span>
                     <i class="fa-solid fa-chevron-up side-chevron"></i>
                 </button>
                 <ul class="side-sublist">
@@ -1997,7 +1947,7 @@
             <!-- Group 3: RAPTOR Mega -->
             <div class="side-group" data-group-view="rocket-view">
                 <button type="button" class="side-group-btn" onclick="toggleSideGroup(this)">
-                    <span class="side-group-title"><i class="fa-solid fa-rocket side-group-icon"></i> RAPTOR Mega</span>
+                    <span class="side-group-title">RAPTOR Mega</span>
                     <i class="fa-solid fa-chevron-up side-chevron"></i>
                 </button>
                 <ul class="side-sublist">
@@ -2006,7 +1956,7 @@
                     <li><button type="button" class="side-sublink" data-nav-view="rocket-view" data-nav-target="rocket-specs" onclick="scrollCurrentPageSection('rocket-specs', this)">Specs, CAD &amp; Fins</button></li>
                     <li><button type="button" class="side-sublink" data-nav-view="rocket-view" data-nav-target="rocket-avionics" onclick="scrollCurrentPageSection('rocket-avionics', this)">Avionics &amp; BOM</button></li>
                     <li><button type="button" class="side-sublink" data-nav-view="rocket-view" data-nav-target="rocket-launch-site" onclick="scrollCurrentPageSection('rocket-launch-site', this)">Launch Site (TRAPHX)</button></li>
-                    <li><button type="button" class="side-sublink" data-nav-view="rocket-view" data-nav-target="rocket-building" onclick="scrollCurrentPageSection('rocket-building', this)">Build Progress</button></li>
+                    <li><button type="button" class="side-sublink" data-nav-view="rocket-view" data-nav-target="rocket-building" onclick="scrollCurrentPageSection('rocket-building', this)">Building Progress</button></li>
                     <li><button type="button" class="side-sublink" data-nav-view="rocket-view" data-nav-target="rocket-openrocket" onclick="scrollCurrentPageSection('rocket-openrocket', this)">OpenRocket Graphs</button></li>
                 </ul>
             </div>
@@ -2014,7 +1964,7 @@
             <!-- Group 4: Gallery -->
             <div class="side-group" data-group-view="gallery-view">
                 <button type="button" class="side-group-btn" onclick="toggleSideGroup(this)">
-                    <span class="side-group-title"><i class="fa-solid fa-images side-group-icon"></i> Gallery</span>
+                    <span class="side-group-title">Gallery</span>
                     <i class="fa-solid fa-chevron-up side-chevron"></i>
                 </button>
                 <ul class="side-sublist">
@@ -2030,7 +1980,7 @@
             <!-- Group 5: Documents -->
             <div class="side-group" data-group-view="documents-view">
                 <button type="button" class="side-group-btn" onclick="toggleSideGroup(this)">
-                    <span class="side-group-title"><i class="fa-solid fa-file-pdf side-group-icon"></i> Documents</span>
+                    <span class="side-group-title">Documents</span>
                     <i class="fa-solid fa-chevron-up side-chevron"></i>
                 </button>
                 <ul class="side-sublist">
@@ -2045,7 +1995,7 @@
         <main class="container">
 
             <div class="tablet-outline-bar">
-                <span>On This Page</span>
+                <span>Jump to Section</span>
                 <button type="button" class="mobile-outline-btn" onclick="toggleSideDrawer()">
                     <i class="fa-solid fa-list-ul"></i> Sections
                 </button>
@@ -2238,16 +2188,6 @@
                 <div class="title-with-logo">
                     <h2 class="section-title">RAPTOR Mini: Design Evolution &amp; Aerodynamics</h2>
                     <img src="figures/raptor_logo.png" loading="lazy" alt="Project RAPTOR Logo" class="section-raptor-logo">
-                </div>
-
-                <div class="jump-pill-bar">
-                    <span class="jump-pill-label">Jump to Section:</span>
-                    <button type="button" class="jump-pill-btn" onclick="jumpToSection('mini-3d')">3D Model</button>
-                    <button type="button" class="jump-pill-btn" onclick="jumpToSection('mini-evolution')">Design Evolution</button>
-                    <button type="button" class="jump-pill-btn" onclick="jumpToSection('mini-drawings')">4-View Drawings</button>
-                    <button type="button" class="jump-pill-btn" onclick="jumpToSection('mini-materials')">Materials &amp; ASA Aero</button>
-                    <button type="button" class="jump-pill-btn" onclick="jumpToSection('mini-avionics')">Avionics &amp; BOM</button>
-                    <button type="button" class="jump-pill-btn" onclick="jumpToSection('mini-simulations')">CFD &amp; MATLAB Simulations</button>
                 </div>
 
                 <div class="direct-figure-item jump-target" id="mini-exploded" style="margin-top: 10px;">
@@ -2629,16 +2569,6 @@
                     <img src="figures/raptor_logo.png" loading="lazy" alt="Project RAPTOR Logo" class="section-raptor-logo">
                 </div>
 
-                <div class="jump-pill-bar">
-                    <span class="jump-pill-label">Jump to Section:</span>
-                    <button type="button" class="jump-pill-btn" onclick="jumpToSection('rocket-3d')">3D Model</button>
-                    <button type="button" class="jump-pill-btn" onclick="jumpToSection('rocket-specs')">Specs, CAD &amp; Fins</button>
-                    <button type="button" class="jump-pill-btn" onclick="jumpToSection('rocket-avionics')">Avionics &amp; BOM</button>
-                    <button type="button" class="jump-pill-btn" onclick="jumpToSection('rocket-launch-site')">Launch Site (TRAPHX)</button>
-                    <button type="button" class="jump-pill-btn" onclick="jumpToSection('rocket-building')">Building Progress</button>
-                    <button type="button" class="jump-pill-btn" onclick="jumpToSection('rocket-openrocket')">OpenRocket Graphs</button>
-                </div>
-
                 <div class="direct-figure-item jump-target" id="rocket-profile" style="margin-top: 10px;">
                     <h4 class="subheading-title">Internal Payload Bay CAD View</h4>
                     <p>
@@ -2780,7 +2710,7 @@
                 </div>
 
                 <div class="section-block jump-target" id="rocket-building">
-                    <h3 class="subsection-title">Build Progress</h3>
+                    <h3 class="subsection-title">Building Progress</h3>
                     <p style="font-size: 0.94rem; line-height: 1.75; margin-bottom: 12px;">
                         We started building the rocket components in early November. We began by a fiberglass test of a spare rocket tube, and after that, we first fiberglassed the motor bay, one thirty-inch tube. After that was successful, we fiberglassed the coupler to connect the motor bay and the payload bay. Then we fiberglassed the payload bay, which consisted of two thirty-inch tubes fiberglassed together. We held the tube straight with a PVC pipe and multiple 3D-printed internal spoke hub rotation mounts. These were very important because we had to keep the rocket tube straight while the fiberglass was drying. This also allowed us to spin the rocket while spreading the epoxy around.
                     </p>
@@ -2835,7 +2765,7 @@
                     <img src="figures/raptor_logo.png" loading="lazy" alt="Project RAPTOR Logo" class="section-raptor-logo">
                 </div>
                 <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 18px;">
-                    All of our project photos. Hover over any image for its description, or click to view it larger.
+                    Photos of fiberglass rocket building, 3D printed parts, CAD versions, engineering drawings, schematics, and CFD plots. Hover over any image for its figure number and description, or click to view it larger.
                 </p>
 
                 <div class="gallery-filter-bar">
@@ -3368,11 +3298,6 @@
               event.preventDefault();
               const navElement = document.getElementById('main-nav');
               if (navElement) navElement.scrollIntoView({ behavior: 'smooth' });
-            }
-
-            function jumpToSection(targetId) {
-              const target = document.getElementById(targetId);
-              if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
 
             function scrollBackToTop() {
