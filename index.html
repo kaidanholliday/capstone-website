@@ -215,6 +215,10 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
 
+        .mobile-nav-bar {
+            display: none;
+        }
+
         .nav-links {
             max-width: 1200px;
             margin: 0 auto;
@@ -251,6 +255,75 @@
                 border-bottom: 3px solid var(--nau-gold);
                 background-color: #f8fafc;
             }
+
+        @media (max-width: 768px) {
+            .mobile-nav-bar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 8px 16px;
+                background: #ffffff;
+            }
+
+            .mobile-nav-current {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 0.9rem;
+                font-weight: 700;
+                color: var(--nau-navy);
+                border-left: 4px solid var(--nau-gold);
+                padding-left: 10px;
+            }
+
+            .mobile-menu-toggle {
+                background: var(--nau-navy);
+                color: #ffffff;
+                border: 1px solid var(--nau-navy);
+                padding: 7px 14px;
+                border-radius: 6px;
+                font-size: 0.84rem;
+                font-weight: 700;
+                font-family: inherit;
+                cursor: pointer;
+                display: inline-flex;
+                align-items: center;
+                gap: 7px;
+                transition: all 0.2s ease;
+            }
+
+                .mobile-menu-toggle[aria-expanded="true"] {
+                    background: var(--nau-gold);
+                    color: var(--nau-navy);
+                    border-color: var(--nau-gold);
+                }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                padding: 6px 16px 12px 16px;
+                border-top: 1px solid #e2e8f0;
+                background: #ffffff;
+            }
+
+                .nav-links.mobile-open {
+                    display: flex;
+                }
+
+            .nav-tab-btn {
+                width: 100%;
+                justify-content: flex-start;
+                padding: 10px 12px;
+                font-size: 0.88rem;
+                border-bottom: none;
+                border-left: 3px solid transparent;
+                border-radius: 4px;
+            }
+
+                .nav-tab-btn.active {
+                    border-bottom: none;
+                    border-left: 3px solid var(--nau-gold);
+                    background-color: #f8fafc;
+                }
+        }
 
         .container {
             max-width: 1160px;
@@ -1570,7 +1643,13 @@
     </div>
 
     <nav>
-        <ul class="nav-links">
+        <div class="mobile-nav-bar">
+            <span class="mobile-nav-current" id="mobile-nav-current">Project Overview</span>
+            <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-expanded="false" aria-controls="nav-links-list">
+                <i class="fa-solid fa-bars"></i> Menu
+            </button>
+        </div>
+        <ul class="nav-links" id="nav-links-list">
             <li><button class="nav-tab-btn active" data-view="overview-view" onclick="switchView('overview-view', this)">Project Overview</button></li>
             <li><button class="nav-tab-btn" data-view="team" onclick="goToTeamSection(this)">Team Members</button></li>
             <li><button class="nav-tab-btn" data-view="raptor-mini-view" onclick="switchView('raptor-mini-view', this)">RAPTOR Mini</button></li>
@@ -1730,35 +1809,35 @@
             <h3 class="subsection-title" style="margin-top: 35px;">Detailed Project Timeline (Fall 2026 to Spring 2027)</h3>
             <ul class="timeline-list">
                 <li class="timeline-item">
-                    <span class="timeline-date">October 2026</span>
+                    <span class="timeline-date">October 2026 (Semester 1)</span>
                     <div class="timeline-text">Project proposal approval, initial Onshape CAD modeling, OpenRocket simulation runs (603 m apogee validation), 3D printing of PETG kinematics prototype, order placement for 7.51" phenolic tubes and CO<sub>2</sub> canister, and TRA Phoenix launch site compliance coordination.</div>
                 </li>
                 <li class="timeline-item">
-                    <span class="timeline-date">November 2026</span>
+                    <span class="timeline-date">November 2026 (Semester 1)</span>
                     <div class="timeline-text">Arrival of initial rocket parts, wet-layup fiberglass reinforcement over the 7.51" airframe, fin construction (fiberglass over laser-cut wood), initial design refinements, ground CO<sub>2</sub> ejection tests, project videos, and NAU Fest presentation.</div>
                 </li>
                 <li class="timeline-item">
-                    <span class="timeline-date">December 2026</span>
+                    <span class="timeline-date">December 2026 (Semester 1)</span>
                     <div class="timeline-text">Finalize Build 1 assembly, complete full-scale CO<sub>2</sub> ejection tests prior to launch, conduct <strong>1st Rocket Launch at TRAPHX</strong> (qualification launch to verify flight behavior and recovery), and Semester 1 Final Presentation and report.</div>
                 </li>
                 <li class="timeline-item">
-                    <span class="timeline-date">January 2027</span>
+                    <span class="timeline-date">January 2027 (Semester 2)</span>
                     <div class="timeline-text">Review flight telemetry data from the 1st launch, update CAD for Version 2, and print Version 2 RAPTOR Mini airframe parts out of lightweight Bambu Lab ASA Aero foaming filament.</div>
                 </li>
                 <li class="timeline-item">
-                    <span class="timeline-date">February 2027</span>
+                    <span class="timeline-date">February 2027 (Semester 2)</span>
                     <div class="timeline-text">Final design construction, secondary CO<sub>2</sub> cold-gas deployment payload integration tests, battery discharge threshold checks, and drone glide and flight tuning trials.</div>
                 </li>
                 <li class="timeline-item">
-                    <span class="timeline-date">March 2027</span>
+                    <span class="timeline-date">March 2027 (Semester 2)</span>
                     <div class="timeline-text">Subsystem integration and controls tuning, Spring Midterm presentations, and <strong>2nd Rocket Launch</strong> (testing apogee deployment and separation).</div>
                 </li>
                 <li class="timeline-item">
-                    <span class="timeline-date">April 2027</span>
+                    <span class="timeline-date">April 2027 (Semester 2)</span>
                     <div class="timeline-text">Final build adjustments based on 2nd launch data, and <strong>Final Full-Scale Rocket &amp; Glider Launch</strong> showing apogee ejection, wing rotation, autonomous stabilized glide return, and dual parachute recovery.</div>
                 </li>
                 <li class="timeline-item">
-                    <span class="timeline-date">May 2027</span>
+                    <span class="timeline-date">May 2027 (Semester 2)</span>
                     <div class="timeline-text">Final Capstone presentation, ABET accreditation documentation, departmental archive upload, and project completion.</div>
                 </li>
             </ul>
@@ -2687,11 +2766,11 @@
 
                   if (obj.userData.hasEdgeOverlay || obj.children.some(c => c.userData && c.userData.isEdgeOverlay)) return;
 
-                  const edgesGeo = new EdgesGeometry(obj.geometry, 30);
+                  const edgesGeo = new EdgesGeometry(obj.geometry, 10);
                   const edgesMat = new LineBasicMaterial({
                     color: 0xcbd5e1,
                     transparent: true,
-                    opacity: 0.3
+                    opacity: 0.55
                   });
                   const lineSegments = new LineSegments(edgesGeo, edgesMat);
                   lineSegments.userData.isEdgeOverlay = true;
@@ -2737,6 +2816,32 @@
               'documents': 'documents-view'
             };
 
+            function setMobileMenuState(open) {
+              const list = document.getElementById('nav-links-list');
+              const toggleBtn = document.getElementById('mobile-menu-toggle');
+              if (!list || !toggleBtn) return;
+              list.classList.toggle('mobile-open', open);
+              toggleBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+              toggleBtn.innerHTML = open
+                ? '<i class="fa-solid fa-xmark"></i> Close'
+                : '<i class="fa-solid fa-bars"></i> Menu';
+            }
+
+            function toggleMobileMenu() {
+              const list = document.getElementById('nav-links-list');
+              if (!list) return;
+              setMobileMenuState(!list.classList.contains('mobile-open'));
+            }
+
+            function closeMobileMenu() {
+              setMobileMenuState(false);
+            }
+
+            function updateMobileNavLabel(btn) {
+              const label = document.getElementById('mobile-nav-current');
+              if (label && btn) label.textContent = btn.textContent.trim();
+            }
+
             function lazyLoadFramesForView(viewId) {
               if (viewId === 'documents-view') {
                 const pdfFrame = document.getElementById('inline-pdf-frame');
@@ -2762,13 +2867,18 @@
 
             function switchView(viewId, buttonElement, options) {
               const opts = options || {};
+              closeMobileMenu();
+
               document.querySelectorAll('.page-view').forEach(v => v.classList.remove('active-view'));
               const selectedView = document.getElementById(viewId);
               if (selectedView) selectedView.classList.add('active-view');
 
               document.querySelectorAll('.nav-tab-btn').forEach(b => b.classList.remove('active'));
               const targetBtn = buttonElement || document.querySelector('.nav-tab-btn[data-view="' + viewId + '"]');
-              if (targetBtn) targetBtn.classList.add('active');
+              if (targetBtn) {
+                targetBtn.classList.add('active');
+                updateMobileNavLabel(targetBtn);
+              }
 
               lazyLoadFramesForView(viewId);
 
@@ -2786,13 +2896,18 @@
 
             function goToTeamSection(buttonElement, options) {
               const opts = options || {};
+              closeMobileMenu();
+
               document.querySelectorAll('.page-view').forEach(v => v.classList.remove('active-view'));
               const overview = document.getElementById('overview-view');
               if (overview) overview.classList.add('active-view');
 
               document.querySelectorAll('.nav-tab-btn').forEach(b => b.classList.remove('active'));
               const targetBtn = buttonElement || document.querySelector('.nav-tab-btn[data-view="team"]');
-              if (targetBtn) targetBtn.classList.add('active');
+              if (targetBtn) {
+                targetBtn.classList.add('active');
+                updateMobileNavLabel(targetBtn);
+              }
 
               if (!opts.skipHash && window.location.hash !== '#team') {
                 history.pushState(null, '', '#team');
@@ -2967,12 +3082,23 @@
             window.addEventListener('hashchange', () => applyHashRoute(false));
             window.addEventListener('popstate', () => applyHashRoute(false));
 
+            document.addEventListener('click', function(e) {
+              const navEl = document.querySelector('nav');
+              const list = document.getElementById('nav-links-list');
+              if (list && list.classList.contains('mobile-open') && navEl && !navEl.contains(e.target)) {
+                closeMobileMenu();
+              }
+            });
+
             document.addEventListener('keydown', function(e) {
               const modal = document.getElementById('lightbox-modal');
-              if (!modal || !modal.classList.contains('lightbox-active')) return;
-              if (e.key === 'Escape') closeLightbox();
-              else if (e.key === 'ArrowLeft') stepLightbox(-1);
-              else if (e.key === 'ArrowRight') stepLightbox(1);
+              if (modal && modal.classList.contains('lightbox-active')) {
+                if (e.key === 'Escape') closeLightbox();
+                else if (e.key === 'ArrowLeft') stepLightbox(-1);
+                else if (e.key === 'ArrowRight') stepLightbox(1);
+              } else if (e.key === 'Escape') {
+                closeMobileMenu();
+              }
             });
 
             window.addEventListener('scroll', function() {
