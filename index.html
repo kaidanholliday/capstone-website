@@ -1007,7 +1007,7 @@
 
         .v0-images-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
             gap: 18px;
             margin-bottom: 18px;
         }
@@ -1020,6 +1020,12 @@
                 border-radius: 6px;
                 display: block;
             }
+
+        .v2-photos-row img {
+            object-fit: cover;
+            aspect-ratio: 4 / 3;
+            height: auto;
+        }
 
         .cfd-staggered-container {
             display: flex;
@@ -2250,7 +2256,7 @@
                 <div class="version-section">
                     <div class="version-header-bar">
                         <strong style="font-size: 1.08rem;">Version 2 - Current CAD with Cooling Vents &amp; Control Surfaces</strong>
-                        <span style="font-size: 0.8rem; opacity: 0.88; margin-left: 8px;">| Simulated in ANSYS CFD &amp; Ready for ASA Aero Printing</span>
+                        <span style="font-size: 0.8rem; opacity: 0.88; margin-left: 8px;">| Simulated in ANSYS CFD &amp; ASA Aero + PETG Prototype</span>
                     </div>
                     <div class="v0-images-container">
                         <img src="figures/Capture38.PNG" loading="lazy" data-hover-caption="true" alt="Figure 13: RAPTOR Mini Version 2 isometric CAD with vents.">
@@ -2260,6 +2266,13 @@
                     </div>
                     <div class="direct-figure-item" style="margin: 18px 0;">
                         <img src="figures/Capture57.PNG" loading="lazy" data-hover-caption="true" alt="Figure 17: Version 2 wing cross-section view showing internal channels for the carbon fiber reinforcement rods." class="direct-figure-img" style="max-height: 260px;">
+                    </div>
+                    <div class="v0-images-container v2-photos-row" style="margin-top: 18px;">
+                        <img src="figures/20261120_082030(0).jpg" loading="lazy" data-hover-caption="true" alt="Figure 18: Assembled Version 2 RAPTOR Mini printed in ASA Aero and PETG (isometric view).">
+                        <img src="figures/20261120_082030.jpg" loading="lazy" data-hover-caption="true" alt="Figure 19: Version 2 RAPTOR Mini showing white ASA Aero body and gray PETG parts.">
+                        <img src="figures/20261120_082043.jpg" loading="lazy" data-hover-caption="true" alt="Figure 20: Top-down planform view of the assembled Version 2 RAPTOR Mini.">
+                        <img src="figures/20261120_082055.jpg" loading="lazy" data-hover-caption="true" alt="Figure 21: Overhead view of Version 2 RAPTOR Mini showing wing geometry and ailerons.">
+                        <img src="figures/20261120_082108.jpg" loading="lazy" data-hover-caption="true" alt="Figure 22: Front view of Version 2 RAPTOR Mini showing nose cooling grill vents and winglets.">
                     </div>
                     <h4 class="subheading-title">Avionics Cooling Vents &amp; Ailerons</h4>
                     <p style="font-size: 0.92rem; line-height: 1.7; color: var(--text-dark);">
@@ -2271,13 +2284,13 @@
                 <div class="clean-two-col-grid">
                     <div class="clean-figure-col">
                         <h5 class="figure-label">Flight Configuration</h5>
-                        <img src="figures/v2FlightOrientation4-View.png" loading="lazy" alt="Figure 18: RAPTOR Mini 4-view drawing in flight configuration.">
-                        <div class="direct-figure-caption">Figure 18: RAPTOR Mini 4-view drawing in flight configuration.</div>
+                        <img src="figures/v2FlightOrientation4-View.png" loading="lazy" alt="Figure 23: RAPTOR Mini 4-view drawing in flight configuration.">
+                        <div class="direct-figure-caption">Figure 23: RAPTOR Mini 4-view drawing in flight configuration.</div>
                     </div>
                     <div class="clean-figure-col">
                         <h5 class="figure-label">Stowed Launch Configuration</h5>
-                        <img src="figures/v2LaunchOrientation4-View.png" loading="lazy" alt="Figure 19: RAPTOR Mini 4-view drawing in stowed launch configuration.">
-                        <div class="direct-figure-caption">Figure 19: RAPTOR Mini 4-view drawing in stowed launch configuration.</div>
+                        <img src="figures/v2LaunchOrientation4-View.png" loading="lazy" alt="Figure 24: RAPTOR Mini 4-view drawing in stowed launch configuration.">
+                        <div class="direct-figure-caption">Figure 24: RAPTOR Mini 4-view drawing in stowed launch configuration.</div>
                     </div>
                 </div>
 
@@ -2294,8 +2307,8 @@
                     </ul>
 
                     <div class="direct-figure-item" style="margin: 18px 0 14px 0;">
-                        <img src="figures/IMG_20261110_1946282.jpg" loading="lazy" alt="Figure 20: This is our first time printing ASA Aero, and it weighs 194 grams." class="direct-figure-img" style="max-height: 360px;">
-                        <div class="direct-figure-caption">Figure 20: This is our first time printing ASA Aero, and it weighs 194 grams.</div>
+                        <img src="figures/IMG_20261110_1946282.jpg" loading="lazy" alt="Figure 25: This is our first time printing ASA Aero, and it weighs 194 grams." class="direct-figure-img" style="max-height: 360px;">
+                        <div class="direct-figure-caption">Figure 25: This is our first time printing ASA Aero, and it weighs 194 grams.</div>
                     </div>
 
                     <p style="font-size: 0.94rem; line-height: 1.7; margin-bottom: 20px;">
@@ -2394,8 +2407,8 @@
 
                     <div class="direct-schematic-wrap">
                         <h5 class="figure-label">Avionics Schematic</h5>
-                        <img src="figures/RAPTOR_Mini_Schematic.png" loading="lazy" alt="Figure 21: RAPTOR Mini avionics electrical schematic.">
-                        <div class="direct-figure-caption">Figure 21: RAPTOR Mini avionics electrical schematic.</div>
+                        <img src="figures/RAPTOR_Mini_Schematic.png" loading="lazy" alt="Figure 26: RAPTOR Mini avionics electrical schematic.">
+                        <div class="direct-figure-caption">Figure 26: RAPTOR Mini avionics electrical schematic.</div>
                     </div>
                 </div>
 
@@ -2419,14 +2432,14 @@
                     </p>
 
                     <div class="direct-figure-item" style="margin: 18px 0 32px 0;">
-                        <img src="Simulationfiles/RaptorMiniV2/PulsePathlinesv2.gif" loading="lazy" data-hover-caption="true" alt="Figure 22: Animated pathline pulses across the RAPTOR Mini V2." class="direct-figure-img" style="max-height: 480px; width: 100%; max-width: 920px; background: #0b1329; border-radius: 8px;">
+                        <img src="Simulationfiles/RaptorMiniV2/PulsePathlinesv2.gif" loading="lazy" data-hover-caption="true" alt="Figure 27: Animated pathline pulses across the RAPTOR Mini V2." class="direct-figure-img" style="max-height: 480px; width: 100%; max-width: 920px; background: #0b1329; border-radius: 8px;">
                     </div>
 
                     <div class="direct-figure-item" style="margin: 28px 0;">
                         <p>
                             After getting the data from ANSYS we graphed the results in MATLAB below. On the left is the V2 lift vs speed, and we can see this grow exponentially. Then in the middle is the same but with drag and notice how the 12 AOA gets more as the speed increases. Then at the right is the efficiency and that's lift over drag, as we can see that at 4 degrees the efficiency is substantially higher than the 12 degree angle of attack. At a 30 mph cruise angle the glider makes 3.7 N of lift force and that can lift a glider that has a mass of 377 grams.
                         </p>
-                        <img src="Simulationfiles/RaptorMiniV2/RaptorMiniV2Aerodynamics.png" loading="lazy" data-hover-caption="true" alt="Figure 23: RAPTOR Mini V2 lift, drag, and lift-to-drag efficiency results from ANSYS graphed in MATLAB." class="direct-figure-img" style="max-height: 380px;">
+                        <img src="Simulationfiles/RaptorMiniV2/RaptorMiniV2Aerodynamics.png" loading="lazy" data-hover-caption="true" alt="Figure 28: RAPTOR Mini V2 lift, drag, and lift-to-drag efficiency results from ANSYS graphed in MATLAB." class="direct-figure-img" style="max-height: 380px;">
                     </div>
 
                     <h3 class="subsection-title" style="margin-top: 35px;">Visual Airflow Images</h3>
@@ -2441,7 +2454,7 @@
                                 <p>On the V2 we have velocity ribbons that are color coded tracking the air acceleration around the V2. We can see the air glide smoothly over the V2 main wing, tail wings and the fuselage.</p>
                             </div>
                             <div class="cfd-img-col">
-                                <img src="Simulationfiles/RaptorMiniV2/velocityPathlines.png" loading="lazy" data-hover-caption="true" alt="Figure 24: Velocity pathline ribbons around the RAPTOR Mini V2.">
+                                <img src="Simulationfiles/RaptorMiniV2/velocityPathlines.png" loading="lazy" data-hover-caption="true" alt="Figure 29: Velocity pathline ribbons around the RAPTOR Mini V2.">
                             </div>
                         </div>
 
@@ -2451,7 +2464,7 @@
                                 <p>This shows the pressure contour on the V2 when it's flying. With the pressure contour we can actually see low pressure on top of the main wing with blue color on the top. This means that the wing is generating lift with lower pressure air on top of the plane and higher-pressure air on the bottom of the plane.</p>
                             </div>
                             <div class="cfd-img-col">
-                                <img src="Simulationfiles/RaptorMiniV2/StaticPressureContor.png" loading="lazy" data-hover-caption="true" alt="Figure 25: Upper wing static pressure contour showing low-pressure suction.">
+                                <img src="Simulationfiles/RaptorMiniV2/StaticPressureContor.png" loading="lazy" data-hover-caption="true" alt="Figure 30: Upper wing static pressure contour showing low-pressure suction.">
                             </div>
                         </div>
 
@@ -2461,7 +2474,7 @@
                                 <p>Now we turned the plane to see the underside with the same contour, and we can see most of the V2 is green and yellow. This means that there is a higher pressure (green and yellow) on the bottom of the V2 compared to the top (blue and cyan).</p>
                             </div>
                             <div class="cfd-img-col">
-                                <img src="Simulationfiles/RaptorMiniV2/StaticPressureContorUnderSide.png" loading="lazy" data-hover-caption="true" alt="Figure 26: Underside static pressure contour showing higher pressure beneath the wing.">
+                                <img src="Simulationfiles/RaptorMiniV2/StaticPressureContorUnderSide.png" loading="lazy" data-hover-caption="true" alt="Figure 31: Underside static pressure contour showing higher pressure beneath the wing.">
                             </div>
                         </div>
 
@@ -2471,7 +2484,7 @@
                                 <p>This post CFD shows the velocity magnitude right down the middle of the V2 with the mesh still drawn in. This shows the low velocity at the tail end with the blue to green transition contour. Also, there is a higher velocity magnitude around the transition from the nose to the fuselage.</p>
                             </div>
                             <div class="cfd-img-col">
-                                <img src="Simulationfiles/RaptorMiniV2/MagVelocityContorSide.png" loading="lazy" data-hover-caption="true" alt="Figure 27: Centerline velocity magnitude contour with CFD mesh.">
+                                <img src="Simulationfiles/RaptorMiniV2/MagVelocityContorSide.png" loading="lazy" data-hover-caption="true" alt="Figure 32: Centerline velocity magnitude contour with CFD mesh.">
                             </div>
                         </div>
 
@@ -2481,7 +2494,7 @@
                                 <p>This shows the skin friction from the air moving across V2 in units of pressure. The contour shows red for the highest shear stress and blue for the least amount. We can see the nose and the back fuselage being blue, which means not as much air is flying past those sections as the top of the main wing.</p>
                             </div>
                             <div class="cfd-img-col">
-                                <img src="Simulationfiles/RaptorMiniV2/WallShearStressContor.png" loading="lazy" data-hover-caption="true" alt="Figure 28: Skin friction and wall shear stress contour across the V2 airframe.">
+                                <img src="Simulationfiles/RaptorMiniV2/WallShearStressContor.png" loading="lazy" data-hover-caption="true" alt="Figure 33: Skin friction and wall shear stress contour across the V2 airframe.">
                             </div>
                         </div>
 
@@ -2491,7 +2504,7 @@
                                 <p>Pressure pathlines over the RAPTOR Mini V2, with blue representing low pressure and red highlighting the high pressure. We can see the green pathlines past the wings showing that the pressure is normal after the main wing.</p>
                             </div>
                             <div class="cfd-img-col">
-                                <img src="Simulationfiles/RaptorMiniV2/pressurePathlines.png" loading="lazy" data-hover-caption="true" alt="Figure 29: Pressure pathlines across the RAPTOR Mini V2 wing and fuselage.">
+                                <img src="Simulationfiles/RaptorMiniV2/pressurePathlines.png" loading="lazy" data-hover-caption="true" alt="Figure 34: Pressure pathlines across the RAPTOR Mini V2 wing and fuselage.">
                             </div>
                         </div>
                     </div>
@@ -2505,22 +2518,22 @@
                         <div class="comparison-plot-item">
                             <h5 class="figure-label">Glide Efficiency Comparison</h5>
                             <p>This compares the lift to drag ratio for all simulated speeds. The dashed line is the V2 while the solid line is the V1. This is at the 4 degree angle of attack.</p>
-                            <img src="Simulationfiles/EfficiencyComparisonMini V1vsMiniV2.png" loading="lazy" data-hover-caption="true" alt="Figure 30: Glide efficiency comparison between V1 and V2 at 4-degree angle of attack.">
+                            <img src="Simulationfiles/EfficiencyComparisonMini V1vsMiniV2.png" loading="lazy" data-hover-caption="true" alt="Figure 35: Glide efficiency comparison between V1 and V2 at 4-degree angle of attack.">
                         </div>
                         <div class="comparison-plot-item">
                             <h5 class="figure-label">Efficiency Gain</h5>
                             <p>This shows the efficiency gain from V1 to V2. We can see the efficiency increase at the lower speeds and then decrease at the higher speeds.</p>
-                            <img src="Simulationfiles/EfficiencyGain.png" loading="lazy" data-hover-caption="true" alt="Figure 31: Percent efficiency gain from Version 1 to Version 2.">
+                            <img src="Simulationfiles/EfficiencyGain.png" loading="lazy" data-hover-caption="true" alt="Figure 36: Percent efficiency gain from Version 1 to Version 2.">
                         </div>
                         <div class="comparison-plot-item">
                             <h5 class="figure-label">Lift Force</h5>
                             <p>The dashed line is the V2 while the solid line is V1. The V2 lift is slightly better for the lower angle of attack than the V1.</p>
-                            <img src="Simulationfiles/Mini V1vsMiniV2.png" loading="lazy" data-hover-caption="true" alt="Figure 32: Lift force comparison between Version 1 and Version 2.">
+                            <img src="Simulationfiles/Mini V1vsMiniV2.png" loading="lazy" data-hover-caption="true" alt="Figure 37: Lift force comparison between Version 1 and Version 2.">
                         </div>
                         <div class="comparison-plot-item">
                             <h5 class="figure-label">Drag Force</h5>
                             <p>The dashed line is the V2 while the solid line is V1. The V2 drag is slightly worse than the V1, but V2 was simulated with no air channels so we are expecting less drag because air should be able to go through the fuselage.</p>
-                            <img src="Simulationfiles/Mini V1vsMiniV2drag.png" loading="lazy" data-hover-caption="true" alt="Figure 33: Drag force comparison between Version 1 and Version 2.">
+                            <img src="Simulationfiles/Mini V1vsMiniV2drag.png" loading="lazy" data-hover-caption="true" alt="Figure 38: Drag force comparison between Version 1 and Version 2.">
                         </div>
                     </div>
                 </div>
@@ -2534,29 +2547,29 @@
                     </p>
 
                     <div class="direct-figure-item" style="margin: 15px 0 25px 0;">
-                        <img src="Simulationfiles/RaptorMiniV1/RaptorMiniV1Aerodynamics.png" loading="lazy" data-hover-caption="true" alt="Figure 34: RAPTOR Mini V1 baseline lift, drag, and lift-to-drag efficiency curves." class="direct-figure-img" style="max-height: 350px;">
+                        <img src="Simulationfiles/RaptorMiniV1/RaptorMiniV1Aerodynamics.png" loading="lazy" data-hover-caption="true" alt="Figure 39: RAPTOR Mini V1 baseline lift, drag, and lift-to-drag efficiency curves." class="direct-figure-img" style="max-height: 350px;">
                     </div>
 
                     <div class="v1-clean-grid">
                         <div class="v1-clean-item">
                             <h5 class="figure-label">3D Airflow Streamlines</h5>
                             <p>Baseline 3D airflow over the V1 fuselage and wing.</p>
-                            <img src="Simulationfiles/RaptorMiniV1/FFFiso.png" loading="lazy" data-hover-caption="true" alt="Figure 35: Version 1 3D airflow streamlines over the fuselage and wing.">
+                            <img src="Simulationfiles/RaptorMiniV1/FFFiso.png" loading="lazy" data-hover-caption="true" alt="Figure 40: Version 1 3D airflow streamlines over the fuselage and wing.">
                         </div>
                         <div class="v1-clean-item">
                             <h5 class="figure-label">Top-Down Wing Alignment</h5>
                             <p>Attached airflow across the 30-inch span.</p>
-                            <img src="Simulationfiles/RaptorMiniV1/topdown.png" loading="lazy" data-hover-caption="true" alt="Figure 36: Version 1 top-down wing airflow alignment.">
+                            <img src="Simulationfiles/RaptorMiniV1/topdown.png" loading="lazy" data-hover-caption="true" alt="Figure 41: Version 1 top-down wing airflow alignment.">
                         </div>
                         <div class="v1-clean-item">
                             <h5 class="figure-label">Frontal Inflow Split</h5>
                             <p>Airflow division around the nose and leading edges.</p>
-                            <img src="Simulationfiles/RaptorMiniV1/front.png" loading="lazy" data-hover-caption="true" alt="Figure 37: Version 1 frontal inflow split around the nose and leading edges.">
+                            <img src="Simulationfiles/RaptorMiniV1/front.png" loading="lazy" data-hover-caption="true" alt="Figure 42: Version 1 frontal inflow split around the nose and leading edges.">
                         </div>
                         <div class="v1-clean-item">
                             <h5 class="figure-label">Winglet Vortex Control</h5>
                             <p>Upturned wingtips reducing tip vortex drag.</p>
-                            <img src="Simulationfiles/RaptorMiniV1/wingtip.png" loading="lazy" data-hover-caption="true" alt="Figure 38: Version 1 winglet vortex control streamlines.">
+                            <img src="Simulationfiles/RaptorMiniV1/wingtip.png" loading="lazy" data-hover-caption="true" alt="Figure 43: Version 1 winglet vortex control streamlines.">
                         </div>
                     </div>
                 </div>
@@ -2574,8 +2587,8 @@
                     <p>
                         Here is a longitudinal cross-section profile of the rocket airframe showing the forward translucent payload bay, internal deployment rail mounting track, and folded RAPTOR Mini stowed inside.
                     </p>
-                    <img src="figures/Capture44.PNG" loading="lazy" alt="Figure 39: Full Side View showing the forward nosecone, payload bay, and fin section." class="direct-figure-img">
-                    <div class="direct-figure-caption">Figure 39: Full Side View showing the forward nosecone, payload bay, and fin section.</div>
+                    <img src="figures/Capture44.PNG" loading="lazy" alt="Figure 44: Full Side View showing the forward nosecone, payload bay, and fin section." class="direct-figure-img">
+                    <div class="direct-figure-caption">Figure 44: Full Side View showing the forward nosecone, payload bay, and fin section.</div>
                 </div>
 
                 <div class="model-viewer-section jump-target" id="rocket-3d">
@@ -2601,8 +2614,8 @@
                         <p>
                             Here we have the engineering drawing of the RAPTOR launch vehicle showing dimensions of the RAPTOR Mega:
                         </p>
-                        <img src="figures/RAPTOR3-View.png" loading="lazy" alt="Figure 40: RAPTOR Rocket Engineering Drawing - Overall Height: 110.0 in | Body Diameter: 7.51 in | Fin Span Width: 20.0 in." class="direct-figure-img">
-                        <div class="direct-figure-caption">Figure 40: RAPTOR Rocket Engineering Drawing - Overall Height: 110.0 in | Body Diameter: 7.51 in | Fin Span Width: 20.0 in.</div>
+                        <img src="figures/RAPTOR3-View.png" loading="lazy" alt="Figure 45: RAPTOR Rocket Engineering Drawing - Overall Height: 110.0 in | Body Diameter: 7.51 in | Fin Span Width: 20.0 in." class="direct-figure-img">
+                        <div class="direct-figure-caption">Figure 45: RAPTOR Rocket Engineering Drawing - Overall Height: 110.0 in | Body Diameter: 7.51 in | Fin Span Width: 20.0 in.</div>
                     </div>
 
                     <div class="direct-figure-item">
@@ -2613,13 +2626,13 @@
                         <div class="clean-two-col-grid">
                             <div class="clean-figure-col">
                                 <h5 class="figure-label">Full Rocket</h5>
-                                <img src="figures/Capture37.PNG" loading="lazy" alt="Figure 41: Full RAPTOR Mega rocket isometric CAD assembly.">
-                                <div class="direct-figure-caption">Figure 41: Full RAPTOR Mega rocket isometric CAD assembly.</div>
+                                <img src="figures/Capture37.PNG" loading="lazy" alt="Figure 46: Full RAPTOR Mega rocket isometric CAD assembly.">
+                                <div class="direct-figure-caption">Figure 46: Full RAPTOR Mega rocket isometric CAD assembly.</div>
                             </div>
                             <div class="clean-figure-col">
                                 <h5 class="figure-label">Full Rocket with Transparent Payload Bay</h5>
-                                <img src="figures/Capture47.PNG" loading="lazy" alt="Figure 42: Full RAPTOR Mega rocket with transparent payload bay showing stowed glider.">
-                                <div class="direct-figure-caption">Figure 42: Full RAPTOR Mega rocket with transparent payload bay showing stowed glider.</div>
+                                <img src="figures/Capture47.PNG" loading="lazy" alt="Figure 47: Full RAPTOR Mega rocket with transparent payload bay showing stowed glider.">
+                                <div class="direct-figure-caption">Figure 47: Full RAPTOR Mega rocket with transparent payload bay showing stowed glider.</div>
                             </div>
                         </div>
                     </div>
@@ -2691,8 +2704,8 @@
 
                     <div class="direct-schematic-wrap">
                         <h5 class="figure-label">Avionics Schematic</h5>
-                        <img src="figures/RAPTOR_Schematic.png" loading="lazy" alt="Figure 43: RAPTOR Mega rocket avionics electrical schematic.">
-                        <div class="direct-figure-caption">Figure 43: RAPTOR Mega rocket avionics electrical schematic.</div>
+                        <img src="figures/RAPTOR_Schematic.png" loading="lazy" alt="Figure 48: RAPTOR Mega rocket avionics electrical schematic.">
+                        <div class="direct-figure-caption">Figure 48: RAPTOR Mega rocket avionics electrical schematic.</div>
                     </div>
                 </div>
 
@@ -2719,25 +2732,25 @@
                     </p>
 
                     <div class="true-gallery-grid">
-                        <img src="figures/IMG_20261105_2100048.jpg" loading="lazy" alt="Figure 44: 3D-printed internal spoke-hub rotation alignment mounts.">
-                        <img src="figures/20261104_150920.jpg" loading="lazy" alt="Figure 45: Rocket body tube mounted on horizontal PVC rotation mandrel.">
-                        <img src="figures/IMG_20261105_121741.jpg" loading="lazy" alt="Figure 46: Wrapping dry fiberglass cloth around the airframe tube.">
-                        <img src="figures/IMG_20261105_121746.jpg" loading="lazy" alt="Figure 47: Initial epoxy resin wet-out on fiberglass cloth.">
-                        <img src="figures/IMG_20261105_210004_3.jpg" loading="lazy" alt="Figure 48: Checking airframe alignment on rotation mandrel.">
-                        <img src="figures/IMG_20261105_210004_5.jpg" loading="lazy" alt="Figure 49: Spreading and squeegeeing epoxy resin across fiberglass weave.">
-                        <img src="figures/IMG_20261105_210004_9).jpg" loading="lazy" alt="Figure 50: Full airframe fiberglass layup in progress.">
-                        <img src="figures/IMG_20261105_210004_10).jpg" loading="lazy" alt="Figure 51: Rotating the airframe tube on sawhorse stand while curing.">
-                        <img src="figures/IMG_20261105_210004_14).jpg" loading="lazy" alt="Figure 52: Inspecting fiberglass lamination and resin saturation.">
-                        <img src="figures/IMG_20261105_210004_15).jpg" loading="lazy" alt="Figure 53: Finished composite fiberglass layer curing on mandrel.">
-                        <img src="figures/IMG_20261105_210004_16).jpg" loading="lazy" alt="Figure 54: Smoothing the fiberglass seam along the body tube.">
-                        <img src="figures/IMG_20261110_1946283.jpg" loading="lazy" alt="Figure 55: Assembling and clamping wooden rocket fin cores.">
-                        <img src="figures/IMG_20261110_1946284.jpg" loading="lazy" alt="Figure 56: Three cut wooden rocket fins prior to fiberglassing.">
-                        <img src="figures/IMG_20261110_194628.jpg" loading="lazy" alt="Figure 57: Measuring and cutting wood fin cores.">
-                        <img src="figures/IMG_20261113_122334.jpg" loading="lazy" alt="Figure 58: Assembling the 54 mm motor mount tube and centering rings.">
-                        <img src="figures/IMG_20261113_1223341).jpg" loading="lazy" alt="Figure 59: Motor mount tube with wooden centering rings installed.">
-                        <img src="figures/IMG_20261113_1223342).jpg" loading="lazy" alt="Figure 60: Wooden rocket fins clamped flat during lamination.">
-                        <img src="figures/IMG_20261113_1223343).jpg" loading="lazy" alt="Figure 61: Fiberglass cloth layered over wooden fin core.">
-                        <img src="figures/IMG_20261113_1223344).jpg" loading="lazy" alt="Figure 62: Applying epoxy and fiberglass layers onto wooden rocket fins.">
+                        <img src="figures/IMG_20261105_2100048.jpg" loading="lazy" alt="Figure 49: 3D-printed internal spoke-hub rotation alignment mounts.">
+                        <img src="figures/20261104_150920.jpg" loading="lazy" alt="Figure 50: Rocket body tube mounted on horizontal PVC rotation mandrel.">
+                        <img src="figures/IMG_20261105_121741.jpg" loading="lazy" alt="Figure 51: Wrapping dry fiberglass cloth around the airframe tube.">
+                        <img src="figures/IMG_20261105_121746.jpg" loading="lazy" alt="Figure 52: Initial epoxy resin wet-out on fiberglass cloth.">
+                        <img src="figures/IMG_20261105_210004_3.jpg" loading="lazy" alt="Figure 53: Checking airframe alignment on rotation mandrel.">
+                        <img src="figures/IMG_20261105_210004_5.jpg" loading="lazy" alt="Figure 54: Spreading and squeegeeing epoxy resin across fiberglass weave.">
+                        <img src="figures/IMG_20261105_210004_9).jpg" loading="lazy" alt="Figure 55: Full airframe fiberglass layup in progress.">
+                        <img src="figures/IMG_20261105_210004_10).jpg" loading="lazy" alt="Figure 56: Rotating the airframe tube on sawhorse stand while curing.">
+                        <img src="figures/IMG_20261105_210004_14).jpg" loading="lazy" alt="Figure 57: Inspecting fiberglass lamination and resin saturation.">
+                        <img src="figures/IMG_20261105_210004_15).jpg" loading="lazy" alt="Figure 58: Finished composite fiberglass layer curing on mandrel.">
+                        <img src="figures/IMG_20261105_210004_16).jpg" loading="lazy" alt="Figure 59: Smoothing the fiberglass seam along the body tube.">
+                        <img src="figures/IMG_20261110_1946283.jpg" loading="lazy" alt="Figure 60: Assembling and clamping wooden rocket fin cores.">
+                        <img src="figures/IMG_20261110_1946284.jpg" loading="lazy" alt="Figure 61: Three cut wooden rocket fins prior to fiberglassing.">
+                        <img src="figures/IMG_20261110_194628.jpg" loading="lazy" alt="Figure 62: Measuring and cutting wood fin cores.">
+                        <img src="figures/IMG_20261113_122334.jpg" loading="lazy" alt="Figure 63: Assembling the 54 mm motor mount tube and centering rings.">
+                        <img src="figures/IMG_20261113_1223341).jpg" loading="lazy" alt="Figure 64: Motor mount tube with wooden centering rings installed.">
+                        <img src="figures/IMG_20261113_1223342).jpg" loading="lazy" alt="Figure 65: Wooden rocket fins clamped flat during lamination.">
+                        <img src="figures/IMG_20261113_1223343).jpg" loading="lazy" alt="Figure 66: Fiberglass cloth layered over wooden fin core.">
+                        <img src="figures/IMG_20261113_1223344).jpg" loading="lazy" alt="Figure 67: Applying epoxy and fiberglass layers onto wooden rocket fins.">
                     </div>
                 </div>
 
@@ -2746,15 +2759,15 @@
                 <div class="direct-figure-item">
                     <h4 class="subheading-title">Altitude &amp; Thrust Profile vs. Flight Time</h4>
                     <p>Cesaroni K935-P motor burn and coast phase reaching a simulated apogee of 603 m (~2,000 ft AGL) at t = 12 seconds with dual-deployment parachute staging.</p>
-                    <img src="figures/Picture4.png" loading="lazy" alt="Figure 63: OpenRocket simulated altitude and thrust profile vs. flight time." class="direct-figure-img">
-                    <div class="direct-figure-caption">Figure 63: OpenRocket simulated altitude and thrust profile vs. flight time.</div>
+                    <img src="figures/Picture4.png" loading="lazy" alt="Figure 68: OpenRocket simulated altitude and thrust profile vs. flight time." class="direct-figure-img">
+                    <div class="direct-figure-caption">Figure 68: OpenRocket simulated altitude and thrust profile vs. flight time.</div>
                 </div>
 
                 <div class="direct-figure-item">
                     <h4 class="subheading-title">Variable Wind Speed Stability Simulation</h4>
                     <p>Trajectory simulation under 13 mph 90-degree crosswinds increasing with altitude, showing center of gravity forward of center of pressure with stability above 1.0 caliber throughout boost.</p>
-                    <img src="figures/Picture5.png" loading="lazy" alt="Figure 64: OpenRocket variable wind speed stability simulation. Note: The stability margin drop to -7.5 calibers at t = 12 s represents apogee separation and drogue parachute deployment in the simulation." class="direct-figure-img">
-                    <div class="direct-figure-caption">Figure 64: OpenRocket variable wind speed stability simulation. Note: The stability margin drop to -7.5 calibers at t = 12 s represents apogee separation and drogue parachute deployment in the simulation.</div>
+                    <img src="figures/Picture5.png" loading="lazy" alt="Figure 69: OpenRocket variable wind speed stability simulation. Note: The stability margin drop to -7.5 calibers at t = 12 s represents apogee separation and drogue parachute deployment in the simulation." class="direct-figure-img">
+                    <div class="direct-figure-caption">Figure 69: OpenRocket variable wind speed stability simulation. Note: The stability margin drop to -7.5 calibers at t = 12 s represents apogee separation and drogue parachute deployment in the simulation.</div>
                 </div>
             </div>
 
@@ -2779,25 +2792,25 @@
 
                 <div class="gallery-category-title" data-category="rocket-build">Fiberglass Rocket Construction &amp; Alignment Tooling</div>
                 <div class="true-gallery-grid" data-category="rocket-build">
-                    <img src="figures/IMG_20261105_2100048.jpg" loading="lazy" alt="Figure 44: 3D-printed internal spoke-hub rotation alignment mounts.">
-                    <img src="figures/20261104_150920.jpg" loading="lazy" alt="Figure 45: Rocket body tube mounted on horizontal PVC rotation mandrel.">
-                    <img src="figures/IMG_20261105_121741.jpg" loading="lazy" alt="Figure 46: Wrapping dry fiberglass cloth around the airframe tube.">
-                    <img src="figures/IMG_20261105_121746.jpg" loading="lazy" alt="Figure 47: Initial epoxy resin wet-out on fiberglass cloth.">
-                    <img src="figures/IMG_20261105_210004_3.jpg" loading="lazy" alt="Figure 48: Checking airframe alignment on rotation mandrel.">
-                    <img src="figures/IMG_20261105_210004_5.jpg" loading="lazy" alt="Figure 49: Spreading and squeegeeing epoxy resin across fiberglass weave.">
-                    <img src="figures/IMG_20261105_210004_9).jpg" loading="lazy" alt="Figure 50: Full airframe fiberglass layup in progress.">
-                    <img src="figures/IMG_20261105_210004_10).jpg" loading="lazy" alt="Figure 51: Rotating the airframe tube on sawhorse stand while curing.">
-                    <img src="figures/IMG_20261105_210004_14).jpg" loading="lazy" alt="Figure 52: Inspecting fiberglass lamination and resin saturation.">
-                    <img src="figures/IMG_20261105_210004_15).jpg" loading="lazy" alt="Figure 53: Finished composite fiberglass layer curing on mandrel.">
-                    <img src="figures/IMG_20261105_210004_16).jpg" loading="lazy" alt="Figure 54: Smoothing the fiberglass seam along the body tube.">
-                    <img src="figures/IMG_20261110_1946283.jpg" loading="lazy" alt="Figure 55: Assembling and clamping wooden rocket fin cores.">
-                    <img src="figures/IMG_20261110_1946284.jpg" loading="lazy" alt="Figure 56: Three cut wooden rocket fins prior to fiberglassing.">
-                    <img src="figures/IMG_20261110_194628.jpg" loading="lazy" alt="Figure 57: Measuring and cutting wood fin cores.">
-                    <img src="figures/IMG_20261113_122334.jpg" loading="lazy" alt="Figure 58: Assembling the 54 mm motor mount tube and centering rings.">
-                    <img src="figures/IMG_20261113_1223341).jpg" loading="lazy" alt="Figure 59: Motor mount tube with wooden centering rings installed.">
-                    <img src="figures/IMG_20261113_1223342).jpg" loading="lazy" alt="Figure 60: Wooden rocket fins clamped flat during lamination.">
-                    <img src="figures/IMG_20261113_1223343).jpg" loading="lazy" alt="Figure 61: Fiberglass cloth layered over wooden fin core.">
-                    <img src="figures/IMG_20261113_1223344).jpg" loading="lazy" alt="Figure 62: Applying epoxy and fiberglass layers onto wooden rocket fins.">
+                    <img src="figures/IMG_20261105_2100048.jpg" loading="lazy" alt="Figure 49: 3D-printed internal spoke-hub rotation alignment mounts.">
+                    <img src="figures/20261104_150920.jpg" loading="lazy" alt="Figure 50: Rocket body tube mounted on horizontal PVC rotation mandrel.">
+                    <img src="figures/IMG_20261105_121741.jpg" loading="lazy" alt="Figure 51: Wrapping dry fiberglass cloth around the airframe tube.">
+                    <img src="figures/IMG_20261105_121746.jpg" loading="lazy" alt="Figure 52: Initial epoxy resin wet-out on fiberglass cloth.">
+                    <img src="figures/IMG_20261105_210004_3.jpg" loading="lazy" alt="Figure 53: Checking airframe alignment on rotation mandrel.">
+                    <img src="figures/IMG_20261105_210004_5.jpg" loading="lazy" alt="Figure 54: Spreading and squeegeeing epoxy resin across fiberglass weave.">
+                    <img src="figures/IMG_20261105_210004_9).jpg" loading="lazy" alt="Figure 55: Full airframe fiberglass layup in progress.">
+                    <img src="figures/IMG_20261105_210004_10).jpg" loading="lazy" alt="Figure 56: Rotating the airframe tube on sawhorse stand while curing.">
+                    <img src="figures/IMG_20261105_210004_14).jpg" loading="lazy" alt="Figure 57: Inspecting fiberglass lamination and resin saturation.">
+                    <img src="figures/IMG_20261105_210004_15).jpg" loading="lazy" alt="Figure 58: Finished composite fiberglass layer curing on mandrel.">
+                    <img src="figures/IMG_20261105_210004_16).jpg" loading="lazy" alt="Figure 59: Smoothing the fiberglass seam along the body tube.">
+                    <img src="figures/IMG_20261110_1946283.jpg" loading="lazy" alt="Figure 60: Assembling and clamping wooden rocket fin cores.">
+                    <img src="figures/IMG_20261110_1946284.jpg" loading="lazy" alt="Figure 61: Three cut wooden rocket fins prior to fiberglassing.">
+                    <img src="figures/IMG_20261110_194628.jpg" loading="lazy" alt="Figure 62: Measuring and cutting wood fin cores.">
+                    <img src="figures/IMG_20261113_122334.jpg" loading="lazy" alt="Figure 63: Assembling the 54 mm motor mount tube and centering rings.">
+                    <img src="figures/IMG_20261113_1223341).jpg" loading="lazy" alt="Figure 64: Motor mount tube with wooden centering rings installed.">
+                    <img src="figures/IMG_20261113_1223342).jpg" loading="lazy" alt="Figure 65: Wooden rocket fins clamped flat during lamination.">
+                    <img src="figures/IMG_20261113_1223343).jpg" loading="lazy" alt="Figure 66: Fiberglass cloth layered over wooden fin core.">
+                    <img src="figures/IMG_20261113_1223344).jpg" loading="lazy" alt="Figure 67: Applying epoxy and fiberglass layers onto wooden rocket fins.">
                 </div>
 
                 <div class="gallery-category-title" data-category="glider-prototypes">RAPTOR Mini Laboratory Prototypes &amp; Benchtop Assemblies</div>
@@ -2807,7 +2820,12 @@
                     <img src="figures/20261023_131244.jpg" loading="lazy" alt="Figure 10: Version 1 physical prototype in stowed launch configuration.">
                     <img src="figures/20261023_125634.jpg" loading="lazy" alt="Figure 11: Version 1 benchtop wing fitment and alignment check.">
                     <img src="figures/IMG_20261023_164817709_HDR.jpg" loading="lazy" alt="Figure 12: Overhead planform view of assembled Version 1 prototype.">
-                    <img src="figures/IMG_20261110_1946282.jpg" loading="lazy" alt="Figure 20: This is our first time printing ASA Aero, and it weighs 194 grams.">
+                    <img src="figures/20261120_082030(0).jpg" loading="lazy" alt="Figure 18: Assembled Version 2 RAPTOR Mini printed in ASA Aero and PETG (isometric view).">
+                    <img src="figures/20261120_082030.jpg" loading="lazy" alt="Figure 19: Version 2 RAPTOR Mini showing white ASA Aero body and gray PETG parts.">
+                    <img src="figures/20261120_082043.jpg" loading="lazy" alt="Figure 20: Top-down planform view of the assembled Version 2 RAPTOR Mini.">
+                    <img src="figures/20261120_082055.jpg" loading="lazy" alt="Figure 21: Overhead view of Version 2 RAPTOR Mini showing wing geometry and ailerons.">
+                    <img src="figures/20261120_082108.jpg" loading="lazy" alt="Figure 22: Front view of Version 2 RAPTOR Mini showing nose cooling grill vents and winglets.">
+                    <img src="figures/IMG_20261110_1946282.jpg" loading="lazy" alt="Figure 25: This is our first time printing ASA Aero, and it weighs 194 grams.">
                 </div>
 
                 <div class="gallery-category-title" data-category="cad-drawings">RAPTOR Mini CAD Models, Schematics &amp; 4-View Drawings</div>
@@ -2821,62 +2839,62 @@
                     <img src="figures/Capture40.PNG" loading="lazy" alt="Figure 15: Version 2 front elevation CAD view.">
                     <img src="figures/Capture41.PNG" loading="lazy" alt="Figure 16: Version 2 top planform view with cooling vents.">
                     <img src="figures/Capture57.PNG" loading="lazy" alt="Figure 17: Version 2 wing cross-section view showing internal channels for the carbon fiber reinforcement rods.">
-                    <img src="figures/v2FlightOrientation4-View.png" loading="lazy" alt="Figure 18: RAPTOR Mini 4-view drawing in flight configuration.">
-                    <img src="figures/v2LaunchOrientation4-View.png" loading="lazy" alt="Figure 19: RAPTOR Mini 4-view drawing in stowed launch configuration.">
-                    <img src="figures/RAPTOR_Mini_Schematic.png" loading="lazy" alt="Figure 21: RAPTOR Mini avionics electrical schematic.">
-                    <img src="figures/Capture49.PNG" loading="lazy" alt="Figure 65: RAPTOR Mini wireframe CAD.">
-                    <img src="figures/Capture24.PNG" loading="lazy" alt="Figure 66: RAPTOR Mini isometric CAD.">
-                    <img src="figures/Picture11.png" loading="lazy" alt="Figure 67: RAPTOR Mini 4-view drawing (flight orientation).">
-                    <img src="figures/Picture12.png" loading="lazy" alt="Figure 68: RAPTOR Mini 4-view drawing (launch orientation).">
-                    <img src="figures/eng_drawing_flight_v2.png" loading="lazy" alt="Figure 69: RAPTOR Mini line 4-view drawing (flight configuration).">
-                    <img src="figures/eng_drawing_launch.png" loading="lazy" alt="Figure 70: RAPTOR Mini line 4-view drawing (launch configuration).">
+                    <img src="figures/v2FlightOrientation4-View.png" loading="lazy" alt="Figure 23: RAPTOR Mini 4-view drawing in flight configuration.">
+                    <img src="figures/v2LaunchOrientation4-View.png" loading="lazy" alt="Figure 24: RAPTOR Mini 4-view drawing in stowed launch configuration.">
+                    <img src="figures/RAPTOR_Mini_Schematic.png" loading="lazy" alt="Figure 26: RAPTOR Mini avionics electrical schematic.">
+                    <img src="figures/Capture49.PNG" loading="lazy" alt="Figure 70: RAPTOR Mini wireframe CAD.">
+                    <img src="figures/Capture24.PNG" loading="lazy" alt="Figure 71: RAPTOR Mini isometric CAD.">
+                    <img src="figures/Picture11.png" loading="lazy" alt="Figure 72: RAPTOR Mini 4-view drawing (flight orientation).">
+                    <img src="figures/Picture12.png" loading="lazy" alt="Figure 73: RAPTOR Mini 4-view drawing (launch orientation).">
+                    <img src="figures/eng_drawing_flight_v2.png" loading="lazy" alt="Figure 74: RAPTOR Mini line 4-view drawing (flight configuration).">
+                    <img src="figures/eng_drawing_launch.png" loading="lazy" alt="Figure 75: RAPTOR Mini line 4-view drawing (launch configuration).">
                 </div>
 
                 <div class="gallery-category-title" data-category="cad-drawings">RAPTOR Mega CAD Models, OpenRocket &amp; Engineering Drawings</div>
                 <div class="true-gallery-grid" data-category="cad-drawings">
                     <img src="figures/Picture1.png" loading="lazy" alt="Figure 1 depicts the complete mission flight profile, illustrating the RAPTOR Mega launch to apogee, pneumatic payload separation, RAPTOR Mini descent and independent recoveries for both vehicles.">
                     <img src="figures/Pictudddre1.png" loading="lazy" alt="Figure 2 displays a 3D CAD of the post-deployment RAPTOR Mini drone with wings expanded, nosecone separation, rail-guided glider release, and booster airframe staging.">
-                    <img src="figures/Capture44.PNG" loading="lazy" alt="Figure 39: Full Side View showing the forward nosecone, payload bay, and fin section.">
-                    <img src="figures/RAPTOR3-View.png" loading="lazy" alt="Figure 40: RAPTOR Rocket Engineering Drawing - Overall Height: 110.0 in | Body Diameter: 7.51 in | Fin Span Width: 20.0 in.">
-                    <img src="figures/Capture37.PNG" loading="lazy" alt="Figure 41: Full RAPTOR Mega rocket isometric CAD assembly.">
-                    <img src="figures/Capture47.PNG" loading="lazy" alt="Figure 42: Full RAPTOR Mega rocket with transparent payload bay showing stowed glider.">
-                    <img src="figures/RAPTOR_Schematic.png" loading="lazy" alt="Figure 43: RAPTOR Mega rocket avionics electrical schematic.">
-                    <img src="figures/Picture4.png" loading="lazy" alt="Figure 63: OpenRocket simulated altitude and thrust profile vs. flight time.">
-                    <img src="figures/Picture5.png" loading="lazy" alt="Figure 64: OpenRocket variable wind speed stability simulation. Note: The stability margin drop to -7.5 calibers at t = 12 s represents apogee separation and drogue parachute deployment in the simulation.">
-                    <img src="figures/Picture2.png" loading="lazy" alt="Figure 71: OpenRocket launch vehicle configuration and stability summary.">
-                    <img src="figures/Capture45.PNG" loading="lazy" alt="Figure 72: Full rocket exploded staging assembly.">
-                    <img src="figures/Capture48.PNG" loading="lazy" alt="Figure 73: RAPTOR Mega rocket wireframe CAD.">
-                    <img src="figures/rocket_eng_drawing.png" loading="lazy" alt="Figure 74: RAPTOR Mega rocket engineering 3-view drawing.">
+                    <img src="figures/Capture44.PNG" loading="lazy" alt="Figure 44: Full Side View showing the forward nosecone, payload bay, and fin section.">
+                    <img src="figures/RAPTOR3-View.png" loading="lazy" alt="Figure 45: RAPTOR Rocket Engineering Drawing - Overall Height: 110.0 in | Body Diameter: 7.51 in | Fin Span Width: 20.0 in.">
+                    <img src="figures/Capture37.PNG" loading="lazy" alt="Figure 46: Full RAPTOR Mega rocket isometric CAD assembly.">
+                    <img src="figures/Capture47.PNG" loading="lazy" alt="Figure 47: Full RAPTOR Mega rocket with transparent payload bay showing stowed glider.">
+                    <img src="figures/RAPTOR_Schematic.png" loading="lazy" alt="Figure 48: RAPTOR Mega rocket avionics electrical schematic.">
+                    <img src="figures/Picture4.png" loading="lazy" alt="Figure 68: OpenRocket simulated altitude and thrust profile vs. flight time.">
+                    <img src="figures/Picture5.png" loading="lazy" alt="Figure 69: OpenRocket variable wind speed stability simulation. Note: The stability margin drop to -7.5 calibers at t = 12 s represents apogee separation and drogue parachute deployment in the simulation.">
+                    <img src="figures/Picture2.png" loading="lazy" alt="Figure 76: OpenRocket launch vehicle configuration and stability summary.">
+                    <img src="figures/Capture45.PNG" loading="lazy" alt="Figure 77: Full rocket exploded staging assembly.">
+                    <img src="figures/Capture48.PNG" loading="lazy" alt="Figure 78: RAPTOR Mega rocket wireframe CAD.">
+                    <img src="figures/rocket_eng_drawing.png" loading="lazy" alt="Figure 79: RAPTOR Mega rocket engineering 3-view drawing.">
                 </div>
 
                 <div class="gallery-category-title" data-category="cfd-plots">Aerodynamic CFD Flow Studies &amp; MATLAB Plots</div>
                 <div class="true-gallery-grid" data-category="cfd-plots">
-                    <img src="Simulationfiles/RaptorMiniV2/PulsePathlinesv2.gif" loading="lazy" alt="Figure 22: Animated pathline pulses across the RAPTOR Mini V2.">
-                    <img src="Simulationfiles/RaptorMiniV2/RaptorMiniV2Aerodynamics.png" loading="lazy" alt="Figure 23: RAPTOR Mini V2 lift, drag, and lift-to-drag efficiency results from ANSYS graphed in MATLAB.">
-                    <img src="Simulationfiles/RaptorMiniV2/velocityPathlines.png" loading="lazy" alt="Figure 24: Velocity pathline ribbons around the RAPTOR Mini V2.">
-                    <img src="Simulationfiles/RaptorMiniV2/StaticPressureContor.png" loading="lazy" alt="Figure 25: Upper wing static pressure contour showing low-pressure suction.">
-                    <img src="Simulationfiles/RaptorMiniV2/StaticPressureContorUnderSide.png" loading="lazy" alt="Figure 26: Underside static pressure contour showing higher pressure beneath the wing.">
-                    <img src="Simulationfiles/RaptorMiniV2/MagVelocityContorSide.png" loading="lazy" alt="Figure 27: Centerline velocity magnitude contour with CFD mesh.">
-                    <img src="Simulationfiles/RaptorMiniV2/WallShearStressContor.png" loading="lazy" alt="Figure 28: Skin friction and wall shear stress contour across the V2 airframe.">
-                    <img src="Simulationfiles/RaptorMiniV2/pressurePathlines.png" loading="lazy" alt="Figure 29: Pressure pathlines across the RAPTOR Mini V2 wing and fuselage.">
-                    <img src="Simulationfiles/EfficiencyComparisonMini V1vsMiniV2.png" loading="lazy" alt="Figure 30: Glide efficiency comparison between V1 and V2 at 4-degree angle of attack.">
-                    <img src="Simulationfiles/EfficiencyGain.png" loading="lazy" alt="Figure 31: Percent efficiency gain from Version 1 to Version 2.">
-                    <img src="Simulationfiles/Mini V1vsMiniV2.png" loading="lazy" alt="Figure 32: Lift force comparison between Version 1 and Version 2.">
-                    <img src="Simulationfiles/Mini V1vsMiniV2drag.png" loading="lazy" alt="Figure 33: Drag force comparison between Version 1 and Version 2.">
-                    <img src="Simulationfiles/RaptorMiniV1/RaptorMiniV1Aerodynamics.png" loading="lazy" alt="Figure 34: RAPTOR Mini V1 baseline lift, drag, and lift-to-drag efficiency curves.">
-                    <img src="Simulationfiles/RaptorMiniV1/iso2.png" loading="lazy" alt="Figure 75: V1 airframe surface pressure contours.">
-                    <img src="Simulationfiles/RaptorMiniV1/iso3.png" loading="lazy" alt="Figure 76: V1 downstream wake velocity gradients.">
-                    <img src="Simulationfiles/RaptorMiniV1/front2.png" loading="lazy" alt="Figure 77: V1 nose cone inflow velocity.">
-                    <img src="Simulationfiles/RaptorMiniV1/wing_tip_vector.png" loading="lazy" alt="Figure 78: V1 wingtip vortex vector distribution.">
+                    <img src="Simulationfiles/RaptorMiniV2/PulsePathlinesv2.gif" loading="lazy" alt="Figure 27: Animated pathline pulses across the RAPTOR Mini V2.">
+                    <img src="Simulationfiles/RaptorMiniV2/RaptorMiniV2Aerodynamics.png" loading="lazy" alt="Figure 28: RAPTOR Mini V2 lift, drag, and lift-to-drag efficiency results from ANSYS graphed in MATLAB.">
+                    <img src="Simulationfiles/RaptorMiniV2/velocityPathlines.png" loading="lazy" alt="Figure 29: Velocity pathline ribbons around the RAPTOR Mini V2.">
+                    <img src="Simulationfiles/RaptorMiniV2/StaticPressureContor.png" loading="lazy" alt="Figure 30: Upper wing static pressure contour showing low-pressure suction.">
+                    <img src="Simulationfiles/RaptorMiniV2/StaticPressureContorUnderSide.png" loading="lazy" alt="Figure 31: Underside static pressure contour showing higher pressure beneath the wing.">
+                    <img src="Simulationfiles/RaptorMiniV2/MagVelocityContorSide.png" loading="lazy" alt="Figure 32: Centerline velocity magnitude contour with CFD mesh.">
+                    <img src="Simulationfiles/RaptorMiniV2/WallShearStressContor.png" loading="lazy" alt="Figure 33: Skin friction and wall shear stress contour across the V2 airframe.">
+                    <img src="Simulationfiles/RaptorMiniV2/pressurePathlines.png" loading="lazy" alt="Figure 34: Pressure pathlines across the RAPTOR Mini V2 wing and fuselage.">
+                    <img src="Simulationfiles/EfficiencyComparisonMini V1vsMiniV2.png" loading="lazy" alt="Figure 35: Glide efficiency comparison between V1 and V2 at 4-degree angle of attack.">
+                    <img src="Simulationfiles/EfficiencyGain.png" loading="lazy" alt="Figure 36: Percent efficiency gain from Version 1 to Version 2.">
+                    <img src="Simulationfiles/Mini V1vsMiniV2.png" loading="lazy" alt="Figure 37: Lift force comparison between Version 1 and Version 2.">
+                    <img src="Simulationfiles/Mini V1vsMiniV2drag.png" loading="lazy" alt="Figure 38: Drag force comparison between Version 1 and Version 2.">
+                    <img src="Simulationfiles/RaptorMiniV1/RaptorMiniV1Aerodynamics.png" loading="lazy" alt="Figure 39: RAPTOR Mini V1 baseline lift, drag, and lift-to-drag efficiency curves.">
+                    <img src="Simulationfiles/RaptorMiniV1/iso2.png" loading="lazy" alt="Figure 80: V1 airframe surface pressure contours.">
+                    <img src="Simulationfiles/RaptorMiniV1/iso3.png" loading="lazy" alt="Figure 81: V1 downstream wake velocity gradients.">
+                    <img src="Simulationfiles/RaptorMiniV1/front2.png" loading="lazy" alt="Figure 82: V1 nose cone inflow velocity.">
+                    <img src="Simulationfiles/RaptorMiniV1/wing_tip_vector.png" loading="lazy" alt="Figure 83: V1 wingtip vortex vector distribution.">
                 </div>
 
                 <div class="gallery-category-title" data-category="milestones-logos">Presentation Milestones, Logos &amp; Hardware Archives</div>
                 <div class="true-gallery-grid" data-category="milestones-logos">
                     <img src="figures/20261023_133642.jpg" loading="lazy" alt="Figure 3: Project RAPTOR Team at Midterm Presentation.">
-                    <img src="figures/Picture3.png" loading="lazy" alt="Figure 79: LOC Precision 7.51-inch airframe and component order.">
-                    <img src="figures/raptor_logo.png" loading="lazy" alt="Figure 80: Project RAPTOR logo.">
-                    <img src="figures/NAU_Steve Sanghi College of Engineering_primary_282_3514.png" loading="lazy" alt="Figure 81: NAU Steve Sanghi College of Engineering primary logo." class="gallery-dark-bg">
-                    <img src="figures/steveSanghiWhiteLogo.png" loading="lazy" alt="Figure 82: NAU Steve Sanghi College of Engineering white logo." class="gallery-dark-bg">
+                    <img src="figures/Picture3.png" loading="lazy" alt="Figure 84: LOC Precision 7.51-inch airframe and component order.">
+                    <img src="figures/raptor_logo.png" loading="lazy" alt="Figure 85: Project RAPTOR logo.">
+                    <img src="figures/NAU_Steve Sanghi College of Engineering_primary_282_3514.png" loading="lazy" alt="Figure 86: NAU Steve Sanghi College of Engineering primary logo." class="gallery-dark-bg">
+                    <img src="figures/steveSanghiWhiteLogo.png" loading="lazy" alt="Figure 87: NAU Steve Sanghi College of Engineering white logo." class="gallery-dark-bg">
                 </div>
             </div>
 
@@ -3007,7 +3025,7 @@
                 <div>
                     <strong>Project RAPTOR - Autonomous Apogee-Deployed Glider Rocket</strong>
                     <p style="margin-top: 4px; font-size: 0.8rem; color: #94a3b8;">Northern Arizona University | The Steve Sanghi College of Engineering</p>
-                    <p style="margin-top: 4px; font-size: 0.8rem; color: var(--nau-gold);"><i class="fa-regular fa-clock me-1"></i> Website Last Edited: November 19, 2026</p>
+                    <p style="margin-top: 4px; font-size: 0.8rem; color: var(--nau-gold);"><i class="fa-regular fa-clock me-1"></i> Website Last Edited: November 20, 2026</p>
                 </div>
             </div>
             <div>
